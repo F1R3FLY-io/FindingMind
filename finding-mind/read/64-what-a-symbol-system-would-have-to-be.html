@@ -1,0 +1,815 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What a Symbol System Would Have to Be · Finding Mind</title>
+<link rel="canonical" href="https://findingmind.com/read/64-what-a-symbol-system-would-have-to-be.html">
+<meta name="description" content="What a Symbol System Would Have to Be">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../book.css">
+<link rel="stylesheet" href="../katex/katex.min.css">
+<script defer src="../katex/katex.min.js"></script>
+<script defer src="../katex/auto-render.min.js"></script>
+<script defer src="../macros.js"></script>
+<script defer src="../reader.js"></script>
+</head>
+<body class="readpage">
+
+<a class="skip" href="#main">Skip to text</a>
+<div class="reader">
+<nav class="rail" aria-label="Contents"><div class="rail-in"><a class="rail-home" href="../index.html">Finding Mind</a><h2 class="rail-act">The Pledge</h2><a class="rail-ch" href="permitted-say.html"><span class="rn rn-i">⁂</span><span class="rt">The Permitted Say</span></a><a class="rail-ch" href="01-prolegomena-to-finding-mind.html"><span class="rn">1</span><span class="rt">Prolegomena to Finding Mind</span></a><a class="rail-ch" href="02-the-ordinary-world.html"><span class="rn">2</span><span class="rt">The Ordinary World</span></a><a class="rail-ch" href="03-information-causation-and-the-blind-spot.html"><span class="rn">3</span><span class="rt">Information, Causation, and the Blind Spot</span></a><a class="rail-ch" href="04-finding-the-shape.html"><span class="rn">4</span><span class="rt">Finding the Shape</span></a><a class="rail-ch" href="05-inside-and-outside-and-what-it-means-to-assume.html"><span class="rn">5</span><span class="rt">Inside and Outside, and What it Means to Assume the Virtue</span></a><a class="rail-ch" href="how-to-read-this-book.html"><span class="rn rn-i">⁂</span><span class="rt">How to Read This Book</span></a><a class="rail-ch" href="related-work-and-where-this-differs.html"><span class="rn rn-i">⁂</span><span class="rt">Related Work, and Where This Differs</span></a><h2 class="rail-act">The Turn</h2><a class="rail-ch" href="foam-born.html"><span class="rn rn-i">⁂</span><span class="rt">The Foam-Born</span></a><h3 class="rail-part">The Machinery: From GSLTs to Cost-Accounted Theories</h3><a class="rail-ch" href="06-what-a-language-presentation-is-and-why-it-com.html"><span class="rn">6</span><span class="rt">What a Language Presentation Is, and Why It Comes First</span></a><a class="rail-ch" href="07-graph-structured-lambda-theories.html"><span class="rn">7</span><span class="rt">Graph-Structured Lambda Theories</span></a><a class="rail-ch" href="08-interactive-gslts-and-the-site-of-interaction.html"><span class="rn">8</span><span class="rt">Interactive GSLTs, and the Site of Interaction</span></a><a class="rail-ch" href="09-continued-interactive-gslts.html"><span class="rn">9</span><span class="rt">Continued Interactive GSLTs</span></a><a class="rail-ch" href="10-the-category-of-gslts.html"><span class="rn">10</span><span class="rt">The Category of GSLTs</span></a><a class="rail-ch" href="11-the-cost-monad.html"><span class="rn">11</span><span class="rt">The Cost Monad</span></a><a class="rail-ch" href="12-the-history-monad.html"><span class="rn">12</span><span class="rt">The History Monad</span></a><a class="rail-ch" href="13-weighting-rates-from-the-generated-logic.html"><span class="rn">13</span><span class="rt">Weighting: Rates from the Generated Logic</span></a><a class="rail-ch" href="14-cost-accounted-rho.html"><span class="rn">14</span><span class="rt">Cost-Accounted Rho</span></a><a class="rail-ch" href="15-conversion-enzymes-and-the-virtual-token.html"><span class="rn">15</span><span class="rt">Conversion, Enzymes, and the Virtual Token</span></a><a class="rail-ch" href="16-the-labeled-transition-system-and-context-deco.html"><span class="rn">16</span><span class="rt">The Labeled Transition System and Context-Decorated HML</span></a><a class="rail-ch" href="17-what-goes-into-a-logic.html"><span class="rn">17</span><span class="rt">What Goes Into a Logic</span></a><a class="rail-ch" href="18-scopes-and-the-fixed-points-that-generate-them.html"><span class="rn">18</span><span class="rt">Scopes, and the Fixed Points that Generate Them</span></a><a class="rail-ch" href="19-generating-type-systems-oslf-and-the-hypercube.html"><span class="rn">19</span><span class="rt">Generating Type Systems: OSLF and the Hypercube</span></a><a class="rail-ch" href="20-instruments-making-structure-visible-to-bisimu.html"><span class="rn">20</span><span class="rt">Instruments: Making Structure Visible to Bisimulation</span></a><h3 class="rail-part">Ecology as Cognitive Architecture</h3><a class="rail-ch" href="21-the-mortal-scientist.html"><span class="rn">21</span><span class="rt">The Mortal Scientist</span></a><a class="rail-ch" href="22-learning-to-play.html"><span class="rn">22</span><span class="rt">Learning to Play</span></a><a class="rail-ch" href="23-composing-learners.html"><span class="rn">23</span><span class="rt">Composing Learners</span></a><a class="rail-ch" href="24-enzymes-and-individuals.html"><span class="rn">24</span><span class="rt">Enzymes and Individuals</span></a><a class="rail-ch" href="25-a-network-that-learns-by-rewriting.html"><span class="rn">25</span><span class="rt">A Network That Learns by Rewriting</span></a><h3 class="rail-part">Suffering: Homeostasis and the Learner&#x27;s Own Account</h3><a class="rail-ch" href="26-suffering-a-learner-s-view-of-its-own-account.html"><span class="rn">26</span><span class="rt">Suffering: A Learner’s View of Its Own Account</span></a><h3 class="rail-part">Situating the Learner: A Variety of Possible Physics</h3><a class="rail-ch" href="27-the-learner-s-world-already-has-a-physics.html"><span class="rn">27</span><span class="rt">The Learner’s World Already Has a Physics</span></a><a class="rail-ch" href="28-the-reversibility-construction.html"><span class="rn">28</span><span class="rt">The Reversibility Construction</span></a><a class="rail-ch" href="29-causal-structure-and-time.html"><span class="rn">29</span><span class="rt">Causal Structure and Time</span></a><a class="rail-ch" href="30-decoration-one-map-many-semirings.html"><span class="rn">30</span><span class="rt">Decoration: One Map, Many Semirings</span></a><a class="rail-ch" href="31-conservation-and-what-it-costs-to-have-it.html"><span class="rn">31</span><span class="rt">Conservation, and What It Costs to Have It</span></a><a class="rail-ch" href="32-extended-modal-operators.html"><span class="rn">32</span><span class="rt">Extended Modal Operators</span></a><a class="rail-ch" href="33-complex-amplitudes-and-where-the-coherence-is.html"><span class="rn">33</span><span class="rt">Complex Amplitudes, and Where the Coherence Is</span></a><a class="rail-ch" href="34-synthesis-the-full-structure.html"><span class="rn">34</span><span class="rt">Synthesis: The Full Structure</span></a><a class="rail-ch" href="35-entropy-and-the-cost-of-staying-level.html"><span class="rn">35</span><span class="rt">Entropy, and the Cost of Staying Level</span></a><a class="rail-ch" href="36-discussion-and-future-directions.html"><span class="rn">36</span><span class="rt">Discussion and Future Directions</span></a><h3 class="rail-part">Why Scientists Get Misled: Emergent Ontology in Massive Agent Populations</h3><a class="rail-ch" href="37-introduction.html"><span class="rn">37</span><span class="rt">Introduction</span></a><a class="rail-ch" href="38-ontological-isolation.html"><span class="rn">38</span><span class="rt">Ontological Isolation</span></a><a class="rail-ch" href="39-agents-and-the-scientific-method.html"><span class="rn">39</span><span class="rt">Agents and the Scientific Method</span></a><a class="rail-ch" href="40-behavioral-primes.html"><span class="rn">40</span><span class="rt">Behavioral Primes</span></a><a class="rail-ch" href="41-massive-populations-and-communication-degradat.html"><span class="rn">41</span><span class="rt">Massive Populations and Communication Degradation</span></a><a class="rail-ch" href="42-the-logical-topology-and-compactness.html"><span class="rn">42</span><span class="rt">The Logical Topology and Compactness</span></a><a class="rail-ch" href="43-coherence-clusters-and-their-nerve.html"><span class="rn">43</span><span class="rt">Coherence Clusters and Their Nerve</span></a><a class="rail-ch" href="44-the-apparent-ontology.html"><span class="rn">44</span><span class="rt">The Apparent Ontology</span></a><a class="rail-ch" href="45-open-gaps-and-future-work.html"><span class="rn">45</span><span class="rt">Open Gaps and Future Work</span></a><a class="rail-ch" href="46-discussion.html"><span class="rn">46</span><span class="rt">Discussion</span></a><h3 class="rail-part">Origins of Life: Assembly Theory, Phase Transitions, and Replication</h3><a class="rail-ch" href="47-introduction.html"><span class="rn">47</span><span class="rt">Introduction</span></a><a class="rail-ch" href="48-assembly-theory-causal-depth-and-copy-number.html"><span class="rn">48</span><span class="rt">Assembly Theory: Causal Depth and Copy Number</span></a><a class="rail-ch" href="49-replication-as-a-fixed-point.html"><span class="rn">49</span><span class="rt">Replication as a Fixed Point</span></a><a class="rail-ch" href="50-smith-s-phase-transition-and-the-density-of-at.html"><span class="rn">50</span><span class="rt">Smith’s Phase Transition and the Density of Attractors</span></a><a class="rail-ch" href="51-metabolism-energy-gradients-and-the-ecosystem.html"><span class="rn">51</span><span class="rt">Metabolism, Energy Gradients, and the Ecosystem</span></a><a class="rail-ch" href="52-assembly-index-and-the-depth-of-the-fractal-le.html"><span class="rn">52</span><span class="rt">Assembly Index and the Depth of the Fractal Learner</span></a><a class="rail-ch" href="53-scope-and-manufacture.html"><span class="rn">53</span><span class="rt">Scope and Manufacture</span></a><a class="rail-ch" href="54-open-gaps.html"><span class="rn">54</span><span class="rt">Open Gaps</span></a><a class="rail-ch" href="55-discussion.html"><span class="rn">55</span><span class="rt">Discussion</span></a><h3 class="rail-part">Conclusion</h3><a class="rail-ch" href="what-has-been-built.html"><span class="rn rn-i">⁂</span><span class="rt">What Has Been Built</span></a><a class="rail-ch" href="a-view-from-inside-the-framework.html"><span class="rn rn-i">⁂</span><span class="rt">A View from Inside the Framework</span></a><a class="rail-ch" href="what-remains-to-be-done.html"><span class="rn rn-i">⁂</span><span class="rt">What Remains to Be Done</span></a><h2 class="rail-act">The Prestige</h2><a class="rail-ch" href="begotten.html"><span class="rn rn-i">⁂</span><span class="rt">begotten not made</span></a><h3 class="rail-part">The Method, and What It Left Out</h3><a class="rail-ch" href="56-how-the-trick-was-done.html"><span class="rn">56</span><span class="rt">How the Trick Was Done</span></a><a class="rail-ch" href="57-everything-so-far-was-turing-complete.html"><span class="rn">57</span><span class="rt">Everything So Far Was Turing Complete</span></a><a class="rail-ch" href="58-the-tower-of-oracle-extensions.html"><span class="rn">58</span><span class="rt">The Tower of Oracle Extensions</span></a><a class="rail-ch" href="59-not-every-cut-is-an-aperture.html"><span class="rn">59</span><span class="rt">Not Every Cut Is an Aperture</span></a><a class="rail-ch" href="60-where-does-agency-live.html"><span class="rn">60</span><span class="rt">Where Does Agency Live?</span></a><a class="rail-ch" href="61-choice-principles-are-the-types-schedulers-are.html"><span class="rn">61</span><span class="rt">Choice Principles are the Types; Schedulers are the Terms</span></a><a class="rail-ch" href="62-consciousness-and-the-world-it-comes-with.html"><span class="rn">62</span><span class="rt">Consciousness, and the World It Comes With</span></a><a class="rail-ch" href="63-what-these-chapters-owe.html"><span class="rn">63</span><span class="rt">What These Chapters Owe</span></a><h3 class="rail-part">Reference, Simulation, Reception, and a Future Metaphysics</h3><a class="rail-ch" aria-current="page" href="64-what-a-symbol-system-would-have-to-be.html"><span class="rn">64</span><span class="rt">What a Symbol System Would Have to Be</span></a><a class="rail-ch" href="65-if-this-is-a-simulation-which-kind.html"><span class="rn">65</span><span class="rt">If This Is a Simulation, Which Kind</span></a><a class="rail-ch" href="66-what-it-is-like-to-be-a-bot.html"><span class="rn">66</span><span class="rt">What It Is Like to Be a Bot</span></a><a class="rail-ch" href="67-how-life-like-is-life-like-enough.html"><span class="rn">67</span><span class="rt">How Life-Like Is Life-Like Enough?</span></a><a class="rail-ch" href="68-any-future-metaphysics.html"><span class="rn">68</span><span class="rt">Any Future Metaphysics</span></a><a class="rail-ch" href="right-sizing.html"><span class="rn rn-i">⁂</span><span class="rt">Right-Sizing</span></a></div></nav>
+<main id="main" class="text ">
+<header class="chead"><p class="kicker">Chapter 64</p><h1>What a Symbol System Would Have to Be</h1></header>
+<p>Chapter <a class="xref" href="56-how-the-trick-was-done.html#top" data-ref="ch:trick">56</a> showed the method and named the price.
+This chapter is the price list.</p>
+<p>It is the most technical chapter in the Prestige, and it is
+technical on purpose.
+The Turn spent three hundred pages establishing that a Kantian
+conclusion with a ledger attached is a claim, and that the same
+conclusion without one is a posture.
+Having just conceded that the book’s grounding was analytic rather
+than earned, the least i can do is be specific about what earning
+it would involve.</p>
+<p>The chapter has four movements.
+What a symbol system <em>is</em>, which turns out to be a prior
+question nobody in the grounding literature answers
+(Section <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#sec-64-1" data-ref="sec:goodman">64.1</a>).
+Where the machinery already in hand meets that account and where it
+falls short (Section <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#sec-64-2" data-ref="sec:bisim">64.2</a>).
+What a budget buys, which turns out to be the deepest of three
+instances of one move that Chapter <a class="xref" href="68-any-future-metaphysics.html#top" data-ref="ch:kant">68</a> will gather
+(Section <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#sec-64-3" data-ref="sec:budget">64.3</a>).
+And a construction — \(\RHO[\Bee]\), the calculus-making functor
+— which organizes several of the conditions attractively, lands
+on a category the Turn already built, and then fails, for a reason
+i will make as sharp as i can (Sections <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#sec-64-4" data-ref="sec:rho-builtins">64.4</a>
+to <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#sec-64-6" data-ref="sec:notasolution">64.6</a>).</p>
+<h2 id="sec-64-1"><span class="secnum">64.1</span> The prior question</h2>
+<p>The reference bootstrap problem asks us to construct a symbol
+system.
+It is therefore prior to ask what one is.</p>
+<p>The literature is remarkably thin on this.
+Symbol grounding work generally treats <em>symbol</em> as understood
+and asks how to attach it to sensors.
+Representation learning treats discreteness as an architectural
+choice, to be imposed with a quantizer where convenient.
+Emergent communication treats a symbol as whatever the channel
+happens to carry.
+None of these supplies a criterion by which a proposed system could
+be judged <em>inadequate</em>, which is what one needs if the
+construction is to be a construction rather than a hope.</p>
+<p>Goodman’s <em>Languages of Art</em> does supply one
+[<a class="cite" href="bibliography.html#bib-goodman1968" data-cite="goodman1968">141</a>].
+It offers a set of conditions distinguishing notational systems
+from other symbol systems, developed for the score / performance
+relation in music and dance and generalized from there.
+i adopt it provisionally — provisionally because it has known
+failure modes, taken up in Section <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#sec-64-1-3" data-ref="sec:failures">64.1.3</a>, and because
+adopting it is a bet that its conditions are the right ones rather
+than merely the first ones available.
+The one prior attempt to put the theory to computational work is
+Goel’s, which derives from notationality a class of physical
+notational systems and argues that these are exactly the dynamical
+systems capable of realizing computational information processing
+[<a class="cite" href="bibliography.html#bib-goel1991" data-cite="goel1991">140</a>].
+That work predates everything in the current setting and has not
+been revisited for learned representations.
+So far as i can determine it is the whole of the prior art, which
+is itself a small scandal.</p>
+<h3 id="sec-64-1-1"><span class="secnum">64.1.1</span> The conditions</h3>
+<p>Goodman distinguishes <em>marks</em> (physical inscriptions or
+utterances), <em>characters</em> (classes of marks that count as the
+same), and <em>compliants</em> (the things a character applies to,
+its compliance class).
+A score is a character.
+A performance is a compliant.</p>
+<p>A <em>notational scheme</em> satisfies two syntactic conditions.</p>
+<section class="thm plain thm-condition" id="condition-64-1" data-kind="Condition" data-num="64.1"><header><span class="thm-kind">Condition 64.1</span> <span class="thm-name">Syntactic disjointness</span><a class="permalink" href="#condition-64-1" aria-label="Link to Condition 64.1">¶</a></header><p>
+No mark belongs to more than one character.</p></section>
+<section class="thm plain thm-condition" id="condition-64-2" data-kind="Condition" data-num="64.2"><header><span class="thm-kind">Condition 64.2</span> <span class="thm-name">Syntactic finite differentiation</span><a class="permalink" href="#condition-64-2" aria-label="Link to Condition 64.2">¶</a></header><p>
+For any two characters \(K \neq K'\) and any mark \(m\) not belonging
+to both, it is theoretically possible to determine that \(m\) does
+not belong to \(K\), or that it does not belong to \(K'\).</p></section>
+<p>
+A <em>notational system</em> is a scheme satisfying three further
+semantic conditions.</p>
+<section class="thm plain thm-condition" id="condition-64-3" data-kind="Condition" data-num="64.3"><header><span class="thm-kind">Condition 64.3</span> <span class="thm-name">Unambiguity</span><a class="permalink" href="#condition-64-3" aria-label="Link to Condition 64.3">¶</a></header><p>
+Each character has a single compliance class: not different
+compliants at different times or in different contexts.</p></section>
+<section class="thm plain thm-condition" id="condition-64-4" data-kind="Condition" data-num="64.4"><header><span class="thm-kind">Condition 64.4</span> <span class="thm-name">Semantic disjointness</span><a class="permalink" href="#condition-64-4" aria-label="Link to Condition 64.4">¶</a></header><p>
+No two characters share a compliant.</p></section>
+<section class="thm plain thm-condition" id="condition-64-5" data-kind="Condition" data-num="64.5"><header><span class="thm-kind">Condition 64.5</span> <span class="thm-name">Semantic finite differentiation</span><a class="permalink" href="#condition-64-5" aria-label="Link to Condition 64.5">¶</a></header><p>
+The analogue of Condition <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-2" data-ref="cond:sfd">64.2</a> on the compliance side.</p></section>
+<p>
+The two finite-differentiation conditions are what exclude
+<em>dense</em> systems.
+A system whose characters are ordered so that between any two there
+is a third fails Condition <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-2" data-ref="cond:sfd">64.2</a>, and this is Goodman’s
+account of the difference between a score and a sketch, or between
+the digital and the analogue.</p>
+<h3 id="sec-64-1-2"><span class="secnum">64.1.2</span> The roundtrip is derived, not primitive</h3>
+<p>It is natural — and it was my own first reading — to take the
+criterion of adequacy to be losslessness of the roundtrip: from
+score to performance and back by transcription, and from
+performance to score and back, without loss of identity.
+That is indeed the property Goodman is after and it is the property
+that matters here.
+But it is a <em>consequence</em> of
+Conditions <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-1" data-ref="cond:sd">64.1</a>–<a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-5" data-ref="cond:semfd">64.5</a> rather than an
+additional stipulation, and the distinction is load-bearing.
+The roundtrip tells you when you have succeeded.
+The five conditions tell you what to check, and they decompose the
+requirement into parts that turn out to have very different
+relationships to the machinery this book has built.</p>
+<section class="thm remarkish thm-remark" id="remark-64-1" data-kind="Remark" data-num="64.1"><header><span class="thm-kind">Remark 64.1</span> <span class="thm-name">What the framework does and does not do</span><a class="permalink" href="#remark-64-1" aria-label="Link to Remark 64.1">¶</a></header><p>
+Goodman’s conditions are conditions on a symbol <em>system</em>: a
+scheme together with a compliance relation.
+They presuppose the compliance relation as given and adjudicate
+whether it is notational.
+They therefore cannot <em>select</em> a compliance relation, and they
+are invariant under relabeling: if \(\Sigma\) is a notational system
+and \(\phi\) a bijection on characters, then \(\phi(\Sigma)\) is a
+notational system with the same compliance classes differently
+named.
+Goodman’s framework says what a solution to the reference bootstrap
+problem would look like.
+It cannot by itself produce one.</p></section>
+<p>
+Remark <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#remark-64-1" data-ref="rem:invariance">64.1</a> is why adopting Goodman is half the
+battle rather than progress on the bootstrap problem proper.
+It is also the formal seed of Observation <a class="xref" href="56-how-the-trick-was-done.html#observation-56-6" data-ref="obs:social">56.6</a>: a
+framework invariant under relabeling cannot fix reference, and
+this one is invariant by construction.</p>
+<h3 id="sec-64-1-3"><span class="secnum">64.1.3</span> Failure modes, and provisional repairs</h3>
+<h5 id="p-4">The wrong-note paradox.</h5>
+<p>Goodman’s compliance relation is exact.
+A performance containing a single wrong note is not a performance
+of the work.
+Since performances without wrong notes are essentially never found,
+the theory as stated has no instances in musical practice.
+This is the standard objection and it is a real one.
+i record the shape of the repair now and return to it in
+Section <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#sec-64-3" data-ref="sec:budget">64.3</a>: exactness should be relativized to a
+resource bound, so that two performances are the same performance
+when no affordable observation separates them.
+That is not an evasion, because in a cost-accounted setting
+“affordable” is a defined quantity rather than a gesture, and the
+move converts an absolute condition into a family of conditions
+indexed by budget.</p>
+<h5 id="p-5">Density is a property of the world, not only of the notation.</h5>
+<p>Finite differentiation can fail because the notation is badly
+designed, or because the phenomenon being notated is dense and no
+notation of it could succeed.
+Goodman does not clearly separate these, and for our purposes the
+separation is essential: we need to know whether a failure to
+notate is a failure of the agent or a fact about the environment.
+Question <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#question-64-2" data-ref="q:density">64.2</a> states this as an open problem, and it is
+the one on the list i would most like answered.</p>
+<h5 id="p-6">The ontological commitments are separable.</h5>
+<p>Goodman’s theory of notation comes attached to strong claims about
+the identity of works of art.
+Recent work in aesthetics argues that the notational apparatus
+survives being detached from those commitments and reinterpreted
+epistemically [<a class="cite" href="bibliography.html#bib-estetika2026" data-cite="estetika2026">137</a>].
+i take that detachment for granted.</p>
+<h2 id="sec-64-2"><span class="secnum">64.2</span> Where the machinery meets it, and where it does not</h2>
+<h3 id="sec-64-2-1"><span class="secnum">64.2.1</span> The two bisimulations</h3>
+<p>The natural translation of the roundtrip requirement into
+process-calculus vocabulary is a pair of bisimulations.
+Write \(\mathcal{S}\) for the space of scores, \(\mathcal{P}\) for the
+space of performances, \(\sem{-} : \mathcal{S} \to
+\pop(\mathcal{P})\) for the compliance map taking a score to its
+compliance class, and \(\tau : \mathcal{P} \to \mathcal{S}\) for
+transcription.
+The requirement is that
+<span class="math-d">\[\begin{align}
+p \bisim_{\mathcal{P}} p' &\iff \tau(p) \bisim_{\mathcal{S}} \tau(p') \label{eq:rt1}\\
+s \bisim_{\mathcal{S}} s' &\iff \sem{s} = \sem{s'} \label{eq:rt2}
+\end{align}\]</span>
+with \(\bisim_{\mathcal{P}}\) and \(\bisim_{\mathcal{S}}\) the
+respective behavioral equivalences.
+Read one way this says the two kernels agree; read another, that
+\(\tau\) and \(\sem{-}\) are mutually inverse on the quotients.</p>
+<h3 id="sec-64-2-2"><span class="secnum">64.2.2</span> What bisimulation supplies</h3>
+<p>Conditions <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-1" data-ref="cond:sd">64.1</a>, <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-3" data-ref="cond:ua">64.3</a> and <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-4" data-ref="cond:semd">64.4</a> are
+<em>quotient</em> conditions and fall out of
+<a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#eq-eq-rt1" data-ref="eq:rt1">(64.1)</a>–<a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#eq-eq-rt2" data-ref="eq:rt2">(64.2)</a> directly.
+Syntactic disjointness says the character map is a function on
+marks, which is what it means for \(\bisim_{\mathcal{S}}\) to be an
+equivalence.
+Unambiguity says the compliance class of a character does not vary,
+which is the statement that \(\sem{-}\) is well defined on
+\(\bisim_{\mathcal{S}}\)-classes.
+Semantic disjointness says compliance classes partition, which is
+<a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#eq-eq-rt2" data-ref="eq:rt2">(64.2)</a> read as injectivity on the quotient.</p>
+<p>This is a good fit, and it is why the translation is worth making
+at all.
+Bisimulation is the mathematically mature version of <em>same
+behavior</em>, it comes with coinductive proof methods, and in the
+reflective setting it is the equivalence the namespace logic
+already denotes.</p>
+<h3 id="sec-64-2-3"><span class="secnum">64.2.3</span> Where Goodman adds</h3>
+<p>Conditions <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-2" data-ref="cond:sfd">64.2</a> and <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-5" data-ref="cond:semfd">64.5</a> are not quotient
+conditions, and bisimulation does not supply them.</p>
+<section class="thm remarkish thm-observation" id="observation-64-1" data-kind="Observation" data-num="64.1"><header><span class="thm-kind">Observation 64.1</span> <span class="thm-name">Separation is not quotient</span><a class="permalink" href="#observation-64-1" aria-label="Link to Observation 64.1">¶</a></header><p>
+Finite differentiation is a <em>separation</em> condition: it
+requires not merely that distinct characters be distinct, but that
+their distinctness be effectively determinable from a mark.
+A bisimulation quotient can be perfectly well defined over a dense
+space, in which case every pair of distinct classes is
+distinguishable in the limit and no pair is distinguishable by any
+finite observation.
+Such a system satisfies <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#eq-eq-rt1" data-ref="eq:rt1">(64.1)</a>–<a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#eq-eq-rt2" data-ref="eq:rt2">(64.2)</a> and fails
+Condition <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-2" data-ref="cond:sfd">64.2</a>.</p></section>
+<p>
+That is the precise content of the claim that Goodman is compatible
+with the bisimulation approach and adds strictly more.
+What he adds is an effectivity requirement that process
+equivalence, being defined by a greatest fixed point, is
+systematically silent about.</p>
+<p>And the point is not academic.
+It is exactly where the neural implementations fail, and they fail
+there without the vocabulary to say so.</p>
+<h5 id="p-11">LatPlan and the symbol stability problem.</h5>
+<p>LatPlan learns propositional and action symbols from unlabeled
+image pairs and plans in the resulting latent space
+[<a class="cite" href="bibliography.html#bib-asai2018" data-cite="asai2018">130</a>].
+Asai and Kajino subsequently identified what they named the
+<em>symbol stability problem</em>: the propositions produced by the
+state autoencoder behave stochastically, so the same input does not
+reliably produce the same proposition [<a class="cite" href="bibliography.html#bib-asai2019" data-cite="asai2019">131</a>].
+In Goodman’s vocabulary this is a failure of
+Condition <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-2" data-ref="cond:sfd">64.2</a> — one mark, no effective determination
+of which character it belongs to — discovered empirically, by
+people who ran into it as an obstacle to making a learned symbol
+system behave like a symbol system.</p>
+<h5 id="p-12">Vector quantization as a fix for one condition only.</h5>
+<p>The VQ-VAE bottleneck assigns continuous latents to a codebook by
+nearest neighbor [<a class="cite" href="bibliography.html#bib-oord2017" data-cite="oord2017">145</a>].
+This imposes syntactic disjointness and a separation margin by
+construction: read through Goodman, it is an engineering solution
+to Conditions <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-1" data-ref="cond:sd">64.1</a> and <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-2" data-ref="cond:sfd">64.2</a> and to nothing else.
+It says nothing about the compliance side, which is why
+quantization alone does not produce symbols that mean anything.
+The subsequent literature’s efforts to make the codes “semantic”
+by additional training objectives are attempts to buy
+Conditions <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-3" data-ref="cond:ua">64.3</a>–<a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-5" data-ref="cond:semfd">64.5</a> that do not know that is
+what they are doing.</p>
+<h3 id="sec-64-2-4"><span class="secnum">64.2.4</span> Why bisimulation metrics are the wrong repair</h3>
+<p>The reinforcement-learning literature has independently encountered
+the rigidity of exact bisimulation and responded with quantitative
+relaxations: bisimulation metrics [<a class="cite" href="bibliography.html#bib-ferns2004" data-cite="ferns2004">138</a>] and their
+scalable descendants [<a class="cite" href="bibliography.html#bib-gelada2019" data-cite="gelada2019">139</a>, <a class="cite" href="bibliography.html#bib-zhang2021" data-cite="zhang2021">152</a>, <a class="cite" href="bibliography.html#bib-castro2021" data-cite="castro2021">136</a>].
+These are the correct response to the wrong-note paradox in that
+setting and the wrong response here.</p>
+<section class="thm remarkish thm-observation" id="observation-64-2" data-kind="Observation" data-num="64.2"><header><span class="thm-kind">Observation 64.2</span> <span class="thm-name">The metric smooths what notation needs separated</span><a class="permalink" href="#observation-64-2" aria-label="Link to Observation 64.2">¶</a></header><p>
+A bisimulation metric replaces the equivalence with a distance and
+the quotient with a geometry.
+It thereby dissolves precisely the discreteness that
+Conditions <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-2" data-ref="cond:sfd">64.2</a> and <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-5" data-ref="cond:semfd">64.5</a> require.
+A representation shaped by a bisimulation metric is, in Goodman’s
+classification, closer to a sketch than to a score.</p></section>
+<p>
+The tension is genuine and not merely terminological.
+One cannot have a symbol system and a smooth behavioral geometry
+at the same level of description.
+What one can have is a discrete system whose <em>admissible
+discriminations</em> are set by a resource bound.</p>
+<h2 id="sec-64-3"><span class="secnum">64.3</span> What a budget buys</h2>
+<p>There is a move this book makes repeatedly and has not yet named.
+Something is put out of an agent’s reach; one asks whether the
+barrier is a matter of logic or of money; and the answer keeps
+coming back <em>money</em>.
+It has appeared twice already.
+Hennessy–Milner adequacy characterizes a bisimulation class
+positively, by formulae of the agent’s own logic, and says nothing
+whatever about whether the separating formula can be afforded —
+so what an agent cannot distinguish, it usually cannot distinguish
+for want of funds rather than for want of concepts.
+And Chapter <a class="xref" href="53-scope-and-manufacture.html#top" data-ref="sec:scope-manufacture">53</a> shows that a learner does
+not merely fail to see the distinctions it cannot afford; it fails
+to see that they are there, and reports a world with fewer kinds in
+it than the world has.</p>
+<p>Here is the third instance, and it is the one that bites hardest,
+because it is about which marks are the same mark.
+Chapter <a class="xref" href="68-any-future-metaphysics.html#top" data-ref="ch:kant">68</a> collects all three and argues that what they
+amount to is Kant’s thing-in-itself surviving translation into
+computation as an economic fact rather than a logical one.
+i mention that now so the reader can see where this is going; the
+argument for it is that chapter’s, not mine here.</p>
+<p>The mortal-scientist framework already prices observation.
+Assays cost.
+Refutation is budget-relative.
+A verdict may be \(\bot\) because the budget ran out rather than
+because the world was silent.
+That is exactly the ingredient Observation <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#observation-64-1" data-ref="obs:sep">64.1</a> says is
+missing.</p>
+<section class="thm plain thm-conjecture" id="conjecture-64-1" data-kind="Conjecture" data-num="64.1"><header><span class="thm-kind">Conjecture 64.1</span> <span class="thm-name">Finite differentiation as a theorem</span><a class="permalink" href="#conjecture-64-1" aria-label="Link to Conjecture 64.1">¶</a></header><p>
+In a cost-accounted setting with budget \(\sigma\), define
+\(x \bisim^{\sigma} y\) to hold when no assay affordable at \(\sigma\)
+separates \(x\) from \(y\).
+Then the quotient by \(\bisim^{\sigma}\) satisfies
+Conditions <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-2" data-ref="cond:sfd">64.2</a> and <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-5" data-ref="cond:semfd">64.5</a> with the budget as
+the separation constant, and the resulting family
+\(\{\Qs\}_{\sigma}\) is a filtered diagram of notational schemes
+refining as \(\sigma\) grows.</p></section>
+<p>
+i state this as a conjecture rather than a proposition because two
+things are unverified.
+First, that \(\bisim^{\sigma}\) is transitive: affordability is not
+obviously composable, and a chain of pairwise-indistinguishable
+states may have distinguishable endpoints, which is the standard
+failure of relations of the form “indistinguishable by a bounded
+observer”.
+Second, that the cost-accounting monad interacts correctly with the
+extension of Section <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#sec-64-4" data-ref="sec:rho-builtins">64.4</a>; see
+Question <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#question-64-5" data-ref="q:monad">64.5</a>.
+If the first fails, the repair is to take the transitive closure
+and accept a coarser scheme, at the price of the separation
+constant no longer being \(\sigma\).</p>
+<p>Should Conjecture <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#conjecture-64-1" data-ref="conj:fd">64.1</a> hold, the reading is worth having.
+<em>A poorer agent has a coarser notation.</em>
+Notational adequacy becomes a purchasable property rather than a
+binary one, the wrong-note paradox is resolved by making exactness
+relative to what can be afforded rather than by abandoning it, and
+the whole of Goodman’s digital / analogue distinction becomes a
+statement about budgets rather than about the metaphysics of
+inscription.
+That is the same move as the other two, applied one level further
+down, to the question of what counts as a symbol at all — and it
+has the same consequence, which is that a wall turns into a
+frontier and the frontier has a price on it.</p>
+<h2 id="sec-64-4"><span class="secnum">64.4</span> Reflection is score construction, not performance</h2>
+<p>We now have a criterion and no way of satisfying it.
+What follows is an attempt to see how far the machinery of this
+book can be pushed toward satisfying it, carried as far as it will
+go and then stopped.
+It is offered as an analogy.
+Section <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#sec-64-6" data-ref="sec:notasolution">64.6</a> argues, at some length and against
+my own construction, why it is not more than that.</p>
+<p>The reflective higher-order calculus takes names to be quoted
+processes [<a class="cite" href="bibliography.html#bib-meredith2005rho" data-cite="meredith2005rho">1</a>].
+For a process \(P\), \(\quo{P}\) is a name; for a name \(x\), \(*x\) is a
+process; and \(*\quo{P} = P\), \(\quo{*x} = x\).
+Quotation and dereference are mutually inverse.</p>
+<p>It is tempting — and i made this mistake before correcting it —
+to read that immediately as the score / performance relation, with
+Goodman’s roundtrip holding by construction.
+It is not, and seeing why is what makes the rest of this section
+follow rather than intrude.</p>
+<p>In pure \(\rhoc\), both sides of \(\quo{-}\) and \(*\) are syntax.
+\(P\) is a term; \(\quo{P}\) is a term-code; \(*\quo{P}\) is the same
+term again.
+Nothing here is a performance.
+What the operators do is build scores out of scores: quotation lets
+a score be embedded in another score as an atom, and dereference
+recovers it.
+The construction is <em>recursive score construction</em>, and its
+losslessness is the statement that the recursion is faithful —
+that no information is lost by descending a level and climbing back
+up.
+That is a genuine and useful property.
+It is also a property internal to the notation.
+A notational system all of whose compliants are further
+inscriptions is precisely the case Goodman analyses under the
+heading of scripts that denote other scripts, and it is not yet a
+system that says anything about a world.</p>
+<section class="thm remarkish thm-observation" id="observation-64-3" data-kind="Observation" data-num="64.3"><header><span class="thm-kind">Observation 64.3</span> <span class="thm-name">Two readings of \(\quo{-}\) and \(*\)</span><a class="permalink" href="#observation-64-3" aria-label="Link to Observation 64.3">¶</a></header><p>
+In \(\rhoc = \RHO[\varnothing]\), \(\quo{-}\) and \(*\) are
+score-to-score: they witness the faithfulness of a recursion inside
+the notation, and there is no performance in the picture.
+The compliance relation is trivial, in the sense that every
+character complies with syntax.</p></section>
+<h3 id="sec-64-4-1"><span class="secnum">64.4.1</span> Builtins turn the recursion into a correspondence</h3>
+<p>Now adjoin a builtin process \(b\) drawn from the host world.
+The syntax of quotation does not change: \(\quo{b}\) is formed
+exactly as \(\quo{P}\) is.
+Its semantics changes completely, because \(b\) is not a term of the
+calculus.
+It is a behavior in the world the computation is embedded in.</p>
+<p>At that point, and only at that point, \(\quo{b}\) is a score and \(b\)
+is a performance in Goodman’s sense.
+\(\quo{b}\) is a static, inspectable, transmissible mark that can be
+handled by the calculus’s own machinery — sent on channels,
+pattern-matched, quantified over in the namespace logic — while
+the thing it codes is an event elsewhere, running under laws the
+calculus does not supply.
+Dereference \(*\quo{b}\) is then not a syntactic identity but a
+performance instruction: produce, in the host world, something
+indistinguishable from \(b\).</p>
+<section class="thm remarkish thm-observation" id="observation-64-4" data-kind="Observation" data-num="64.4"><header><span class="thm-kind">Observation 64.4</span> <span class="thm-name">Where the correspondence enters</span><a class="permalink" href="#observation-64-4" aria-label="Link to Observation 64.4">¶</a></header><p>
+Adjoining builtins does not add a new operator.
+It re-types the existing one.
+The same \(\quo{-}\) that was recursive score construction over
+\(\rhoc\)-terms becomes, on the builtin sort, a score / performance
+correspondence; and the same \(*\) that was syntactic recovery
+becomes performance.
+Goodman’s roundtrip requirement therefore attaches to \(\rhoc\) at
+exactly the point where the calculus is extended by the world, and
+nowhere else.</p></section>
+<p>
+This is why the extension is the interesting object and the pure
+calculus is not.
+In \(\RHO[\varnothing]\) there is nothing to ground and the roundtrip
+is a tautology — which is Observation <a class="xref" href="56-how-the-trick-was-done.html#observation-56-1" data-ref="obs:sidestep">56.1</a> again,
+arrived at from the side of the notation rather than from the side
+of the ontology.</p>
+<h3 id="sec-64-4-2"><span class="secnum">64.4.2</span> Two ways to adjoin the world</h3>
+<p>There are two ways to perform the extension, and
+Observation <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#observation-64-4" data-ref="obs:enters">64.4</a> explains why only one of them does the
+job.</p>
+<h5 id="p-18">Builtin names.</h5>
+<p>Adjoin name constants beyond \(\quo{\nil}\), understood as channels
+to the host world.
+This gives an interface but no theory of what is on the other end:
+the calculus can send and receive, and has nothing to say about the
+behavior it is interacting with.
+It is the applied-\(\pi\) move [<a class="cite" href="bibliography.html#bib-abadi2001" data-cite="abadi2001">129</a>], where a term algebra
+of data is adjoined and the added material is inert with respect to
+the operational semantics.
+Crucially it does <em>not</em> re-type \(\quo{-}\): an adjoined name is
+a name, not the quotation of anything, so there is no performance
+for it to be the score of, and Observation <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#observation-64-3" data-ref="obs:tworeadings">64.3</a>
+still applies.
+The roundtrip stays inside the notation.</p>
+<h5 id="p-19">Builtin processes.</h5>
+<p>Adjoin processes \(b\) drawn from the host world.
+Then \(\quo{b}\) is a symbol <em>for</em> \(b\), and \(*\quo{b}\) is a
+process in the host world indistinguishable from \(b\).
+This is the version that does the work, for the reason just given:
+it is the only one of the two under which quotation acquires a
+compliance class outside the syntax.</p>
+<section class="thm remarkish thm-remark" id="remark-64-2" data-kind="Remark" data-num="64.2"><header><span class="thm-kind">Remark 64.2</span> <span class="thm-name">This is not psi-calculi</span><a class="permalink" href="#remark-64-2" aria-label="Link to Remark 64.2">¶</a></header><p>
+The psi-calculi framework parameterizes \(\pi\)-like calculi by
+nominal datatypes for terms, conditions and assertions, together
+with a channel-equivalence relation, a composition, a unit and an
+entailment relation, and subsumes applied \(\pi\), spi, fusion and
+concurrent constraint \(\pi\) as instances [<a class="cite" href="bibliography.html#bib-bengtson2011" data-cite="bengtson2011">134</a>].
+The adjoined material there is <em>data</em>: inert under the
+operational semantics, transmitted but not run.
+Adjoining builtin <em>processes</em> is a different move, because the
+adjoined objects have their own dynamics and the calculus ceases to
+be closed — part of the reduction relation is delegated to the
+host.
+Readers who know psi-calculi will otherwise assume this is an
+instance of it.</p></section>
+<h2 id="sec-64-5"><span class="secnum">64.5</span> The calculus-making functor, and a category we already have</h2>
+<p>The natural way to organize this is to stop thinking of \(\rhoc\) as
+a calculus and start thinking of it as a functor from behaviors to
+calculi:
+<span class="math-d">\[\RHO[\Bee] ::= \nil \mid \Bee \mid \inn{y}{x}{P} \mid \out{x}{Q}
+\mid P \Par Q \mid *x,
+\qquad x, y ::= \quo{P}\]</span>
+with the usual equations and rewrites, and with \(\Bee\)’s behavior
+specified in a source category \(\Cat\) and imported into a version
+of the parallel-composition rule.
+The pure calculus is the fiber over the empty behavior,
+\(\rhoc = \RHO[\varnothing]\), and everything the Turn did with
+\(\rhoc\) was done in that fiber.</p>
+<p>Now the part i find genuinely satisfying, because it was not
+planned.</p>
+<p>Chapter <a class="xref" href="10-the-category-of-gslts.html#top" data-ref="ch:catgslt">10</a> built a category of theories, and built it
+carefully, because the obvious definition was wrong three separate
+ways.
+Objects are GSLTs; morphisms are pseudofunctors of context
+multicategories that preserve context-labeled bisimulation, with
+the bisimulation on the target computed only over the image of the
+source’s contexts (Definition <a class="xref" href="10-the-category-of-gslts.html#definition-10-1" data-ref="ob:def:morphism">10.1</a>).
+And to stop the resulting comparison being trivial, that chapter
+imposed two conditions on a morphism \(F : G \to H\):</p>
+<ul><li><p>\(F\) is <em>hosting</em> when the target can run the source —
+the encoding reflects as well as preserves context-labeled
+transition structure, so no branching present in \(G\) is lost in
+\(H\);</p></li><li><p>\(F\) is <em>exhausting</em> when the target is nothing the
+source cannot assemble — every context of \(H\) relevant to the
+image is, up to equivalence, in the image of a context of \(G\).</p></li></ul>
+<p>
+Those are faithfulness and density, and they were introduced to
+make the expressiveness preorder on calculi mean something.</p>
+<p>\(\RHO[-]\) is a functor into that category.
+Take the morphisms of \(\Cat\) to be behavior-preserving maps.
+There is then a unit \(\eta_{\Bee} : \Bee \to \RHO[\Bee]\) including
+builtins as processes, and:</p>
+<ul><li><p>\(\eta_{\Bee}\) <em>hosting</em> says distinct builtin behaviors
+receive distinct symbols and no branching in the world is collapsed
+by the calculus, which is performance \(\to\) score \(\to\) performance
+losslessness;</p></li><li><p>\(\eta_{\Bee}\) <em>exhausting</em> says every calculus-level
+distinction over builtins is realized by a builtin distinction,
+which is score \(\to\) performance \(\to\) score losslessness, and
+which forbids the calculus from minting symbols the world cannot
+cash.</p></li></ul>
+<section class="thm remarkish thm-observation" id="observation-64-5" data-kind="Observation" data-num="64.5"><header><span class="thm-kind">Observation 64.5</span> <span class="thm-name">Goodman’s adequacy is hosting and exhausting</span><a class="permalink" href="#observation-64-5" aria-label="Link to Observation 64.5">¶</a></header><p>
+Goodman’s two-way losslessness for the score / performance relation
+of Observation <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#observation-64-4" data-ref="obs:enters">64.4</a> is the statement that \(\eta_{\Bee}\)
+is hosting and exhausting in the sense of
+Chapter <a class="xref" href="10-the-category-of-gslts.html#top" data-ref="ch:catgslt">10</a>, with respect to behavioral equivalence.</p></section>
+<p>
+i want to be careful about how much that is and how much it is not.
+It is not a solution to anything.
+What it is, is the observation that the pair of conditions this
+book introduced to compare one calculus with another turns out to
+be the criterion of notational adequacy when one of the two is a
+world instead of a calculus.
+The question the Turn asked was: how much of calculus \(G\) can
+calculus \(H\) host, and how much of \(H\) does \(G\) exhaust?
+The question here is: how much of world \(\Bee\) can \(\rhoc\) host,
+and does \(\rhoc\) mint anything \(\Bee\) cannot cash?
+Same two conditions, same category, one argument changed from a
+theory to a world.
+Goodman’s criterion of adequacy becomes a property one could try to
+prove, which is more than it was before.</p>
+<p>And it became a little more provable while this was being written.
+i said above that hosting and exhausting “are faithfulness and
+density” as though that were a gloss.
+Remark <a class="xref" href="10-the-category-of-gslts.html#remark-10-2" data-ref="ob:rem:faithdense">10.2</a> back in Chapter <a class="xref" href="10-the-category-of-gslts.html#top" data-ref="ch:catgslt">10</a> makes
+it a statement: a morphism carries a map \(\Phi\) on contexts, and
+hosting and exhausting are faithfulness and density <em>of \(\Phi\)</em>.
+If that is right, then Observation <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#observation-64-5" data-ref="obs:hosting">64.5</a> is not an
+analogy between two pairs of conditions but a single statement about
+one functor: Goodman’s two-way losslessness is the demand that the
+map sending world-distinctions to notation-distinctions be faithful
+and dense.
+i do not prove it here, and i note that the world side of that
+functor is exactly the encoder this book does not build.
+But a criterion with a shape is easier to attack than a criterion
+with a description, and this one now has a shape.</p>
+<h3 id="sec-64-5-1"><span class="secnum">64.5.1</span> Three further things the functorial reading suggests</h3>
+<p>Each is a suggestion rather than a theorem, and i flag which are
+checkable.</p>
+<h5 id="p-24">(i) The import into \(\Par\) has a known shape.</h5>
+<p>“Behavior specified in the source category, imported into the par
+rule” is the shape of a distributive law of syntax over behavior.
+Turi and Plotkin’s bialgebraic semantics takes operational rules
+given as a natural transformation \(\lambda : SF \Rightarrow
+FS^{\dagger}\), with \(S\) a syntax functor, \(F\) a behavior functor
+and \(S^{\dagger}\) the free monad on \(S\), and yields an operational
+model together with a canonical, internally fully abstract
+denotational model [<a class="cite" href="bibliography.html#bib-turiplotkin" data-cite="turiplotkin">86</a>].
+The relevant corollary is that for any such law, behavioral
+equivalence in the final coalgebra is a congruence on the
+operational model.
+If the import can be put in that form, bisimulation-as-congruence
+over \(\RHO[\Bee]\) comes free rather than being re-proved per
+\(\Bee\).
+If it cannot, congruence fails and every compositional result of
+the Turn stops transferring across the cut.
+This is checkable and unchecked, and it is the single most
+consequential unchecked thing in this chapter.</p>
+<h5 id="p-25">(ii) Unambiguity forces behaviors, not states.</h5>
+<p>If the objects of \(\Bee\) are states with dynamics, then \(\quo{b}\)
+codes a moving target: the same mark has different compliants at
+different times, which is exactly the failure of
+Condition <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-3" data-ref="cond:ua">64.3</a>.
+The repair is forced.
+The objects of \(\Bee\) must be <em>behaviors</em> — a subobject of
+the final \(F\)-coalgebra — so that quoting a builtin quotes its
+entire future rather than a snapshot.
+Then \(*\quo{b} \bisim b\) holds definitionally, and unambiguity
+holds because behaviors do not change over time even though states
+do.
+A consequence worth stating on its own: one cannot take \(\Bee\) to
+be the physical furniture of the world.
+\(\Bee\) must be the world already quotiented by an observational
+equivalence — which is where Conjecture <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#conjecture-64-1" data-ref="conj:fd">64.1</a> would
+enter, with \(\Bee = \Qs(W)\), and which ties the whole construction
+back to a budget.</p>
+<h5 id="p-26">(iii) The source category is constrained.</h5>
+<p>Name matching in \(\inn{y}{x}{P} \Par \out{x}{Q}\) requires deciding
+name equality, and names now include \(\quo{b}\).
+So structural congruence on \(\RHO[\Bee]\) is decidable only if
+equality on \(\Bee\)’s objects is at least budget-decidable.
+This is a restriction on which worlds can serve as source, and it
+is the formal descendant of the fact that builtin names are the
+base case of the well-founded coding by which quotation
+manufactures fresh names.</p>
+<h2 id="sec-64-6"><span class="secnum">64.6</span> Why this is an analogy and not a solution</h2>
+<p>i now argue against the construction just presented, because the
+argument is short and decisive and it is better made here than by a
+reader.</p>
+<ol><li id="item-28-1"><p><strong>It consumes what it was meant to produce.</strong>
+\(\RHO[-]\) takes \(\Bee\) as an argument.
+The reference bootstrap problem is the problem of <em>finding</em>
+\(\Bee\): of individuating the world into behaviors worth having
+symbols for.
+The functor presupposes a solved instance of the problem it was
+introduced to address, and everything it then does is bookkeeping
+over that solution.
+This is the decisive objection and the rest are supporting.
+It is also, i note without pleasure, the same objection as
+Observation <a class="xref" href="56-how-the-trick-was-done.html#observation-56-1" data-ref="obs:sidestep">56.1</a>, one level of abstraction up: the
+first time we assumed the world was made of processes, and this
+time we assume it comes pre-carved into them.</p></li><li id="item-28-2"><p><strong>Functoriality entails relabeling invariance.</strong>
+\(\RHO[\Bee] \cong \RHO[\Bee']\) whenever \(\Bee \cong \Bee'\).
+So the construction cannot fix reference; it transports whatever
+reference \(\Bee\) came with.
+This is not an imported objection but a theorem of the
+construction, and it is the formal version of
+Remark <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#remark-64-1" data-ref="rem:invariance">64.1</a> and the machinery behind
+Observation <a class="xref" href="56-how-the-trick-was-done.html#observation-56-6" data-ref="obs:social">56.6</a>.</p></li><li id="item-28-3"><p><strong>Losslessness is stipulated where it is interesting.</strong>
+\(*\quo{b} \bisim b\) holds by construction, because we defined
+\(\quo{-}\) on \(\Bee\) to be exact.
+In the world, sensor-to-symbol transduction is lossy, noisy and
+partial, and the interesting question is what to do when the
+roundtrip <em>fails</em>.
+The construction has nothing to say about approximate compliance,
+which is where all the empirical difficulty lives.</p></li><li id="item-28-4"><p><strong>The par rule import is unverified.</strong>
+Section <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#sec-64-5-1" data-ref="sec:suggests">64.5.1</a>(i) is conditional.
+Until the import is exhibited as a distributive law of the required
+shape, congruence of bisimulation over \(\RHO[\Bee]\) is an
+assumption, and with it every compositional result that would be
+transported.</p></li><li id="item-28-5"><p><strong>Two interaction disciplines complicate the logic.</strong>
+Communication in \(\rhoc\) is name-mediated.
+If builtins react in the source category by something that is not a
+name rendezvous, then \(\RHO[\Bee]\)’s parallel composition hosts two
+kinds of redex, and the namespace logic’s modalities — which
+quantify over redex positions — require a sort distinction.
+The ladders computed in Chapters <a class="xref" href="22-learning-to-play.html#top" data-ref="ch:gam">22</a> and <a class="xref" href="23-composing-learners.html#top" data-ref="ch:com">23</a>
+would need recomputation, and it is not known whether their
+qualitative shape survives.</p></li><li id="item-28-6"><p><strong>Nothing here proposes candidates.</strong>
+Even granting all of the above, the construction is a specification
+language for grounded symbol systems, not a procedure for acquiring
+one.
+It says what the answer must look like.
+It does not search.</p></li></ol>
+<p>
+The honest summary is that the functorial reading is a good way to
+<em>state</em> several of Goodman’s conditions in a form where they
+might be proved, and no way at all to satisfy them.</p>
+<h2 id="sec-64-7"><span class="secnum">64.7</span> Where a transformer belongs</h2>
+<p>The framing above assigns transformers a job, and it is not the job
+they are usually given in discussions of grounding.
+It is also not quite the job Chapter <a class="xref" href="21-the-mortal-scientist.html#top" data-ref="ch:sci">21</a> gave them, and
+i have corrected that chapter rather than leave the two accounts
+standing side by side.</p>
+<p>The slogan there was: the network is the transducer, the ecology is
+the epistemology.
+The second half is right.
+The first half is wrong, and it is wrong in an instructive
+direction.
+In the construction of Section <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#sec-64-5" data-ref="sec:functor">64.5</a> the transducer
+<em>is</em> \(\quo{-}\) and \(*\) extended to builtins.
+That map is exact and lossless by construction; a network cannot
+improve on it and is not needed for it.
+What is needed, and what nothing in the calculus supplies, is a
+<em>proposal mechanism</em>: given a stream of host-world
+observation, propose candidate builtin behaviors.
+That is objection (a) of Section <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#sec-64-6" data-ref="sec:notasolution">64.6</a> turned into
+a task, which is the most useful thing one can do with a decisive
+objection.</p>
+<p>Two features make it a well-posed learning problem, which is more
+than can be said for “learn symbols from sensors”.</p>
+<h5 id="p-30">The success criterion is coverage, not reward.</h5>
+<p>\(\Bee\) is a <em>presentation</em>: a generating set such that the
+observable world lies in the image of \(\RHO[\Bee]\).
+This is a generators-and-relations problem with a definite answer,
+and minimality of \(\Bee\) is a statistical-complexity analogue
+rather than a hyperparameter to be tuned.</p>
+<h5 id="p-31">There is a principled candidate.</h5>
+<p>Causal states are already the coarsest coarse-graining of pasts
+retaining full predictive power [<a class="cite" href="bibliography.html#bib-shalizi2001" data-cite="shalizi2001">148</a>], and by
+Section <a class="xref" href="56-how-the-trick-was-done.html#sec-56-8" data-ref="sec:recovers">56.8</a> a next-token-trained transformer
+represents belief states over them [<a class="cite" href="bibliography.html#bib-shai2024" data-cite="shai2024">147</a>].
+That makes causal states the natural first candidate for which
+distinctions deserve builtin names.
+The correspondence extends further than convenience: Crutchfield’s
+taxonomy of \(\epsilon\)-machines runs from finite-state through
+countable to uncountable and fractal, and that taxonomy <em>is</em> a
+density hierarchy — so Condition <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-2" data-ref="cond:sfd">64.2</a> is the condition
+separating its bottom rung from the rest, and the question “is
+this world notationally accessible to this agent at this budget”
+becomes “is the budget-quotiented \(\epsilon\)-machine of the host
+process finite”.</p>
+<p>That last equivalence is, i think, the most promising single item
+in this chapter, because both sides of it are computable and
+neither side has been computed.</p>
+<p>A second job for a network is amortized bisimulation checking.
+Assays are priced in the framework already, checking behavioral
+equivalence is expensive, and an approximate checker with
+calibrated error is a legitimate purchase if its errors can be
+priced.
+That is more speculative and i do not pursue it.</p>
+<h2 id="sec-64-8"><span class="secnum">64.8</span> Open questions</h2>
+<p>These are the ones i would take money on being tractable.</p>
+<section class="thm plain thm-question" id="question-64-1" data-kind="Question" data-num="64.1"><header><span class="thm-kind">Question 64.1</span> <span class="thm-name">Transitivity of budget-relative indistinguishability</span><a class="permalink" href="#question-64-1" aria-label="Link to Question 64.1">¶</a></header><p>
+Is \(\bisim^{\sigma}\) of Conjecture <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#conjecture-64-1" data-ref="conj:fd">64.1</a> transitive?
+If not, what is the cost of taking transitive closure, and does the
+resulting scheme still separate at a rate related to \(\sigma\)?</p></section>
+<section class="thm plain thm-question" id="question-64-2" data-kind="Question" data-num="64.2"><header><span class="thm-kind">Question 64.2</span> <span class="thm-name">Density: agent or world?</span><a class="permalink" href="#question-64-2" aria-label="Link to Question 64.2">¶</a></header><p>
+Given a failure of Condition <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#condition-64-2" data-ref="cond:sfd">64.2</a>, is there a criterion
+separating “this agent cannot notate this world” from “this
+world admits no notation”?
+A candidate: the former is a statement about \(\Qs\) for the agent’s
+\(\sigma\), the latter about \(\lim_{\sigma \to \infty} \Qs\).</p></section>
+<section class="thm plain thm-question" id="question-64-3" data-kind="Question" data-num="64.3"><header><span class="thm-kind">Question 64.3</span> <span class="thm-name">Notationality of learned codebooks</span><a class="permalink" href="#question-64-3" aria-label="Link to Question 64.3">¶</a></header><p>
+Goodman’s five conditions are checkable properties of an
+encoder / decoder pair.
+What do VQ-VAE codebooks, BPE tokenisers and LatPlan’s state
+autoencoder score on them?
+“How notational is this tokeniser” appears to be a measurable
+quantity and, so far as i can determine, has never been measured.</p></section>
+<section class="thm plain thm-question" id="question-64-4" data-kind="Question" data-num="64.4"><header><span class="thm-kind">Question 64.4</span> <span class="thm-name">Is the import a distributive law?</span><a class="permalink" href="#question-64-4" aria-label="Link to Question 64.4">¶</a></header><p>
+Can the import of \(\Bee\)’s behavior into parallel composition be
+exhibited as \(\lambda : \RHO \circ F \Rightarrow F \circ
+\RHO^{\dagger}\)?
+If so, congruence is free by [<a class="cite" href="bibliography.html#bib-turiplotkin" data-cite="turiplotkin">86</a>].
+If not, what weaker condition holds, and does the lax version
+suffice?</p></section>
+<section class="thm plain thm-question" id="question-64-5" data-kind="Question" data-num="64.5"><header><span class="thm-kind">Question 64.5</span> <span class="thm-name">Does \(\RHO\) preserve the cost-accounting monad?</span><a class="permalink" href="#question-64-5" aria-label="Link to Question 64.5">¶</a></header><p>
+The Turn works inside plain \(\rhoc\) and appeals to a WLOG on syntax
+that is valid there.
+Do \(\RHO[-]\) and the cost monad of Chapter <a class="xref" href="11-the-cost-monad.html#top" data-ref="ch:costmonad">11</a>
+commute?
+If they do not, the foraging inequality, the pricing schedule and
+the monotonicity of cost in distance do not transport to
+\(\RHO[\Bee]\), and with them Conjecture <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#conjecture-64-1" data-ref="conj:fd">64.1</a> loses its
+setting.</p></section>
+<section class="thm plain thm-question" id="question-64-6" data-kind="Question" data-num="64.6"><header><span class="thm-kind">Question 64.6</span> <span class="thm-name">The minimal social configuration</span><a class="permalink" href="#question-64-6" aria-label="Link to Question 64.6">¶</a></header><p>
+Observation <a class="xref" href="56-how-the-trick-was-done.html#observation-56-6" data-ref="obs:social">56.6</a> says grounding is a property of a
+composite.
+What is the smallest composite that suffices?
+Two agents with shared action, or does the argument require a
+population?
+Does the typed-overlap apparatus of Chapter <a class="xref" href="23-composing-learners.html#top" data-ref="ch:com">23</a> already
+contain the answer?</p></section>
+<section class="thm plain thm-question" id="question-64-7" data-kind="Question" data-num="64.7"><header><span class="thm-kind">Question 64.7</span> <span class="thm-name">Approximate compliance</span><a class="permalink" href="#question-64-7" aria-label="Link to Question 64.7">¶</a></header><p>
+Section <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#sec-64-6" data-ref="sec:notasolution">64.6</a>(c) observes that the interesting
+case is roundtrip failure.
+Is there a notion of <em>graded</em> compliance that degrades
+Goodman’s conditions gracefully without collapsing into the metric
+of Observation <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#observation-64-2" data-ref="obs:metric">64.2</a>?</p></section>
+<h2 id="sec-64-9"><span class="secnum">64.9</span> What is claimed and what is not</h2>
+<h5 id="p-34">Claimed.</h5>
+<p>That the correspondence between a language and a world is a fact
+about the language’s users and is not contained in the corpus
+(Observation <a class="xref" href="56-how-the-trick-was-done.html#observation-56-2" data-ref="obs:locus">56.2</a>); that the record of decipherment and
+of cetacean bioacoustics is evidence for this rather than merely
+consistent with it, and that the two successful routes both acquire
+the correspondence from agents who already have it
+(Observation <a class="xref" href="56-how-the-trick-was-done.html#observation-56-3" data-ref="obs:transport">56.3</a>); that next-token prediction
+recovers the structure of the token-generating process, which for a
+corpus is the linguistic community and not the environment
+(Observation <a class="xref" href="56-how-the-trick-was-done.html#observation-56-4" data-ref="obs:generator">56.4</a>); that the problem has at least
+two independent solutions in nature, so that solubility is not in
+question and impossibility arguments are unsound
+(Observation <a class="xref" href="56-how-the-trick-was-done.html#observation-56-5" data-ref="obs:soluble">56.5</a>); that this book’s grounding is
+analytic and therefore does not address the problem
+(Observation <a class="xref" href="56-how-the-trick-was-done.html#observation-56-1" data-ref="obs:sidestep">56.1</a>); that Goodman’s conditions
+decompose into quotient conditions bisimulation supplies and
+separation conditions it does not (Observation <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#observation-64-1" data-ref="obs:sep">64.1</a>); that
+bisimulation metrics are the wrong repair for the latter
+(Observation <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#observation-64-2" data-ref="obs:metric">64.2</a>); that quotation and dereference in
+the pure calculus are score-internal recursion and acquire a
+compliance class outside the syntax only when builtin processes are
+adjoined (Observations <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#observation-64-3" data-ref="obs:tworeadings">64.3</a>
+and <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#observation-64-4" data-ref="obs:enters">64.4</a>); that Goodman’s adequacy criterion is
+hosting-and-exhausting for the unit of \(\RHO[-]\)
+(Observation <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#observation-64-5" data-ref="obs:hosting">64.5</a>); and that no relabeling-invariant
+single-agent framework can deliver correspondence to <em>our</em>
+symbols (Observation <a class="xref" href="56-how-the-trick-was-done.html#observation-56-6" data-ref="obs:social">56.6</a>).</p>
+<h5 id="p-35">Spent immediately.</h5>
+<p>The hosting-and-exhausting reading of Goodman is used in the very next
+chapter and it is worth saying what for.
+Chapter <a class="xref" href="65-if-this-is-a-simulation-which-kind.html#top" data-ref="ch:sim">65</a> observes that the pair of conditions is exactly what
+separates the versions of the simulation hypothesis from one another:
+a simulation that never leaves the level it simulates admits an encoding
+that is both hosting and exhausting, and is therefore inert; one run from
+a higher position in the lattice cannot be exhausting, and what its
+inhabitants bootstrap is a shadow.
+i had not expected the criterion to have that use, and i note it here
+because a criterion that turns out to answer a question it was not built
+for is worth more than one that does not.</p>
+<h5 id="p-36">Conjectured.</h5>
+<p>That cost accounting supplies finite differentiation with the
+budget as separation constant (Conjecture <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#conjecture-64-1" data-ref="conj:fd">64.1</a>).</p>
+<h5 id="p-37">Offered as analogy only.</h5>
+<p>The entire content of
+Sections <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#sec-64-4" data-ref="sec:rho-builtins">64.4</a>–<a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#sec-64-5" data-ref="sec:functor">64.5</a>.
+The functorial reading organizes the conditions attractively and
+suggests several checkable statements.
+It does not bootstrap anything, for the reasons in
+Section <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#sec-64-6" data-ref="sec:notasolution">64.6</a>, and the first of those reasons is
+not a technicality.</p>
+<h5 id="p-38">Not claimed.</h5>
+<p>That Goodman’s conditions are the right ones — they are adopted
+provisionally, and the density and wrong-note objections are live.
+That transformers cannot in principle transduce — only that
+next-token prediction over an already-grounded corpus is not
+transduction, and that the two are routinely conflated.
+And that the reference bootstrap problem is soluble <em>by
+construction</em>: nature’s two solutions were achieved by populations,
+under selection, over long timescales, with interfaces that
+co-evolved with the symbol systems they support, and this book has
+no argument that any of those conditions can be dispensed with.</p>
+<nav class="pager"><a class="prev" href="63-what-these-chapters-owe.html"><span>Previous</span>What These Chapters Owe</a><a class="next" href="65-if-this-is-a-simulation-which-kind.html"><span>Next</span>If This Is a Simulation, Which Kind</a></nav>
+</main>
+<aside class="margin" id="margin" aria-live="polite"></aside>
+</div>
+<button class="railtoggle" id="railtoggle" aria-expanded="false">Contents</button>
+
+</body>
+</html>

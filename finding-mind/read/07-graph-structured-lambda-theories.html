@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graph-Structured Lambda Theories · Finding Mind</title>
+<link rel="canonical" href="https://findingmind.com/read/07-graph-structured-lambda-theories.html">
+<meta name="description" content="Graph-Structured Lambda Theories">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../book.css">
+<link rel="stylesheet" href="../katex/katex.min.css">
+<script defer src="../katex/katex.min.js"></script>
+<script defer src="../katex/auto-render.min.js"></script>
+<script defer src="../macros.js"></script>
+<script defer src="../reader.js"></script>
+</head>
+<body class="readpage">
+
+<a class="skip" href="#main">Skip to text</a>
+<div class="reader">
+<nav class="rail" aria-label="Contents"><div class="rail-in"><a class="rail-home" href="../index.html">Finding Mind</a><h2 class="rail-act">The Pledge</h2><a class="rail-ch" href="permitted-say.html"><span class="rn rn-i">⁂</span><span class="rt">The Permitted Say</span></a><a class="rail-ch" href="01-prolegomena-to-finding-mind.html"><span class="rn">1</span><span class="rt">Prolegomena to Finding Mind</span></a><a class="rail-ch" href="02-the-ordinary-world.html"><span class="rn">2</span><span class="rt">The Ordinary World</span></a><a class="rail-ch" href="03-information-causation-and-the-blind-spot.html"><span class="rn">3</span><span class="rt">Information, Causation, and the Blind Spot</span></a><a class="rail-ch" href="04-finding-the-shape.html"><span class="rn">4</span><span class="rt">Finding the Shape</span></a><a class="rail-ch" href="05-inside-and-outside-and-what-it-means-to-assume.html"><span class="rn">5</span><span class="rt">Inside and Outside, and What it Means to Assume the Virtue</span></a><a class="rail-ch" href="how-to-read-this-book.html"><span class="rn rn-i">⁂</span><span class="rt">How to Read This Book</span></a><a class="rail-ch" href="related-work-and-where-this-differs.html"><span class="rn rn-i">⁂</span><span class="rt">Related Work, and Where This Differs</span></a><h2 class="rail-act">The Turn</h2><a class="rail-ch" href="foam-born.html"><span class="rn rn-i">⁂</span><span class="rt">The Foam-Born</span></a><h3 class="rail-part">The Machinery: From GSLTs to Cost-Accounted Theories</h3><a class="rail-ch" href="06-what-a-language-presentation-is-and-why-it-com.html"><span class="rn">6</span><span class="rt">What a Language Presentation Is, and Why It Comes First</span></a><a class="rail-ch" aria-current="page" href="07-graph-structured-lambda-theories.html"><span class="rn">7</span><span class="rt">Graph-Structured Lambda Theories</span></a><a class="rail-ch" href="08-interactive-gslts-and-the-site-of-interaction.html"><span class="rn">8</span><span class="rt">Interactive GSLTs, and the Site of Interaction</span></a><a class="rail-ch" href="09-continued-interactive-gslts.html"><span class="rn">9</span><span class="rt">Continued Interactive GSLTs</span></a><a class="rail-ch" href="10-the-category-of-gslts.html"><span class="rn">10</span><span class="rt">The Category of GSLTs</span></a><a class="rail-ch" href="11-the-cost-monad.html"><span class="rn">11</span><span class="rt">The Cost Monad</span></a><a class="rail-ch" href="12-the-history-monad.html"><span class="rn">12</span><span class="rt">The History Monad</span></a><a class="rail-ch" href="13-weighting-rates-from-the-generated-logic.html"><span class="rn">13</span><span class="rt">Weighting: Rates from the Generated Logic</span></a><a class="rail-ch" href="14-cost-accounted-rho.html"><span class="rn">14</span><span class="rt">Cost-Accounted Rho</span></a><a class="rail-ch" href="15-conversion-enzymes-and-the-virtual-token.html"><span class="rn">15</span><span class="rt">Conversion, Enzymes, and the Virtual Token</span></a><a class="rail-ch" href="16-the-labeled-transition-system-and-context-deco.html"><span class="rn">16</span><span class="rt">The Labeled Transition System and Context-Decorated HML</span></a><a class="rail-ch" href="17-what-goes-into-a-logic.html"><span class="rn">17</span><span class="rt">What Goes Into a Logic</span></a><a class="rail-ch" href="18-scopes-and-the-fixed-points-that-generate-them.html"><span class="rn">18</span><span class="rt">Scopes, and the Fixed Points that Generate Them</span></a><a class="rail-ch" href="19-generating-type-systems-oslf-and-the-hypercube.html"><span class="rn">19</span><span class="rt">Generating Type Systems: OSLF and the Hypercube</span></a><a class="rail-ch" href="20-instruments-making-structure-visible-to-bisimu.html"><span class="rn">20</span><span class="rt">Instruments: Making Structure Visible to Bisimulation</span></a><h3 class="rail-part">Ecology as Cognitive Architecture</h3><a class="rail-ch" href="21-the-mortal-scientist.html"><span class="rn">21</span><span class="rt">The Mortal Scientist</span></a><a class="rail-ch" href="22-learning-to-play.html"><span class="rn">22</span><span class="rt">Learning to Play</span></a><a class="rail-ch" href="23-composing-learners.html"><span class="rn">23</span><span class="rt">Composing Learners</span></a><a class="rail-ch" href="24-enzymes-and-individuals.html"><span class="rn">24</span><span class="rt">Enzymes and Individuals</span></a><a class="rail-ch" href="25-a-network-that-learns-by-rewriting.html"><span class="rn">25</span><span class="rt">A Network That Learns by Rewriting</span></a><h3 class="rail-part">Suffering: Homeostasis and the Learner&#x27;s Own Account</h3><a class="rail-ch" href="26-suffering-a-learner-s-view-of-its-own-account.html"><span class="rn">26</span><span class="rt">Suffering: A Learner’s View of Its Own Account</span></a><h3 class="rail-part">Situating the Learner: A Variety of Possible Physics</h3><a class="rail-ch" href="27-the-learner-s-world-already-has-a-physics.html"><span class="rn">27</span><span class="rt">The Learner’s World Already Has a Physics</span></a><a class="rail-ch" href="28-the-reversibility-construction.html"><span class="rn">28</span><span class="rt">The Reversibility Construction</span></a><a class="rail-ch" href="29-causal-structure-and-time.html"><span class="rn">29</span><span class="rt">Causal Structure and Time</span></a><a class="rail-ch" href="30-decoration-one-map-many-semirings.html"><span class="rn">30</span><span class="rt">Decoration: One Map, Many Semirings</span></a><a class="rail-ch" href="31-conservation-and-what-it-costs-to-have-it.html"><span class="rn">31</span><span class="rt">Conservation, and What It Costs to Have It</span></a><a class="rail-ch" href="32-extended-modal-operators.html"><span class="rn">32</span><span class="rt">Extended Modal Operators</span></a><a class="rail-ch" href="33-complex-amplitudes-and-where-the-coherence-is.html"><span class="rn">33</span><span class="rt">Complex Amplitudes, and Where the Coherence Is</span></a><a class="rail-ch" href="34-synthesis-the-full-structure.html"><span class="rn">34</span><span class="rt">Synthesis: The Full Structure</span></a><a class="rail-ch" href="35-entropy-and-the-cost-of-staying-level.html"><span class="rn">35</span><span class="rt">Entropy, and the Cost of Staying Level</span></a><a class="rail-ch" href="36-discussion-and-future-directions.html"><span class="rn">36</span><span class="rt">Discussion and Future Directions</span></a><h3 class="rail-part">Why Scientists Get Misled: Emergent Ontology in Massive Agent Populations</h3><a class="rail-ch" href="37-introduction.html"><span class="rn">37</span><span class="rt">Introduction</span></a><a class="rail-ch" href="38-ontological-isolation.html"><span class="rn">38</span><span class="rt">Ontological Isolation</span></a><a class="rail-ch" href="39-agents-and-the-scientific-method.html"><span class="rn">39</span><span class="rt">Agents and the Scientific Method</span></a><a class="rail-ch" href="40-behavioral-primes.html"><span class="rn">40</span><span class="rt">Behavioral Primes</span></a><a class="rail-ch" href="41-massive-populations-and-communication-degradat.html"><span class="rn">41</span><span class="rt">Massive Populations and Communication Degradation</span></a><a class="rail-ch" href="42-the-logical-topology-and-compactness.html"><span class="rn">42</span><span class="rt">The Logical Topology and Compactness</span></a><a class="rail-ch" href="43-coherence-clusters-and-their-nerve.html"><span class="rn">43</span><span class="rt">Coherence Clusters and Their Nerve</span></a><a class="rail-ch" href="44-the-apparent-ontology.html"><span class="rn">44</span><span class="rt">The Apparent Ontology</span></a><a class="rail-ch" href="45-open-gaps-and-future-work.html"><span class="rn">45</span><span class="rt">Open Gaps and Future Work</span></a><a class="rail-ch" href="46-discussion.html"><span class="rn">46</span><span class="rt">Discussion</span></a><h3 class="rail-part">Origins of Life: Assembly Theory, Phase Transitions, and Replication</h3><a class="rail-ch" href="47-introduction.html"><span class="rn">47</span><span class="rt">Introduction</span></a><a class="rail-ch" href="48-assembly-theory-causal-depth-and-copy-number.html"><span class="rn">48</span><span class="rt">Assembly Theory: Causal Depth and Copy Number</span></a><a class="rail-ch" href="49-replication-as-a-fixed-point.html"><span class="rn">49</span><span class="rt">Replication as a Fixed Point</span></a><a class="rail-ch" href="50-smith-s-phase-transition-and-the-density-of-at.html"><span class="rn">50</span><span class="rt">Smith’s Phase Transition and the Density of Attractors</span></a><a class="rail-ch" href="51-metabolism-energy-gradients-and-the-ecosystem.html"><span class="rn">51</span><span class="rt">Metabolism, Energy Gradients, and the Ecosystem</span></a><a class="rail-ch" href="52-assembly-index-and-the-depth-of-the-fractal-le.html"><span class="rn">52</span><span class="rt">Assembly Index and the Depth of the Fractal Learner</span></a><a class="rail-ch" href="53-scope-and-manufacture.html"><span class="rn">53</span><span class="rt">Scope and Manufacture</span></a><a class="rail-ch" href="54-open-gaps.html"><span class="rn">54</span><span class="rt">Open Gaps</span></a><a class="rail-ch" href="55-discussion.html"><span class="rn">55</span><span class="rt">Discussion</span></a><h3 class="rail-part">Conclusion</h3><a class="rail-ch" href="what-has-been-built.html"><span class="rn rn-i">⁂</span><span class="rt">What Has Been Built</span></a><a class="rail-ch" href="a-view-from-inside-the-framework.html"><span class="rn rn-i">⁂</span><span class="rt">A View from Inside the Framework</span></a><a class="rail-ch" href="what-remains-to-be-done.html"><span class="rn rn-i">⁂</span><span class="rt">What Remains to Be Done</span></a><h2 class="rail-act">The Prestige</h2><a class="rail-ch" href="begotten.html"><span class="rn rn-i">⁂</span><span class="rt">begotten not made</span></a><h3 class="rail-part">The Method, and What It Left Out</h3><a class="rail-ch" href="56-how-the-trick-was-done.html"><span class="rn">56</span><span class="rt">How the Trick Was Done</span></a><a class="rail-ch" href="57-everything-so-far-was-turing-complete.html"><span class="rn">57</span><span class="rt">Everything So Far Was Turing Complete</span></a><a class="rail-ch" href="58-the-tower-of-oracle-extensions.html"><span class="rn">58</span><span class="rt">The Tower of Oracle Extensions</span></a><a class="rail-ch" href="59-not-every-cut-is-an-aperture.html"><span class="rn">59</span><span class="rt">Not Every Cut Is an Aperture</span></a><a class="rail-ch" href="60-where-does-agency-live.html"><span class="rn">60</span><span class="rt">Where Does Agency Live?</span></a><a class="rail-ch" href="61-choice-principles-are-the-types-schedulers-are.html"><span class="rn">61</span><span class="rt">Choice Principles are the Types; Schedulers are the Terms</span></a><a class="rail-ch" href="62-consciousness-and-the-world-it-comes-with.html"><span class="rn">62</span><span class="rt">Consciousness, and the World It Comes With</span></a><a class="rail-ch" href="63-what-these-chapters-owe.html"><span class="rn">63</span><span class="rt">What These Chapters Owe</span></a><h3 class="rail-part">Reference, Simulation, Reception, and a Future Metaphysics</h3><a class="rail-ch" href="64-what-a-symbol-system-would-have-to-be.html"><span class="rn">64</span><span class="rt">What a Symbol System Would Have to Be</span></a><a class="rail-ch" href="65-if-this-is-a-simulation-which-kind.html"><span class="rn">65</span><span class="rt">If This Is a Simulation, Which Kind</span></a><a class="rail-ch" href="66-what-it-is-like-to-be-a-bot.html"><span class="rn">66</span><span class="rt">What It Is Like to Be a Bot</span></a><a class="rail-ch" href="67-how-life-like-is-life-like-enough.html"><span class="rn">67</span><span class="rt">How Life-Like Is Life-Like Enough?</span></a><a class="rail-ch" href="68-any-future-metaphysics.html"><span class="rn">68</span><span class="rt">Any Future Metaphysics</span></a><a class="rail-ch" href="right-sizing.html"><span class="rn rn-i">⁂</span><span class="rt">Right-Sizing</span></a></div></nav>
+<main id="main" class="text ">
+<header class="chead"><p class="kicker">Chapter 7</p><h1>Graph-Structured Lambda Theories</h1></header>
+<h2 id="sec-7-1"><span class="secnum">7.1</span> The lineage: structured operational semantics</h2>
+<p>The presentation style we depend on is Plotkin’s [<a class="cite" href="bibliography.html#bib-Plotkin1981" data-cite="Plotkin1981">126</a>, <a class="cite" href="bibliography.html#bib-Plotkin" data-cite="Plotkin">46</a>]. Before
+structured operational semantics, giving the meaning of a programming construct meant
+either a denotational assignment into a domain or an informal appeal to an abstract
+machine. Plotkin’s proposal was that one could give the behaviour of a language
+<em>syntactically</em>, by inference rules over the term structure, with the rules for a
+compound term given in terms of the rules for its parts. The presentation was finite,
+it was checkable, and — this is the part that matters here — it was
+<em>structural</em>: the shape of the rules followed the shape of the grammar.</p>
+<p>Milner’s <em>Functions as Processes</em> [<a class="cite" href="bibliography.html#bib-Milner1992" data-cite="Milner1992">125</a>] adopts this style and sets the
+standard by which such presentations should be judged. The paper gives the
+\(\pi\)-calculus by a grammar, a structural congruence, and a small family of reduction
+rules, and then encodes the \(\lambda\)-calculus into it. What makes the presentation
+exemplary is not merely that it is correct but that it is <em>complete in the
+relevant sense</em>: the grammar, the congruence, and the rules together are the whole of
+the definition. Nothing is left to the reader’s operational imagination. One can
+mechanically check a claimed reduction, and one can mechanically check that an encoding
+respects reduction, because there is nothing to the language beyond what has been
+written down.</p>
+<p>Cardelli and Gordon’s presentation of the mobile ambient
+calculus [<a class="cite" href="bibliography.html#bib-CardelliGordon2000" data-cite="CardelliGordon2000">117</a>] adopts precisely this style, and it is instructive
+to see how little has to change. The ambient calculus is a very different theory —
+its reductions restructure a spatial hierarchy rather than substitute a value — and
+yet the presentation is recognisably the same document: sorts, term formers, a
+structural congruence, a handful of reduction rules, and congruence rules closing
+reduction under the term formers. The style is not an artifact of process calculi. It
+is a general format for presenting a language.</p>
+<p>The observation on which this document rests is that once a presentation is
+<em>that</em> regular, it is data. A grammar is a signature. A structural congruence is a
+set of equations. Reduction rules and congruence rules are a set of rewrites. These are
+not analogies; they are the same information under different typography. A GSLT is what
+you get when you stop treating an SOS presentation as a document to be read by a human
+implementer and start treating it as a structure to be consumed by a machine.</p>
+<h2 id="sec-7-2"><span class="secnum">7.2</span> The definition</h2>
+<section class="thm plain thm-definition" id="definition-7-1" data-kind="Definition" data-num="7.1"><header><span class="thm-kind">Definition 7.1</span> <span class="thm-name">Graph-structured lambda theory</span><a class="permalink" href="#definition-7-1" aria-label="Link to Definition 7.1">¶</a></header><p>
+A <strong>graph-structured lambda theory</strong> is a triple \(G = (\Sigma, E, R)\) consisting of</p>
+<ul><li><p>a signature \(\Sigma\), which is in general a <em>lambda theory</em> — so that
+    terms may contain variables;</p></li><li><p>a set \(E\) of equations, imposing a structural congruence \(\equiv\); and</p></li><li><p>a set \(R\) of rewrite rules.</p></li></ul></section>
+<section class="thm remarkish thm-remark" id="remark-7-1" data-kind="Remark" data-num="7.1"><header><span class="thm-kind">Remark 7.1</span> <span class="thm-name">A bridge between two spellings</span><a class="permalink" href="#remark-7-1" aria-label="Link to Remark 7.1">¶</a></header><p>
+This part writes a theory as \(G = (\Sigma, E, R)\) and reserves boldface
+for the categories — \(\catGSLT\), \(\catiGSLT\), \(\catciGSLT\) — because
+that is the notation in which the constructions were first worked out and
+in which the reader will find them in the reference literature.
+Later parts of the book write the same data as
+\(\GSLT = (\terms, \eqs, \rules)\), a theory being denoted by a single
+calligraphic letter because the parts that use it care about which
+<em>theory</em> they are in far more often than they care about which
+component of it they are looking at.
+Nothing turns on the difference.
+Where a later chapter says “the GSLT \(\GSLT\)” it means an object of
+\(\catGSLT\), and where this part says “the signature \(\Sigma\)” a later
+chapter would say “the grammar \(\terms\)”.</p></section>
+<p>The definition is deliberately thin in one direction and deliberately generous in
+another, and both deserve comment.</p>
+<p>It is thin in that a GSLT is any rewrite theory whatever. Nothing in
+Definition <a class="xref" href="07-graph-structured-lambda-theories.html#definition-7-1" data-ref="ob:def:gslt">7.1</a> says the theory is about computation, or that it has processes,
+or that anything interacts with anything. The strengthenings of
+Chapters <a class="xref" href="08-interactive-gslts-and-the-site-of-interaction.html#top" data-ref="ch:igslt">8</a> and <a class="xref" href="09-continued-interactive-gslts.html#top" data-ref="ch:cigslt">9</a> add exactly the structure later
+constructions require, and the discipline of the present document is to add it only when
+a construction needs it.<sup class="fn"><a href="#fn1" id="fnr1">1</a></sup></p>
+<p>It is generous in that \(\Sigma\) is a lambda theory rather than a bare algebraic
+signature. That is the substantive choice in the definition, and the next subsection is
+about why it was made.</p>
+<h2 id="sec-7-3"><span class="secnum">7.3</span> Reading the name</h2>
+<p>The two halves of “graph-structured lambda theory” are doing two separable jobs. The
+<em>lambda theory</em> captures the term language — specifically, a term language
+<em>with variables</em>. The adjective <em>graph-structured</em> captures the rewrite rules.
+It is worth taking these in turn, and worth recording the route not taken, because the
+route not taken is the one a reader familiar with categorical algebra will expect.</p>
+<h2 id="sec-7-4"><span class="secnum">7.4</span> Why lambda theories and not Lawvere theories</h2>
+<p>The natural first thought is that a language presentation is an algebraic theory, and
+that the right categorical home for an algebraic theory is a Lawvere
+theory [<a class="cite" href="bibliography.html#bib-Lawvere1963" data-cite="Lawvere1963">123</a>]: a category with finite products whose objects are the powers
+of a generic object, in which an \(n\)-ary operation is a morphism \(n \to 1\). This is a
+beautiful and well-understood setting, and it is not adequate here.</p>
+<p>The reason is variables. A Lawvere theory does not generate a term language with
+variables; it generates a term language in which variables have been <em>absorbed into
+arities</em>. A term in \(n\) variables is not a term containing variables, it is a morphism
+out of \(n\). That encoding is faithful for first-order algebra and it breaks down exactly
+where we need it not to: one cannot abstract, one cannot have a variable that ranges over
+functions, and one cannot write a binder. Every calculus this document treats has
+binders — \(\lambda x.M\), \(\mathrm{for}(x \leftarrow n)P\), \(\mathrm{new}(x, P)\) — and
+a formalism that cannot express a binder cannot present them.</p>
+<p>Lambda theories do generate term languages with variables. And in the limit — that is,
+in how the variables get used, which is to say abstraction and application — lambda
+theories are cartesian closed categories. This is the content of the
+Curry–Howard–Lambek correspondence [<a class="cite" href="bibliography.html#bib-LambekScott1986" data-cite="LambekScott1986">122</a>], and it is why the
+classifying form of Section <a class="xref" href="07-graph-structured-lambda-theories.html#sec-7-6" data-ref="ob:subsec:classifying">7.6</a> carries a chosen cartesian closed
+structure. The CCC structure is not an extra assumption bolted on for the convenience of
+Chapter <a class="xref" href="19-generating-type-systems-oslf-and-the-hypercube.html#top" data-ref="ch:hypercube">19</a>; it is what a lambda theory becomes when one asks what its
+variables are for.</p>
+<h2 id="sec-7-5"><span class="secnum">7.5</span> Why adjoined and not enriched</h2>
+<p>The second natural thought concerns the rewrites. Rewriting looks like \(2\)-dimensional
+structure — between two terms there is not merely the question of whether they are
+equal but a collection of ways of getting from one to the other — and the standard
+technique for such structure is <em>enrichment</em>: take hom-objects in the category of
+graphs rather than in \(\mathbf{Set}\). Graph-enriched Lawvere theories were the initial
+approach, and they too are not adequate here.</p>
+<p>The difficulty is that enrichment puts the rewrite structure in the wrong place. Under
+enrichment the graph of rewrites lives in the hom, where it is available to whatever
+respects composition and to nothing else. But we want to <em>quantify over</em> rewrites:
+the history monad of Chapter <a class="xref" href="12-the-history-monad.html#top" data-ref="ch:histmonad">12</a> makes rewrite events into terms, and the
+type-generation of Chapter <a class="xref" href="19-generating-type-systems-oslf-and-the-hypercube.html#top" data-ref="ch:hypercube">19</a> reads a rewrite rule together with a
+choice of position inside its left-hand side. Neither operation is available to a
+construction that can only see hom-objects.</p>
+<p>The approach we take instead is to <em>adjoin</em> the graph structure to the theory,
+as a Lawvere theory of graphs. One says what the sources and the targets are, and ensures
+that the source and target maps enjoy the minimal requisite equations. The rewrite
+structure thereby becomes ordinary algebraic structure inside the theory, presented by
+the same mechanism that presents everything else — rather than a change of base for
+enrichment, sitting outside the theory and constraining it from without. The framing of
+operational semantics in this algebraic style follows Stay and
+Meredith [<a class="cite" href="bibliography.html#bib-OSLF" data-cite="OSLF">41</a>] and Baez and Williams [<a class="cite" href="bibliography.html#bib-BaezWilliams2020" data-cite="BaezWilliams2020">115</a>].</p>
+<section class="thm remarkish thm-remark" id="remark-7-2" data-kind="Remark" data-num="7.2"><header><span class="thm-kind">Remark 7.2</span> <span class="thm-name">The name, in a nutshell</span><a class="permalink" href="#remark-7-2" aria-label="Link to Remark 7.2">¶</a></header><p>
+<em>Lambda theory</em> captures term languages with variables. <em>Graph-structured</em>
+captures the rewrite rules. A GSLT is a term language with variables, together with an
+adjoined graph of rewrites over it.</p></section>
+<section class="thm remarkish thm-remark" id="remark-7-3" data-kind="Remark" data-num="7.3"><header><span class="thm-kind">Remark 7.3</span> <span class="thm-name">Why this matters to the reader who wants to ship</span><a class="permalink" href="#remark-7-3" aria-label="Link to Remark 7.3">¶</a></header><p>The choice is visible in the specification format. Because the graph structure is
+adjoined rather than enriched, the <code>rewrites</code> block of a specification is not a
+different <em>kind</em> of declaration from the <code>terms</code> block — it is more
+algebraic structure over the same signature. That is why the ladder of
+Section <a class="xref" href="07-graph-structured-lambda-theories.html#sec-7-7" data-ref="ob:subsec:ladder">7.7</a> is a ladder rather than three unrelated facilities, and why a
+tool that can read the first two blocks can read the third.</p></section>
+<h2 id="sec-7-6"><span class="secnum">7.6</span> Presentation and classifying theory</h2>
+<p>Definition <a class="xref" href="07-graph-structured-lambda-theories.html#definition-7-1" data-ref="ob:def:gslt">7.1</a> is syntactic: it is what a developer writes and what a machine
+accepts. Several constructions below are more naturally stated semantically, and
+Section <a class="xref" href="07-graph-structured-lambda-theories.html#sec-7-3" data-ref="ob:subsec:name">7.3</a> has already said what the semantic form is. We record it
+explicitly.</p>
+<p>The <em>classifying theory</em> of a presentation is a category \(\mathsf{T}\) with finite
+limits and a chosen cartesian closed structure — the cartesian closure being what the
+lambda theory \(\Sigma\) becomes in the limit — equipped with its subobject fibration
+\(\pi : \mathrm{Sub}(\mathsf{T}) \to \mathsf{T}\), a distinguished object \(\Pr\) of
+programs, and a distinguished subobject
+<span class="math-d">\[(\rsq) \rightarrowtail \Pr \times \Pr\]</span>
+of one-step reduction, together with entailments generating the base rewrites and their
+closure under the term formers. This is the presentation-independent form in which the
+type-theoretic construction of Chapter <a class="xref" href="19-generating-type-systems-oslf-and-the-hypercube.html#top" data-ref="ch:hypercube">19</a> takes its input.</p>
+<p>The subobject \((\rsq)\) is the adjoined graph of Section <a class="xref" href="07-graph-structured-lambda-theories.html#sec-7-3" data-ref="ob:subsec:name">7.3</a> seen
+semantically: its source and target maps are the two projections, and the entailments
+generating the base rewrites and closing them under the term formers are the minimal
+equations those maps must satisfy. So the two presentations are not two objects to be
+reconciled; they are the syntactic and semantic faces of the same construction, and the
+reason the classifying theory has exactly the structure it has is that \(\Sigma\) is a
+lambda theory and \(R\) is adjoined as a graph.</p>
+<p>We take the presentation as primary throughout, for the practical reason that it is what
+one can type, and use the classifying theory when a construction is more naturally stated
+in the internal language.</p>
+<h2 id="sec-7-7"><span class="secnum">7.7</span> The ladder</h2>
+<p>Definition <a class="xref" href="07-graph-structured-lambda-theories.html#definition-7-1" data-ref="ob:def:gslt">7.1</a> has three components, and the reader can switch two of them
+off. Doing so produces a ladder of three rungs, each of which is a familiar and
+independently useful thing. We climb it because it is the most efficient route we know
+from “I already know what this is” to “I did not know you could do that.”</p>
+<div class="centered"><p><figure class="tikz"><img src="../figures/77314cc0dae1.svg" alt="Diagram"></figure></p></div>
+<h2 id="sec-7-8"><span class="secnum">7.8</span> Rung one: terms only</h2>
+<p>Take \(E = \emptyset\) and \(R = \emptyset\). What remains is a multi-sorted signature: a
+set of sorts and a set of operators with declared argument sorts and result sort. The
+terms over such a signature, up to nothing at all, are exactly the inhabitants of an
+algebraic data type.</p>
+<p><pre class="code"><code>language! {
+    name: Json,
+
+    types {
+        Value
+        Field
+    },
+
+    terms {
+        JNull  . Value ::= &quot;null&quot; ;
+        JBool  . b:Bool |- b : Value ;
+        JNum   . n:BigRat |- n : Value ;
+        JStr   . s:Str |- s : Value ;
+        JArr   . Value ::= &quot;[&quot; List(Value) &quot;]&quot; ;
+        JObj   . Value ::= &quot;{&quot; List(Field) &quot;}&quot; ;
+        Field  . k:Str, v:Value |- k &quot;:&quot; v : Field ;
+    },
+
+    equations { },
+    rewrites  { },
+}</code></pre></p>
+<p>There is nothing here a working developer has not written a hundred times, in whatever
+notation their language provides for sums of products. The point of the rung is not
+that it is novel but that it is <em>included</em>: the specification format that will
+shortly describe the \(\pi\)-calculus describes a JSON document with no change of
+register.</p>
+<h2 id="sec-7-9"><span class="secnum">7.9</span> Rung two: equations</h2>
+<p>Now populate \(E\). The terms are quotiented by a congruence, and what one is presenting
+is no longer a free term algebra but an algebra satisfying equations — that is, a
+finitely presentable object of universal algebra. Monoids, groups, rings, lattices,
+semilattices, and the various bag- and set-like structures all live at this rung.</p>
+<p><pre class="code"><code>language! {
+    name: Monoid,
+
+    types { M },
+
+    terms {
+        Unit . M ::= &quot;e&quot; ;
+        Mul  . x:M, y:M |- x &quot;*&quot; y : M ;
+    },
+
+    equations {
+        Assoc  . |- (Mul (Mul X Y) Z) = (Mul X (Mul Y Z)) ;
+        UnitL  . |- (Mul Unit X)      = X ;
+        UnitR  . |- (Mul X Unit)      = X ;
+    },
+
+    rewrites { },
+}</code></pre></p>
+<p>The rung matters to us for a specific downstream reason. The equational theory of a
+single operator — whether it is free, associative, or associative–commutative —
+turns out to determine whether proximity to a resource confers authority over it
+(Section <a class="xref" href="11-the-cost-monad.html#sec-11-5" data-ref="ob:subsec:capabilities">11.5</a>), and whether an interaction surface can be carried
+by position or must be named explicitly (Section <a class="xref" href="08-interactive-gslts-and-the-site-of-interaction.html#sec-8-3" data-ref="ob:subsec:surfaces">8.3</a>). Equations are
+not decoration. They are the difference between an object-capability discipline and an
+ambient-authority leak.</p>
+<h2 id="sec-7-10"><span class="secnum">7.10</span> Rung three: rewrites</h2>
+<p>Finally populate \(R\). Now the data can wiggle.</p>
+<p>This is the rung at which a specification stops describing a static structure and
+starts describing a language with a behaviour. The reduction rules of an SOS
+presentation go here, and so do the congruence rules that close reduction under the
+term formers, in exactly the shape Plotkin, Milner, and Cardelli–Gordon wrote them.</p>
+<p><pre class="code"><code>language! {
+    name: Lambda,
+
+    types { Term },
+
+    terms {
+        Lam . ^x.body:[Term -&gt; Term] |- &quot;lam &quot; x &quot;.&quot; body : Term;
+        App . fun:Term, arg:Term     |- &quot;(&quot; fun &quot;,&quot; arg &quot;)&quot; : Term;
+    },
+
+    equations { },
+
+    rewrites {
+        Beta     . |- (App (Lam fun) arg) ~&gt; (eval fun arg);
+        AppCongL . | M0 ~&gt; M1 |- (App M0 N) ~&gt; (App M1 N);
+        AppCongR . | N0 ~&gt; N1 |- (App M N0) ~&gt; (App M N1);
+        LamCong  . | S ~&gt; T   |- (Lam ^x.S) ~&gt; (Lam ^x.T);
+    },
+}</code></pre></p>
+<p>Read the <code>rewrites</code> block against a textbook presentation of the
+\(\lambda\)-calculus and the correspondence is immediate: one base rule and three
+congruence rules, with the binder handled by the <code>\^{}x.</code> notation and
+substitution by <code>eval</code>. The horizontal bar of an inference rule has become
+<code>|-</code>, and the premises sit to its left. This is not a translation of the
+\(\lambda\)-calculus into some other formalism. It is the \(\lambda\)-calculus, written so
+that a machine can read it.</p>
+<section class="thm remarkish thm-remark" id="remark-7-4" data-kind="Remark" data-num="7.4"><header><span class="thm-kind">Remark 7.4</span> <span class="thm-name">What the ladder buys</span><a class="permalink" href="#remark-7-4" aria-label="Link to Remark 7.4">¶</a></header><p>A reader arriving at rung three from rung one has crossed from data to computation
+without changing tools. That is the whole design argument for the format, and it is
+worth stating plainly: the reason to present a language as \((\Sigma, E, R)\) is not
+elegance, it is that the same machinery that gives you a parser and a pretty-printer
+for your JSON documents gives you a reduction engine for your calculus, and everything
+in Part III on top of that.</p></section>
+<h2 id="sec-7-11"><span class="secnum">7.11</span> A worked presentation: the rho calculus</h2>
+<p>We will need the rho calculus [<a class="cite" href="bibliography.html#bib-meredith2005rho" data-cite="meredith2005rho">1</a>] as a running example, since
+it is both the host language of Part IV and one of the more instructive instances of
+the constructions of Part III. It is a reflective higher-order calculus: names are not
+generated by a restriction operator but are <em>quoted processes</em>, and the quoting and
+unquoting operators \(@\) and \(*\) mediate between the two sorts.</p>
+<p><pre class="code"><code>language! {
+    name: RhoCalc,
+
+    types { Proc  Name },
+
+    terms {
+        PZero   .                            |- &quot;Nil&quot; : Proc;
+        PDrop   . n:Name                     |- &quot;*&quot; n : Proc;
+        POutput . n:Name, q:Proc             |- n &quot;!&quot; &quot;(&quot; q &quot;)&quot; : Proc;
+        PInput  . n:Name, ^x.p:[Name -&gt; Proc] |- &quot;for&quot; &quot;(&quot; x &quot;&lt;-&quot; n &quot;)&quot; p : Proc;
+        PPar    . ps:HashBag(Proc)           |- &quot;{&quot; ps.*sep(&quot;|&quot;) &quot;}&quot; : Proc;
+        NQuote  . p:Proc                     |- &quot;@&quot; p : Name;
+    },
+
+    equations {
+        QuoteDrop . |- (NQuote (PDrop N)) = N ;
+    },
+
+    rewrites {
+        Comm . |- (PPar {(PInput n ^x.p), (POutput n q), ...rest})
+                    ~&gt; (PPar {(subst ^x.p (NQuote q)), ...rest});
+        Drop . |- (PDrop (NQuote P)) ~&gt; P;
+        ParCong . | S ~&gt; T |- (PPar {S, ...rest}) ~&gt; (PPar {T, ...rest});
+    },
+}</code></pre></p>
+<p>Three features of this presentation will be load-bearing later. The parallel composition
+<code>PPar</code> takes a <code>HashBag</code>, so its equational theory is
+associative–commutative — position among parallel components carries no information.
+The <code>Comm</code> rule matches two components of that bag and leaves the remainder
+<code>...rest</code> untouched, which is what makes it a rule about a <em>site</em> of
+interaction rather than about whole terms. And the quote constructor <code>NQuote</code>
+gives the theory a way to name its own programs, which will matter when we ask whether a
+theory can internalise apparatus applied to it.</p><section class="footnotes"><h2>Notes</h2><ol><li id="fn1">We say <em>strengthening</em> rather than
+<em>enrichment</em> throughout, reserving the latter for its technical sense, which
+Section <a class="xref" href="07-graph-structured-lambda-theories.html#sec-7-3" data-ref="ob:subsec:name">7.3</a> argues is not the right technique here. <a class="fnback" href="#fnr1">↩</a></li></ol></section>
+<nav class="pager"><a class="prev" href="06-what-a-language-presentation-is-and-why-it-com.html"><span>Previous</span>What a Language Presentation Is, and Why It Comes First</a><a class="next" href="08-interactive-gslts-and-the-site-of-interaction.html"><span>Next</span>Interactive GSLTs, and the Site of Interaction</a></nav>
+</main>
+<aside class="margin" id="margin" aria-live="polite"></aside>
+</div>
+<button class="railtoggle" id="railtoggle" aria-expanded="false">Contents</button>
+
+</body>
+</html>

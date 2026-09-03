@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decoration: One Map, Many Semirings · Finding Mind</title>
+<link rel="canonical" href="https://findingmind.com/read/30-decoration-one-map-many-semirings.html">
+<meta name="description" content="Decoration: One Map, Many Semirings">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../book.css">
+<link rel="stylesheet" href="../katex/katex.min.css">
+<script defer src="../katex/katex.min.js"></script>
+<script defer src="../katex/auto-render.min.js"></script>
+<script defer src="../macros.js"></script>
+<script defer src="../reader.js"></script>
+</head>
+<body class="readpage">
+
+<a class="skip" href="#main">Skip to text</a>
+<div class="reader">
+<nav class="rail" aria-label="Contents"><div class="rail-in"><a class="rail-home" href="../index.html">Finding Mind</a><h2 class="rail-act">The Pledge</h2><a class="rail-ch" href="permitted-say.html"><span class="rn rn-i">⁂</span><span class="rt">The Permitted Say</span></a><a class="rail-ch" href="01-prolegomena-to-finding-mind.html"><span class="rn">1</span><span class="rt">Prolegomena to Finding Mind</span></a><a class="rail-ch" href="02-the-ordinary-world.html"><span class="rn">2</span><span class="rt">The Ordinary World</span></a><a class="rail-ch" href="03-information-causation-and-the-blind-spot.html"><span class="rn">3</span><span class="rt">Information, Causation, and the Blind Spot</span></a><a class="rail-ch" href="04-finding-the-shape.html"><span class="rn">4</span><span class="rt">Finding the Shape</span></a><a class="rail-ch" href="05-inside-and-outside-and-what-it-means-to-assume.html"><span class="rn">5</span><span class="rt">Inside and Outside, and What it Means to Assume the Virtue</span></a><a class="rail-ch" href="how-to-read-this-book.html"><span class="rn rn-i">⁂</span><span class="rt">How to Read This Book</span></a><a class="rail-ch" href="related-work-and-where-this-differs.html"><span class="rn rn-i">⁂</span><span class="rt">Related Work, and Where This Differs</span></a><h2 class="rail-act">The Turn</h2><a class="rail-ch" href="foam-born.html"><span class="rn rn-i">⁂</span><span class="rt">The Foam-Born</span></a><h3 class="rail-part">The Machinery: From GSLTs to Cost-Accounted Theories</h3><a class="rail-ch" href="06-what-a-language-presentation-is-and-why-it-com.html"><span class="rn">6</span><span class="rt">What a Language Presentation Is, and Why It Comes First</span></a><a class="rail-ch" href="07-graph-structured-lambda-theories.html"><span class="rn">7</span><span class="rt">Graph-Structured Lambda Theories</span></a><a class="rail-ch" href="08-interactive-gslts-and-the-site-of-interaction.html"><span class="rn">8</span><span class="rt">Interactive GSLTs, and the Site of Interaction</span></a><a class="rail-ch" href="09-continued-interactive-gslts.html"><span class="rn">9</span><span class="rt">Continued Interactive GSLTs</span></a><a class="rail-ch" href="10-the-category-of-gslts.html"><span class="rn">10</span><span class="rt">The Category of GSLTs</span></a><a class="rail-ch" href="11-the-cost-monad.html"><span class="rn">11</span><span class="rt">The Cost Monad</span></a><a class="rail-ch" href="12-the-history-monad.html"><span class="rn">12</span><span class="rt">The History Monad</span></a><a class="rail-ch" href="13-weighting-rates-from-the-generated-logic.html"><span class="rn">13</span><span class="rt">Weighting: Rates from the Generated Logic</span></a><a class="rail-ch" href="14-cost-accounted-rho.html"><span class="rn">14</span><span class="rt">Cost-Accounted Rho</span></a><a class="rail-ch" href="15-conversion-enzymes-and-the-virtual-token.html"><span class="rn">15</span><span class="rt">Conversion, Enzymes, and the Virtual Token</span></a><a class="rail-ch" href="16-the-labeled-transition-system-and-context-deco.html"><span class="rn">16</span><span class="rt">The Labeled Transition System and Context-Decorated HML</span></a><a class="rail-ch" href="17-what-goes-into-a-logic.html"><span class="rn">17</span><span class="rt">What Goes Into a Logic</span></a><a class="rail-ch" href="18-scopes-and-the-fixed-points-that-generate-them.html"><span class="rn">18</span><span class="rt">Scopes, and the Fixed Points that Generate Them</span></a><a class="rail-ch" href="19-generating-type-systems-oslf-and-the-hypercube.html"><span class="rn">19</span><span class="rt">Generating Type Systems: OSLF and the Hypercube</span></a><a class="rail-ch" href="20-instruments-making-structure-visible-to-bisimu.html"><span class="rn">20</span><span class="rt">Instruments: Making Structure Visible to Bisimulation</span></a><h3 class="rail-part">Ecology as Cognitive Architecture</h3><a class="rail-ch" href="21-the-mortal-scientist.html"><span class="rn">21</span><span class="rt">The Mortal Scientist</span></a><a class="rail-ch" href="22-learning-to-play.html"><span class="rn">22</span><span class="rt">Learning to Play</span></a><a class="rail-ch" href="23-composing-learners.html"><span class="rn">23</span><span class="rt">Composing Learners</span></a><a class="rail-ch" href="24-enzymes-and-individuals.html"><span class="rn">24</span><span class="rt">Enzymes and Individuals</span></a><a class="rail-ch" href="25-a-network-that-learns-by-rewriting.html"><span class="rn">25</span><span class="rt">A Network That Learns by Rewriting</span></a><h3 class="rail-part">Suffering: Homeostasis and the Learner&#x27;s Own Account</h3><a class="rail-ch" href="26-suffering-a-learner-s-view-of-its-own-account.html"><span class="rn">26</span><span class="rt">Suffering: A Learner’s View of Its Own Account</span></a><h3 class="rail-part">Situating the Learner: A Variety of Possible Physics</h3><a class="rail-ch" href="27-the-learner-s-world-already-has-a-physics.html"><span class="rn">27</span><span class="rt">The Learner’s World Already Has a Physics</span></a><a class="rail-ch" href="28-the-reversibility-construction.html"><span class="rn">28</span><span class="rt">The Reversibility Construction</span></a><a class="rail-ch" href="29-causal-structure-and-time.html"><span class="rn">29</span><span class="rt">Causal Structure and Time</span></a><a class="rail-ch" aria-current="page" href="30-decoration-one-map-many-semirings.html"><span class="rn">30</span><span class="rt">Decoration: One Map, Many Semirings</span></a><a class="rail-ch" href="31-conservation-and-what-it-costs-to-have-it.html"><span class="rn">31</span><span class="rt">Conservation, and What It Costs to Have It</span></a><a class="rail-ch" href="32-extended-modal-operators.html"><span class="rn">32</span><span class="rt">Extended Modal Operators</span></a><a class="rail-ch" href="33-complex-amplitudes-and-where-the-coherence-is.html"><span class="rn">33</span><span class="rt">Complex Amplitudes, and Where the Coherence Is</span></a><a class="rail-ch" href="34-synthesis-the-full-structure.html"><span class="rn">34</span><span class="rt">Synthesis: The Full Structure</span></a><a class="rail-ch" href="35-entropy-and-the-cost-of-staying-level.html"><span class="rn">35</span><span class="rt">Entropy, and the Cost of Staying Level</span></a><a class="rail-ch" href="36-discussion-and-future-directions.html"><span class="rn">36</span><span class="rt">Discussion and Future Directions</span></a><h3 class="rail-part">Why Scientists Get Misled: Emergent Ontology in Massive Agent Populations</h3><a class="rail-ch" href="37-introduction.html"><span class="rn">37</span><span class="rt">Introduction</span></a><a class="rail-ch" href="38-ontological-isolation.html"><span class="rn">38</span><span class="rt">Ontological Isolation</span></a><a class="rail-ch" href="39-agents-and-the-scientific-method.html"><span class="rn">39</span><span class="rt">Agents and the Scientific Method</span></a><a class="rail-ch" href="40-behavioral-primes.html"><span class="rn">40</span><span class="rt">Behavioral Primes</span></a><a class="rail-ch" href="41-massive-populations-and-communication-degradat.html"><span class="rn">41</span><span class="rt">Massive Populations and Communication Degradation</span></a><a class="rail-ch" href="42-the-logical-topology-and-compactness.html"><span class="rn">42</span><span class="rt">The Logical Topology and Compactness</span></a><a class="rail-ch" href="43-coherence-clusters-and-their-nerve.html"><span class="rn">43</span><span class="rt">Coherence Clusters and Their Nerve</span></a><a class="rail-ch" href="44-the-apparent-ontology.html"><span class="rn">44</span><span class="rt">The Apparent Ontology</span></a><a class="rail-ch" href="45-open-gaps-and-future-work.html"><span class="rn">45</span><span class="rt">Open Gaps and Future Work</span></a><a class="rail-ch" href="46-discussion.html"><span class="rn">46</span><span class="rt">Discussion</span></a><h3 class="rail-part">Origins of Life: Assembly Theory, Phase Transitions, and Replication</h3><a class="rail-ch" href="47-introduction.html"><span class="rn">47</span><span class="rt">Introduction</span></a><a class="rail-ch" href="48-assembly-theory-causal-depth-and-copy-number.html"><span class="rn">48</span><span class="rt">Assembly Theory: Causal Depth and Copy Number</span></a><a class="rail-ch" href="49-replication-as-a-fixed-point.html"><span class="rn">49</span><span class="rt">Replication as a Fixed Point</span></a><a class="rail-ch" href="50-smith-s-phase-transition-and-the-density-of-at.html"><span class="rn">50</span><span class="rt">Smith’s Phase Transition and the Density of Attractors</span></a><a class="rail-ch" href="51-metabolism-energy-gradients-and-the-ecosystem.html"><span class="rn">51</span><span class="rt">Metabolism, Energy Gradients, and the Ecosystem</span></a><a class="rail-ch" href="52-assembly-index-and-the-depth-of-the-fractal-le.html"><span class="rn">52</span><span class="rt">Assembly Index and the Depth of the Fractal Learner</span></a><a class="rail-ch" href="53-scope-and-manufacture.html"><span class="rn">53</span><span class="rt">Scope and Manufacture</span></a><a class="rail-ch" href="54-open-gaps.html"><span class="rn">54</span><span class="rt">Open Gaps</span></a><a class="rail-ch" href="55-discussion.html"><span class="rn">55</span><span class="rt">Discussion</span></a><h3 class="rail-part">Conclusion</h3><a class="rail-ch" href="what-has-been-built.html"><span class="rn rn-i">⁂</span><span class="rt">What Has Been Built</span></a><a class="rail-ch" href="a-view-from-inside-the-framework.html"><span class="rn rn-i">⁂</span><span class="rt">A View from Inside the Framework</span></a><a class="rail-ch" href="what-remains-to-be-done.html"><span class="rn rn-i">⁂</span><span class="rt">What Remains to Be Done</span></a><h2 class="rail-act">The Prestige</h2><a class="rail-ch" href="begotten.html"><span class="rn rn-i">⁂</span><span class="rt">begotten not made</span></a><h3 class="rail-part">The Method, and What It Left Out</h3><a class="rail-ch" href="56-how-the-trick-was-done.html"><span class="rn">56</span><span class="rt">How the Trick Was Done</span></a><a class="rail-ch" href="57-everything-so-far-was-turing-complete.html"><span class="rn">57</span><span class="rt">Everything So Far Was Turing Complete</span></a><a class="rail-ch" href="58-the-tower-of-oracle-extensions.html"><span class="rn">58</span><span class="rt">The Tower of Oracle Extensions</span></a><a class="rail-ch" href="59-not-every-cut-is-an-aperture.html"><span class="rn">59</span><span class="rt">Not Every Cut Is an Aperture</span></a><a class="rail-ch" href="60-where-does-agency-live.html"><span class="rn">60</span><span class="rt">Where Does Agency Live?</span></a><a class="rail-ch" href="61-choice-principles-are-the-types-schedulers-are.html"><span class="rn">61</span><span class="rt">Choice Principles are the Types; Schedulers are the Terms</span></a><a class="rail-ch" href="62-consciousness-and-the-world-it-comes-with.html"><span class="rn">62</span><span class="rt">Consciousness, and the World It Comes With</span></a><a class="rail-ch" href="63-what-these-chapters-owe.html"><span class="rn">63</span><span class="rt">What These Chapters Owe</span></a><h3 class="rail-part">Reference, Simulation, Reception, and a Future Metaphysics</h3><a class="rail-ch" href="64-what-a-symbol-system-would-have-to-be.html"><span class="rn">64</span><span class="rt">What a Symbol System Would Have to Be</span></a><a class="rail-ch" href="65-if-this-is-a-simulation-which-kind.html"><span class="rn">65</span><span class="rt">If This Is a Simulation, Which Kind</span></a><a class="rail-ch" href="66-what-it-is-like-to-be-a-bot.html"><span class="rn">66</span><span class="rt">What It Is Like to Be a Bot</span></a><a class="rail-ch" href="67-how-life-like-is-life-like-enough.html"><span class="rn">67</span><span class="rt">How Life-Like Is Life-Like Enough?</span></a><a class="rail-ch" href="68-any-future-metaphysics.html"><span class="rn">68</span><span class="rt">Any Future Metaphysics</span></a><a class="rail-ch" href="right-sizing.html"><span class="rn rn-i">⁂</span><span class="rt">Right-Sizing</span></a></div></nav>
+<main id="main" class="text ">
+<header class="chead"><p class="kicker">Chapter 30</p><h1>Decoration: One Map, Many Semirings</h1></header>
+<p>An earlier presentation of this material carried two separate pieces of
+data — a <em>weight map</em> valued in \(\CC\) and a <em>cost map</em> valued
+in an ordered monoid — and called the first a Lagrangian and the second
+a Hamiltonian.  That presentation was doing more work than it needed to
+and claiming more than it had earned.  The two maps have the same domain,
+the same indexing, and the same shape; they differ only in where they take
+their values.  This chapter replaces them with a single construction,
+parametric in a semiring, and is careful about which classical structures
+the construction actually delivers.</p>
+<p>The construction itself was built in Part <a class="xref" href="contents.html#part-the-machinery-from-gslts-to-cost-account" data-ref="part:machinery">Part I</a>: a
+decoration is the weight map of Definition <a class="xref" href="13-weighting-rates-from-the-generated-logic.html#definition-13-4" data-ref="wt:def:wmap">13.4</a>, its domain
+is the admissible key set of Definition <a class="xref" href="13-weighting-rates-from-the-generated-logic.html#definition-13-3" data-ref="wt:def:reqs">13.3</a>, and equipping
+a theory with one is the endofunctor \(\Wgt_{\Semi}\) of
+Construction <a class="xref" href="13-weighting-rates-from-the-generated-logic.html#construction-13-1" data-ref="wt:con:functor">13.1</a>.  What is new here is the
+<em>parameter</em>.  Chapter <a class="xref" href="13-weighting-rates-from-the-generated-logic.html#top" data-ref="ch:weight">13</a> developed two instances
+because those are the two an implementation runs; the question this
+chapter asks is what the other choices of semiring deliver, and the
+answer is that a surprising amount of the classical vocabulary of
+dynamics is a choice of \(\oplus\) and \(\otimes\).</p>
+<h2 id="sec-30-1"><span class="secnum">30.1</span> Decorations</h2>
+<section class="thm plain thm-definition" id="definition-30-1" data-kind="Definition" data-num="30.1"><header><span class="thm-kind">Definition 30.1</span> <span class="thm-name">Semiring</span><a class="permalink" href="#definition-30-1" aria-label="Link to Definition 30.1">¶</a></header><p>A <em>semiring</em> \(\Semi = (R, \oplus, \otimes, 0_R, 1_R)\) is a set with
+two monoid structures, \(\otimes\) distributing over a commutative \(\oplus\),
+with \(0_R\) absorbing for \(\otimes\).  We do not require additive inverses;
+that omission is the point of the generality.</p></section>
+<section class="thm plain thm-definition" id="definition-30-2" data-kind="Definition" data-num="30.2"><header><span class="thm-kind">Definition 30.2</span> <span class="thm-name">Decoration</span><a class="permalink" href="#definition-30-2" aria-label="Link to Definition 30.2">¶</a></header><p>
+A <em>decoration</em> of a GSLT \(\GSLT\) in a semiring \(\Semi\) is a family
+<span class="math-d">\[\dec_r : \HML(\ctx) \rightharpoonup R, \qquad r \in \rules,\]</span>
+whose domain consists of formulae that <em>refine the left-hand side of
+\(r\)</em>: formulae \(\phi\) such that \(u \sat \phi\) implies \(u\) matches the
+pattern \(l_r\).  A <em>decorated GSLT</em> is a pair \((\GSLT, \dec)\).</p></section>
+<p>The refinement relation orders the domain of \(\dec_r\): write
+\(\phi \leq \psi\) when \(\psi\) entails \(\phi\).  To evaluate a decoration at
+a step one must select a formula, and the selection has to be well
+defined.  The condition under which it is, is the partition discipline of
+Definition <a class="xref" href="13-weighting-rates-from-the-generated-logic.html#definition-13-2" data-ref="wt:def:partition">13.2</a>: the keys of a rule are pairwise
+exclusive and jointly exhaustive over the rule’s left-hand side, so that
+by Proposition <a class="xref" href="13-weighting-rates-from-the-generated-logic.html#proposition-13-1" data-ref="wt:prop:classify">13.1</a> each redex is classified by exactly
+one of them.  We write \(\phi_r(u)\) for that unique witness and \(\dec_r(u)\)
+for \(\dec_r(\phi_r(u))\), and everything below assumes it.</p>
+<section class="thm remarkish thm-remark" id="remark-30-1" data-kind="Remark" data-num="30.1"><header><span class="thm-kind">Remark 30.1</span> <span class="thm-name">The weaker alternative, and why it is not taken</span><a class="permalink" href="#remark-30-1" aria-label="Link to Remark 30.1">¶</a></header><p>
+An earlier presentation of this chapter imposed a different and weaker
+condition, which is worth naming because it is the obvious one and
+because it will occur independently to any reader who tries to build the
+construction.  Call a decoration <em>refinement-complete</em> when, for
+every rule \(r\) and every term \(u\) matching \(l_r\), the set of satisfied
+formulae in \(\mathrm{dom}(\dec_r)\) has a greatest element — a
+<em>most refined witness</em> — and evaluate the decoration there.  This
+also makes the selection single-valued, and it is strictly weaker: a
+partition is refinement-complete, since the unique satisfied key is
+trivially the greatest, and the converse fails.</p>
+<p>The reason to prefer the partition is not that most-specific-match is
+ill-defined but that it is <em>differently</em> defined, and that three
+things downstream need the disjointness rather than the selection.  The
+locality of reclassification which licenses an incremental simulator
+needs it; the propensity of a class being summable over its redexes needs
+it; and in the complex instance the classes being orthogonal projectors
+needs it.  Refinement-completeness delivers a well-defined rate and none
+of the three.  Where a modeller genuinely wants overlapping keys with a
+most-specific rule — and it is a natural thing to want — what is being
+specified is a different semantics, and it should be said which.</p></section>
+<section class="thm plain thm-definition" id="definition-30-3" data-kind="Definition" data-num="30.3"><header><span class="thm-kind">Definition 30.3</span> <span class="thm-name">Path weight</span><a class="permalink" href="#definition-30-3" aria-label="Link to Definition 30.3">¶</a></header><p>
+Let \(\gamma = r_1 \cdot r_2 \cdots r_n\) be a rewrite path from \(P\) to \(Q\),
+with \(u_i\) the redex at step \(i\).  The <em>path weight</em> is the ordered
+product
+<span class="math-d">\[W(\gamma) \;=\; \dec_{r_1}(u_1) \otimes \cdots \otimes \dec_{r_n}(u_n)
+  \;\in\; R,\]</span>
+and the <em>transition weight</em> from \(P\) to \(Q\) is the sum over paths
+<span class="math-d">\[\langle Q \mid P \rangle \;=\; \bigoplus_{\gamma : P \to Q} W(\gamma),\]</span>
+whenever that sum exists.</p></section>
+<p>The product is ordered because \(\otimes\) need not be commutative, and is
+not in the cases of interest: the order of the factors is the order of the
+steps.  This is the temporal monoid of [<a class="cite" href="bibliography.html#bib-CE" data-cite="CE">62</a>, \S4] reappearing inside
+the decoration — reduction is sequential even when interaction is
+parallel.</p>
+<h2 id="sec-30-2"><span class="secnum">30.2</span> Four instances</h2>
+<p>The content of the parametrisation is that familiar dynamical structures
+are recovered by a choice of semiring.  What follows is the reading
+of [<a class="cite" href="bibliography.html#bib-CE" data-cite="CE">62</a>, \S13], transposed to the present setting.</p>
+<div class="centered"><p>{1.35}</p>
+<div class="tablewrap"><table><thead><tr><th><strong>Semiring \(\Semi\)</strong></th><th><strong>What \((\GSLT,\dec)\) becomes</strong></th></tr></thead><tbody><tr><td>Boolean \((\{0,1\},\vee,\wedge)\)</td><td>the bare nondeterministic transition system; \(\langle Q\mid P\rangle\)
+    is reachability</td></tr><tr><td>Tropical \((\Real\cup\{\infty\},\min,+)\)</td><td>cost; \(W(\gamma)\) is the total charge of a path and
+    \(\langle Q\mid P\rangle\) is the cheapest way to get there</td></tr><tr><td>Non-negative reals \((\Real_{\geq 0},+,\times)\)</td><td>stochastic dynamics; \(W\) is a path weight, and the Gillespie
+    algorithm samples it — which by
+    Theorem <a class="xref" href="13-weighting-rates-from-the-generated-logic.html#theorem-13-3" data-ref="wt:thm:degeneration">13.3</a> is a theorem about degeneration
+    and not an analogy</td></tr><tr><td>Complex numbers \((\CC,+,\times)\)</td><td>amplitudes, and with them interference — see
+    Chapter <a class="xref" href="33-complex-amplitudes-and-where-the-coherence-is.html#top" data-ref="sec:quantum">33</a>, and the obstruction recorded there</td></tr></tbody></table></div></div>
+<section class="thm remarkish thm-remark" id="remark-30-2" data-kind="Remark" data-num="30.2"><header><span class="thm-kind">Remark 30.2</span> <span class="thm-name">What the two-map presentation was seeing</span><a class="permalink" href="#remark-30-2" aria-label="Link to Remark 30.2">¶</a></header><p>The weight map was the complex instance; the cost map was the tropical
+instance.  They were never two kinds of structure.  Nothing is lost by
+the merge, and something is gained: the Boolean and stochastic instances,
+for which the two-map presentation had no room, are now the same
+construction specialised twice more.</p></section>
+<h2 id="sec-30-3"><span class="secnum">30.3</span> Where the Lagrangian actually is</h2>
+<p>The earlier text set \(S[\gamma] = \sum_i \log \dec_{r_i}(u_i)\), observed
+that \(W(\gamma) = e^{S[\gamma]}\), and called \(S\) an action.  That is a
+change of variable, not a variational principle: it converts a product
+into a sum and asserts nothing further.  A Lagrangian earns its name by
+making the realised trajectory the stationary point of an action over a
+space of competing trajectories, and no such principle was stated, let
+alone proved.</p>
+<p>There is nevertheless a genuine least-action statement available, and it
+is the tropical instance.</p>
+<section class="thm plain thm-proposition" id="proposition-30-1" data-kind="Proposition" data-num="30.1"><header><span class="thm-kind">Proposition 30.1</span> <span class="thm-name">Least action is the tropical path integral</span><a class="permalink" href="#proposition-30-1" aria-label="Link to Proposition 30.1">¶</a></header><p>
+In the tropical semiring, Definition <a class="xref" href="30-decoration-one-map-many-semirings.html#definition-30-3" data-ref="def:pathweight">30.3</a> reads
+<span class="math-d">\[W(\gamma) = \sum_{i=1}^{n} \dec_{r_i}(u_i),
+  \qquad
+  \langle Q \mid P \rangle = \min_{\gamma : P \to Q} W(\gamma).\]</span>
+The path weight is an additive action functional, and the transition
+weight is its <em>minimisation over all paths</em>.  The principle of least
+action is therefore not an approximation to the sum over paths in this
+setting; it <em>is</em> the sum over paths, computed in the semiring whose
+addition is \(\min\).</p></section>
+<section class="proof"><header>Proof</header><p>Immediate from \(\oplus = \min\) and \(\otimes = +\).</p></section>
+<section class="thm remarkish thm-remark" id="remark-30-3" data-kind="Remark" data-num="30.3"><header><span class="thm-kind">Remark 30.3</span> <span class="thm-name">And the saddle point</span><a class="permalink" href="#remark-30-3" aria-label="Link to Remark 30.3">¶</a></header><p>The relation between Proposition <a class="xref" href="30-decoration-one-map-many-semirings.html#proposition-30-1" data-ref="prop:leastaction">30.1</a> and the complex
+instance is the relation between tropicalisation and the \(\hbar \to 0\)
+limit: the saddle-point approximation of a complex sum over paths is a
+tropical minimisation, which is why the classical limit of a path
+integral is a least-action principle.  Here the two are not limits of
+each other but instances of one construction at different semirings, so
+the passage between them is a question about semiring homomorphisms
+rather than about asymptotics.  We do not claim to have answered it.  We
+claim only that this is where the question lives.</p></section>
+<p>The honest summary is this.  The decoration supplies a charge per step.
+The tropical instance supplies a least-action principle.  The word
+“Lagrangian” is warranted for the tropical case and premature for the
+others.</p>
+<h2 id="sec-30-4"><span class="secnum">30.4</span> Decorations move</h2>
+<p>A decoration as defined above is static: \(\dec_r\) is fixed once and for
+all.  That is too weak for what the later parts of this book require,
+where the rate at which a rule fires depends on what has already happened.</p>
+<section class="thm plain thm-definition" id="definition-30-4" data-kind="Definition" data-num="30.4"><header><span class="thm-kind">Definition 30.4</span> <span class="thm-name">Dynamic decoration</span><a class="permalink" href="#definition-30-4" aria-label="Link to Definition 30.4">¶</a></header><p>
+A <em>dynamic decoration</em> equips each state with a table
+\(T : \mathrm{dom}(\dec) \to R\) keyed by the formulae refining the
+left-hand sides of the rules, and equips each rewrite with an update
+\(T \mapsto T'\) on the table carried by its successor.  A static decoration
+is the special case in which every update is the identity.</p></section>
+<p>Because the successor state carries a table of the same kind, the updates
+compose, and the weights are genuinely dynamical rather than parameters.</p>
+<p>It is worth being explicit about what that costs and what it buys, since
+the chapter as previously written recorded the construction and not its
+consequence.  A table travelling with the state means the state is not
+the term.  The object being decorated is the <em>configuration</em>
+\((P, T)\) of Definition <a class="xref" href="13-weighting-rates-from-the-generated-logic.html#definition-13-5" data-ref="wt:def:config">13.5</a>, and the process is Markov on
+configurations and in general not on terms — two runs can reach the same
+term carrying different tables, and then no rate function of the term
+alone reproduces both (Theorem <a class="xref" href="13-weighting-rates-from-the-generated-logic.html#theorem-13-1" data-ref="wt:thm:markov">13.1</a>,
+Example <a class="xref" href="13-weighting-rates-from-the-generated-logic.html#example-13-1" data-ref="wt:ex:nonmarkov">13.1</a>).  This is the price of dynamism and it is
+paid in the size of the state space.  It is also, read the other way, the
+reason a physics whose constants respond to what has happened is still a
+physics: one has not left the Markovian world, one has moved up a level
+inside it.</p>
+<p>One further consequence is worth recording early:
+the adequacy of a logic generated over such a structure is a function of
+the rewrites.  Interleaving rewrites yield a logic that sees only
+interleaving; true-concurrency rewrites yield a logic that sees true
+concurrency.  The decoration does not fix this; the rewrites do.</p>
+<section class="thm remarkish thm-remark" id="remark-30-4" data-kind="Remark" data-num="30.4"><header><span class="thm-kind">Remark 30.4</span> <span class="thm-name">Geometry and matter</span><a class="permalink" href="#remark-30-4" aria-label="Link to Remark 30.4">¶</a></header><p>
+The propensity of Definition <a class="xref" href="13-weighting-rates-from-the-generated-logic.html#definition-13-7" data-ref="wt:def:propensity">13.7</a> carries a second
+factor this chapter has so far ignored: the geometric factor
+\(\gfac(k)\) accumulated along the context rules addressing a redex.  It is
+worth naming here because the split it induces is a physical one and the
+book has no other statement of it.  \(\dec_r(u)\) prices a step by
+<em>what</em> is transferred; \(\gfac(k)\) prices it by <em>where in the
+term</em> the interaction surfaces are.  The first depends on the matter of
+the interaction and the second on nothing but its position.  A weighting
+of the reduction graph therefore splits, canonically, into a geometric
+part and a matter part.</p>
+<p>We take the default \(\gfac \equiv 1\) throughout — addressing is free —
+and record the split as an opportunity rather than a result.  What would
+make it more than a suggestive coincidence is an action forcing the two
+parts to agree, in the way that a field equation forces geometry and
+matter to determine one another.  Chapter <a class="xref" href="36-discussion-and-future-directions.html#top" data-ref="sec:discussion">36</a> lists
+this among the things not attempted.</p></section>
+<h2 id="sec-30-5"><span class="secnum">30.5</span> The cost instance, and affordability</h2>
+<p>The tropical instance deserves separate treatment, because it alone
+supports a notion of <em>sufficiency</em>: a step can fail for want of
+funds, which is not something a probability or an amplitude can do.</p>
+<section class="thm plain thm-definition" id="definition-30-5" data-kind="Definition" data-num="30.5"><header><span class="thm-kind">Definition 30.5</span> <span class="thm-name">Resource algebra</span><a class="permalink" href="#definition-30-5" aria-label="Link to Definition 30.5">¶</a></header><p>A <em>resource algebra</em> is a commutative ordered monoid
+\((A, +, \mathbf{0}, \leq)\).  A <em>vectorial account</em> over resource
+types \(\mathbf{I} = \{1,\ldots,k\}\) is an element
+\(\vect{A} = (A_1,\ldots,A_k)\) of \(A^k\), each \(A_i\) tracking the available
+amount of one type.</p></section>
+<p>For the rho calculus the natural types include a budget for fresh names
+(the \(@\) constructor), a budget for synchronisations, and a budget for
+persistent-receive firings.  Heterogeneous resources are tracked
+separately because they are not interconvertible for free; what it costs
+to convert one into another is the subject of the next chapter.</p>
+<section class="thm plain thm-definition" id="definition-30-6" data-kind="Definition" data-num="30.6"><header><span class="thm-kind">Definition 30.6</span> <span class="thm-name">Account-aware rewrite</span><a class="permalink" href="#definition-30-6" aria-label="Link to Definition 30.6">¶</a></header><p>
+A step is <em>affordable</em> if the account covers the charge:
+\(\langle P, \vect{A}\rangle \rewrite_r \langle P', \vect{A}'\rangle\)
+provided that \(P \rewrite_r P'\) via \(r\) with witness \(\phi_r(u)\), that
+\(\dec_r(u) \leq \vect{A}\) componentwise, and that
+\(\vect{A}' = \vect{A} - \dec_r(u)\).</p></section>
+<p>Definition <a class="xref" href="30-decoration-one-map-many-semirings.html#definition-30-6" data-ref="def:affordable">30.6</a> is stated here in the form the earlier
+presentation used, and in that form it harbours a defect: it says nothing
+about <em>who</em> may draw on \(\vect{A}\).  A single account adjacent to an
+associative–commutative soup of processes is adjacent to every process in
+it, and adjacency taken as the right to spend is ambient
+authority [<a class="cite" href="bibliography.html#bib-finrho" data-cite="finrho">64</a>].  The next chapter states the defect precisely and
+repairs it, and the repair turns out to carry the most interesting physics
+in this part of the book.</p>
+<nav class="pager"><a class="prev" href="29-causal-structure-and-time.html"><span>Previous</span>Causal Structure and Time</a><a class="next" href="31-conservation-and-what-it-costs-to-have-it.html"><span>Next</span>Conservation, and What It Costs to Have It</a></nav>
+</main>
+<aside class="margin" id="margin" aria-live="polite"></aside>
+</div>
+<button class="railtoggle" id="railtoggle" aria-expanded="false">Contents</button>
+
+</body>
+</html>

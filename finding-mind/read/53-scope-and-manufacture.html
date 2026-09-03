@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scope and Manufacture · Finding Mind</title>
+<link rel="canonical" href="https://findingmind.com/read/53-scope-and-manufacture.html">
+<meta name="description" content="Scope and Manufacture">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../book.css">
+<link rel="stylesheet" href="../katex/katex.min.css">
+<script defer src="../katex/katex.min.js"></script>
+<script defer src="../katex/auto-render.min.js"></script>
+<script defer src="../macros.js"></script>
+<script defer src="../reader.js"></script>
+</head>
+<body class="readpage">
+
+<a class="skip" href="#main">Skip to text</a>
+<div class="reader">
+<nav class="rail" aria-label="Contents"><div class="rail-in"><a class="rail-home" href="../index.html">Finding Mind</a><h2 class="rail-act">The Pledge</h2><a class="rail-ch" href="permitted-say.html"><span class="rn rn-i">⁂</span><span class="rt">The Permitted Say</span></a><a class="rail-ch" href="01-prolegomena-to-finding-mind.html"><span class="rn">1</span><span class="rt">Prolegomena to Finding Mind</span></a><a class="rail-ch" href="02-the-ordinary-world.html"><span class="rn">2</span><span class="rt">The Ordinary World</span></a><a class="rail-ch" href="03-information-causation-and-the-blind-spot.html"><span class="rn">3</span><span class="rt">Information, Causation, and the Blind Spot</span></a><a class="rail-ch" href="04-finding-the-shape.html"><span class="rn">4</span><span class="rt">Finding the Shape</span></a><a class="rail-ch" href="05-inside-and-outside-and-what-it-means-to-assume.html"><span class="rn">5</span><span class="rt">Inside and Outside, and What it Means to Assume the Virtue</span></a><a class="rail-ch" href="how-to-read-this-book.html"><span class="rn rn-i">⁂</span><span class="rt">How to Read This Book</span></a><a class="rail-ch" href="related-work-and-where-this-differs.html"><span class="rn rn-i">⁂</span><span class="rt">Related Work, and Where This Differs</span></a><h2 class="rail-act">The Turn</h2><a class="rail-ch" href="foam-born.html"><span class="rn rn-i">⁂</span><span class="rt">The Foam-Born</span></a><h3 class="rail-part">The Machinery: From GSLTs to Cost-Accounted Theories</h3><a class="rail-ch" href="06-what-a-language-presentation-is-and-why-it-com.html"><span class="rn">6</span><span class="rt">What a Language Presentation Is, and Why It Comes First</span></a><a class="rail-ch" href="07-graph-structured-lambda-theories.html"><span class="rn">7</span><span class="rt">Graph-Structured Lambda Theories</span></a><a class="rail-ch" href="08-interactive-gslts-and-the-site-of-interaction.html"><span class="rn">8</span><span class="rt">Interactive GSLTs, and the Site of Interaction</span></a><a class="rail-ch" href="09-continued-interactive-gslts.html"><span class="rn">9</span><span class="rt">Continued Interactive GSLTs</span></a><a class="rail-ch" href="10-the-category-of-gslts.html"><span class="rn">10</span><span class="rt">The Category of GSLTs</span></a><a class="rail-ch" href="11-the-cost-monad.html"><span class="rn">11</span><span class="rt">The Cost Monad</span></a><a class="rail-ch" href="12-the-history-monad.html"><span class="rn">12</span><span class="rt">The History Monad</span></a><a class="rail-ch" href="13-weighting-rates-from-the-generated-logic.html"><span class="rn">13</span><span class="rt">Weighting: Rates from the Generated Logic</span></a><a class="rail-ch" href="14-cost-accounted-rho.html"><span class="rn">14</span><span class="rt">Cost-Accounted Rho</span></a><a class="rail-ch" href="15-conversion-enzymes-and-the-virtual-token.html"><span class="rn">15</span><span class="rt">Conversion, Enzymes, and the Virtual Token</span></a><a class="rail-ch" href="16-the-labeled-transition-system-and-context-deco.html"><span class="rn">16</span><span class="rt">The Labeled Transition System and Context-Decorated HML</span></a><a class="rail-ch" href="17-what-goes-into-a-logic.html"><span class="rn">17</span><span class="rt">What Goes Into a Logic</span></a><a class="rail-ch" href="18-scopes-and-the-fixed-points-that-generate-them.html"><span class="rn">18</span><span class="rt">Scopes, and the Fixed Points that Generate Them</span></a><a class="rail-ch" href="19-generating-type-systems-oslf-and-the-hypercube.html"><span class="rn">19</span><span class="rt">Generating Type Systems: OSLF and the Hypercube</span></a><a class="rail-ch" href="20-instruments-making-structure-visible-to-bisimu.html"><span class="rn">20</span><span class="rt">Instruments: Making Structure Visible to Bisimulation</span></a><h3 class="rail-part">Ecology as Cognitive Architecture</h3><a class="rail-ch" href="21-the-mortal-scientist.html"><span class="rn">21</span><span class="rt">The Mortal Scientist</span></a><a class="rail-ch" href="22-learning-to-play.html"><span class="rn">22</span><span class="rt">Learning to Play</span></a><a class="rail-ch" href="23-composing-learners.html"><span class="rn">23</span><span class="rt">Composing Learners</span></a><a class="rail-ch" href="24-enzymes-and-individuals.html"><span class="rn">24</span><span class="rt">Enzymes and Individuals</span></a><a class="rail-ch" href="25-a-network-that-learns-by-rewriting.html"><span class="rn">25</span><span class="rt">A Network That Learns by Rewriting</span></a><h3 class="rail-part">Suffering: Homeostasis and the Learner&#x27;s Own Account</h3><a class="rail-ch" href="26-suffering-a-learner-s-view-of-its-own-account.html"><span class="rn">26</span><span class="rt">Suffering: A Learner’s View of Its Own Account</span></a><h3 class="rail-part">Situating the Learner: A Variety of Possible Physics</h3><a class="rail-ch" href="27-the-learner-s-world-already-has-a-physics.html"><span class="rn">27</span><span class="rt">The Learner’s World Already Has a Physics</span></a><a class="rail-ch" href="28-the-reversibility-construction.html"><span class="rn">28</span><span class="rt">The Reversibility Construction</span></a><a class="rail-ch" href="29-causal-structure-and-time.html"><span class="rn">29</span><span class="rt">Causal Structure and Time</span></a><a class="rail-ch" href="30-decoration-one-map-many-semirings.html"><span class="rn">30</span><span class="rt">Decoration: One Map, Many Semirings</span></a><a class="rail-ch" href="31-conservation-and-what-it-costs-to-have-it.html"><span class="rn">31</span><span class="rt">Conservation, and What It Costs to Have It</span></a><a class="rail-ch" href="32-extended-modal-operators.html"><span class="rn">32</span><span class="rt">Extended Modal Operators</span></a><a class="rail-ch" href="33-complex-amplitudes-and-where-the-coherence-is.html"><span class="rn">33</span><span class="rt">Complex Amplitudes, and Where the Coherence Is</span></a><a class="rail-ch" href="34-synthesis-the-full-structure.html"><span class="rn">34</span><span class="rt">Synthesis: The Full Structure</span></a><a class="rail-ch" href="35-entropy-and-the-cost-of-staying-level.html"><span class="rn">35</span><span class="rt">Entropy, and the Cost of Staying Level</span></a><a class="rail-ch" href="36-discussion-and-future-directions.html"><span class="rn">36</span><span class="rt">Discussion and Future Directions</span></a><h3 class="rail-part">Why Scientists Get Misled: Emergent Ontology in Massive Agent Populations</h3><a class="rail-ch" href="37-introduction.html"><span class="rn">37</span><span class="rt">Introduction</span></a><a class="rail-ch" href="38-ontological-isolation.html"><span class="rn">38</span><span class="rt">Ontological Isolation</span></a><a class="rail-ch" href="39-agents-and-the-scientific-method.html"><span class="rn">39</span><span class="rt">Agents and the Scientific Method</span></a><a class="rail-ch" href="40-behavioral-primes.html"><span class="rn">40</span><span class="rt">Behavioral Primes</span></a><a class="rail-ch" href="41-massive-populations-and-communication-degradat.html"><span class="rn">41</span><span class="rt">Massive Populations and Communication Degradation</span></a><a class="rail-ch" href="42-the-logical-topology-and-compactness.html"><span class="rn">42</span><span class="rt">The Logical Topology and Compactness</span></a><a class="rail-ch" href="43-coherence-clusters-and-their-nerve.html"><span class="rn">43</span><span class="rt">Coherence Clusters and Their Nerve</span></a><a class="rail-ch" href="44-the-apparent-ontology.html"><span class="rn">44</span><span class="rt">The Apparent Ontology</span></a><a class="rail-ch" href="45-open-gaps-and-future-work.html"><span class="rn">45</span><span class="rt">Open Gaps and Future Work</span></a><a class="rail-ch" href="46-discussion.html"><span class="rn">46</span><span class="rt">Discussion</span></a><h3 class="rail-part">Origins of Life: Assembly Theory, Phase Transitions, and Replication</h3><a class="rail-ch" href="47-introduction.html"><span class="rn">47</span><span class="rt">Introduction</span></a><a class="rail-ch" href="48-assembly-theory-causal-depth-and-copy-number.html"><span class="rn">48</span><span class="rt">Assembly Theory: Causal Depth and Copy Number</span></a><a class="rail-ch" href="49-replication-as-a-fixed-point.html"><span class="rn">49</span><span class="rt">Replication as a Fixed Point</span></a><a class="rail-ch" href="50-smith-s-phase-transition-and-the-density-of-at.html"><span class="rn">50</span><span class="rt">Smith’s Phase Transition and the Density of Attractors</span></a><a class="rail-ch" href="51-metabolism-energy-gradients-and-the-ecosystem.html"><span class="rn">51</span><span class="rt">Metabolism, Energy Gradients, and the Ecosystem</span></a><a class="rail-ch" href="52-assembly-index-and-the-depth-of-the-fractal-le.html"><span class="rn">52</span><span class="rt">Assembly Index and the Depth of the Fractal Learner</span></a><a class="rail-ch" aria-current="page" href="53-scope-and-manufacture.html"><span class="rn">53</span><span class="rt">Scope and Manufacture</span></a><a class="rail-ch" href="54-open-gaps.html"><span class="rn">54</span><span class="rt">Open Gaps</span></a><a class="rail-ch" href="55-discussion.html"><span class="rn">55</span><span class="rt">Discussion</span></a><h3 class="rail-part">Conclusion</h3><a class="rail-ch" href="what-has-been-built.html"><span class="rn rn-i">⁂</span><span class="rt">What Has Been Built</span></a><a class="rail-ch" href="a-view-from-inside-the-framework.html"><span class="rn rn-i">⁂</span><span class="rt">A View from Inside the Framework</span></a><a class="rail-ch" href="what-remains-to-be-done.html"><span class="rn rn-i">⁂</span><span class="rt">What Remains to Be Done</span></a><h2 class="rail-act">The Prestige</h2><a class="rail-ch" href="begotten.html"><span class="rn rn-i">⁂</span><span class="rt">begotten not made</span></a><h3 class="rail-part">The Method, and What It Left Out</h3><a class="rail-ch" href="56-how-the-trick-was-done.html"><span class="rn">56</span><span class="rt">How the Trick Was Done</span></a><a class="rail-ch" href="57-everything-so-far-was-turing-complete.html"><span class="rn">57</span><span class="rt">Everything So Far Was Turing Complete</span></a><a class="rail-ch" href="58-the-tower-of-oracle-extensions.html"><span class="rn">58</span><span class="rt">The Tower of Oracle Extensions</span></a><a class="rail-ch" href="59-not-every-cut-is-an-aperture.html"><span class="rn">59</span><span class="rt">Not Every Cut Is an Aperture</span></a><a class="rail-ch" href="60-where-does-agency-live.html"><span class="rn">60</span><span class="rt">Where Does Agency Live?</span></a><a class="rail-ch" href="61-choice-principles-are-the-types-schedulers-are.html"><span class="rn">61</span><span class="rt">Choice Principles are the Types; Schedulers are the Terms</span></a><a class="rail-ch" href="62-consciousness-and-the-world-it-comes-with.html"><span class="rn">62</span><span class="rt">Consciousness, and the World It Comes With</span></a><a class="rail-ch" href="63-what-these-chapters-owe.html"><span class="rn">63</span><span class="rt">What These Chapters Owe</span></a><h3 class="rail-part">Reference, Simulation, Reception, and a Future Metaphysics</h3><a class="rail-ch" href="64-what-a-symbol-system-would-have-to-be.html"><span class="rn">64</span><span class="rt">What a Symbol System Would Have to Be</span></a><a class="rail-ch" href="65-if-this-is-a-simulation-which-kind.html"><span class="rn">65</span><span class="rt">If This Is a Simulation, Which Kind</span></a><a class="rail-ch" href="66-what-it-is-like-to-be-a-bot.html"><span class="rn">66</span><span class="rt">What It Is Like to Be a Bot</span></a><a class="rail-ch" href="67-how-life-like-is-life-like-enough.html"><span class="rn">67</span><span class="rt">How Life-Like Is Life-Like Enough?</span></a><a class="rail-ch" href="68-any-future-metaphysics.html"><span class="rn">68</span><span class="rt">Any Future Metaphysics</span></a><a class="rail-ch" href="right-sizing.html"><span class="rn rn-i">⁂</span><span class="rt">Right-Sizing</span></a></div></nav>
+<main id="main" class="text ">
+<header class="chead"><p class="kicker">Chapter 53</p><h1>Scope and Manufacture</h1></header>
+<div class="pullquote"><p>
+Assembly theory characterizes life by two numbers, and they are
+asymmetrically specified. The assembly index is a minimum over
+constructions, so whatever else is unclear about it, it does not depend on
+who is looking. Copy number does: to count copies one must say where to
+count and what counts as a copy, and the theory says neither. The previous
+chapter bounded the first number from above. This one supplies the second
+with the region and the observer it has been missing, and finds that once
+both are supplied the two numbers stop being independent.</p></div>
+<p>The region is already built. Chapter <a class="xref" href="18-scopes-and-the-fixed-points-that-generate-them.html#top" data-ref="ch:scope">18</a> made a scope a
+predicate rather than a list, showed that disjointness makes a composite
+scope parse uniquely, and put fixed points into the name-predicate
+language so that a self-similar region can be finitely described and
+unboundedly large. What remains is to count in it, to ask what the
+counting costs, and to ask what had to be manufactured before there was
+anything there to count.</p>
+<h2 id="sec-53-1"><span class="secnum">53.1</span> Copy number, graded</h2>
+<h3 id="sec-53-1-1"><span class="secnum">53.1.1</span> Well posed is not effective</h3>
+<p>The identity criterion is easy to state once the region is fixed. Two
+processes are copies when no experiment distinguishes them, and the
+relation that says so is bisimilarity. Definition <a class="xref" href="48-assembly-theory-causal-depth-and-copy-number.html#definition-48-4" data-ref="def:copy-number">48.4</a>
+already takes this line, and it is the right one: structural identity is
+at once too strict, since two conformers of a molecule are the same
+reagent, and too permissive, since two graphs may agree while the things
+they denote behave differently under interaction. Behavioral identity is
+what a count of copies was always trying to track.</p>
+<p>What Definition <a class="xref" href="48-assembly-theory-causal-depth-and-copy-number.html#definition-48-4" data-ref="def:copy-number">48.4</a> gives is therefore well posed. It is
+not effective. Bisimilarity is undecidable for calculi of this
+expressiveness [<a class="cite" href="bibliography.html#bib-sangiorgi" data-cite="sangiorgi">120</a>], so no learner computes it, and in
+particular no learner computes that count. The gap is the one \(\chSci\) meets
+in the assay, where a hypothesis that is true but unaffordable is refuted
+<em>relative to a budget</em>, and the remedy is the same.</p>
+<section class="thm plain thm-definition" id="definition-53-1" data-kind="Definition" data-num="53.1"><header><span class="thm-kind">Definition 53.1</span> <span class="thm-name">Copy number at a resolution</span><a class="permalink" href="#definition-53-1" aria-label="Link to Definition 53.1">¶</a></header><p>
+For a process \(P\), a scope \(\Nsp\) and \(n \in \mathbb{N}\),
+<span class="math-d">\[\CN_n(P, \Nsp) \;=\;
+  \bigl|\{\, c \in \Ext(\Nsp) \;:\; \drop{c} \bisim_n P \,\}\bigr|,\]</span>
+where \(\bisim_n\) is \(n\)-step bisimulation. By the Hennessy–Milner
+characterization [<a class="cite" href="bibliography.html#bib-HennessyMilner1985" data-cite="HennessyMilner1985">121</a>], \(\drop{c} \bisim_n P\) exactly
+when \(\drop{c}\) and \(P\) agree on all formulae of modal nesting depth at
+most \(n\).</p></section>
+<section class="thm plain thm-proposition" id="proposition-53-1" data-kind="Proposition" data-num="53.1"><header><span class="thm-kind">Proposition 53.1</span> <span class="thm-name">Effectivity</span><a class="permalink" href="#proposition-53-1" aria-label="Link to Proposition 53.1">¶</a></header><p>
+\(\CN_n(P,\Nsp)\) is computable for finitely branching processes, any
+generated scope \(\Nsp\), and any finite \(n\), at cost linear in the surveyed
+extension and in the depth-\(n\) decision procedure.</p></section>
+<p>The resolution \(n\) is not a free parameter. It is the modal depth a
+learner can afford to evaluate, and Chapter <a class="xref" href="52-assembly-index-and-the-depth-of-the-fractal-le.html#top" data-ref="sec:assembly-depth">52</a>
+bounds that: by integration depth, hence by tower height, hence by
+assembly index. So a count of copies has three arguments, and the third
+belongs to whoever is counting.</p>
+<h3 id="sec-53-1-2"><span class="secnum">53.1.2</span> The observer enters the count</h3>
+<section class="thm plain thm-proposition" id="proposition-53-2" data-kind="Proposition" data-num="53.2"><header><span class="thm-kind">Proposition 53.2</span> <span class="thm-name">Coarse resolution overcounts</span><a class="permalink" href="#proposition-53-2" aria-label="Link to Proposition 53.2">¶</a></header><p>
+For \(n' \le n\), \(\ \CN_{n'}(P,\Nsp) \ge \CN_n(P,\Nsp)\), and
+\(\CN_n \downarrow \CN\) as \(n \to \infty\) for image-finite processes.</p></section>
+<section class="proof"><header>Proof</header><p>\(\bisim_n \,\subseteq\, \bisim_{n'}\) for \(n' \le n\), so the counted set
+shrinks with \(n\); the limit is the standard approximation theorem for
+bisimilarity on image-finite processes.</p></section>
+<p>The direction is the opposite of the one intuition supplies. A weak
+instrument does not miss copies. It manufactures them, by failing to
+separate things that differ below its resolution, and the manufacture is
+not a small correction.</p>
+<section class="thm plain thm-proposition" id="proposition-53-3" data-kind="Proposition" data-num="53.3"><header><span class="thm-kind">Proposition 53.3</span> <span class="thm-name">Geometric overcounting</span><a class="permalink" href="#proposition-53-3" aria-label="Link to Proposition 53.3">¶</a></header><p>
+Let a population be the leaves of a behavior tree of depth \(h\) and
+branching factor \(b\), with two members \(n\)-step bisimilar exactly when
+their paths agree for \(n\) steps. Then for any member \(P\),
+<span class="math-d">\[\CN_n(P,\Nsp) \;=\; b^{\,h-n}, \qquad 0 \le n \le h,\]</span>
+so an observer whose resolution falls short of \(h\) by \(k\) reports \(b^{k}\)
+times too many copies.</p></section>
+<section class="proof"><header>Proof</header><p>The members \(n\)-step bisimilar to \(P\) are exactly the leaves of the
+depth-\(n\) subtree containing \(P\), of which there are \(b^{h-n}\); at \(n = h\)
+only \(P\) itself remains.</p></section>
+<figure class="float figfloat" id="fig-53-1"><p><figure class="tikz"><img src="../figures/c1c1d28af369.svg" alt="Diagram"></figure></p><figcaption><span class="fignum">Figure 53.1</span> Proposition <a class="xref" href="53-scope-and-manufacture.html#proposition-53-3" data-ref="scm:prop:geom">53.3</a> for \(b=3\), \(h=8\); the vertical
+axis is logarithmic, so the overcount is the vertical gap to the
+right-hand endpoint.</figcaption></figure>
+<section class="thm plain thm-corollary" id="corollary-53-1" data-kind="Corollary" data-num="53.1"><header><span class="thm-kind">Corollary 53.1</span> <span class="thm-name">A detector has a floor of its own</span><a class="permalink" href="#corollary-53-1" aria-label="Link to Corollary 53.1">¶</a></header><p>
+To report \(\CN\) correctly for a population whose members separate at depth
+\(h\), an observer must afford resolution \(h\), and therefore must itself
+have been assembled to a depth supporting modal nesting \(h\).</p></section>
+<section class="thm remarkish thm-remark" id="remark-53-1" data-kind="Remark" data-num="53.1"><header><span class="thm-kind">Remark 53.1</span> <span class="thm-name">How far this claim goes, and how far it does not</span><a class="permalink" href="#remark-53-1" aria-label="Link to Remark 53.1">¶</a></header><p>
+It is tempting to summarize Corollary <a class="xref" href="53-scope-and-manufacture.html#corollary-53-1" data-ref="scm:cor:detector">53.1</a> as “it takes
+a mind to find a mind”, and that summary is wrong, or at any rate much
+stronger than what has been shown. What the observer must match is the
+depth at which the <em>kinds</em> in a population separate, not the assembly
+index of any member of it. Those are very different numbers: in the worked
+composite of §<a class="xref" href="53-scope-and-manufacture.html#sec-53-4-5" data-ref="scm:sec:composite">53.4.5</a> the four kinds separate by depth
+\(4\) while the individual carrying them has an assembly floor of \(28\). A
+shallow instrument can therefore certify kind structure it could not begin
+to build. What it cannot do is report a copy number that means anything,
+and what it will do instead — silently, with no error signal — is
+report one too large by a factor exponential in its shortfall. That is the
+useful claim, and it is a claim about instruments rather than about minds.</p></section>
+<section class="thm remarkish thm-remark" id="remark-53-2" data-kind="Remark" data-num="53.2"><header><span class="thm-kind">Remark 53.2</span> <span class="thm-name">A false-positive mechanism for the biosignature</span><a class="permalink" href="#remark-53-2" aria-label="Link to Remark 53.2">¶</a></header><p>
+The criterion of §<a class="xref" href="48-assembly-theory-causal-depth-and-copy-number.html#top" data-ref="sec:assembly">48</a> reads high assembly index together
+with high copy number as evidence of selection.
+Proposition <a class="xref" href="53-scope-and-manufacture.html#proposition-53-3" data-ref="scm:prop:geom">53.3</a> says the second conjunct is inflated by
+any instrument that cannot resolve the population, and inflated most where
+the population is most diverse — which is to say, exactly where selection
+has been most active in generating the variants a coarse instrument pools.
+The failure mode is therefore not random noise but a bias aligned with the
+signal being sought. We do not know how large the effect is in the
+mass-spectrometric practice the theory was designed around, and we would
+want it estimated before the criterion is applied to anything as
+consequential as an extraterrestrial sample. This is a friendly amendment;
+the criterion survives it, but it survives it as a statement about an
+instrument and a sample rather than about a sample alone.</p></section>
+<h3 id="sec-53-1-3"><span class="secnum">53.1.3</span> The count has a grading it should have kept</h3>
+<p>In a generated scope there is a second thing wrong with reporting an
+integer.</p>
+<section class="thm plain thm-definition" id="definition-53-2" data-kind="Definition" data-num="53.2"><header><span class="thm-kind">Definition 53.2</span> <span class="thm-name">Copy series</span><a class="permalink" href="#definition-53-2" aria-label="Link to Definition 53.2">¶</a></header><p>
+For a generated scope \(\Nsp\) with strata as in
+Definition <a class="xref" href="18-scopes-and-the-fixed-points-that-generate-them.html#definition-18-3" data-ref="sco:def:stratum">18.3</a>, the <em>copy series</em> of \(P\) at
+resolution \(n\) is
+<span class="math-d">\[\CN_n^{\bullet}(P,\Nsp) \;=\;
+  \bigl( \CN_n^{(0)}, \CN_n^{(1)}, \CN_n^{(2)}, \dots \bigr),\]</span>
+where
+<span class="math-d">\[\CN_n^{(j)} \;=\;
+  \bigl|\{\, c \in \Ext(\Nsp) : \str(c) = j,\ \drop{c} \bisim_n P \,\}\bigr| .\]</span>
+Equivalently, the generating function \(\sum_j \CN_n^{(j)} x^j\).</p></section>
+<section class="thm remarkish thm-remark" id="remark-53-3" data-kind="Remark" data-num="53.3"><header><span class="thm-kind">Remark 53.3</span> <span class="thm-name">The integer is the flat collapse</span><a class="permalink" href="#remark-53-3" aria-label="Link to Remark 53.3">¶</a></header><p>
+\(\CN_n(P,\Nsp) = \sum_j \CN_n^{(j)}\), so nothing is lost in passing to the
+series and a great deal is lost in passing back. The collapse is
+legitimate exactly when the scope has one stratum — when it is a flat
+region of like things, which is the situation a jar of reagent
+approximates and an organism does not. Assembly theory’s copy number is
+the flat collapse, and the reason that has felt unproblematic is that the
+theory’s home application really is a jar.</p></section>
+<section class="thm remarkish thm-remark" id="remark-53-4" data-kind="Remark" data-num="53.4"><header><span class="thm-kind">Remark 53.4</span> <span class="thm-name">This agrees with something arrived at independently</span><a class="permalink" href="#remark-53-4" aria-label="Link to Remark 53.4">¶</a></header><p>
+§<a class="xref" href="24-enzymes-and-individuals.html#sec-24-8" data-ref="eng:S8">24.8</a> concludes, from an argument about typed namespaces and the
+medium tower that has nothing to do with counting, that the grading vector
+\(k\) is not a vector but a <em>sequence</em> of vectors, one per stratum.
+That is the present observation reached from the composition side, and the
+agreement is some evidence that the stratification is a feature of the
+subject rather than of either argument.</p></section>
+<section class="thm remarkish thm-remark" id="remark-53-5" data-kind="Remark" data-num="53.5"><header><span class="thm-kind">Remark 53.5</span> <span class="thm-name">What the series is for</span><a class="permalink" href="#remark-53-5" aria-label="Link to Remark 53.5">¶</a></header><p>
+Three uses, in increasing order of speculativeness. First, it distinguishes
+architectures the integer confuses: a colony of a thousand like cells and
+an organism of a thousand cells in four tissues have the same \(\CN\) and
+different series. Second, the ratio between consecutive terms is a
+branching factor, and §<a class="xref" href="53-scope-and-manufacture.html#sec-53-4" data-ref="scm:sec:pressure">53.4</a> argues that this factor is
+forced from below by repair and by sampling, so the series has a shape one
+can predict and check. Third, if the biosignature is to be read off a
+series rather than a number, the criterion becomes a statement about
+shape, and “many copies at low strata, few at high, with a ratio bounded
+below by reliability” is a far more specific fingerprint than “the copy
+number is large”. We do not develop the third.</p></section>
+<h3 id="sec-53-1-4"><span class="secnum">53.1.4</span> A worked series</h3>
+<p>Take the two-atom generated scope of Definition <a class="xref" href="18-scopes-and-the-fixed-points-that-generate-them.html#definition-18-2" data-ref="sco:def:gen">18.2</a> and
+populate it: let \(\phi\)-atoms be sources and \(\psi\)-atoms be foragers, and
+let the population instantiate every shape at strata \(0\) through \(2\) with
+multiplicity \(12\). By Table <a class="xref" href="18-scopes-and-the-fixed-points-that-generate-them.html#tab-18-1" data-ref="sco:tab:growth">18.1</a> there are \(17\) shapes,
+distributed \(2 : 3 : 12\) over the strata, so the populated scope has \(204\)
+channels.</p>
+<p>Ask for the copy number of a stratum-\(1\) shape, say \(\quo{(\phi \mid
+\psi)}\). The truth is \(12\). A learner of resolution \(2\) separates all
+three stratum-\(1\) shapes and reports \(12\). A learner of resolution \(1\)
+separates \(\quo{(\phi\mid\psi)}\) from \(\quo{(\phi\mid\phi)}\) but not from
+\(\quo{(\psi\mid\psi)}\), if the two atoms agree on their first step, and
+reports \(24\). A learner of resolution \(0\) reports \(36\); and an instrument
+that counts occurrences rather than channels, and so fails to separate
+strata at all, reports \(204\).</p>
+<p>The series makes legible what the integer does not:
+<span class="math-d">\[\CN_2^{\bullet} = (0,\,12,\,0), \qquad
+  \CN_1^{\bullet} = (0,\,24,\,0), \qquad
+  \CN_0^{\bullet} = (0,\,36,\,0), \qquad
+  \text{flat} = 204 .\]</span>
+Every one of these is a defensible answer to “how many copies are
+there”. Only the first is an answer to “how many copies are there, at
+the resolution at which copies are a kind”.</p>
+<h2 id="sec-53-2"><span class="secnum">53.2</span> Some cheap lower bounds</h2>
+<h3 id="sec-53-2-1"><span class="secnum">53.2.1</span> What a lower bound would have to be</h3>
+<p>Upper bounds on what an assembled thing can do come easily here, and
+Chapter <a class="xref" href="52-assembly-index-and-the-depth-of-the-fractal-le.html#top" data-ref="sec:assembly-depth">52</a> has several: exhibit an invariant that
+cannot exceed the assembly index, then bound capability by the invariant.
+Lower bounds run the other way and are much harder, because \(\AI\) is a
+<em>minimum</em> over constructions, so a lower bound asserts that no
+shorter construction exists. That is an incompressibility statement, and
+incompressibility statements are notoriously resistant.</p>
+<p>There is one tractable route. Find quantities \(\iota_1, \dots, \iota_m\)
+that are monotone along assembly edges, forced to a minimum value by the
+capability in question, and witnessed by <em>disjoint</em> sets of edges.
+Then \(\AI(E) \ge \sum_i \iota_i(E)\); without the third condition one gets
+only \(\AI(E) \ge \max_i \iota_i(E)\). The third is the hard one in general,
+and §<a class="xref" href="53-scope-and-manufacture.html#sec-53-2-4" data-ref="scm:sec:additive">53.2.4</a> observes that the disjointness of
+Chapter <a class="xref" href="18-scopes-and-the-fixed-points-that-generate-them.html#top" data-ref="ch:scope">18</a> certifies it in the cases that matter.</p>
+<p>Six such quantities follow. They are all obvious once stated, none
+requires an argument longer than a paragraph, and we make no claim that
+their sum is anywhere near the truth.</p>
+<h3 id="sec-53-2-2"><span class="secnum">53.2.2</span> Six floors</h3>
+<figure class="float tabfloat" id="tab-53-1"><div class="tablewrap"><table><thead><tr><th></th><th>capability</th><th>floor</th><th>from</th></tr></thead><tbody><tr><td>L1</td><td>having an inside</td><td>\(\AI \ge 1\)</td><td>Definition <a class="xref" href="24-enzymes-and-individuals.html#definition-24-6" data-ref="eng:def:indiv">24.6</a></td></tr><tr><td>L2</td><td>owning a boundary</td><td>\(\AI \ge 2\)</td><td>Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-7" data-ref="eng:prop:closuredeath">24.7</a></td></tr><tr><td>L3</td><td>carrying a germ</td><td>\(+1\)</td><td>no-self-code</td></tr><tr><td>L4</td><td>resolving at depth \(n\)</td><td>\(\AI \ge n\)</td><td>Theorem <a class="xref" href="52-assembly-index-and-the-depth-of-the-fractal-le.html#theorem-52-1" data-ref="thm:ai-bound">52.1</a></td></tr><tr><td>L5</td><td>escaping a basin of radius \(2^{-n}\)</td><td>\(\AI \gtrsim n\)</td><td>Proposition <a class="xref" href="21-the-mortal-scientist.html#proposition-21-4" data-ref="sci:prop:confinement">21.4</a></td></tr><tr><td>L6</td><td>repairing itself</td><td>\(\AI \ge \bt\)</td><td>Theorem <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-2" data-ref="eng:thm:foster">24.2</a></td></tr></tbody></table></div><figcaption><span class="fignum">Table 53.1</span> Cheap floors on the assembly index of an ecology-as-mind. None is
+tight.</figcaption></figure>
+<h5 id="p-8">L1: having an inside.</h5>
+<p>An ecology-as-mind is a region distinguished from its environment, so
+there is at least one medium whose endpoints straddle the boundary. A
+medium is a process and must be constructed — by no-self-code it is not
+among the terms it carries — so its construction is a joining step.</p>
+<h5 id="p-9">L2: owning a boundary.</h5>
+<p>Definition <a class="xref" href="24-enzymes-and-individuals.html#definition-24-6" data-ref="eng:def:indiv">24.6</a> asks that internal media be closed and
+boundary media not, which requires the two to be distinguishable and hence
+separately constructed: a single medium serving both roles would put the
+interior under external naming and dissolve the closure that makes repair
+possible. And by Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-7" data-ref="eng:prop:closuredeath">24.7</a> a mind that has
+paid for the boundary must also have paid for at least one redex pathway
+across it, since perfect closure is death. We fold the pathway into L2
+rather than counting it separately.</p>
+<h5 id="p-10">L3: carrying a germ.</h5>
+<p>The germ of §<a class="xref" href="21-the-mortal-scientist.html#sec-21-12-2" data-ref="sci:S12.2">21.12.2</a> is a quotation, transmissible and inert
+until dropped. By no-self-code it is not among the names occurring in what
+it encodes: the germ sits strictly above what it quotes. So the machinery
+that manipulates germ material occupies a level of the tower above the
+machinery it manipulates, and by Proposition <a class="xref" href="52-assembly-index-and-the-depth-of-the-fractal-le.html#proposition-52-1" data-ref="prop:tower-ai">52.1</a> each
+level costs at least one edge of a minimum path. Reproduction is \(+1\),
+unconditionally, over the floor of a thing that does not reproduce.</p>
+<h5 id="p-11">L4: resolving at depth \(n\).</h5>
+<p>This one is free: it is the contrapositive of a theorem already proved. If
+an ecology of assembly index \(\AI\) cannot distinguish environments that
+are \(\AI\)-step bisimilar, then an ecology that <em>does</em> distinguish
+environments differing only at depth \(n\) has \(\AI \ge n\). Every upper
+bound on capability is a lower bound on manufacture read backwards, and
+this is the cleanest instance.</p>
+<h5 id="p-12">L5: escaping a basin.</h5>
+<p>By Proposition <a class="xref" href="21-the-mortal-scientist.html#proposition-21-4" data-ref="sci:prop:confinement">21.4</a> a walk whose steps are all
+shorter than \(2^{-n}\) never leaves the ball of that radius. Escape
+requires a revision move of distance at least \(2^{-n}\), which by
+Definition <a class="xref" href="21-the-mortal-scientist.html#definition-21-6" data-ref="sci:def:move">21.6</a> means a locus at term-depth at most \(n\)
+together with an operation applied there. Addressing a locus at depth \(n\)
+requires a one-hole context of that depth, and that must be built. So a
+learner able to leave its initial basin pays on the order of \(n\) steps for
+the addressing alone.</p>
+<h5 id="p-13">L6: repairing itself.</h5>
+<p>By Theorem <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-2" data-ref="eng:thm:foster">24.2</a> the total detection strength of the price
+code is exactly \(\bt\), and an edge lying on no cycle carries no discipline
+at all. So a region that can detect a single-edge fault has \(\bt \ge 1\)
+and one detecting \(m\) independent faults has \(\bt \ge m\). Each independent
+cycle requires an edge that closes it, and those edges are joining steps.</p>
+<h3 id="sec-53-2-3"><span class="secnum">53.2.3</span> Genetic exploration, and the difference between a learner and
+a scorer</h3>
+<p>L3 and L5 combine into the one bound here we find genuinely interesting,
+because it separates two things the framework has otherwise treated
+together.</p>
+<section class="thm plain thm-proposition" id="proposition-53-4" data-kind="Proposition" data-num="53.4"><header><span class="thm-kind">Proposition 53.4</span> <span class="thm-name">A learner costs strictly more than a scorer</span><a class="permalink" href="#proposition-53-4" aria-label="Link to Proposition 53.4">¶</a></header><p>
+Let \(S\) be an ecology that evaluates hypotheses drawn from a fixed ball of
+radius \(2^{-n}\) and never leaves it, and let \(L\) be one that can leave.
+Then
+<span class="math-d">\[\AI(L) \;\ge\; \AI(S) + 1 + n^{-},\]</span>
+where the \(+1\) is the germ level of L3 and \(n^{-}\) is the term-depth of
+the shallowest locus whose revision leaves the ball.</p></section>
+<section class="proof"><header>Proof</header><p>By confinement no sequence of moves available to \(S\) leaves the ball, so
+whatever \(L\) has that \(S\) lacks is not a longer run of the same machinery.
+By §<a class="xref" href="21-the-mortal-scientist.html#sec-21-6-5" data-ref="sci:S6.5">21.6.5</a> the escape available inside this framework is
+recombination; by L3 germ material costs a tower level; by L5 the move
+must address a locus at depth \(n^{-}\). The germ level and the addressing
+contexts are constructed from different material — the first from the
+learner’s own code as quoted, the second from the term structure being
+addressed — so their edges are distinct.</p></section>
+<section class="thm remarkish thm-remark" id="remark-53-6" data-kind="Remark" data-num="53.6"><header><span class="thm-kind">Remark 53.6</span> <span class="thm-name">What this says about genetic exploration</span><a class="permalink" href="#remark-53-6" aria-label="Link to Remark 53.6">¶</a></header><p>
+Read as a design statement rather than a bound: sexual recombination is
+not an optimization of an existing search but the purchase of a search
+that was not previously available at any price. Confinement says an
+individual cannot get out of its basin by trying harder;
+Proposition <a class="xref" href="53-scope-and-manufacture.html#proposition-53-4" data-ref="scm:prop:learner">53.4</a> says what getting out costs, and the
+cost is structural — a level of the tower — rather than metabolic.
+That is a satisfying place for the price of sex to sit, because it
+explains why the price is paid once, architecturally, rather than
+continuously.</p></section>
+<section class="thm remarkish thm-remark" id="remark-53-7" data-kind="Remark" data-num="53.7"><header><span class="thm-kind">Remark 53.7</span> <span class="thm-name">A suite of skills does not multiply this</span><a class="permalink" href="#remark-53-7" aria-label="Link to Remark 53.7">¶</a></header><p>
+A mind with \(k\) skills, each realized as an ecology-as-mind, does not pay
+L3 \(k\) times. The germ quotes the whole individual’s code, and quotation
+does not distribute over the parts in a way that would require one germ
+level per skill. This is the first appearance of an economy that
+§<a class="xref" href="53-scope-and-manufacture.html#sec-53-3" data-ref="scm:sec:gen">53.3</a> and §<a class="xref" href="53-scope-and-manufacture.html#sec-53-4-5" data-ref="scm:sec:composite">53.4.5</a> make quantitative:
+architecture is paid for once, content is paid for per skill.</p></section>
+<h3 id="sec-53-2-4"><span class="secnum">53.2.4</span> Disjointness is the additivity certificate</h3>
+<section class="thm plain thm-proposition" id="proposition-53-5" data-kind="Proposition" data-num="53.5"><header><span class="thm-kind">Proposition 53.5</span> <span class="thm-name">Disjoint strata have disjoint witnesses</span><a class="permalink" href="#proposition-53-5" aria-label="Link to Proposition 53.5">¶</a></header><p>
+Let an ecology \(E\) have strata rooted at pairwise disjoint scopes \(\Nsp_1,
+\dots, \Nsp_m\) in the sense of Proposition <a class="xref" href="18-scopes-and-the-fixed-points-that-generate-them.html#proposition-18-1" data-ref="sco:prop:parse">18.1</a>. Then no
+single joining step contributes to two strata, and therefore
+\(\AI(E) \ge \sum_i \iota(\Nsp_i)\) for any per-stratum floor \(\iota\)
+monotone along assembly edges.</p></section>
+<section class="proof"><header>Proof</header><p>A joining step produces a term \(T\), and the step contributes to stratum
+\(i\) only if \(\quo{T} \in \Ext(\Nsp_i)\). Disjointness makes that membership
+exclusive, so each step is charged to at most one stratum, and the
+per-stratum floors are supported on disjoint edge sets of any construction
+path — in particular of a minimum-length one.</p></section>
+<section class="thm remarkish thm-remark" id="remark-53-8" data-kind="Remark" data-num="53.8"><header><span class="thm-kind">Remark 53.8</span> <span class="thm-name">The obligation this discharges</span><a class="permalink" href="#remark-53-8" aria-label="Link to Remark 53.8">¶</a></header><p>
+Chapter <a class="xref" href="52-assembly-index-and-the-depth-of-the-fractal-le.html#top" data-ref="sec:assembly-depth">52</a> left open whether the joining steps for
+distinct levels of the medium tower are distinct edges of a single
+minimum-length path, noting that if one construction could serve two
+levels the count would collapse.
+Proposition <a class="xref" href="53-scope-and-manufacture.html#proposition-53-5" data-ref="scm:prop:disjointedges">53.5</a> discharges that obligation
+whenever the levels are rooted at disjoint scopes — which, by
+Proposition <a class="xref" href="23-composing-learners.html#proposition-23-9" data-ref="com:prop:root">23.9</a>, is something a designer or a lineage can
+arrange rather than something that must be hoped for. The general case,
+where levels are not disjointly rooted, remains open, and we suspect it is
+genuinely harder rather than merely unwritten.</p></section>
+<h3 id="sec-53-2-5"><span class="secnum">53.2.5</span> Why we stop here</h3>
+<p>The sum of Table <a class="xref" href="53-scope-and-manufacture.html#tab-53-1" data-ref="scm:tab:floors">53.1</a> for a reproducing, repairing,
+depth-\(n\)-resolving individual is something like \(n + \bt + 4\), and
+§<a class="xref" href="53-scope-and-manufacture.html#sec-53-4-5" data-ref="scm:sec:composite">53.4.5</a> evaluates it at \(28\). The true minimum is
+presumably very much larger, for the reason
+Remark <a class="xref" href="52-assembly-index-and-the-depth-of-the-fractal-le.html#remark-52-1" data-ref="rmk:ai-loose">52.1</a> gives: the assembly index counts everything
+built, including redundancy, repair machinery and bulk, while these floors
+count only the building that buys a named capability. The ratio between
+them is the interesting quantity and we cannot compute it.</p>
+<p>That is a reasonable place to leave it. A framework earns attention by
+making quantities visible before it makes them sharp, and a floor anyone
+can check and improve is a better invitation than a theorem that closes
+the question. The lower-bound problem for minds is at about the stage the
+lower-bound problem for circuits was before anyone had a technique:
+everybody can see what a bound would have to look like and nobody can
+produce one. We would be pleased to be scooped on this.</p>
+<h2 id="sec-53-3"><span class="secnum">53.3</span> Generator and unfolding</h2>
+<p>Table <a class="xref" href="18-scopes-and-the-fixed-points-that-generate-them.html#tab-18-1" data-ref="sco:tab:growth">18.1</a> showed a generator of fixed size whose
+extension grows doubly exponentially. With the assembly index in hand
+there are three quantities to relate, not two.</p>
+<section class="thm plain thm-proposition" id="proposition-53-6" data-kind="Proposition" data-num="53.6"><header><span class="thm-kind">Proposition 53.6</span> <span class="thm-name">The chain</span><a class="permalink" href="#proposition-53-6" aria-label="Link to Proposition 53.6">¶</a></header><p>
+For an ecology \(E\) whose namespace is generated by \(\Nsp\),
+<span class="math-d">\[\gen(\Nsp) \;\le\; h(E) \;\le\; \AI(E)\]</span>
+under the convention that atomic predicates are at least one symbol and
+each level of the tower is generated by at least one unfolding.</p></section>
+<section class="thm remarkish thm-remark" id="remark-53-9" data-kind="Remark" data-num="53.9"><header><span class="thm-kind">Remark 53.9</span> <span class="thm-name">Three quantities, three questions</span><a class="permalink" href="#remark-53-9" aria-label="Link to Remark 53.9">¶</a></header><p>
+\(\gen\) answers “how long is the description”; \(h\) answers “how many
+levels of inside does it have”; \(\AI\) answers “how many steps did it
+take to build”. Under \(\mu\), \(\gen\) is constant while \(h\) grows with the
+unfolding and \(\AI\) grows at least as fast as \(h\). Two ratios follow, and
+they measure different virtues:
+<span class="math-d">\[\frac{h}{\gen} = \text{how much depth a description buys},
+  \quad
+  \frac{h}{\AI} = \text{architectural efficiency}.\]</span>
+The second is the ratio Remark <a class="xref" href="52-assembly-index-and-the-depth-of-the-fractal-le.html#remark-52-1" data-ref="rmk:ai-loose">52.1</a> proposes as a measure of
+how much of an organism’s manufacture bought a new inside. The first is
+new, and it is the one corresponding to something biologists already
+measure: a small genome producing a deep organism is a large \(h/\gen\).</p></section>
+<section class="thm remarkish thm-remark" id="remark-53-10" data-kind="Remark" data-num="53.10"><header><span class="thm-kind">Remark 53.10</span> <span class="thm-name">The germ is the generator</span><a class="permalink" href="#remark-53-10" aria-label="Link to Remark 53.10">¶</a></header><p>
+This is not an analogy, and both objects are already in hand. The germ of
+§<a class="xref" href="21-the-mortal-scientist.html#sec-21-12-2" data-ref="sci:S12.2">21.12.2</a> is a quotation: inert, transmissible, inspectable, and
+costing nothing until dropped. The generator of
+Definition <a class="xref" href="18-scopes-and-the-fixed-points-that-generate-them.html#definition-18-2" data-ref="sco:def:gen">18.2</a> is a formula: finite, transmissible, and
+costing nothing until unfolded. In an ecology whose namespace is
+generated these coincide — what is inherited is the generator, and
+development is the unfolding. The assembly index prices the unfolding,
+which is why a genome can be small while its organism is deep, and why the
+two numbers were never going to be the same number.</p></section>
+<section class="thm remarkish thm-remark" id="remark-53-11" data-kind="Remark" data-num="53.11"><header><span class="thm-kind">Remark 53.11</span> <span class="thm-name">A caution about the direction of the depth bound</span><a class="permalink" href="#remark-53-11" aria-label="Link to Remark 53.11">¶</a></header><p>
+The bounds of Chapter <a class="xref" href="52-assembly-index-and-the-depth-of-the-fractal-le.html#top" data-ref="sec:assembly-depth">52</a> are additive: one level,
+one edge, one unit of modal depth. That additivity is inherited from the
+tower argument and there is no reason to doubt it there. But a lower bound
+routed through characteristic formulae rather than through the tower would
+need to know how far the modal depth of a characteristic formula for
+\(P \mid Q\) can exceed those for \(P\) and \(Q\), and if a single joining step
+can more than increment it then bounds of that shape degrade from \(n\) to
+\(\log n\). Nothing here needs that route — all six floors go through
+structure rather than through characteristic formulae — but anyone
+extending this work should check it before relying on it.</p></section>
+<h2 id="sec-53-4"><span class="secnum">53.4</span> The pressure on copy number</h2>
+<p>The two parameters of the biosignature look independent. One is a property
+of an object and the other of a population, and nothing in assembly theory
+relates them beyond the observation that in living matter both are large.
+Here they are related, by two mechanisms pushing the same way: an
+architecture that is deep <em>requires</em> copies before anyone wants them
+for statistics.</p>
+<h3 id="sec-53-4-1"><span class="secnum">53.4.1</span> Detection forces copies</h3>
+<p>By Theorem <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-2" data-ref="eng:thm:foster">24.2</a> the total detection strength of the price
+code is \(\bt\), distributed over edges by effective resistance, and an edge
+on no cycle is undetectable. A region whose internal media form a tree
+therefore has no error correction at all: every fault is silent, and by
+Corollary <a class="xref" href="24-enzymes-and-individuals.html#corollary-24-10" data-ref="eng:bridges-fail-twice">24.10</a> a bridge fails twice, having
+neither a cycle to check it nor an owner to repair it.</p>
+<p>Repairability requires cycles; a cycle requires a redundant pathway; and a
+redundant pathway between two functional positions is two copies of a
+relation where one would carry the traffic. The requirement recurs per
+stratum, since each level of the tower has its own media and its own
+faults.</p>
+<section class="thm plain thm-proposition" id="proposition-53-7" data-kind="Proposition" data-num="53.7"><header><span class="thm-kind">Proposition 53.7</span> <span class="thm-name">Repair floor</span><a class="permalink" href="#proposition-53-7" aria-label="Link to Proposition 53.7">¶</a></header><p>
+An ecology whose stratum-\(j\) media can detect \(m_j\) independent
+single-edge faults has \(\bt^{(j)} \ge m_j\), and therefore carries at least
+\(m_j\) media in excess of a spanning structure at that stratum.</p></section>
+<p>This is a floor on copies of <em>media</em>, and it is small. The second
+mechanism is not.</p>
+<h3 id="sec-53-4-2"><span class="secnum">53.4.2</span> Sampling forces copies, exponentially</h3>
+<p>By Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-9" data-ref="eng:prop:fragile">24.9</a> a percept of integration depth \(d\)
+traverses \(d\) hops of internal medium and survives with probability
+\(p^{d}\). A hypothesis at that depth needs \(m\) independent confirmations
+before a learner will fund a revision on it, and confirmations attempted
+in parallel are attempted by copies.</p>
+<section class="thm plain thm-proposition" id="proposition-53-8" data-kind="Proposition" data-num="53.8"><header><span class="thm-kind">Proposition 53.8</span> <span class="thm-name">Sampling floor</span><a class="permalink" href="#proposition-53-8" aria-label="Link to Proposition 53.8">¶</a></header><p>
+To obtain \(m\) usable depth-\(d\) confirmations per round, an ecology
+requires \(\CN \ge \lceil m\, p^{-d} \rceil\) learners positioned at that
+depth.</p></section>
+<figure class="float tabfloat" id="tab-53-2"><div class="tablewrap"><table><thead><tr><th>\(p \backslash d\)</th><th>\(1\)</th><th>\(2\)</th><th>\(3\)</th><th>\(4\)</th><th>\(5\)</th><th>\(6\)</th><th>\(7\)</th><th>\(8\)</th></tr></thead><tbody><tr><td>\(0.99\)</td><td>\(21\)</td><td>\(21\)</td><td>\(21\)</td><td>\(21\)</td><td>\(22\)</td><td>\(22\)</td><td>\(22\)</td><td>\(22\)</td></tr><tr><td>\(0.95\)</td><td>\(22\)</td><td>\(23\)</td><td>\(24\)</td><td>\(25\)</td><td>\(26\)</td><td>\(28\)</td><td>\(29\)</td><td>\(31\)</td></tr><tr><td>\(0.90\)</td><td>\(23\)</td><td>\(25\)</td><td>\(28\)</td><td>\(31\)</td><td>\(34\)</td><td>\(38\)</td><td>\(42\)</td><td>\(47\)</td></tr><tr><td>\(0.80\)</td><td>\(25\)</td><td>\(32\)</td><td>\(40\)</td><td>\(49\)</td><td>\(62\)</td><td>\(77\)</td><td>\(96\)</td><td>\(120\)</td></tr><tr><td>\(0.70\)</td><td>\(29\)</td><td>\(41\)</td><td>\(59\)</td><td>\(84\)</td><td>\(119\)</td><td>\(170\)</td><td>\(243\)</td><td>\(347\)</td></tr><tr><td>\(0.50\)</td><td>\(40\)</td><td>\(80\)</td><td>\(160\)</td><td>\(320\)</td><td>\(640\)</td><td>\(1280\)</td><td>\(2560\)</td><td>\(5120\)</td></tr></tbody></table></div><figcaption><span class="fignum">Table 53.2</span> \(\lceil m p^{-d}\rceil\) at \(m = 20\): copies needed to sustain
+twenty confirmations at integration depth \(d\) on media of reliability \(p\).</figcaption></figure>
+<h3 id="sec-53-4-3"><span class="secnum">53.4.3</span> The two axes are coupled</h3>
+<section class="thm plain thm-proposition" id="proposition-53-9" data-kind="Proposition" data-num="53.9"><header><span class="thm-kind">Proposition 53.9</span> <span class="thm-name">The frontier</span><a class="permalink" href="#proposition-53-9" aria-label="Link to Proposition 53.9">¶</a></header><p>
+An ecology that uses its architecture — one whose hypotheses are
+evaluated at integration depths reaching its tower height \(h\) — has
+<span class="math-d">\[\CN \;\gtrsim\; m\, p^{-h},\]</span>
+and since \(h \le \AI\), a point of the \((\AI, \CN)\) plane at reliability
+\(p\) lying below the curve \(\CN = m p^{-\AI}\) belongs to an ecology that
+does not use its full depth.</p></section>
+<figure class="float figfloat" id="fig-53-2"><p><figure class="tikz"><img src="../figures/05fa8175e564.svg" alt="Diagram"></figure></p><figcaption><span class="fignum">Figure 53.2</span> Proposition <a class="xref" href="53-scope-and-manufacture.html#proposition-53-9" data-ref="scm:prop:frontier">53.9</a>. Each line is
+\(\log \CN = \log m + h \log(1/p)\): the copy number an ecology must hold to
+use a tower of height \(h\) on media of reliability \(p\). The slope is set by
+reliability alone.</figcaption></figure>
+<section class="thm remarkish thm-remark" id="remark-53-12" data-kind="Remark" data-num="53.12"><header><span class="thm-kind">Remark 53.12</span> <span class="thm-name">What the biosignature becomes</span><a class="permalink" href="#remark-53-12" aria-label="Link to Remark 53.12">¶</a></header><p>
+“High assembly index and high copy number” is, on this reading, not a
+conjunction of independent findings but a point above a line whose slope
+is \(\log(1/p)\). The framework accordingly predicts something the bare
+conjunction does not: the ratio \(\log \CN / h\) should cluster near
+\(\log(1/p)\) for systems using their architecture and fall well below it
+for systems that are merely abundant. A crystal is abundant and shallow; a
+bacterium is deep and abundant in the proportion its chemistry can
+sustain. If the ratio is measurable this is falsifiable, and it is
+falsifiable in a way the conjunction is not. It also sharpens the joint
+rise of Remark <a class="xref" href="50-smith-s-phase-transition-and-the-density-of-at.html#remark-50-5" data-ref="rmk:joint-rise">50.5</a>: that remark says the two numbers go
+up together after the phase transition, and this one says how fast.</p></section>
+<h3 id="sec-53-4-4"><span class="secnum">53.4.4</span> A prediction about scarcity</h3>
+<section class="thm remarkish thm-remark" id="remark-53-13" data-kind="Remark" data-num="53.13"><header><span class="thm-kind">Remark 53.13</span> <span class="thm-name">Depth goes before population</span><a class="permalink" href="#remark-53-13" aria-label="Link to Remark 53.13">¶</a></header><p>
+Depth is priced exponentially and width linearly, so under a contraction
+of resources a lineage should shed the exponentially priced axis first.
+Reducing \(h\) by one releases a factor \(p^{-1}\) of the sampling requirement
+at every stratum above the cut, together with the media, repair and enzyme
+machinery of the level removed; reducing \(\CN\) by one releases one
+learner’s maintenance. The first is worth vastly more per unit of
+structural change. So we expect — as an empirical matter, and stated as
+an expectation rather than a theorem — that lineages entering sustained
+scarcity lose architectural levels before they lose population, and that
+the reverse pattern indicates something other than resource pressure.
+Regressive evolution in parasites and cave fauna is the obvious place to
+look, and the obvious confound is that the same pressure removes the
+selective reason for a level as well as the means to pay for it.</p></section>
+<h3 id="sec-53-4-5"><span class="secnum">53.4.5</span> A worked composite: four skills, one individual, twelve of them</h3>
+<p>Now the numbers, carried through a mind whose skills are themselves
+ecologies-as-mind, in the manner of §<a class="xref" href="23-composing-learners.html#sec-23-11" data-ref="com:sec:worked">23.11</a>. The
+illustration is orca-shaped and the shape does no work beyond making the
+skills memorable: a hunting skill, a skill for one’s place in the pod, a
+mating skill, and a skill for rearing calves. Each is a population of
+mortal scientists in its own typed namespace with its own token flavor;
+the four are wired by enzymes; the whole closes over its namespace and is
+an individual; and twelve such individuals form a pod, which is a
+candidate individual one stratum up.</p>
+<h5 id="p-24">The generator.</h5>
+<p>The individual’s scope is
+<span class="math-d">\[\Nsp \;=\; \mu X.\;
+  \quo{\bigl( (\phi_{\mathrm{for}} \lor X) \mid
+              (\phi_{\mathrm{pod}} \lor X) \mid
+              (\phi_{\mathrm{mat}} \lor X) \mid
+              (\phi_{\mathrm{rea}} \lor X) \bigr)},\]</span>
+the four-predicate version of Definition <a class="xref" href="18-scopes-and-the-fixed-points-that-generate-them.html#definition-18-2" data-ref="sco:def:gen">18.2</a>. The four
+predicates are pairwise disjoint — each skill’s population is rooted at
+its own quotation, by Proposition <a class="xref" href="23-composing-learners.html#proposition-23-9" data-ref="com:prop:root">23.9</a> — so the scope
+parses uniquely, membership is decidable by
+Proposition <a class="xref" href="18-scopes-and-the-fixed-points-that-generate-them.html#proposition-18-2" data-ref="sco:prop:descent">18.2</a>, and the floors may be added by
+Proposition <a class="xref" href="53-scope-and-manufacture.html#proposition-53-5" data-ref="scm:prop:disjointedges">53.5</a>.</p>
+<h5 id="p-25">Depths and populations.</h5>
+<p>Each skill sits on media of its own reliability: the pod and rearing
+skills run on internal, owned media (\(p = 0.99\)); hunting reaches across
+the boundary into a noisy world (\(p = 0.95\)); mating runs across
+<em>another individual’s</em> boundary and is worst (\(p = 0.90\)). Optimal
+integration depth follows Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-9" data-ref="eng:prop:fragile">24.9</a>, maximizing
+\(Y(d)p^{d} - cd\) with \(Y(d) = 100(1-2^{-d})\) and \(c = 2\); the sampling
+floor follows Proposition <a class="xref" href="53-scope-and-manufacture.html#proposition-53-8" data-ref="scm:prop:sampfloor">53.8</a> with \(m = 20\).</p>
+<figure class="float tabfloat" id="tab-53-3"><div class="tablewrap"><table><thead><tr><th>skill</th><th>\(p\)</th><th>\(d^\ast\)</th><th>net value</th><th>\(\CN\) floor</th><th>separates at</th></tr></thead><tbody><tr><td>Forage</td><td>\(0.95\)</td><td>\(3\)</td><td>\(69.0\)</td><td>\(24\)</td><td>\(4\)</td></tr><tr><td>Pod</td><td>\(0.99\)</td><td>\(5\)</td><td>\(82.1\)</td><td>\(22\)</td><td>\(2\)</td></tr><tr><td>Mate</td><td>\(0.90\)</td><td>\(3\)</td><td>\(57.8\)</td><td>\(28\)</td><td>\(3\)</td></tr><tr><td>Rear</td><td>\(0.99\)</td><td>\(5\)</td><td>\(82.1\)</td><td>\(22\)</td><td>\(3\)</td></tr><tr><td></td><td></td><td></td><td></td><td>\(96\)</td><td></td></tr></tbody></table></div><figcaption><span class="fignum">Table 53.3</span> The four skill-ecologies. “Separates at” is the modal depth at
+which that skill’s learners become distinguishable from the shared kernel
+behavior.</figcaption></figure>
+<p>Note which skill is most expensive in copies. It is not the deepest; it is
+the one on the worst medium. Mating costs \(28\) learners to sustain depth
+\(3\) while the pod skill costs \(22\) to sustain depth \(5\), because
+reliability enters the floor exponentially and depth only through the
+exponent. An architecture is expensive where it is <em>unreliable</em>, not
+where it is deep.</p>
+<h5 id="p-26">The copy series.</h5>
+<p>Twelve individuals, each with \(96\) learners in four skill-ecologies:
+<span class="math-d">\[\CN^{\bullet}(\text{pod}) \;=\; (1152,\; 48,\; 12,\; 1),\]</span>
+being learners, skill-ecologies, individuals, and the pod itself. The flat
+collapse is \(1213\), a number that answers no question anyone would ask.
+The ratios \(1152 : 48 : 12 : 1\) are \(24\), \(4\) and \(12\), and those are
+respectively a sampling floor, a skill count and a group size — three
+different kinds of fact about the animal, which the collapse blends into
+one meaningless total.</p>
+<h5 id="p-27">The assembly floor.</h5>
+<p>Applying Table <a class="xref" href="53-scope-and-manufacture.html#tab-53-1" data-ref="scm:tab:floors">53.1</a> with the additivity of
+Proposition <a class="xref" href="53-scope-and-manufacture.html#proposition-53-5" data-ref="scm:prop:disjointedges">53.5</a>:</p>
+<figure class="float tabfloat" id="tab-53-4"><div class="tablewrap"><table><thead><tr><th>component</th><th>steps</th><th>from</th></tr></thead><tbody><tr><td>kernel: inside, boundary, germ, stack, assay</td><td>\(5\)</td><td>L1–L3, paid once</td></tr><tr><td>differentia: \(d^\ast\) per skill, \(3+5+3+5\)</td><td>\(16\)</td><td>L4, L5</td></tr><tr><td>wiring: joining four parts, \(\lceil \log_2 4\rceil\)</td><td>\(2\)</td><td></td></tr><tr><td>enzymes: four, to close a cycle over four flavors</td><td>\(4\)</td><td>L6</td></tr><tr><td>closure of the individual’s namespace</td><td>\(1\)</td><td>L2</td></tr><tr><td><strong>floor</strong></td><td>\(\mathbf{28}\)</td><td></td></tr><tr><td>same, with no kernel sharing (\(5 \times 4\))</td><td>\(43\)</td><td></td></tr></tbody></table></div><figcaption><span class="fignum">Table 53.4</span> The assembly floor of the four-skill individual.</figcaption></figure>
+<p>Two numbers to take from this. Sharing the kernel across the four skills
+saves \(15\) of \(43\) steps, or \(34.9\%\); and of the \(28\) remaining, \(16\) —
+\(57.1\%\) — are <em>content</em> rather than architecture. The fractal is
+cheap and the niches are expensive.</p>
+<section class="thm remarkish thm-remark" id="remark-53-14" data-kind="Remark" data-num="53.14"><header><span class="thm-kind">Remark 53.14</span> <span class="thm-name">The economy runs the other way from intuition</span><a class="permalink" href="#remark-53-14" aria-label="Link to Remark 53.14">¶</a></header><p>
+One expects a mind made of minds to be expensive because it is deep. It is
+not: depth is what the fixed point gives away, since a generator that
+describes one level describes all of them, and copies of a made thing are
+free in assembly index. What a multi-skilled mind pays for is
+<em>differentiation</em> — the distinct predicates, assays and token
+flavors that make hunting not-mating. Under this accounting an animal’s
+assembly index tracks the number of distinct niches it addresses far more
+closely than the elaborateness of its architecture, and two animals of
+very different apparent sophistication addressing the same number of
+niches should come out close together.</p></section>
+<h5 id="p-28">Does the whole close?</h5>
+<p>By §<a class="xref" href="24-enzymes-and-individuals.html#sec-24-8" data-ref="eng:S8">24.8</a> a region may close over its namespace exactly when its
+isoperimetric ratio clears \((\varepsilon\theta/\rho)\,r\). Taking
+\(\theta = 0.2\), \(\rho = 5\) and \(\varepsilon = 1-p\) for the relevant media:
+the individual, with internal media at \(p = 0.99\) and two of its four
+skills facing outward so that \(h = 0.5\), has
+\(\varepsilon\theta/\rho = 4\times 10^{-4}\) and critical radius
+\(r^\ast = 1250\); it closes with enormous margin. The pod, whose media run
+across individual boundaries at \(p = 0.90\) and whose isoperimetric ratio
+we take as \(0.3\), has \(\varepsilon\theta/\rho = 4\times 10^{-3}\) and
+\(r^\ast = 75\). A pod of twelve closes. An aggregation of two hundred does
+not.</p>
+<section class="thm remarkish thm-remark" id="remark-53-15" data-kind="Remark" data-num="53.15"><header><span class="thm-kind">Remark 53.15</span> <span class="thm-name">A critical group size, and how much to believe it</span><a class="permalink" href="#remark-53-15" aria-label="Link to Remark 53.15">¶</a></header><p>
+The number \(75\) is a consequence of parameters we invented, and nothing
+here determines \(\theta\), \(\rho\) or the isoperimetric ratio of a pod. What
+is not invented is the shape of the result: there is a finite size beyond
+which a social aggregation cannot close over its namespace, it scales as
+\(\rho/(\varepsilon\theta)\), and it is set by the reliability of the media
+running <em>between</em> individuals rather than by anything about the
+individuals. We note without pressing it that the literature on cohesive
+group size in social mammals lives in this neighborhood, and that the
+framework predicts the bound should move with communication reliability
+rather than with brain size. We would not want that repeated as a result.</p></section>
+<h5 id="p-29">What a passing instrument sees.</h5>
+<p>Finally the point of §<a class="xref" href="53-scope-and-manufacture.html#sec-53-1" data-ref="scm:sec:graded">53.1</a>, made concrete. The four
+skills’ learners share the kernel and separate at depths \(2, 3, 3, 4\). An
+observer surveying the pod’s namespace at resolution \(n\) reports:</p>
+<figure class="float tabfloat" id="tab-53-5"><div class="tablewrap"><table><thead><tr><th>resolution \(n\)</th><th>kinds</th><th>largest class</th><th></th></tr></thead><tbody><tr><td>\(0\)</td><td>\(1\)</td><td>\(1152\)</td><td>everything is one kind</td></tr><tr><td>\(1\)</td><td>\(1\)</td><td>\(1152\)</td><td></td></tr><tr><td>\(2\)</td><td>\(2\)</td><td>\(888\)</td><td>the pod skill separates</td></tr><tr><td>\(3\)</td><td>\(4\)</td><td>\(336\)</td><td>mating and rearing separate</td></tr><tr><td>\(\ge 4\)</td><td>\(4\)</td><td>\(336\)</td><td>truth</td></tr></tbody></table></div><figcaption><span class="fignum">Table 53.5</span> An observer’s report on the learner stratum, by resolution. Truth
+is four kinds, largest class \(336\).</figcaption></figure>
+<p>An instrument at resolution \(0\) reports a copy number \(3.4\) times the
+truth and a monoculture where there are four kinds; at resolution \(2\) it
+is still wrong by a factor of \(2.6\) on the largest class. And note the
+small mercy at \(n = 3\): once every kind but one has been separated, the
+last comes free, because what remains in the pool is a kind by
+elimination. A survey therefore needs resolution equal to the
+second-deepest separation, not the deepest — a saving of exactly one
+kind’s worth of instrument, and the only place in this chapter where the
+accounting is generous.</p>
+<h2 id="sec-53-5"><span class="secnum">53.5</span> The survey, in rholang</h2>
+<p>Two contracts. The first decides membership in a generated scope by
+descent, per Proposition <a class="xref" href="18-scopes-and-the-fixed-points-that-generate-them.html#proposition-18-2" data-ref="sco:prop:descent">18.2</a>. The second surveys a
+scope and returns a copy series. Both follow the conventions of
+§<a class="xref" href="22-learning-to-play.html#sec-22-13" data-ref="gam:app:code">22.13</a>: a bare parameter is a name, an <code>@</code>-pattern
+binds data, and a channel is passed as <code>*c</code>. Guards marked
+<code>//!  ideal</code> stand for decision procedures assumed rather than
+implemented.</p>
+<p><pre class="code"><code>new InScope, Split, Survey, Series, BisimN, Atom, Stratum in {
+
+  // ---- membership by descent -------------------------------------
+  // mu X . @( (phi \/ X) | (psi \/ X) ), presented as a list of
+  // atomic predicates and tested by structural descent on the quote.
+
+  contract InScope(@nm, atoms, ret) = {
+    new hit in {
+      Atom!(nm, *atoms, *hit) |
+      for (@isAtom &lt;- hit) {
+        if (isAtom) { ret!(true) }
+        else {
+          // By &quot;Unique decomposition&quot; the split is unique, so one
+          // split and two recursive calls -- no search.
+          new sp in {
+            Split!(nm, *sp) |
+            for (@p, @q, @ok &lt;- sp) {
+              if (not ok) { ret!(false) }
+              else {
+                new l, r in {
+                  InScope!(p, *atoms, *l) |
+                  InScope!(q, *atoms, *r) |
+                  for (@a &lt;- l &amp; @b &lt;- r) { ret!(a and b) }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  } |
+
+  // Split returns the unique decomposition of a quoted parallel
+  // composition.  Termination of the recursion above is exactly the
+  // no-self-code theorem: p and q code strictly smaller terms.
+  contract Split(@nm, ret) = {
+    match *nm {
+      { P | Q } =&gt; { ret!(@P, @Q, true) }        //! ideal
+      _         =&gt; { ret!(Nil, Nil, false) }
+    }
+  } |
+
+  // ---- the survey ------------------------------------------------
+  // Visit each channel of the scope, decide n-step bisimilarity with
+  // the target, and bin by stratum.  One metered rendezvous per
+  // visit: this contract is where a copy number is paid for.
+
+  contract Survey(@target, chans, @n, ret) = {
+    new tally in {
+      tally!({}) |
+      for (@c &lt;= chans) {                     // one visit per channel
+        new b, s in {
+          BisimN!(c, target, n, *b) |         //! ideal, cost kappa(n)
+          Stratum!(c, *s) |
+          for (@same &lt;- b &amp; @j &lt;- s) {
+            for (@acc &lt;- tally) {
+              if (same) { tally!(acc.set(j, acc.getOrElse(j,0) + 1)) }
+              else      { tally!(acc) }
+            }
+          }
+        }
+      } |
+      for (@acc &lt;- tally) { ret!(acc) }       // the copy series
+    }
+  } |
+
+  // The flat collapse, for comparison with the received definition.
+  contract Series(@series, ret) = {
+    ret!( series.values().fold(0, (a, b) =&gt; a + b) )
+  }
+}</code></pre></p>
+<p>
+Three things the listing makes visible that the prose does not. The
+recursion in <code>InScope</code> has no depth bound in its own code — it
+terminates because of a theorem about the calculus, not because of a
+counter. <code>Survey</code> charges once per channel, which is what makes
+affordable scope a budget question rather than a definitional one. And
+<code>Series</code> exists only to throw information away; it is the received
+copy number, written as the lossy projection it is.</p>
+<h2 id="sec-53-6"><span class="secnum">53.6</span> What this leaves</h2>
+<p>Four things, and they belong with the gaps of
+Chapter <a class="xref" href="54-open-gaps.html#top" data-ref="sec:origins-gaps">54</a> rather than here, so they are recorded
+there. The shortest statement of each: whether a non-well-founded scope
+could be surveyed stratum by stratum; whether the copy series can tell a
+merged composite from a merely composed one; whether affordable scope and
+the individuation fixed point of Remark <a class="xref" href="24-enzymes-and-individuals.html#remark-24-11" data-ref="eng:rem:fixpoint">24.11</a> have a
+common solution; and what a copy number looks like once one admits that a
+survey is an assay, and so has a third outcome.</p>
+<p>There is also a connection that runs forward rather than sideways. A
+learner’s region is bounded by what it can pay to survey, so the
+unsurveyable is not the unknowable in principle but the unaffordable in
+fact — and that is precisely the distinction
+§<a class="xref" href="68-any-future-metaphysics.html#sec-68-5-1" data-ref="sec:kant-affordable">68.5.1</a> builds on when it argues that the noumenal
+survives in this framework as a budget constraint rather than as a wall.
+Copy number turns out to be a place where that abstraction has a number
+attached: what a mind can count is bounded by what it was assembled to
+resolve, and what it can survey is bounded by what it can afford to visit.
+Both bounds are economic, both are movable, and neither is a limit on what
+is there.</p>
+<nav class="pager"><a class="prev" href="52-assembly-index-and-the-depth-of-the-fractal-le.html"><span>Previous</span>Assembly Index and the Depth of the Fractal Learner</a><a class="next" href="54-open-gaps.html"><span>Next</span>Open Gaps</a></nav>
+</main>
+<aside class="margin" id="margin" aria-live="polite"></aside>
+</div>
+<button class="railtoggle" id="railtoggle" aria-expanded="false">Contents</button>
+
+</body>
+</html>

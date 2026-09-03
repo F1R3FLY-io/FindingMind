@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The ledger · Finding Mind</title>
+<link rel="canonical" href="https://findingmind.com/read/ledger.html">
+<meta name="description" content="Finding Mind">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../book.css">
+
+</head>
+<body class="plainpage">
+
+<div class="page">
+<header class="phead"><a class="back" href="../index.html">Finding Mind</a>
+<h1>The ledger</h1>
+<p class="lede">Every numbered result in the book, in one place. The book's own front
+matter promises that nothing is hiding. This is where you check.</p>
+<div class="filters">
+  <input type="search" id="q" placeholder="Search by name, number or label" aria-label="Search results">
+  <p class="owedline"><button id="owed" aria-pressed="false">Show only what the book still owes</button>
+     <span id="count"></span></p>
+  <div class="chips" id="chips"></div>
+</div></header>
+<div id="ledger" class="ledger"></div>
+</div>
+<script>
+fetch('ledger.json').then(r=>r.json()).then(function(rows){
+  var kinds=[...new Set(rows.map(r=>r.kind))].sort(function(a,b){
+    return rows.filter(r=>r.kind===b).length - rows.filter(r=>r.kind===a).length; });
+  var active=new Set(), owedOnly=false;
+  var chips=document.getElementById('chips');
+  kinds.forEach(function(k){
+    var b=document.createElement('button');
+    b.textContent=k+' '+rows.filter(r=>r.kind===k).length;
+    b.setAttribute('aria-pressed','false');
+    if(k==='Conjecture'||k==='Question') b.className='owedchip';
+    b.onclick=function(){ if(active.has(k)){active.delete(k);b.setAttribute('aria-pressed','false');}
+      else {active.add(k);b.setAttribute('aria-pressed','true');} draw(); };
+    chips.appendChild(b);
+  });
+  var ob=document.getElementById('owed');
+  ob.onclick=function(){ owedOnly=!owedOnly; ob.setAttribute('aria-pressed',owedOnly?'true':'false');
+    ob.textContent = owedOnly ? 'Show everything' : 'Show only what the book still owes'; draw(); };
+  var q=document.getElementById('q'); q.oninput=draw;
+  function draw(){
+    var term=q.value.toLowerCase();
+    var out=rows.filter(function(r){
+      if(owedOnly && !r.owed) return false;
+      if(active.size && !active.has(r.kind)) return false;
+      if(!term) return true;
+      return (r.kind+' '+r.num+' '+r.title+' '+r.key+' '+r.cht).toLowerCase().indexOf(term)>=0;
+    });
+    document.getElementById('count').textContent = out.length + ' of ' + rows.length;
+    document.getElementById('ledger').innerHTML = out.map(function(r){
+      return '<a class="lrow'+(r.owed?' owed':'')+'" href="'+r.url+'#'+r.anchor+'">'+
+        '<span class="lk">'+r.kind+'</span>'+
+        '<span class="ln">'+r.num+'</span>'+
+        '<span class="lt">'+(r.title? r.title : '<span class="unnamed">'+r.cht+'</span>')+'</span></a>';
+    }).join('') || '<p class="empty">Nothing matches. Clear the filters to see everything.</p>';
+  }
+  draw();
+});
+</script>
+</body>
+</html>

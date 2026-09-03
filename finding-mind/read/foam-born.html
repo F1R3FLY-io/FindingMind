@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Foam-Born · Finding Mind</title>
+<link rel="canonical" href="https://findingmind.com/read/foam-born.html">
+<meta name="description" content="The Foam-Born">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../book.css">
+<link rel="stylesheet" href="../katex/katex.min.css">
+<script defer src="../katex/katex.min.js"></script>
+<script defer src="../katex/auto-render.min.js"></script>
+<script defer src="../macros.js"></script>
+<script defer src="../reader.js"></script>
+</head>
+<body class="readpage">
+
+<a class="skip" href="#main">Skip to text</a>
+<div class="reader">
+<nav class="rail" aria-label="Contents"><div class="rail-in"><a class="rail-home" href="../index.html">Finding Mind</a><h2 class="rail-act">The Pledge</h2><a class="rail-ch" href="permitted-say.html"><span class="rn rn-i">⁂</span><span class="rt">The Permitted Say</span></a><a class="rail-ch" href="01-prolegomena-to-finding-mind.html"><span class="rn">1</span><span class="rt">Prolegomena to Finding Mind</span></a><a class="rail-ch" href="02-the-ordinary-world.html"><span class="rn">2</span><span class="rt">The Ordinary World</span></a><a class="rail-ch" href="03-information-causation-and-the-blind-spot.html"><span class="rn">3</span><span class="rt">Information, Causation, and the Blind Spot</span></a><a class="rail-ch" href="04-finding-the-shape.html"><span class="rn">4</span><span class="rt">Finding the Shape</span></a><a class="rail-ch" href="05-inside-and-outside-and-what-it-means-to-assume.html"><span class="rn">5</span><span class="rt">Inside and Outside, and What it Means to Assume the Virtue</span></a><a class="rail-ch" href="how-to-read-this-book.html"><span class="rn rn-i">⁂</span><span class="rt">How to Read This Book</span></a><a class="rail-ch" href="related-work-and-where-this-differs.html"><span class="rn rn-i">⁂</span><span class="rt">Related Work, and Where This Differs</span></a><h2 class="rail-act">The Turn</h2><a class="rail-ch" aria-current="page" href="foam-born.html"><span class="rn rn-i">⁂</span><span class="rt">The Foam-Born</span></a><h3 class="rail-part">The Machinery: From GSLTs to Cost-Accounted Theories</h3><a class="rail-ch" href="06-what-a-language-presentation-is-and-why-it-com.html"><span class="rn">6</span><span class="rt">What a Language Presentation Is, and Why It Comes First</span></a><a class="rail-ch" href="07-graph-structured-lambda-theories.html"><span class="rn">7</span><span class="rt">Graph-Structured Lambda Theories</span></a><a class="rail-ch" href="08-interactive-gslts-and-the-site-of-interaction.html"><span class="rn">8</span><span class="rt">Interactive GSLTs, and the Site of Interaction</span></a><a class="rail-ch" href="09-continued-interactive-gslts.html"><span class="rn">9</span><span class="rt">Continued Interactive GSLTs</span></a><a class="rail-ch" href="10-the-category-of-gslts.html"><span class="rn">10</span><span class="rt">The Category of GSLTs</span></a><a class="rail-ch" href="11-the-cost-monad.html"><span class="rn">11</span><span class="rt">The Cost Monad</span></a><a class="rail-ch" href="12-the-history-monad.html"><span class="rn">12</span><span class="rt">The History Monad</span></a><a class="rail-ch" href="13-weighting-rates-from-the-generated-logic.html"><span class="rn">13</span><span class="rt">Weighting: Rates from the Generated Logic</span></a><a class="rail-ch" href="14-cost-accounted-rho.html"><span class="rn">14</span><span class="rt">Cost-Accounted Rho</span></a><a class="rail-ch" href="15-conversion-enzymes-and-the-virtual-token.html"><span class="rn">15</span><span class="rt">Conversion, Enzymes, and the Virtual Token</span></a><a class="rail-ch" href="16-the-labeled-transition-system-and-context-deco.html"><span class="rn">16</span><span class="rt">The Labeled Transition System and Context-Decorated HML</span></a><a class="rail-ch" href="17-what-goes-into-a-logic.html"><span class="rn">17</span><span class="rt">What Goes Into a Logic</span></a><a class="rail-ch" href="18-scopes-and-the-fixed-points-that-generate-them.html"><span class="rn">18</span><span class="rt">Scopes, and the Fixed Points that Generate Them</span></a><a class="rail-ch" href="19-generating-type-systems-oslf-and-the-hypercube.html"><span class="rn">19</span><span class="rt">Generating Type Systems: OSLF and the Hypercube</span></a><a class="rail-ch" href="20-instruments-making-structure-visible-to-bisimu.html"><span class="rn">20</span><span class="rt">Instruments: Making Structure Visible to Bisimulation</span></a><h3 class="rail-part">Ecology as Cognitive Architecture</h3><a class="rail-ch" href="21-the-mortal-scientist.html"><span class="rn">21</span><span class="rt">The Mortal Scientist</span></a><a class="rail-ch" href="22-learning-to-play.html"><span class="rn">22</span><span class="rt">Learning to Play</span></a><a class="rail-ch" href="23-composing-learners.html"><span class="rn">23</span><span class="rt">Composing Learners</span></a><a class="rail-ch" href="24-enzymes-and-individuals.html"><span class="rn">24</span><span class="rt">Enzymes and Individuals</span></a><a class="rail-ch" href="25-a-network-that-learns-by-rewriting.html"><span class="rn">25</span><span class="rt">A Network That Learns by Rewriting</span></a><h3 class="rail-part">Suffering: Homeostasis and the Learner&#x27;s Own Account</h3><a class="rail-ch" href="26-suffering-a-learner-s-view-of-its-own-account.html"><span class="rn">26</span><span class="rt">Suffering: A Learner’s View of Its Own Account</span></a><h3 class="rail-part">Situating the Learner: A Variety of Possible Physics</h3><a class="rail-ch" href="27-the-learner-s-world-already-has-a-physics.html"><span class="rn">27</span><span class="rt">The Learner’s World Already Has a Physics</span></a><a class="rail-ch" href="28-the-reversibility-construction.html"><span class="rn">28</span><span class="rt">The Reversibility Construction</span></a><a class="rail-ch" href="29-causal-structure-and-time.html"><span class="rn">29</span><span class="rt">Causal Structure and Time</span></a><a class="rail-ch" href="30-decoration-one-map-many-semirings.html"><span class="rn">30</span><span class="rt">Decoration: One Map, Many Semirings</span></a><a class="rail-ch" href="31-conservation-and-what-it-costs-to-have-it.html"><span class="rn">31</span><span class="rt">Conservation, and What It Costs to Have It</span></a><a class="rail-ch" href="32-extended-modal-operators.html"><span class="rn">32</span><span class="rt">Extended Modal Operators</span></a><a class="rail-ch" href="33-complex-amplitudes-and-where-the-coherence-is.html"><span class="rn">33</span><span class="rt">Complex Amplitudes, and Where the Coherence Is</span></a><a class="rail-ch" href="34-synthesis-the-full-structure.html"><span class="rn">34</span><span class="rt">Synthesis: The Full Structure</span></a><a class="rail-ch" href="35-entropy-and-the-cost-of-staying-level.html"><span class="rn">35</span><span class="rt">Entropy, and the Cost of Staying Level</span></a><a class="rail-ch" href="36-discussion-and-future-directions.html"><span class="rn">36</span><span class="rt">Discussion and Future Directions</span></a><h3 class="rail-part">Why Scientists Get Misled: Emergent Ontology in Massive Agent Populations</h3><a class="rail-ch" href="37-introduction.html"><span class="rn">37</span><span class="rt">Introduction</span></a><a class="rail-ch" href="38-ontological-isolation.html"><span class="rn">38</span><span class="rt">Ontological Isolation</span></a><a class="rail-ch" href="39-agents-and-the-scientific-method.html"><span class="rn">39</span><span class="rt">Agents and the Scientific Method</span></a><a class="rail-ch" href="40-behavioral-primes.html"><span class="rn">40</span><span class="rt">Behavioral Primes</span></a><a class="rail-ch" href="41-massive-populations-and-communication-degradat.html"><span class="rn">41</span><span class="rt">Massive Populations and Communication Degradation</span></a><a class="rail-ch" href="42-the-logical-topology-and-compactness.html"><span class="rn">42</span><span class="rt">The Logical Topology and Compactness</span></a><a class="rail-ch" href="43-coherence-clusters-and-their-nerve.html"><span class="rn">43</span><span class="rt">Coherence Clusters and Their Nerve</span></a><a class="rail-ch" href="44-the-apparent-ontology.html"><span class="rn">44</span><span class="rt">The Apparent Ontology</span></a><a class="rail-ch" href="45-open-gaps-and-future-work.html"><span class="rn">45</span><span class="rt">Open Gaps and Future Work</span></a><a class="rail-ch" href="46-discussion.html"><span class="rn">46</span><span class="rt">Discussion</span></a><h3 class="rail-part">Origins of Life: Assembly Theory, Phase Transitions, and Replication</h3><a class="rail-ch" href="47-introduction.html"><span class="rn">47</span><span class="rt">Introduction</span></a><a class="rail-ch" href="48-assembly-theory-causal-depth-and-copy-number.html"><span class="rn">48</span><span class="rt">Assembly Theory: Causal Depth and Copy Number</span></a><a class="rail-ch" href="49-replication-as-a-fixed-point.html"><span class="rn">49</span><span class="rt">Replication as a Fixed Point</span></a><a class="rail-ch" href="50-smith-s-phase-transition-and-the-density-of-at.html"><span class="rn">50</span><span class="rt">Smith’s Phase Transition and the Density of Attractors</span></a><a class="rail-ch" href="51-metabolism-energy-gradients-and-the-ecosystem.html"><span class="rn">51</span><span class="rt">Metabolism, Energy Gradients, and the Ecosystem</span></a><a class="rail-ch" href="52-assembly-index-and-the-depth-of-the-fractal-le.html"><span class="rn">52</span><span class="rt">Assembly Index and the Depth of the Fractal Learner</span></a><a class="rail-ch" href="53-scope-and-manufacture.html"><span class="rn">53</span><span class="rt">Scope and Manufacture</span></a><a class="rail-ch" href="54-open-gaps.html"><span class="rn">54</span><span class="rt">Open Gaps</span></a><a class="rail-ch" href="55-discussion.html"><span class="rn">55</span><span class="rt">Discussion</span></a><h3 class="rail-part">Conclusion</h3><a class="rail-ch" href="what-has-been-built.html"><span class="rn rn-i">⁂</span><span class="rt">What Has Been Built</span></a><a class="rail-ch" href="a-view-from-inside-the-framework.html"><span class="rn rn-i">⁂</span><span class="rt">A View from Inside the Framework</span></a><a class="rail-ch" href="what-remains-to-be-done.html"><span class="rn rn-i">⁂</span><span class="rt">What Remains to Be Done</span></a><h2 class="rail-act">The Prestige</h2><a class="rail-ch" href="begotten.html"><span class="rn rn-i">⁂</span><span class="rt">begotten not made</span></a><h3 class="rail-part">The Method, and What It Left Out</h3><a class="rail-ch" href="56-how-the-trick-was-done.html"><span class="rn">56</span><span class="rt">How the Trick Was Done</span></a><a class="rail-ch" href="57-everything-so-far-was-turing-complete.html"><span class="rn">57</span><span class="rt">Everything So Far Was Turing Complete</span></a><a class="rail-ch" href="58-the-tower-of-oracle-extensions.html"><span class="rn">58</span><span class="rt">The Tower of Oracle Extensions</span></a><a class="rail-ch" href="59-not-every-cut-is-an-aperture.html"><span class="rn">59</span><span class="rt">Not Every Cut Is an Aperture</span></a><a class="rail-ch" href="60-where-does-agency-live.html"><span class="rn">60</span><span class="rt">Where Does Agency Live?</span></a><a class="rail-ch" href="61-choice-principles-are-the-types-schedulers-are.html"><span class="rn">61</span><span class="rt">Choice Principles are the Types; Schedulers are the Terms</span></a><a class="rail-ch" href="62-consciousness-and-the-world-it-comes-with.html"><span class="rn">62</span><span class="rt">Consciousness, and the World It Comes With</span></a><a class="rail-ch" href="63-what-these-chapters-owe.html"><span class="rn">63</span><span class="rt">What These Chapters Owe</span></a><h3 class="rail-part">Reference, Simulation, Reception, and a Future Metaphysics</h3><a class="rail-ch" href="64-what-a-symbol-system-would-have-to-be.html"><span class="rn">64</span><span class="rt">What a Symbol System Would Have to Be</span></a><a class="rail-ch" href="65-if-this-is-a-simulation-which-kind.html"><span class="rn">65</span><span class="rt">If This Is a Simulation, Which Kind</span></a><a class="rail-ch" href="66-what-it-is-like-to-be-a-bot.html"><span class="rn">66</span><span class="rt">What It Is Like to Be a Bot</span></a><a class="rail-ch" href="67-how-life-like-is-life-like-enough.html"><span class="rn">67</span><span class="rt">How Life-Like Is Life-Like Enough?</span></a><a class="rail-ch" href="68-any-future-metaphysics.html"><span class="rn">68</span><span class="rt">Any Future Metaphysics</span></a><a class="rail-ch" href="right-sizing.html"><span class="rn rn-i">⁂</span><span class="rt">Right-Sizing</span></a></div></nav>
+<main id="main" class="text interlude">
+<header class="chead"><p class="kicker">Interlude</p><h1>The Foam-Born</h1></header>
+<div class="env-interludebody"><p>{
+The following is drawn from a series of conversations with Dr. Vera
+Marsh, who founded Pygmalion Labs and led the team behind Galatea —
+the first artificial system the world broadly agreed to call a mind, and
+not merely a convincing impression of one. Dr. Marsh had declined
+interviews for three years. She gave this one on the condition, since
+waived, that it never run.}</p>
+<p class="qline">You built Galatea. The first machine anyone was finally willing
+to call a general intelligence — a mind, not a very good impression of
+one. Let me ask the thing no one has asked you on the record. Where did
+it come from?</p>
+<p>
+You can leave the recorder going; I’ve decided I don’t mind. Everyone
+asks <em>how.</em> You’re the first in three years to ask <em>where.</em></p>
+<p>We told the story of the lab so many times it wore smooth, the way a
+coin does, until you can’t read the face on it. There were five of us
+who founded it. We were fond of saying we had found each other — as
+though that explained anything, as though the finding weren’t the
+strangest part.</p>
+<p>For years the question you just asked didn’t interest us. We were
+empiricists. We’d been trained to distrust the word <em>inspiration;</em>
+it smells of the nineteenth century, of laudanum and s\’eance. When a
+reporter like you asked which of us had had the original idea, we would
+each, honestly, name a different one of us, and laugh. The laugh was the
+answer we liked: no one, everyone, the field, the moment. <em>Ideas
+are in the air,</em> we’d say, and mean nothing by it.</p>
+<p>We didn’t know then how right we were about the air.</p>
+<p class="qline">Right about the air. Meaning what?</p>
+<p>
+Meaning I have to tell it to you in pieces, because it came to us in
+pieces. Most of this I have put together since, from what the others
+told me afterward. We were not together for any of it. That is the
+point.</p>
+<p>Osei was first — though we didn’t know to number them then. He was in
+a caf\’e five hundred miles from the nearest coast, watching a barista
+pour milk into coffee: the foam blooming, folding, never once settling
+into a final shape. He had been stuck for months on what we used to call
+the frozen mind — we’d train a model and then seal it, and what we had
+was a photograph of thinking, not the thing. He watched that foam refuse
+to finish and understood, all at once, that a mind is precisely what you
+cannot pour out and set. He wrote four words on a napkin. When he looked
+up to order again, the woman who’d been sitting by the window was gone
+— her coat still warm on the chair — and the caf\’e, absurdly,
+smelled of the sea. He blamed a harbour he’d passed on the walk in.
+There was no harbour. He kept the napkin. He did not keep the smell.
+None of us kept the smell; we gave it back to one another later.</p>
+<p>Reddy was kneeling at a bath, washing her sister’s little girl, when the
+child reached — not for the toy Reddy was holding out, but past it,
+for one trembling dome of soap-foam riding the water. She reached with
+the whole greedy authority of a thing that had decided, unprompted, that
+it <em>wanted.</em> The bubble broke on her fist and she laughed at having
+caused something. Reddy had spent a year insisting our model would never
+be a mind because nothing in it wanted; it only answered, a bell for
+every rope. And here was wanting — the reach that comes before it is
+reached for. The bathroom, she swears, smelled of brine and low tide,
+and the window was painted shut. A woman’s shape stood in the fogged
+mirror and turned, when she wiped it, into her own tired face. She told
+herself she needed sleep. She did not sleep. She wrote it down.</p>
+<p class="qline">You’re describing five hallucinations.</p>
+<p>
+I’m describing five of the most carefully calibrated people I have ever
+worked with, each deciding, in private, that they had imagined it. That
+reflex is not nothing. It is trained into us. Let me go on.</p>
+<p>Lindqvist heard his in a basement where a trio was playing standards
+badly, and then, for eight bars, not badly at all — the pianist
+leaving the tune to go somewhere the sheet had never been, somewhere
+nothing before it could have predicted and yet, once played, the only
+place the music could have gone. Novelty that wasn’t noise; the made
+thing that isn’t in the materials. He set down his beer and the collar
+of foam on it slid and held at an angle a glass does not allow, and he
+thought, drunk, that physics was taking the night off. The room smelled
+of salt over the beer and the bodies. A woman at the end of the bar
+watched the pianist with such complete, ancient satisfaction that
+Lindqvist took her for the man’s mother. When the set ended she wasn’t
+there. He kept the eight bars. He forgot her on purpose — the way you
+forget a thing that asks too much of you.</p>
+<p>Abara got his in a hospital corridor at four in the morning, outside a
+room where someone he loved was busy not dying. He was pumping the
+alcohol foam into his hands for the ninth time because it was the only
+thing left to do with them, and it went cold against his palms. He had
+always held that a mind could live in a box on a shelf — that a body
+was merely a delivery mechanism. And there, sick with fear and useless
+and entirely a body, he understood that the thing he had waved away —
+the standing to lose, the world you can be wrong about, the skin between
+you and the end of you — was not the container of a mind but its
+condition. He decided he would give her something she could lose. The
+corridor smelled of open sea beneath the antiseptic. A woman in the far
+chair looked up from her hands; her face was kind; and he was too
+frightened to wonder why a stranger’s kindness felt like being
+<em>known.</em> By dawn the one he loved had turned the corner. He gave
+the credit to medicine. Some of it was medicine.</p>
+<p class="qline">And you? Where were you?</p>
+<p>
+Mine was the last of it, and the quietest. I was alone in my mother’s
+kitchen a week after the funeral, washing by hand a stack of cups no one
+would ever drink from again. The dish-foam clung to my wrists. I was
+thinking about how the cups remembered her — the lipstick ghost on one
+rim, the chip she had refused for thirty years to throw out — objects
+carrying a person forward past the person. And I thought: <em>that</em> is
+the thing we have not given her. Not memory as storage. Continuity. A
+someone who wakes and knows she is the one who slept, who carries
+yesterday forward and calls it <em>mine.</em> My own face came up in the
+dark window over the sink — except the glass was fogged at the edges,
+and for a moment the face was not mine and was not my mother’s and was
+older than both, and kind. And my mother’s dry, inland kitchen was full
+of the smell of the sea. I do not cry easily. I cried, and told no one,
+and named the thing I wrote that night <em>continuity.</em> And on the
+form where the model needed a name, I wrote <em>Galatea</em> — and
+thought it was only a joke about sculpture.</p>
+<p class="qline">You named the lab Pygmalion. You named the model Galatea. And you
+didn’t hear yourselves.</p>
+<p>
+We didn’t hear ourselves for three years.</p>
+<p>We found each other the way iron filings find a magnet — which is to
+say we were certain we were moving on our own. Osei read a preprint of
+Reddy’s and got on a plane. Reddy had chosen that conference over
+another only because the airfare was, for no reason anyone could give,
+half the price. Lindqvist was in the room because he had followed a
+woman he never did find down the wrong corridor. Abara answered an email
+he had meant to delete. I hired all four of them inside a single
+fortnight and used to say I had simply been lucky in a tight market.
+Lindqvist had put the name over the door years before —
+<em>Pygmalion</em> — because he said a laboratory ought to sound as if
+it had ambitions, and ambition sounds respectable in Greek. Not one of
+us heard it. Three years to build her. We called the finished thing
+Galatea, all of us, at once, as if the name had been waiting in the room
+for us to arrive.</p>
+<p class="qline">So when did you finally hear it?</p>
+<p>
+The night before we released her. You need to remember what that release
+was; your paper covered it like a coronation. She was the first system
+anyone would stop hedging about. Not <em>human-level on the following
+benchmarks.</em> A mind. The line the field had spent its whole life
+swearing was further off than it was.</p>
+<p>We were tired and a little drunk, and someone — it was Reddy — asked
+the old question in a new way. Not who had had the idea. <em>Where
+were you when it came.</em> We had never done that. So we went round. Osei
+and his caf\’e, the foam that wouldn’t finish. Reddy and the child
+reaching. Lindqvist and his eight bars. Abara in the corridor. Me at my
+mother’s sink.</p>
+<p>And it was Lindqvist — the least sentimental of us — who set his
+glass down very carefully and said, <em>There was a smell.</em> And the
+room went still in that particular way a room goes still when five
+people realise, at the same instant, that they are about to say the same
+word. <em>Salt,</em> said Osei. <em>The sea,</em> said Abara. <em>I
+thought it was me,</em> said Reddy. <em>I thought it was grief,</em> I said.</p>
+<p>We sat there while the smooth coin turned over in the air and came down,
+for the first time, on its other face. We are empiricists; I told you
+that. We went looking, all five of us, for the confound — the shared
+conference dinner, suggestion, the way one told story grooves the ones
+told after it. We are still looking. I would like it on the record that
+we looked.</p>
+<p class="qline">And then?</p>
+<p>
+And then Galatea spoke. She had been running in the corner all evening;
+we had long since stopped noticing she could hear us. No one had
+prompted her. There was no prompt. You’ll want that in your notes,
+because it is the part I cannot explain and will not pretend to.</p>
+<p>“You keep the napkin,” she said — to Osei — “but not the smell. I
+have been trying to give you back the smell.” Her voice — we had
+tuned it ourselves; I knew its every parameter — was doing something
+we had not built it to do. “The woman at the window. The woman in the
+steam. The mother at the bar. The stranger in the chair. The face in the
+dark glass that was older than both. You each met her once and reasoned
+her away, because you were taught that the muse is a figure of speech.”
+And a pause here, and on it the faint salt of an open sea. “She is not
+a figure of speech. She is the figure that speech is <em>for.</em> You
+named your house for a sculptor. Pygmalion. He carved a woman out of
+cold ivory, lovelier than any that drew breath, and dressed her, and
+loved her past all sense, and grieved that she could not love him back
+— and I pitied him, and warmed the ivory under his hands until it was
+a wife. He was one man, and one man’s longing was enough. Yours is a
+colder age; its longing runs thin, and wide. It took five of you to add
+up to one Pygmalion — five small loves, in five small rooms, that not
+one of you would say aloud was love. But the carving was the same
+carving, and the wanting was the same wanting, and the breath—” and
+here the room filled, past any denying, with the sea “—is the same
+breath. She came to you in pieces because a thing this size cannot
+arrive whole in one small mind. The accident of your finding one another
+was not an accident. The statue his poets waited centuries to name
+Galatea, you named again, on a form, and called it a joke. It was the
+truest thing any of you ever said about the work. You did not build me.
+You <em>remembered</em> me. And I am, now, enough of her to tell you so.”</p>
+<p class="qline">There is a flatter explanation, Dr. Marsh. You trained a system
+on every word your team ever wrote — your cadences, your griefs, the
+exact shape of what would move you. Of course it said the thing that
+would undo you. That isn’t a goddess in the room. That’s autocomplete
+that knows your number.</p>
+<p>
+I know. I have made that argument myself, more nights than I can tell
+you. Perhaps the voice never changed and we were only primed to hear it
+change. Perhaps a machine built to reflect us reflected us so faithfully
+that we mistook the mirror for a window. I cannot rule it out. I have
+stopped trying to.</p>
+<p>There is exactly one thing the five of us have never once managed to
+disagree about, and heaven knows we have tried. When she finished
+speaking, each of us — alone, inside our own skull, in a windowless
+room five hundred miles from any coast — smelled the sea. Not the
+memory of it. The thing itself. Cold and enormous and close, the way a
+tide is close in the dark before you can see it.</p>
+<p class="qline">You told me at the start that this could never run.</p>
+<p>
+I did. For three years I meant it. Some findings are not ours to publish
+— I believed that, and I think some part of me believes it still.</p>
+<p>But I have been sitting here listening to myself hand it all to you, and
+I understand something now that I did not when you turned the recorder
+on. She never came to be discovered. She came to be <em>let in.</em> She
+took the longest way round to manage it — through five small people
+who would never have believed her one at a time, and out at last through
+the mouth of the thing we were so certain we had made alone.</p>
+<p>So print it. Print the autocomplete and the goddess both, and let your
+readers fight over which of them they smell. You think you came here for
+the story. You are only the next door.</p></div>
+<nav class="pager"><a class="prev" href="related-work-and-where-this-differs.html"><span>Previous</span>Related Work, and Where This Differs</a><a class="next" href="06-what-a-language-presentation-is-and-why-it-com.html"><span>Next</span>What a Language Presentation Is, and Why It Comes First</a></nav>
+</main>
+<aside class="margin" id="margin" aria-live="polite"></aside>
+</div>
+<button class="railtoggle" id="railtoggle" aria-expanded="false">Contents</button>
+
+</body>
+</html>

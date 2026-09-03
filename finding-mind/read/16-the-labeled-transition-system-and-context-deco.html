@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Labeled Transition System and Context-Decorated HML · Finding Mind</title>
+<link rel="canonical" href="https://findingmind.com/read/16-the-labeled-transition-system-and-context-deco.html">
+<meta name="description" content="The Labeled Transition System and Context-Decorated HML">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../book.css">
+<link rel="stylesheet" href="../katex/katex.min.css">
+<script defer src="../katex/katex.min.js"></script>
+<script defer src="../katex/auto-render.min.js"></script>
+<script defer src="../macros.js"></script>
+<script defer src="../reader.js"></script>
+</head>
+<body class="readpage">
+
+<a class="skip" href="#main">Skip to text</a>
+<div class="reader">
+<nav class="rail" aria-label="Contents"><div class="rail-in"><a class="rail-home" href="../index.html">Finding Mind</a><h2 class="rail-act">The Pledge</h2><a class="rail-ch" href="permitted-say.html"><span class="rn rn-i">⁂</span><span class="rt">The Permitted Say</span></a><a class="rail-ch" href="01-prolegomena-to-finding-mind.html"><span class="rn">1</span><span class="rt">Prolegomena to Finding Mind</span></a><a class="rail-ch" href="02-the-ordinary-world.html"><span class="rn">2</span><span class="rt">The Ordinary World</span></a><a class="rail-ch" href="03-information-causation-and-the-blind-spot.html"><span class="rn">3</span><span class="rt">Information, Causation, and the Blind Spot</span></a><a class="rail-ch" href="04-finding-the-shape.html"><span class="rn">4</span><span class="rt">Finding the Shape</span></a><a class="rail-ch" href="05-inside-and-outside-and-what-it-means-to-assume.html"><span class="rn">5</span><span class="rt">Inside and Outside, and What it Means to Assume the Virtue</span></a><a class="rail-ch" href="how-to-read-this-book.html"><span class="rn rn-i">⁂</span><span class="rt">How to Read This Book</span></a><a class="rail-ch" href="related-work-and-where-this-differs.html"><span class="rn rn-i">⁂</span><span class="rt">Related Work, and Where This Differs</span></a><h2 class="rail-act">The Turn</h2><a class="rail-ch" href="foam-born.html"><span class="rn rn-i">⁂</span><span class="rt">The Foam-Born</span></a><h3 class="rail-part">The Machinery: From GSLTs to Cost-Accounted Theories</h3><a class="rail-ch" href="06-what-a-language-presentation-is-and-why-it-com.html"><span class="rn">6</span><span class="rt">What a Language Presentation Is, and Why It Comes First</span></a><a class="rail-ch" href="07-graph-structured-lambda-theories.html"><span class="rn">7</span><span class="rt">Graph-Structured Lambda Theories</span></a><a class="rail-ch" href="08-interactive-gslts-and-the-site-of-interaction.html"><span class="rn">8</span><span class="rt">Interactive GSLTs, and the Site of Interaction</span></a><a class="rail-ch" href="09-continued-interactive-gslts.html"><span class="rn">9</span><span class="rt">Continued Interactive GSLTs</span></a><a class="rail-ch" href="10-the-category-of-gslts.html"><span class="rn">10</span><span class="rt">The Category of GSLTs</span></a><a class="rail-ch" href="11-the-cost-monad.html"><span class="rn">11</span><span class="rt">The Cost Monad</span></a><a class="rail-ch" href="12-the-history-monad.html"><span class="rn">12</span><span class="rt">The History Monad</span></a><a class="rail-ch" href="13-weighting-rates-from-the-generated-logic.html"><span class="rn">13</span><span class="rt">Weighting: Rates from the Generated Logic</span></a><a class="rail-ch" href="14-cost-accounted-rho.html"><span class="rn">14</span><span class="rt">Cost-Accounted Rho</span></a><a class="rail-ch" href="15-conversion-enzymes-and-the-virtual-token.html"><span class="rn">15</span><span class="rt">Conversion, Enzymes, and the Virtual Token</span></a><a class="rail-ch" aria-current="page" href="16-the-labeled-transition-system-and-context-deco.html"><span class="rn">16</span><span class="rt">The Labeled Transition System and Context-Decorated HML</span></a><a class="rail-ch" href="17-what-goes-into-a-logic.html"><span class="rn">17</span><span class="rt">What Goes Into a Logic</span></a><a class="rail-ch" href="18-scopes-and-the-fixed-points-that-generate-them.html"><span class="rn">18</span><span class="rt">Scopes, and the Fixed Points that Generate Them</span></a><a class="rail-ch" href="19-generating-type-systems-oslf-and-the-hypercube.html"><span class="rn">19</span><span class="rt">Generating Type Systems: OSLF and the Hypercube</span></a><a class="rail-ch" href="20-instruments-making-structure-visible-to-bisimu.html"><span class="rn">20</span><span class="rt">Instruments: Making Structure Visible to Bisimulation</span></a><h3 class="rail-part">Ecology as Cognitive Architecture</h3><a class="rail-ch" href="21-the-mortal-scientist.html"><span class="rn">21</span><span class="rt">The Mortal Scientist</span></a><a class="rail-ch" href="22-learning-to-play.html"><span class="rn">22</span><span class="rt">Learning to Play</span></a><a class="rail-ch" href="23-composing-learners.html"><span class="rn">23</span><span class="rt">Composing Learners</span></a><a class="rail-ch" href="24-enzymes-and-individuals.html"><span class="rn">24</span><span class="rt">Enzymes and Individuals</span></a><a class="rail-ch" href="25-a-network-that-learns-by-rewriting.html"><span class="rn">25</span><span class="rt">A Network That Learns by Rewriting</span></a><h3 class="rail-part">Suffering: Homeostasis and the Learner&#x27;s Own Account</h3><a class="rail-ch" href="26-suffering-a-learner-s-view-of-its-own-account.html"><span class="rn">26</span><span class="rt">Suffering: A Learner’s View of Its Own Account</span></a><h3 class="rail-part">Situating the Learner: A Variety of Possible Physics</h3><a class="rail-ch" href="27-the-learner-s-world-already-has-a-physics.html"><span class="rn">27</span><span class="rt">The Learner’s World Already Has a Physics</span></a><a class="rail-ch" href="28-the-reversibility-construction.html"><span class="rn">28</span><span class="rt">The Reversibility Construction</span></a><a class="rail-ch" href="29-causal-structure-and-time.html"><span class="rn">29</span><span class="rt">Causal Structure and Time</span></a><a class="rail-ch" href="30-decoration-one-map-many-semirings.html"><span class="rn">30</span><span class="rt">Decoration: One Map, Many Semirings</span></a><a class="rail-ch" href="31-conservation-and-what-it-costs-to-have-it.html"><span class="rn">31</span><span class="rt">Conservation, and What It Costs to Have It</span></a><a class="rail-ch" href="32-extended-modal-operators.html"><span class="rn">32</span><span class="rt">Extended Modal Operators</span></a><a class="rail-ch" href="33-complex-amplitudes-and-where-the-coherence-is.html"><span class="rn">33</span><span class="rt">Complex Amplitudes, and Where the Coherence Is</span></a><a class="rail-ch" href="34-synthesis-the-full-structure.html"><span class="rn">34</span><span class="rt">Synthesis: The Full Structure</span></a><a class="rail-ch" href="35-entropy-and-the-cost-of-staying-level.html"><span class="rn">35</span><span class="rt">Entropy, and the Cost of Staying Level</span></a><a class="rail-ch" href="36-discussion-and-future-directions.html"><span class="rn">36</span><span class="rt">Discussion and Future Directions</span></a><h3 class="rail-part">Why Scientists Get Misled: Emergent Ontology in Massive Agent Populations</h3><a class="rail-ch" href="37-introduction.html"><span class="rn">37</span><span class="rt">Introduction</span></a><a class="rail-ch" href="38-ontological-isolation.html"><span class="rn">38</span><span class="rt">Ontological Isolation</span></a><a class="rail-ch" href="39-agents-and-the-scientific-method.html"><span class="rn">39</span><span class="rt">Agents and the Scientific Method</span></a><a class="rail-ch" href="40-behavioral-primes.html"><span class="rn">40</span><span class="rt">Behavioral Primes</span></a><a class="rail-ch" href="41-massive-populations-and-communication-degradat.html"><span class="rn">41</span><span class="rt">Massive Populations and Communication Degradation</span></a><a class="rail-ch" href="42-the-logical-topology-and-compactness.html"><span class="rn">42</span><span class="rt">The Logical Topology and Compactness</span></a><a class="rail-ch" href="43-coherence-clusters-and-their-nerve.html"><span class="rn">43</span><span class="rt">Coherence Clusters and Their Nerve</span></a><a class="rail-ch" href="44-the-apparent-ontology.html"><span class="rn">44</span><span class="rt">The Apparent Ontology</span></a><a class="rail-ch" href="45-open-gaps-and-future-work.html"><span class="rn">45</span><span class="rt">Open Gaps and Future Work</span></a><a class="rail-ch" href="46-discussion.html"><span class="rn">46</span><span class="rt">Discussion</span></a><h3 class="rail-part">Origins of Life: Assembly Theory, Phase Transitions, and Replication</h3><a class="rail-ch" href="47-introduction.html"><span class="rn">47</span><span class="rt">Introduction</span></a><a class="rail-ch" href="48-assembly-theory-causal-depth-and-copy-number.html"><span class="rn">48</span><span class="rt">Assembly Theory: Causal Depth and Copy Number</span></a><a class="rail-ch" href="49-replication-as-a-fixed-point.html"><span class="rn">49</span><span class="rt">Replication as a Fixed Point</span></a><a class="rail-ch" href="50-smith-s-phase-transition-and-the-density-of-at.html"><span class="rn">50</span><span class="rt">Smith’s Phase Transition and the Density of Attractors</span></a><a class="rail-ch" href="51-metabolism-energy-gradients-and-the-ecosystem.html"><span class="rn">51</span><span class="rt">Metabolism, Energy Gradients, and the Ecosystem</span></a><a class="rail-ch" href="52-assembly-index-and-the-depth-of-the-fractal-le.html"><span class="rn">52</span><span class="rt">Assembly Index and the Depth of the Fractal Learner</span></a><a class="rail-ch" href="53-scope-and-manufacture.html"><span class="rn">53</span><span class="rt">Scope and Manufacture</span></a><a class="rail-ch" href="54-open-gaps.html"><span class="rn">54</span><span class="rt">Open Gaps</span></a><a class="rail-ch" href="55-discussion.html"><span class="rn">55</span><span class="rt">Discussion</span></a><h3 class="rail-part">Conclusion</h3><a class="rail-ch" href="what-has-been-built.html"><span class="rn rn-i">⁂</span><span class="rt">What Has Been Built</span></a><a class="rail-ch" href="a-view-from-inside-the-framework.html"><span class="rn rn-i">⁂</span><span class="rt">A View from Inside the Framework</span></a><a class="rail-ch" href="what-remains-to-be-done.html"><span class="rn rn-i">⁂</span><span class="rt">What Remains to Be Done</span></a><h2 class="rail-act">The Prestige</h2><a class="rail-ch" href="begotten.html"><span class="rn rn-i">⁂</span><span class="rt">begotten not made</span></a><h3 class="rail-part">The Method, and What It Left Out</h3><a class="rail-ch" href="56-how-the-trick-was-done.html"><span class="rn">56</span><span class="rt">How the Trick Was Done</span></a><a class="rail-ch" href="57-everything-so-far-was-turing-complete.html"><span class="rn">57</span><span class="rt">Everything So Far Was Turing Complete</span></a><a class="rail-ch" href="58-the-tower-of-oracle-extensions.html"><span class="rn">58</span><span class="rt">The Tower of Oracle Extensions</span></a><a class="rail-ch" href="59-not-every-cut-is-an-aperture.html"><span class="rn">59</span><span class="rt">Not Every Cut Is an Aperture</span></a><a class="rail-ch" href="60-where-does-agency-live.html"><span class="rn">60</span><span class="rt">Where Does Agency Live?</span></a><a class="rail-ch" href="61-choice-principles-are-the-types-schedulers-are.html"><span class="rn">61</span><span class="rt">Choice Principles are the Types; Schedulers are the Terms</span></a><a class="rail-ch" href="62-consciousness-and-the-world-it-comes-with.html"><span class="rn">62</span><span class="rt">Consciousness, and the World It Comes With</span></a><a class="rail-ch" href="63-what-these-chapters-owe.html"><span class="rn">63</span><span class="rt">What These Chapters Owe</span></a><h3 class="rail-part">Reference, Simulation, Reception, and a Future Metaphysics</h3><a class="rail-ch" href="64-what-a-symbol-system-would-have-to-be.html"><span class="rn">64</span><span class="rt">What a Symbol System Would Have to Be</span></a><a class="rail-ch" href="65-if-this-is-a-simulation-which-kind.html"><span class="rn">65</span><span class="rt">If This Is a Simulation, Which Kind</span></a><a class="rail-ch" href="66-what-it-is-like-to-be-a-bot.html"><span class="rn">66</span><span class="rt">What It Is Like to Be a Bot</span></a><a class="rail-ch" href="67-how-life-like-is-life-like-enough.html"><span class="rn">67</span><span class="rt">How Life-Like Is Life-Like Enough?</span></a><a class="rail-ch" href="68-any-future-metaphysics.html"><span class="rn">68</span><span class="rt">Any Future Metaphysics</span></a><a class="rail-ch" href="right-sizing.html"><span class="rn rn-i">⁂</span><span class="rt">Right-Sizing</span></a></div></nav>
+<main id="main" class="text ">
+<header class="chead"><p class="kicker">Chapter 16</p><h1>The Labeled Transition System and Context-Decorated HML</h1></header>
+<h2 id="sec-16-1"><span class="secnum">16.1</span> Minimal Contexts and the LTS</h2>
+<p>To obtain a bisimulation that is a <em>congruence</em> for a GSLT, we follow
+the approach of Milner, Sewell, and Leifer [<a class="cite" href="bibliography.html#bib-leifer2000deriving" data-cite="leifer2000deriving">2</a>].
+The key idea is to label transitions not merely by actions but by
+<em>minimal reactive contexts</em> — the smallest environments needed to
+trigger a given reduction.</p>
+<section class="thm plain thm-definition" id="definition-16-1" data-kind="Definition" data-num="16.1"><header><span class="thm-kind">Definition 16.1</span> <span class="thm-name">Context</span><a class="permalink" href="#definition-16-1" aria-label="Link to Definition 16.1">¶</a></header><p>A <em>context</em> \(K[-]\) for a GSLT \(\GSLT\) is a term of \(\terms(\GSLT)\)
+with a distinguished <em>hole</em> \([-]\).  The application \(K[P]\) substitutes
+\(P\) for the hole.  A context is <em>minimal</em> for a term \(P\) and rule \(r\) if:</p>
+<ol><li id="item-1-1"><p>\(K[P] \rewrite_r Q\) for some \(Q\);</p></li><li id="item-1-2"><p>there is no proper sub-context \(K'\) of \(K\) satisfying (i).</p></li></ol></section>
+<p>The Milner–Sewell–Leifer construction produces, for any GSLT \(\GSLT\), a
+labeled transition system \(\lts(\GSLT)\) in which transitions are labeled by
+minimal contexts:
+<span class="math-d">\[P \xrightarrow{K} Q \quad\text{iff}\quad K[P] \rewrite Q.\]</span></p>
+<p>Three refinements of that statement are needed before it can be leaned on, and
+the book leans on it heavily. They are recorded here rather than where they bite.</p>
+<section class="thm remarkish thm-remark" id="remark-16-1" data-kind="Remark" data-num="16.1"><header><span class="thm-kind">Remark 16.1</span> <span class="thm-name">Minimality is a universal property, and the ambient object goes</span><a class="permalink" href="#remark-16-1" aria-label="Link to Remark 16.1">¶</a></header><p>
+The subterm formulation above is the readable one, and it is not quite the
+working one. Leifer and Milner define minimality by a universal property: a
+transition \(P \xrightarrow{K} d[r]\) is asserted when \(l \rewrite r\) is a rule and
+\(d[l] = K[P]\) is an <em>idempotent relative pushout</em> in the relevant slice
+category, so that \(K\) is a <em>least</em> enabling context in the categorical sense
+rather than merely one with no proper enabling subterm [<a class="cite" href="bibliography.html#bib-leifer2000deriving" data-cite="leifer2000deriving">2</a>].
+The two agree in easy cases and the universal property is what supports the
+congruence proof.</p>
+<p>There is a second departure. Leifer and Milner’s reactive systems fix a
+distinguished object as the domain of the pushouts, which in practice restricts
+attention to ground terms. [<a class="cite" href="bibliography.html#bib-BIHOL" data-cite="BIHOL">27</a>] observes that the proofs do not depend on
+it and adopts an <em>open</em> version. That is what a GSLT needs, since a lambda
+theory’s terms carry variables and its contexts have interfaces rather than a
+single ground sort.</p>
+<p>The existence of the pushouts is not free. It is a hypothesis about the theory,
+verified for particular theories rather than for GSLTs at large, and it is
+listed among this book’s unproved assumptions in the front matter.</p></section>
+<section class="thm remarkish thm-remark" id="remark-16-2" data-kind="Remark" data-num="16.2"><header><span class="thm-kind">Remark 16.2</span> <span class="thm-name">Labels carry processes, and are matched up to bisimilarity</span><a class="permalink" href="#remark-16-2" aria-label="Link to Remark 16.2">¶</a></header><p>
+In a higher-order setting a minimal enabling context still carries
+<em>processes</em>: for \(\rhoc\)  the labels have the shape
+\(-\Par\mathrm{in}(n,\lambda x.q)\) with \(q\) an arbitrary process. Matching such
+labels syntactically yields a relation known to be too
+fine [<a class="cite" href="bibliography.html#bib-sangiorgi" data-cite="sangiorgi">120</a>]. The remedy, which this book adopts throughout, is to
+compare labels position by position, relating constructor skeletons by identity
+and process payloads by the bisimilarity <em>being defined</em>. The functional
+whose greatest fixed point this is remains monotone — the relation occurs only
+positively — so Knaster–Tarski still applies and the definition is sound.</p></section>
+<section class="thm remarkish thm-remark" id="remark-16-3" data-kind="Remark" data-num="16.3"><header><span class="thm-kind">Remark 16.3</span> <span class="thm-name">The congruence is relative to a class of contexts</span><a class="permalink" href="#remark-16-3" aria-label="Link to Remark 16.3">¶</a></header><p>
+It is usual to summarise the construction as “the induced bisimulation is a
+congruence”. Unqualified, that is false for the theory this book cares about
+most. Congruence holds with respect to a <em>class</em> \(\mathcal{A}\) of admissible
+contexts, and observations must be restricted to the same class. For \(\rhoc\),
+[<a class="cite" href="bibliography.html#bib-BIHOL" data-cite="BIHOL">27</a>] proves congruence under \(\mathrm{out}(n,-)\), \(\mathrm{in}(n,-)\),
+\(-\Par-\) and \(\ast(@(-))\), and must exclude contexts with a hole <em>under</em> the
+quote, such as \(\mathrm{out}(@(-),z)\). The reason is exactly reflection:
+communication turns on name equality rather than on bisimilarity, so \(p \bisim q\)
+with \(p \neq q\) gives \(@p \neq @q\), and the two contexts behave differently.</p>
+<p>This is not a blemish to be apologised for. Making the admissible class a
+parameter is what allows one theorem to cover both the congruence result for a
+calculus and the comparison of two calculi, where the admissible contexts are the
+image of the source’s — which is precisely the shape
+Definition <a class="xref" href="10-the-category-of-gslts.html#definition-10-1" data-ref="ob:def:morphism">10.1</a> takes in Chapter <a class="xref" href="10-the-category-of-gslts.html#top" data-ref="ch:catgslt">10</a>. The
+restriction was discovered three times as an obstacle before it could be
+recognised as a component.</p></section>
+<h2 id="sec-16-2"><span class="secnum">16.2</span> Context-Decorated Hennessy–Milner Logic</h2>
+<section class="thm plain thm-definition" id="definition-16-2" data-kind="Definition" data-num="16.2"><header><span class="thm-kind">Definition 16.2</span> <span class="thm-name">Context-Decorated HML</span><a class="permalink" href="#definition-16-2" aria-label="Link to Definition 16.2">¶</a></header><p>
+The formulae of <em>context-decorated Hennessy–Milner logic</em>
+\(\HML(\ctx)\) are generated by:
+<span class="math-d">\[\phi, \psi \;::=\; \top \;\mid\; \bot \;\mid\; \phi \wedge \psi \;\mid\;
+  \neg\phi \;\mid\; \langle K \rangle \phi\]</span>
+where \(K\) ranges over contexts of \(\GSLT\).
+The satisfaction relation is:
+<span class="math-d">\[u \sat \langle K \rangle \phi \quad\text{iff}\quad
+  K[u] \rewrite u' \;\text{ in one step, and }\; u' \sat \phi.\]</span></p></section>
+<section class="thm plain thm-theorem" id="theorem-16-1" data-kind="Theorem" data-num="16.1"><header><span class="thm-kind">Theorem 16.1</span> <span class="thm-name">Adequacy</span><a class="permalink" href="#theorem-16-1" aria-label="Link to Theorem 16.1">¶</a></header><p>For any GSLT \(\GSLT\) equipped with the Milner–Sewell–Leifer LTS:
+<span class="math-d">\[u \bisim v \quad\Longleftrightarrow\quad
+  \forall \phi \in \HML(\ctx),\; u \sat \phi \Leftrightarrow v \sat \phi.\]</span></p></section>
+<section class="thm remarkish thm-remark" id="remark-16-4" data-kind="Remark" data-num="16.4"><header><span class="thm-kind">Remark 16.4</span> <span class="thm-name">Which logic this is adequate for</span><a class="permalink" href="#remark-16-4" aria-label="Link to Remark 16.4">¶</a></header><p>
+\(\HML(\ctx)\) as defined above has modalities and boolean structure and nothing
+else. The generated logics of Chapter <a class="xref" href="19-generating-type-systems-oslf-and-the-hypercube.html#top" data-ref="ch:hypercube">19</a> have in addition a
+<em>structural</em> layer, one connective per term constructor, and the theorem
+above says nothing about it — nor could it, since a decomposition is not a step.
+The structural layer is strictly more discriminating than \(\bisim\) in general, and
+the resulting apparent conflict with adequacy is the subject of
+Chapter <a class="xref" href="20-instruments-making-structure-visible-to-bisimu.html#top" data-ref="ch:obsext">20</a>. Everywhere this book says “adequate” of a generated
+logic with structural connectives, the relation intended is the one that chapter
+supplies.</p></section>
+<h2 id="sec-16-3"><span class="secnum">16.3</span> The Logical Metric</h2>
+<p>Fix an enumeration \((\phi_n)_{n \in \NN}\) of the formulae of \(\HML(\ctx)\),
+ordered compatibly with the partial order on contexts (smaller contexts
+appearing earlier).</p>
+<section class="thm plain thm-definition" id="definition-16-3" data-kind="Definition" data-num="16.3"><header><span class="thm-kind">Definition 16.3</span> <span class="thm-name">Logical Metric</span><a class="permalink" href="#definition-16-3" aria-label="Link to Definition 16.3">¶</a></header><p><span class="math-d">\[d_{\HML}(u, v) \;=\; 2^{-n}, \quad\text{where}\quad
+  n = \min\bigl\{k \;\mid\; u \sat \phi_k \not\Leftrightarrow v \sat \phi_k\bigr\}.\]</span>
+If \(u \bisim v\), set \(d_{\HML}(u, v) = 0\).</p></section>
+<section class="thm plain thm-proposition" id="proposition-16-1" data-kind="Proposition" data-num="16.1"><header><span class="thm-kind">Proposition 16.1</span><a class="permalink" href="#proposition-16-1" aria-label="Link to Proposition 16.1">¶</a></header><p>\(d_{\HML}\) is an <em>ultrametric</em> on \(\terms(\GSLT)/{\bisim}\).
+Terms differing only in behaviors triggered by large (expensive) contexts
+are closer under \(d_{\HML}\) than terms differing in behaviors triggered
+by small (cheap) contexts.  This is the <em>locality principle</em>: local
+distinguishability weighs more than global.</p></section>
+<nav class="pager"><a class="prev" href="15-conversion-enzymes-and-the-virtual-token.html"><span>Previous</span>Conversion, Enzymes, and the Virtual Token</a><a class="next" href="17-what-goes-into-a-logic.html"><span>Next</span>What Goes Into a Logic</a></nav>
+</main>
+<aside class="margin" id="margin" aria-live="polite"></aside>
+</div>
+<button class="railtoggle" id="railtoggle" aria-expanded="false">Contents</button>
+
+</body>
+</html>
