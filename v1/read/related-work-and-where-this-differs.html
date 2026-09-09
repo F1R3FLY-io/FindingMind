@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Related Work, and Where This Differs · Finding Mind</title>
+<link rel="canonical" href="https://findingmind.com/read/related-work-and-where-this-differs.html">
+<meta name="description" content="Related Work, and Where This Differs">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../book.css">
+<link rel="stylesheet" href="../katex/katex.min.css">
+<script defer src="../katex/katex.min.js"></script>
+<script defer src="../katex/auto-render.min.js"></script>
+<script defer src="../macros.js"></script>
+<script defer src="../reader.js"></script>
+</head>
+<body class="readpage">
+
+<a class="skip" href="#main">Skip to text</a>
+<div class="reader">
+<nav class="rail" aria-label="Contents"><div class="rail-in"><a class="rail-home" href="../index.html">Finding Mind</a><h2 class="rail-act">The Pledge</h2><a class="rail-ch" href="permitted-say.html"><span class="rn rn-i">⁂</span><span class="rt">The Permitted Say</span></a><a class="rail-ch" href="01-prolegomena-to-finding-mind.html"><span class="rn">1</span><span class="rt">Prolegomena to Finding Mind</span></a><a class="rail-ch" href="02-the-ordinary-world.html"><span class="rn">2</span><span class="rt">The Ordinary World</span></a><a class="rail-ch" href="03-information-causation-and-the-blind-spot.html"><span class="rn">3</span><span class="rt">Information, Causation, and the Blind Spot</span></a><a class="rail-ch" href="04-finding-the-shape.html"><span class="rn">4</span><span class="rt">Finding the Shape</span></a><a class="rail-ch" href="05-inside-and-outside-and-what-it-means-to-assume.html"><span class="rn">5</span><span class="rt">Inside and Outside, and What it Means to Assume the Virtue</span></a><a class="rail-ch" href="how-to-read-this-book.html"><span class="rn rn-i">⁂</span><span class="rt">How to Read This Book</span></a><a class="rail-ch" aria-current="page" href="related-work-and-where-this-differs.html"><span class="rn rn-i">⁂</span><span class="rt">Related Work, and Where This Differs</span></a><h2 class="rail-act">The Turn</h2><a class="rail-ch" href="foam-born.html"><span class="rn rn-i">⁂</span><span class="rt">The Foam-Born</span></a><h3 class="rail-part">The Machinery: From GSLTs to Cost-Accounted Theories</h3><a class="rail-ch" href="06-what-a-language-presentation-is-and-why-it-com.html"><span class="rn">6</span><span class="rt">What a Language Presentation Is, and Why It Comes First</span></a><a class="rail-ch" href="07-graph-structured-lambda-theories.html"><span class="rn">7</span><span class="rt">Graph-Structured Lambda Theories</span></a><a class="rail-ch" href="08-interactive-gslts-and-the-site-of-interaction.html"><span class="rn">8</span><span class="rt">Interactive GSLTs, and the Site of Interaction</span></a><a class="rail-ch" href="09-continued-interactive-gslts.html"><span class="rn">9</span><span class="rt">Continued Interactive GSLTs</span></a><a class="rail-ch" href="10-the-category-of-gslts.html"><span class="rn">10</span><span class="rt">The Category of GSLTs</span></a><a class="rail-ch" href="11-the-cost-monad.html"><span class="rn">11</span><span class="rt">The Cost Monad</span></a><a class="rail-ch" href="12-the-history-monad.html"><span class="rn">12</span><span class="rt">The History Monad</span></a><a class="rail-ch" href="13-weighting-rates-from-the-generated-logic.html"><span class="rn">13</span><span class="rt">Weighting: Rates from the Generated Logic</span></a><a class="rail-ch" href="14-cost-accounted-rho.html"><span class="rn">14</span><span class="rt">Cost-Accounted Rho</span></a><a class="rail-ch" href="15-conversion-enzymes-and-the-virtual-token.html"><span class="rn">15</span><span class="rt">Conversion, Enzymes, and the Virtual Token</span></a><a class="rail-ch" href="16-the-labeled-transition-system-and-context-deco.html"><span class="rn">16</span><span class="rt">The Labeled Transition System and Context-Decorated HML</span></a><a class="rail-ch" href="17-what-goes-into-a-logic.html"><span class="rn">17</span><span class="rt">What Goes Into a Logic</span></a><a class="rail-ch" href="18-scopes-and-the-fixed-points-that-generate-them.html"><span class="rn">18</span><span class="rt">Scopes, and the Fixed Points that Generate Them</span></a><a class="rail-ch" href="19-generating-type-systems-oslf-and-the-hypercube.html"><span class="rn">19</span><span class="rt">Generating Type Systems: OSLF and the Hypercube</span></a><a class="rail-ch" href="20-instruments-making-structure-visible-to-bisimu.html"><span class="rn">20</span><span class="rt">Instruments: Making Structure Visible to Bisimulation</span></a><h3 class="rail-part">Ecology as Cognitive Architecture</h3><a class="rail-ch" href="21-the-mortal-scientist.html"><span class="rn">21</span><span class="rt">The Mortal Scientist</span></a><a class="rail-ch" href="22-learning-to-play.html"><span class="rn">22</span><span class="rt">Learning to Play</span></a><a class="rail-ch" href="23-composing-learners.html"><span class="rn">23</span><span class="rt">Composing Learners</span></a><a class="rail-ch" href="24-enzymes-and-individuals.html"><span class="rn">24</span><span class="rt">Enzymes and Individuals</span></a><a class="rail-ch" href="25-a-network-that-learns-by-rewriting.html"><span class="rn">25</span><span class="rt">A Network That Learns by Rewriting</span></a><h3 class="rail-part">Suffering: Homeostasis and the Learner&#x27;s Own Account</h3><a class="rail-ch" href="26-suffering-a-learner-s-view-of-its-own-account.html"><span class="rn">26</span><span class="rt">Suffering: A Learner’s View of Its Own Account</span></a><h3 class="rail-part">Situating the Learner: A Variety of Possible Physics</h3><a class="rail-ch" href="27-the-learner-s-world-already-has-a-physics.html"><span class="rn">27</span><span class="rt">The Learner’s World Already Has a Physics</span></a><a class="rail-ch" href="28-the-reversibility-construction.html"><span class="rn">28</span><span class="rt">The Reversibility Construction</span></a><a class="rail-ch" href="29-causal-structure-and-time.html"><span class="rn">29</span><span class="rt">Causal Structure and Time</span></a><a class="rail-ch" href="30-decoration-one-map-many-semirings.html"><span class="rn">30</span><span class="rt">Decoration: One Map, Many Semirings</span></a><a class="rail-ch" href="31-conservation-and-what-it-costs-to-have-it.html"><span class="rn">31</span><span class="rt">Conservation, and What It Costs to Have It</span></a><a class="rail-ch" href="32-extended-modal-operators.html"><span class="rn">32</span><span class="rt">Extended Modal Operators</span></a><a class="rail-ch" href="33-complex-amplitudes-and-where-the-coherence-is.html"><span class="rn">33</span><span class="rt">Complex Amplitudes, and Where the Coherence Is</span></a><a class="rail-ch" href="34-synthesis-the-full-structure.html"><span class="rn">34</span><span class="rt">Synthesis: The Full Structure</span></a><a class="rail-ch" href="35-entropy-and-the-cost-of-staying-level.html"><span class="rn">35</span><span class="rt">Entropy, and the Cost of Staying Level</span></a><a class="rail-ch" href="36-discussion-and-future-directions.html"><span class="rn">36</span><span class="rt">Discussion and Future Directions</span></a><h3 class="rail-part">Why Scientists Get Misled: Emergent Ontology in Massive Agent Populations</h3><a class="rail-ch" href="37-introduction.html"><span class="rn">37</span><span class="rt">Introduction</span></a><a class="rail-ch" href="38-ontological-isolation.html"><span class="rn">38</span><span class="rt">Ontological Isolation</span></a><a class="rail-ch" href="39-agents-and-the-scientific-method.html"><span class="rn">39</span><span class="rt">Agents and the Scientific Method</span></a><a class="rail-ch" href="40-behavioral-primes.html"><span class="rn">40</span><span class="rt">Behavioral Primes</span></a><a class="rail-ch" href="41-massive-populations-and-communication-degradat.html"><span class="rn">41</span><span class="rt">Massive Populations and Communication Degradation</span></a><a class="rail-ch" href="42-the-logical-topology-and-compactness.html"><span class="rn">42</span><span class="rt">The Logical Topology and Compactness</span></a><a class="rail-ch" href="43-coherence-clusters-and-their-nerve.html"><span class="rn">43</span><span class="rt">Coherence Clusters and Their Nerve</span></a><a class="rail-ch" href="44-the-apparent-ontology.html"><span class="rn">44</span><span class="rt">The Apparent Ontology</span></a><a class="rail-ch" href="45-open-gaps-and-future-work.html"><span class="rn">45</span><span class="rt">Open Gaps and Future Work</span></a><a class="rail-ch" href="46-discussion.html"><span class="rn">46</span><span class="rt">Discussion</span></a><h3 class="rail-part">Origins of Life: Assembly Theory, Phase Transitions, and Replication</h3><a class="rail-ch" href="47-introduction.html"><span class="rn">47</span><span class="rt">Introduction</span></a><a class="rail-ch" href="48-assembly-theory-causal-depth-and-copy-number.html"><span class="rn">48</span><span class="rt">Assembly Theory: Causal Depth and Copy Number</span></a><a class="rail-ch" href="49-replication-as-a-fixed-point.html"><span class="rn">49</span><span class="rt">Replication as a Fixed Point</span></a><a class="rail-ch" href="50-smith-s-phase-transition-and-the-density-of-at.html"><span class="rn">50</span><span class="rt">Smith’s Phase Transition and the Density of Attractors</span></a><a class="rail-ch" href="51-metabolism-energy-gradients-and-the-ecosystem.html"><span class="rn">51</span><span class="rt">Metabolism, Energy Gradients, and the Ecosystem</span></a><a class="rail-ch" href="52-assembly-index-and-the-depth-of-the-fractal-le.html"><span class="rn">52</span><span class="rt">Assembly Index and the Depth of the Fractal Learner</span></a><a class="rail-ch" href="53-scope-and-manufacture.html"><span class="rn">53</span><span class="rt">Scope and Manufacture</span></a><a class="rail-ch" href="54-open-gaps.html"><span class="rn">54</span><span class="rt">Open Gaps</span></a><a class="rail-ch" href="55-discussion.html"><span class="rn">55</span><span class="rt">Discussion</span></a><h3 class="rail-part">Conclusion</h3><a class="rail-ch" href="what-has-been-built.html"><span class="rn rn-i">⁂</span><span class="rt">What Has Been Built</span></a><a class="rail-ch" href="a-view-from-inside-the-framework.html"><span class="rn rn-i">⁂</span><span class="rt">A View from Inside the Framework</span></a><a class="rail-ch" href="what-remains-to-be-done.html"><span class="rn rn-i">⁂</span><span class="rt">What Remains to Be Done</span></a><h2 class="rail-act">The Prestige</h2><a class="rail-ch" href="begotten.html"><span class="rn rn-i">⁂</span><span class="rt">begotten not made</span></a><h3 class="rail-part">The Method, and What It Left Out</h3><a class="rail-ch" href="56-how-the-trick-was-done.html"><span class="rn">56</span><span class="rt">How the Trick Was Done</span></a><a class="rail-ch" href="57-everything-so-far-was-turing-complete.html"><span class="rn">57</span><span class="rt">Everything So Far Was Turing Complete</span></a><a class="rail-ch" href="58-the-tower-of-oracle-extensions.html"><span class="rn">58</span><span class="rt">The Tower of Oracle Extensions</span></a><a class="rail-ch" href="59-not-every-cut-is-an-aperture.html"><span class="rn">59</span><span class="rt">Not Every Cut Is an Aperture</span></a><a class="rail-ch" href="60-where-does-agency-live.html"><span class="rn">60</span><span class="rt">Where Does Agency Live?</span></a><a class="rail-ch" href="61-choice-principles-are-the-types-schedulers-are.html"><span class="rn">61</span><span class="rt">Choice Principles are the Types; Schedulers are the Terms</span></a><a class="rail-ch" href="62-consciousness-and-the-world-it-comes-with.html"><span class="rn">62</span><span class="rt">Consciousness, and the World It Comes With</span></a><a class="rail-ch" href="63-what-these-chapters-owe.html"><span class="rn">63</span><span class="rt">What These Chapters Owe</span></a><h3 class="rail-part">Reference, Simulation, Reception, and a Future Metaphysics</h3><a class="rail-ch" href="64-what-a-symbol-system-would-have-to-be.html"><span class="rn">64</span><span class="rt">What a Symbol System Would Have to Be</span></a><a class="rail-ch" href="65-if-this-is-a-simulation-which-kind.html"><span class="rn">65</span><span class="rt">If This Is a Simulation, Which Kind</span></a><a class="rail-ch" href="66-what-it-is-like-to-be-a-bot.html"><span class="rn">66</span><span class="rt">What It Is Like to Be a Bot</span></a><a class="rail-ch" href="67-how-life-like-is-life-like-enough.html"><span class="rn">67</span><span class="rt">How Life-Like Is Life-Like Enough?</span></a><a class="rail-ch" href="68-any-future-metaphysics.html"><span class="rn">68</span><span class="rt">Any Future Metaphysics</span></a><a class="rail-ch" href="right-sizing.html"><span class="rn rn-i">⁂</span><span class="rt">Right-Sizing</span></a></div></nav>
+<main id="main" class="text ">
+<header class="chead"><h1>Related Work, and Where This Differs</h1></header>
+<p>Related Work{Related Work}
+{table}table{0}</p>
+<p>A related-work section normally goes at the back, where it can be
+read by people who already agree with you.
+This one is at the front because the book is long, and because a
+reader is entitled to know before investing which existing
+programme this most resembles and why it is not that one.</p>
+<p>There is a line to carry through all of it.
+Of every programme discussed below, this is the only one in which
+the knower’s epistemic limits are <em>priced</em>.
+Not bounded, not idealised away, not left to an implementation —
+priced, in a conserved resource, on a ledger the agent cannot
+refill from outside.
+Everything else i might have offered as the differentiator turns
+out to be shared with somebody.
+That one is not, and the rest of this chapter is partly an attempt
+to check that claim against the strongest neighbours i can find.</p>
+<p>For each neighbour i try to say four things: what it claims, what
+this book takes from it, where they part company, and whether the
+parting could be checked by anything.
+The last is the one that makes this more than a bibliography with
+opinions.</p>
+<h2 id="sec-0-0">Theories of mind and consciousness</h2>
+<h5 id="p-1">Integrated Information Theory.</h5>
+<p>Tononi’s \(\Phi\) is a graded measure of consciousness computed from
+a system’s causal structure [<a class="cite" href="bibliography.html#bib-tononi2008consciousness" data-cite="tononi2008consciousness">18</a>], and
+this book also grades rather than thresholds — a point
+Chapter <a class="xref" href="63-what-these-chapters-owe.html#sec-63-2" data-ref="sec:hyper-discussion">63.2</a> used to make in a sentence and
+which deserves more.
+The parting is over what the grading is a measure <em>of</em>.
+\(\Phi\) is intrinsic: it is a property of a system’s own cause-effect
+structure, computed by an analyst standing outside it.
+The coordinate here is relational: it is a position in a lattice of
+choice strength, and it is a fact about what an agent can do at a
+cut with another agent on the far side.
+The two come apart on a case that is easy to state.
+A system with rich internal causal structure and no interaction
+surface — nothing it can meet, nothing it can be met by — has,
+on IIT’s account, whatever \(\Phi\) its structure gives it.
+On this account it has no coordinate at all, because a coordinate
+is a fact about apertures and it has none.
+Whether that is a reductio of one view or the other is exactly the
+question, and it is at least a question with an answer.
+A second and less flattering difference: IIT has an experimental
+programme and this does not.</p>
+<h5 id="p-2">The free energy principle.</h5>
+<p>Friston’s account [<a class="cite" href="bibliography.html#bib-friston2010free" data-cite="friston2010free">17</a>] is the closest neighbour
+in the book, and the resemblance is real: both make prediction the
+central activity of a persisting system, and both make the failure
+of prediction the thing that threatens persistence.
+The parting is that the free energy principle has no ledger.
+Prediction error is minimised, but nothing is <em>spent</em> to
+minimise it, and there is no account that can run dry.
+That difference is not cosmetic, and Chapter <a class="xref" href="21-the-mortal-scientist.html#top" data-ref="ch:sci">21</a> shows
+where it bites: once assays cost, being right stops being the same
+thing as being fed, and a cruder theory that costs a fraction as
+much can dominate the true one.
+An agent minimising prediction error alone would not do that.
+An agent on a budget provably will.</p>
+<h5 id="p-3">Affect as homeostasis.</h5>
+<p>Solms [<a class="cite" href="bibliography.html#bib-solms2021" data-cite="solms2021">14</a>] is the free energy principle pushed onto feeling:
+affect is the registration of departure from homeostasis, and
+consciousness is that registration extended.
+It is the direct ancestor of Chapter <a class="xref" href="26-suffering-a-learner-s-view-of-its-own-account.html#top" data-ref="ch:suffer">26</a>, which is the same
+argument rebuilt with a ledger where the biology was, and the debt is
+acknowledged at length in that chapter rather than here.
+The parting has two parts.
+The first is the one just made: Solms inherits the missing account, so
+nothing in his story can run out, and the price of internalization has
+nowhere to sit.
+The second is a disagreement about reach.
+Solms means the homeostatic argument to arrive at consciousness; this
+book takes it to arrive at sentience and stops it there, on the ground
+that occupying a position in the lattice is a different structure from
+owning a state, and that Chapter <a class="xref" href="62-consciousness-and-the-world-it-comes-with.html#top" data-ref="sec:consciousness">62</a> needs machinery
+Chapter <a class="xref" href="26-suffering-a-learner-s-view-of-its-own-account.html#top" data-ref="ch:suffer">26</a> neither has nor wants.
+One asymmetry should be said plainly, since it runs the other way from
+most of this section: Solms has clinical and lesion evidence and this
+book has none, and the concession made below about the missing
+experimental arm is not repaired by acquiring a neighbour who has one.</p>
+<p>The honest concession used to be in the other direction, and this
+paragraph is the record of it having moved.
+In earlier drafts \(\varsigma\) was a distinguished component of the
+learner’s account driven by an externally supplied reward, which made it
+a budget line rather than a feeling: one drive, no valence, no arousal,
+nothing that was <em>about</em> anything.
+Chapter <a class="xref" href="26-suffering-a-learner-s-view-of-its-own-account.html#top" data-ref="ch:suffer">26</a> withdraws that and rebuilds it as a formula the
+learner holds about its own reserves, so \(\varsigma\) is now signed, is a
+vector indexed by token flavor, and is about the reservoir it reads.
+The reward function stops being a free parameter, because the punishment
+is the learner’s own assay reporting that its goal is receding, and value
+conflict acquires a definition — two deficits with no arbitrage-free
+conversion between them, which is Chapter <a class="xref" href="24-enzymes-and-individuals.html#top" data-ref="ch:eng">24</a>’s
+incommensurability wearing a different hat.</p>
+<p>What remains conceded is smaller but real.
+There is still no arousal dimension, the setpoint’s placement is
+inherited rather than derived, and whether internalization pays is a
+conjecture rather than a result.
+This is a theory of affect now, in the sense that it has the right
+moving parts.  It is not a good one yet.</p>
+<h5 id="p-4">Global workspace.</h5>
+<p>Baars’s architecture [<a class="cite" href="bibliography.html#bib-baars1988" data-cite="baars1988">153</a>] and Dehaene’s neuronal
+implementation [<a class="cite" href="bibliography.html#bib-dehaene2011" data-cite="dehaene2011">157</a>] make consciousness a matter of
+broadcast: content becomes conscious by winning access to a shared
+channel that many specialised processes can read.
+Chapter <a class="xref" href="23-composing-learners.html#top" data-ref="ch:com">23</a> tells a broadcast-and-contention story of its
+own, and the resemblance is close enough to be worth naming.
+The parting is over where the architecture comes from.
+Global workspace theory posits the workspace, because brains appear
+to have one.
+Here the composite is <em>forced</em>: a single learner revising its
+theory incrementally provably cannot leave the region it started
+in, so the unit of learning has to become a population sharing a
+namespace, and the shared namespace is the workspace arriving as a
+consequence rather than as a design.</p>
+<h5 id="p-5">Attention schema.</h5>
+<p>Graziano’s proposal [<a class="cite" href="bibliography.html#bib-graziano2013" data-cite="graziano2013">161</a>] is that awareness is the
+brain’s model of its own attention — a self-model, and a
+deliberately imperfect one.
+This is the neighbor whose absence i felt most, and the absence is now
+partly filled.
+Chapter <a class="xref" href="26-suffering-a-learner-s-view-of-its-own-account.html#top" data-ref="ch:suffer">26</a> is a learner modelling one thing about itself
+— its own reserves — and paying the ordinary tariff to do it, which
+is the shape Graziano’s proposal has.
+Worse, the machinery for the rest is already present:
+Section <a class="xref" href="68-any-future-metaphysics.html#sec-68-5-1" data-ref="sec:kant-affordable">68.5.1</a>’s argument, applied reflexively,
+gives an agent that cannot afford to resolve its own structure and
+therefore reports a simplified one — which is the introspective
+illusion, derived rather than assumed, in about three sentences.
+Those three sentences are still not in this book, and they should be.
+What Chapter <a class="xref" href="26-suffering-a-learner-s-view-of-its-own-account.html#top" data-ref="ch:suffer">26</a> supplies is the account a learner models,
+not the attention it models; Remark <a class="xref" href="26-suffering-a-learner-s-view-of-its-own-account.html#remark-26-6" data-ref="suf:rem:attention">26.6</a> gets as far
+as constraining the space of admissible attention policies and declines
+to pick one.</p>
+<h5 id="p-6">Chalmers, and the hard problem.</h5>
+<p>The Pledge argues that the productive question is not what it is
+like to be a bat but what it is like to be a computer program
+[<a class="cite" href="bibliography.html#bib-nagel1974" data-cite="nagel1974">166</a>, <a class="cite" href="bibliography.html#bib-chalmers1996" data-cite="chalmers1996">154</a>].
+It should be said plainly what that does and does not accomplish.
+It does not dissolve the hard problem.
+It relocates it into a setting where the surrounding questions
+become tractable — what an agent can represent, what it can
+afford to represent, what it must be committed to, what it cannot
+distinguish and cannot tell that it cannot distinguish — and
+leaves the residue exactly where Chalmers left it.
+Making a question tractable is worth doing.
+It is not the same as answering it, and this book does rather more
+of the first than the second.</p>
+<h2 id="sec-0-0">Computational and physical foundations</h2>
+<h5 id="p-8">Wolfram’s physics project and the ruliad.</h5>
+<p>The nearest neighbour in ambition [<a class="cite" href="bibliography.html#bib-wolfram2020" data-cite="wolfram2020">171</a>, <a class="cite" href="bibliography.html#bib-wolfram2021" data-cite="wolfram2021">172</a>]:
+space, time, and a good deal of physics derived from rewriting
+rather than presupposed.
+Two partings, and both are structural.
+First, a GSLT carries equations and a named site of interaction, so
+the cut at which two terms meet is part of the presentation rather
+than something that emerges from the rewriting; that is what makes
+it possible to meter anything at all.
+Second, and more sharply: this book fibres over a <em>category</em>
+of theories, in which no object is privileged.
+The definite article in “the ruliad” is doing work that this
+framework declines to do.
+The rule space here is a variety of possible physics
+(Part <a class="xref" href="contents.html#part-situating-the-learner-a-variety-of-possi" data-ref="part:physics">Part IV</a>), and which one you get depends on which
+further axioms hold — a difference that shows up immediately in
+what each programme thinks it is explaining when it recovers a
+piece of physics.</p>
+<h5 id="p-9">Constructor theory.</h5>
+<p>Deutsch and Marletto’s programme [<a class="cite" href="bibliography.html#bib-deutsch2013" data-cite="deutsch2013">158</a>, <a class="cite" href="bibliography.html#bib-marletto2015" data-cite="marletto2015">164</a>]
+is the nearest neighbour in <em>method</em>, and the resemblance is
+striking once seen.
+Both replace statements about how a system evolves with statements
+about which transformations are possible.
+Both take that reformulation to be more fundamental than the
+dynamical laws it subsumes.
+And the parting is unusually clean.
+Constructor theory’s possible/impossible is Boolean.
+Here it is priced.
+That is not an analogy: it is exactly the distinction
+Chapter <a class="xref" href="30-decoration-one-map-many-semirings.html#top" data-ref="sec:weighted">30</a> already draws between decorating a
+theory in the Boolean semiring and decorating it in the tropical
+one.
+Constructor theory is, on this reading, the Boolean fibre of a
+construction this book runs over a family of semirings, and
+possible-at-a-cost is the tropical one.
+If that identification survives being made carefully, it is the
+most useful single sentence in this chapter, and i do not think it
+has been made before.</p>
+<h5 id="p-10">It from bit, and the computational universe.</h5>
+<p>Wheeler [<a class="cite" href="bibliography.html#bib-wheeler1990" data-cite="wheeler1990">170</a>] and Lloyd [<a class="cite" href="bibliography.html#bib-lloyd2006" data-cite="lloyd2006">163</a>] are
+ancestors rather than rivals, and the debt is general.
+What this book adds to the slogan is a specific answer to
+<em>which</em> computation, argued for in
+Section <a class="xref" href="04-finding-the-shape.html#sec-4-2" data-ref="sec:pledge-viii">4.2</a> rather than assumed: not a function
+machine, because the world is interactive, and not merely an
+interactive one, because an agent has to be able to represent its
+own hypotheses.</p>
+<h5 id="p-11">Applied category theory.</h5>
+<p>The categorical machinery here is standard and the debts are to a
+tradition rather than to a result: Spivak and Fong’s presentation
+of the field [<a class="cite" href="bibliography.html#bib-fongspivak2019" data-cite="fongspivak2019">159</a>], Coecke and Kissinger’s
+diagrammatic method [<a class="cite" href="bibliography.html#bib-coeckekissinger2017" data-cite="coeckekissinger2017">155</a>].
+One honest gap belongs in this paragraph.
+The cost monad and the history monad are applied together
+throughout the book, and no distributive law between them is ever
+stated.
+Remark <a class="xref" href="35-entropy-and-the-cost-of-staying-level.html#remark-35-2" data-ref="rmk:two-erasures">35.2</a>, on the two erasures, is very close to
+being the observation that they interchange only laxly, and it
+stops short of saying so.</p>
+<h5 id="p-12">The technical lineage.</h5>
+<p>Milner’s process calculi [<a class="cite" href="bibliography.html#bib-milnerCC" data-cite="milnerCC">84</a>], Girard’s linear logic,
+Abramsky’s proofs-as-processes [<a class="cite" href="bibliography.html#bib-abramskyPaP" data-cite="abramskyPaP">99</a>], Turi and
+Plotkin’s bialgebraic semantics [<a class="cite" href="bibliography.html#bib-turiplotkin" data-cite="turiplotkin">86</a>], Turing’s oracle
+hierarchy [<a class="cite" href="bibliography.html#bib-turing1939" data-cite="turing1939">12</a>], and the Weihrauch degrees
+[<a class="cite" href="bibliography.html#bib-weihrauch" data-cite="weihrauch">79</a>] are the actual apparatus, cited throughout and not
+argued with.
+The one place the book takes a position against the tradition is
+Chapter <a class="xref" href="61-choice-principles-are-the-types-schedulers-are.html#top" data-ref="ch:chs">61</a>, which claims that linear logic types the
+communication skeleton of a computation and is silent by
+construction about how its nondeterminism resolves — so that a
+logic of choice is the complement of linear logic rather than a
+refinement of it.</p>
+<h2 id="sec-0-0">Learning, agency, and the symbol problem</h2>
+<h5 id="p-14">Solomonoff induction and AIXI.</h5>
+<p>Solomonoff’s prior [<a class="cite" href="bibliography.html#bib-solomonoff1964" data-cite="solomonoff1964">168</a>] and Hutter’s AIXI
+[<a class="cite" href="bibliography.html#bib-hutter2005" data-cite="hutter2005">162</a>] are the canonical account of optimal prediction
+and optimal action given unbounded computation.
+The mortal scientist is the same problem with a budget and a body,
+and the relationship is sharper than a slogan.
+Proposition <a class="xref" href="21-the-mortal-scientist.html#proposition-21-3" data-ref="sci:prop:limit">21.3</a> says the complete theory of an
+environment sits at the top of the lattice as a limit no learner
+with a finite token supply can install — which is to say that
+AIXI’s optimality is precisely the thing this framework proves to
+be unpurchasable.
+The two accounts are not competitors so much as the two ends of one
+axis, and the interesting content is entirely in what happens
+between them.</p>
+<h5 id="p-15">Computational mechanics.</h5>
+<p>Crutchfield and Shalizi’s \(\epsilon\)-machines
+[<a class="cite" href="bibliography.html#bib-shalizi2001" data-cite="shalizi2001">148</a>] are load-bearing in the Prestige rather than
+merely adjacent.
+Causal states are the coarsest coarse-graining of pasts that
+retains full predictive power, and the proposal of
+Chapter <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#top" data-ref="ch:notation">64</a> is that they are the natural first
+candidate for which distinctions in a host world deserve builtin
+names.
+The taxonomy of \(\epsilon\)-machines — finite, countable,
+uncountable, fractal — turns out to be a density hierarchy in
+Goodman’s sense, which converts a question about notational
+adequacy into a question about whether a budget-quotiented
+\(\epsilon\)-machine is finite.
+Both sides of that equivalence are computable.
+Neither has been computed.</p>
+<h5 id="p-16">Symbol grounding and emergent communication.</h5>
+<p>Harnad’s problem [<a class="cite" href="bibliography.html#bib-harnad1990" data-cite="harnad1990">142</a>], Goodman’s theory of
+notationality [<a class="cite" href="bibliography.html#bib-goodman1968" data-cite="goodman1968">141</a>], Steels’s language games
+[<a class="cite" href="bibliography.html#bib-steels2015" data-cite="steels2015">150</a>], and Taniguchi’s collective predictive coding
+[<a class="cite" href="bibliography.html#bib-taniguchi2024" data-cite="taniguchi2024">151</a>] are treated at length in
+Chapters <a class="xref" href="56-how-the-trick-was-done.html#top" data-ref="ch:trick">56</a> and <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#top" data-ref="ch:notation">64</a> and are only noted
+here.
+The short version: the correspondence between a language and a
+world is a fact about the language’s users, the emergent
+communication literature supplies the population that a
+single-agent account structurally cannot, and neither solves the
+problem this book concedes it has not solved.</p>
+<h5 id="p-17">Bisimulation metrics.</h5>
+<p>The reinforcement learning literature has independently hit the
+rigidity of exact bisimulation and answered with quantitative
+relaxations [<a class="cite" href="bibliography.html#bib-ferns2004" data-cite="ferns2004">138</a>, <a class="cite" href="bibliography.html#bib-gelada2019" data-cite="gelada2019">139</a>, <a class="cite" href="bibliography.html#bib-zhang2021" data-cite="zhang2021">152</a>, <a class="cite" href="bibliography.html#bib-castro2021" data-cite="castro2021">136</a>].
+Observation <a class="xref" href="64-what-a-symbol-system-would-have-to-be.html#observation-64-2" data-ref="obs:metric">64.2</a> argues this is the right repair in
+that setting and the wrong one here, because a metric dissolves
+exactly the discreteness a notation requires.
+This is a genuine disagreement with active work and i would rather
+state it as one than leave it in a footnote.</p>
+<h5 id="p-18">Hyperon and MeTTa.</h5>
+<p>Goertzel’s programme [<a class="cite" href="bibliography.html#bib-goertzel2021" data-cite="goertzel2021">160</a>] is the closest thing to a
+sibling project, and its near-absence from this book is the most
+conspicuous omission in this chapter.
+Both take a rewriting substrate to be the right foundation for
+general intelligence; both make reflection central; and MeTTaIL,
+the language-definition platform much of the machinery here was
+implemented against, sits directly between them.
+The comparison i owe and have not made is between MeTTa’s
+approach to self-modification and this book’s — reproduction as
+recombination on quoted code — and between Hyperon’s
+attention allocation and the metering here.
+That is a chapter, not a paragraph, and it is not written.</p>
+<h2 id="sec-0-0">Life and origins</h2>
+<h5 id="p-20">Assembly theory.</h5>
+<p>Cronin and Walker’s programme [<a class="cite" href="bibliography.html#bib-cronin2021" data-cite="cronin2021">156</a>, <a class="cite" href="bibliography.html#bib-walker2023" data-cite="walker2023">169</a>] is the
+largest single engagement in the book.
+What is taken: the assembly index as a measure of causal depth —
+the minimum number of steps by which an object can be built with
+reuse — and the claim that depth combined with abundance is a
+biosignature.
+What is offered back: answers to two questions the theory leaves
+open, namely what counts as a copy and how to specify the scope
+within which copies are counted, both of which
+Chapter <a class="xref" href="53-scope-and-manufacture.html#top" data-ref="sec:scope-manufacture">53</a> treats as fixed-point problems
+with computable answers.
+Where it dissents: Proposition <a class="xref" href="53-scope-and-manufacture.html#proposition-53-3" data-ref="scm:prop:geom">53.3</a> says that a
+coarse instrument does not merely mismeasure copy number, it
+<em>manufactures</em> copies, at a rate exponential in the coarseness,
+and the manufactured copies are biased toward the biosignature the
+measurement is looking for.
+That is a criticism of the measurement protocol rather than of the
+theory, and it should be read as such.
+It is also, so far as i know, the only claim in this book that a
+laboratory could check next year.</p>
+<h5 id="p-21">Smith and Morowitz.</h5>
+<p>The phase-transition account of the origin of life
+[<a class="cite" href="bibliography.html#bib-SmithMorowitz" data-cite="SmithMorowitz">52</a>] supplies the picture of a thermodynamically
+driven whole within which chemistry is channelled.
+Chapter <a class="xref" href="60-where-does-agency-live.html#top" data-ref="ch:agy">60</a> reaches the conclusion that Smith’s
+thermodynamic macro-component and the determinacy islands of this
+framework <em>cross</em> rather than nest — and an earlier reading
+of my own, which had them nesting, is retained in a remark
+explaining why it does not survive.</p>
+<h5 id="p-22">Autopoiesis and \((M,R)\) systems.</h5>
+<p>Maturana and Varela [<a class="cite" href="bibliography.html#bib-maturanavarela1980" data-cite="maturanavarela1980">165</a>] and Rosen
+[<a class="cite" href="bibliography.html#bib-rosen1991" data-cite="rosen1991">167</a>] are the prior attempts at organisational closure,
+and Rosen is the one that should have been in this book from the
+start.
+“Closed to efficient causation” — the requirement that every
+function of an organism be produced by the organism — is close
+kin to the replication-as-a-fixed-point construction of
+Chapter <a class="xref" href="49-replication-as-a-fixed-point.html#top" data-ref="sec:replication">49</a>, close enough that the difference is
+worth stating.
+Rosen’s closure is a condition on a category of mappings, and his
+conclusion is that such systems are not simulable by machines.
+The closure here is a fixed point of a reflective rewrite theory,
+and the same structure is exhibited constructively.
+Whichever of us is wrong, we are wrong about something specific,
+which is more than most pairs of positions in this area manage.</p>
+<h2 id="sec-0-0">The table</h2>
+<p>Table <a class="xref" href="related-work-and-where-this-differs.html#tab-0-1" data-ref="tab:related">0.1</a> scores the programmes on five questions.
+The last column is where the argument of this chapter lives, and it
+is a claim rather than a description — which is why the column
+exists and why it is last.</p>
+<figure class="float tabfloat" id="tab-0-1"><p>{1.35}</p>
+<div class="tablewrap"><table><thead><tr><th><strong>Programme</strong></th><th><strong>Theory of</strong></th><th><strong>Primitive</strong></th><th><strong>Observer inside?</strong></th><th><strong>What would falsify it</strong></th><th><strong>Anything priced?</strong></th></tr></thead><tbody><tr><td>IIT</td><td>consciousness</td><td>cause–effect structure</td><td>no</td><td>a high-\(\Phi\) system reporting nothing</td><td><span class="sc">no</span></td></tr><tr><td>Free energy</td><td>persistence</td><td>prediction error</td><td>yes</td><td>persistence without error minimisation</td><td><span class="sc">no</span></td></tr><tr><td>Global workspace</td><td>access consciousness</td><td>broadcast</td><td>partly</td><td>conscious report without broadcast</td><td><span class="sc">no</span></td></tr><tr><td>Constructor theory</td><td>physical law</td><td>possible / impossible
+transformations</td><td>no</td><td>a task both possible and impossible</td><td><span class="sc">boolean only</span></td></tr><tr><td>Ruliad</td><td>physics</td><td>rewriting</td><td>yes</td><td>a physics not in the rule
+space</td><td><span class="sc">no</span></td></tr><tr><td>AIXI</td><td>optimal agency</td><td>algorithmic probability</td><td>no</td><td>— (optimal by construction)</td><td><span class="sc">no</span></td></tr><tr><td>Assembly theory</td><td>life detection</td><td>causal depth \(\times\)
+abundance</td><td>no</td><td>high assembly index abiotically</td><td><span class="sc">depth, not access</span></td></tr><tr><td><strong>This book</strong></td><td>all of the above, at a cost</td><td>metered interaction at a cut</td><td>yes</td><td>finite contention; the copy-manufacture bound</td><td><span class="sc">yes</span></td></tr></tbody></table></div><figcaption><span class="fignum">Table 0.1</span> Five questions, scored. The final column is the claim this
+chapter is making: the framework developed here is the only one on
+the list in which what an agent can know is limited by what it can
+afford rather than by a prohibition. Constructor theory scores
+partially because possible/impossible is a pricing with two prices.
+Assembly theory scores partially because it prices <em>construction</em>
+and says nothing about the cost of <em>access</em>.</figcaption></figure>
+<p>Two rows deserve comment because they are the ones i expect
+argument about.</p>
+<p>Constructor theory is marked “Boolean only” rather than
+“no”, and that is deliberate: a two-valued possibility measure is
+still a measure, and on the reading proposed above it is precisely
+the Boolean fibre of the semiring-parametric construction of
+Chapter <a class="xref" href="30-decoration-one-map-many-semirings.html#top" data-ref="sec:weighted">30</a>.
+Whether that is a generalisation of constructor theory or a
+misreading of it is a fair question and i do not think the answer
+is obvious.</p>
+<p>AIXI’s falsification cell is a dash, and this is not a cheap shot.
+AIXI is optimal by construction relative to its own prior, so there
+is no observation that could refute it; what can be refuted is the
+claim that it is a useful model of anything realisable, and
+Proposition <a class="xref" href="21-the-mortal-scientist.html#proposition-21-3" data-ref="sci:prop:limit">21.3</a> is one form of that refutation.
+A framework that cannot be wrong is doing something other than what
+this book is trying to do, and the dash records that rather than
+scoring it.</p>
+<h2 id="sec-0-0">Two concessions</h2>
+<h5 id="p-25">Where this is a special case rather than a rival.</h5>
+<p>The account of interaction, the modal logic, and the categorical
+apparatus are all standard, and nothing in
+Part <a class="xref" href="contents.html#part-the-machinery-from-gslts-to-cost-account" data-ref="part:machinery">Part I</a> is offered as a departure from the
+process-calculus tradition.
+The novelty, if there is any, is in what happens when a meter is
+installed and an agent is made of the same material as its
+environment.
+A reader who wants to describe the whole of the Machinery as
+“known, assembled unusually” will get no argument here.</p>
+<h5 id="p-26">Where a neighbour is ahead.</h5>
+<p>Two of these programmes have empirical arms and this one does not.
+The free energy principle has a substantial experimental
+literature.
+IIT has a perturbational complexity index and clinical data behind
+it.
+Assembly theory has a mass spectrometer and a published protocol.
+This book has falsification conditions — finite contention in the
+massive-population argument, and the copy-manufacture bound of
+Chapter <a class="xref" href="53-scope-and-manufacture.html#top" data-ref="sec:scope-manufacture">53</a> — and they are Fermi
+estimates rather than experiments.
+The second of the two is the closer to being run, and it is the
+thing i would most like someone to take away from this chapter.</p>
+<p>{.table}table{0}</p>
+<nav class="pager"><a class="prev" href="how-to-read-this-book.html"><span>Previous</span>How to Read This Book</a><a class="next" href="foam-born.html"><span>Next</span>The Foam-Born</a></nav>
+</main>
+<aside class="margin" id="margin" aria-live="polite"></aside>
+</div>
+<button class="railtoggle" id="railtoggle" aria-expanded="false">Contents</button>
+
+</body>
+</html>

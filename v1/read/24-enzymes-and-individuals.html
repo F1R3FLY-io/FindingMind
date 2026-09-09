@@ -1,0 +1,1223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enzymes and Individuals · Finding Mind</title>
+<link rel="canonical" href="https://findingmind.com/read/24-enzymes-and-individuals.html">
+<meta name="description" content="Enzymes and Individuals">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../book.css">
+<link rel="stylesheet" href="../katex/katex.min.css">
+<script defer src="../katex/katex.min.js"></script>
+<script defer src="../katex/auto-render.min.js"></script>
+<script defer src="../macros.js"></script>
+<script defer src="../reader.js"></script>
+</head>
+<body class="readpage">
+
+<a class="skip" href="#main">Skip to text</a>
+<div class="reader">
+<nav class="rail" aria-label="Contents"><div class="rail-in"><a class="rail-home" href="../index.html">Finding Mind</a><h2 class="rail-act">The Pledge</h2><a class="rail-ch" href="permitted-say.html"><span class="rn rn-i">⁂</span><span class="rt">The Permitted Say</span></a><a class="rail-ch" href="01-prolegomena-to-finding-mind.html"><span class="rn">1</span><span class="rt">Prolegomena to Finding Mind</span></a><a class="rail-ch" href="02-the-ordinary-world.html"><span class="rn">2</span><span class="rt">The Ordinary World</span></a><a class="rail-ch" href="03-information-causation-and-the-blind-spot.html"><span class="rn">3</span><span class="rt">Information, Causation, and the Blind Spot</span></a><a class="rail-ch" href="04-finding-the-shape.html"><span class="rn">4</span><span class="rt">Finding the Shape</span></a><a class="rail-ch" href="05-inside-and-outside-and-what-it-means-to-assume.html"><span class="rn">5</span><span class="rt">Inside and Outside, and What it Means to Assume the Virtue</span></a><a class="rail-ch" href="how-to-read-this-book.html"><span class="rn rn-i">⁂</span><span class="rt">How to Read This Book</span></a><a class="rail-ch" href="related-work-and-where-this-differs.html"><span class="rn rn-i">⁂</span><span class="rt">Related Work, and Where This Differs</span></a><h2 class="rail-act">The Turn</h2><a class="rail-ch" href="foam-born.html"><span class="rn rn-i">⁂</span><span class="rt">The Foam-Born</span></a><h3 class="rail-part">The Machinery: From GSLTs to Cost-Accounted Theories</h3><a class="rail-ch" href="06-what-a-language-presentation-is-and-why-it-com.html"><span class="rn">6</span><span class="rt">What a Language Presentation Is, and Why It Comes First</span></a><a class="rail-ch" href="07-graph-structured-lambda-theories.html"><span class="rn">7</span><span class="rt">Graph-Structured Lambda Theories</span></a><a class="rail-ch" href="08-interactive-gslts-and-the-site-of-interaction.html"><span class="rn">8</span><span class="rt">Interactive GSLTs, and the Site of Interaction</span></a><a class="rail-ch" href="09-continued-interactive-gslts.html"><span class="rn">9</span><span class="rt">Continued Interactive GSLTs</span></a><a class="rail-ch" href="10-the-category-of-gslts.html"><span class="rn">10</span><span class="rt">The Category of GSLTs</span></a><a class="rail-ch" href="11-the-cost-monad.html"><span class="rn">11</span><span class="rt">The Cost Monad</span></a><a class="rail-ch" href="12-the-history-monad.html"><span class="rn">12</span><span class="rt">The History Monad</span></a><a class="rail-ch" href="13-weighting-rates-from-the-generated-logic.html"><span class="rn">13</span><span class="rt">Weighting: Rates from the Generated Logic</span></a><a class="rail-ch" href="14-cost-accounted-rho.html"><span class="rn">14</span><span class="rt">Cost-Accounted Rho</span></a><a class="rail-ch" href="15-conversion-enzymes-and-the-virtual-token.html"><span class="rn">15</span><span class="rt">Conversion, Enzymes, and the Virtual Token</span></a><a class="rail-ch" href="16-the-labeled-transition-system-and-context-deco.html"><span class="rn">16</span><span class="rt">The Labeled Transition System and Context-Decorated HML</span></a><a class="rail-ch" href="17-what-goes-into-a-logic.html"><span class="rn">17</span><span class="rt">What Goes Into a Logic</span></a><a class="rail-ch" href="18-scopes-and-the-fixed-points-that-generate-them.html"><span class="rn">18</span><span class="rt">Scopes, and the Fixed Points that Generate Them</span></a><a class="rail-ch" href="19-generating-type-systems-oslf-and-the-hypercube.html"><span class="rn">19</span><span class="rt">Generating Type Systems: OSLF and the Hypercube</span></a><a class="rail-ch" href="20-instruments-making-structure-visible-to-bisimu.html"><span class="rn">20</span><span class="rt">Instruments: Making Structure Visible to Bisimulation</span></a><h3 class="rail-part">Ecology as Cognitive Architecture</h3><a class="rail-ch" href="21-the-mortal-scientist.html"><span class="rn">21</span><span class="rt">The Mortal Scientist</span></a><a class="rail-ch" href="22-learning-to-play.html"><span class="rn">22</span><span class="rt">Learning to Play</span></a><a class="rail-ch" href="23-composing-learners.html"><span class="rn">23</span><span class="rt">Composing Learners</span></a><a class="rail-ch" aria-current="page" href="24-enzymes-and-individuals.html"><span class="rn">24</span><span class="rt">Enzymes and Individuals</span></a><a class="rail-ch" href="25-a-network-that-learns-by-rewriting.html"><span class="rn">25</span><span class="rt">A Network That Learns by Rewriting</span></a><h3 class="rail-part">Suffering: Homeostasis and the Learner&#x27;s Own Account</h3><a class="rail-ch" href="26-suffering-a-learner-s-view-of-its-own-account.html"><span class="rn">26</span><span class="rt">Suffering: A Learner’s View of Its Own Account</span></a><h3 class="rail-part">Situating the Learner: A Variety of Possible Physics</h3><a class="rail-ch" href="27-the-learner-s-world-already-has-a-physics.html"><span class="rn">27</span><span class="rt">The Learner’s World Already Has a Physics</span></a><a class="rail-ch" href="28-the-reversibility-construction.html"><span class="rn">28</span><span class="rt">The Reversibility Construction</span></a><a class="rail-ch" href="29-causal-structure-and-time.html"><span class="rn">29</span><span class="rt">Causal Structure and Time</span></a><a class="rail-ch" href="30-decoration-one-map-many-semirings.html"><span class="rn">30</span><span class="rt">Decoration: One Map, Many Semirings</span></a><a class="rail-ch" href="31-conservation-and-what-it-costs-to-have-it.html"><span class="rn">31</span><span class="rt">Conservation, and What It Costs to Have It</span></a><a class="rail-ch" href="32-extended-modal-operators.html"><span class="rn">32</span><span class="rt">Extended Modal Operators</span></a><a class="rail-ch" href="33-complex-amplitudes-and-where-the-coherence-is.html"><span class="rn">33</span><span class="rt">Complex Amplitudes, and Where the Coherence Is</span></a><a class="rail-ch" href="34-synthesis-the-full-structure.html"><span class="rn">34</span><span class="rt">Synthesis: The Full Structure</span></a><a class="rail-ch" href="35-entropy-and-the-cost-of-staying-level.html"><span class="rn">35</span><span class="rt">Entropy, and the Cost of Staying Level</span></a><a class="rail-ch" href="36-discussion-and-future-directions.html"><span class="rn">36</span><span class="rt">Discussion and Future Directions</span></a><h3 class="rail-part">Why Scientists Get Misled: Emergent Ontology in Massive Agent Populations</h3><a class="rail-ch" href="37-introduction.html"><span class="rn">37</span><span class="rt">Introduction</span></a><a class="rail-ch" href="38-ontological-isolation.html"><span class="rn">38</span><span class="rt">Ontological Isolation</span></a><a class="rail-ch" href="39-agents-and-the-scientific-method.html"><span class="rn">39</span><span class="rt">Agents and the Scientific Method</span></a><a class="rail-ch" href="40-behavioral-primes.html"><span class="rn">40</span><span class="rt">Behavioral Primes</span></a><a class="rail-ch" href="41-massive-populations-and-communication-degradat.html"><span class="rn">41</span><span class="rt">Massive Populations and Communication Degradation</span></a><a class="rail-ch" href="42-the-logical-topology-and-compactness.html"><span class="rn">42</span><span class="rt">The Logical Topology and Compactness</span></a><a class="rail-ch" href="43-coherence-clusters-and-their-nerve.html"><span class="rn">43</span><span class="rt">Coherence Clusters and Their Nerve</span></a><a class="rail-ch" href="44-the-apparent-ontology.html"><span class="rn">44</span><span class="rt">The Apparent Ontology</span></a><a class="rail-ch" href="45-open-gaps-and-future-work.html"><span class="rn">45</span><span class="rt">Open Gaps and Future Work</span></a><a class="rail-ch" href="46-discussion.html"><span class="rn">46</span><span class="rt">Discussion</span></a><h3 class="rail-part">Origins of Life: Assembly Theory, Phase Transitions, and Replication</h3><a class="rail-ch" href="47-introduction.html"><span class="rn">47</span><span class="rt">Introduction</span></a><a class="rail-ch" href="48-assembly-theory-causal-depth-and-copy-number.html"><span class="rn">48</span><span class="rt">Assembly Theory: Causal Depth and Copy Number</span></a><a class="rail-ch" href="49-replication-as-a-fixed-point.html"><span class="rn">49</span><span class="rt">Replication as a Fixed Point</span></a><a class="rail-ch" href="50-smith-s-phase-transition-and-the-density-of-at.html"><span class="rn">50</span><span class="rt">Smith’s Phase Transition and the Density of Attractors</span></a><a class="rail-ch" href="51-metabolism-energy-gradients-and-the-ecosystem.html"><span class="rn">51</span><span class="rt">Metabolism, Energy Gradients, and the Ecosystem</span></a><a class="rail-ch" href="52-assembly-index-and-the-depth-of-the-fractal-le.html"><span class="rn">52</span><span class="rt">Assembly Index and the Depth of the Fractal Learner</span></a><a class="rail-ch" href="53-scope-and-manufacture.html"><span class="rn">53</span><span class="rt">Scope and Manufacture</span></a><a class="rail-ch" href="54-open-gaps.html"><span class="rn">54</span><span class="rt">Open Gaps</span></a><a class="rail-ch" href="55-discussion.html"><span class="rn">55</span><span class="rt">Discussion</span></a><h3 class="rail-part">Conclusion</h3><a class="rail-ch" href="what-has-been-built.html"><span class="rn rn-i">⁂</span><span class="rt">What Has Been Built</span></a><a class="rail-ch" href="a-view-from-inside-the-framework.html"><span class="rn rn-i">⁂</span><span class="rt">A View from Inside the Framework</span></a><a class="rail-ch" href="what-remains-to-be-done.html"><span class="rn rn-i">⁂</span><span class="rt">What Remains to Be Done</span></a><h2 class="rail-act">The Prestige</h2><a class="rail-ch" href="begotten.html"><span class="rn rn-i">⁂</span><span class="rt">begotten not made</span></a><h3 class="rail-part">The Method, and What It Left Out</h3><a class="rail-ch" href="56-how-the-trick-was-done.html"><span class="rn">56</span><span class="rt">How the Trick Was Done</span></a><a class="rail-ch" href="57-everything-so-far-was-turing-complete.html"><span class="rn">57</span><span class="rt">Everything So Far Was Turing Complete</span></a><a class="rail-ch" href="58-the-tower-of-oracle-extensions.html"><span class="rn">58</span><span class="rt">The Tower of Oracle Extensions</span></a><a class="rail-ch" href="59-not-every-cut-is-an-aperture.html"><span class="rn">59</span><span class="rt">Not Every Cut Is an Aperture</span></a><a class="rail-ch" href="60-where-does-agency-live.html"><span class="rn">60</span><span class="rt">Where Does Agency Live?</span></a><a class="rail-ch" href="61-choice-principles-are-the-types-schedulers-are.html"><span class="rn">61</span><span class="rt">Choice Principles are the Types; Schedulers are the Terms</span></a><a class="rail-ch" href="62-consciousness-and-the-world-it-comes-with.html"><span class="rn">62</span><span class="rt">Consciousness, and the World It Comes With</span></a><a class="rail-ch" href="63-what-these-chapters-owe.html"><span class="rn">63</span><span class="rt">What These Chapters Owe</span></a><h3 class="rail-part">Reference, Simulation, Reception, and a Future Metaphysics</h3><a class="rail-ch" href="64-what-a-symbol-system-would-have-to-be.html"><span class="rn">64</span><span class="rt">What a Symbol System Would Have to Be</span></a><a class="rail-ch" href="65-if-this-is-a-simulation-which-kind.html"><span class="rn">65</span><span class="rt">If This Is a Simulation, Which Kind</span></a><a class="rail-ch" href="66-what-it-is-like-to-be-a-bot.html"><span class="rn">66</span><span class="rt">What It Is Like to Be a Bot</span></a><a class="rail-ch" href="67-how-life-like-is-life-like-enough.html"><span class="rn">67</span><span class="rt">How Life-Like Is Life-Like Enough?</span></a><a class="rail-ch" href="68-any-future-metaphysics.html"><span class="rn">68</span><span class="rt">Any Future Metaphysics</span></a><a class="rail-ch" href="right-sizing.html"><span class="rn rn-i">⁂</span><span class="rt">Right-Sizing</span></a></div></nav>
+<main id="main" class="text ">
+<header class="chead"><p class="kicker">Chapter 24</p><h1>Enzymes and Individuals</h1></header>
+<p>
+Composition assumed a common currency. Two learners sharing a wall were
+drawing on the same tokens, and that assumption did a great deal of quiet
+work. Drop it — let each community’s tokens be its own flavor, as the
+metabolisms of two separately originated biospheres would be — and
+something has to sit between them and convert.</p>
+<p>That converter is this chapter’s subject, and it turns out to be an organism
+rather than a piece of infrastructure: a fourth access profile alongside
+source and prey, persistent like a source, exhaustible like prey, and unique
+in being adaptive in its <em>rate</em>. It lives by the spread, which is not a
+metaphor for a toll but literally the toll of the rendezvous through which
+the swap happens. The nearest thing in the biosphere is not a decomposer but
+a mycorrhizal network.</p>
+<p>Two results give the chapter its title. The first is that the cycles of the
+conversion graph form an error-correcting code, and that its total detecting
+power is exactly the first Betti number of the graph — so how much a
+community can catch a mispriced exchange is a topological fact about the
+shape of its trade, and a conversion sitting on a bridge can never be
+checked at all. The second is a criterion for individuation. Communication
+is not perfect; the notion is recovered by interposing a medium that may
+drop or corrupt what passes through, and a region may close its namespace
+exactly when the boundary it can maintain exceeds what the error rate costs.
+An individual is where repair is cheaper than exposure. It is porous by
+necessity — perfect closure is death, for the same reason a solved science
+is a dead ecology — and it is a fixed point, since the closed region is
+itself a learner that can compose with others.</p>
+<p>That last move closes the loop the part opened with, and it is the natural
+place to hand over. Once individuals are the sort of thing that can be
+stacked, the question of what a learner sees from higher up in the stack is
+no longer rhetorical — which is where the next part begins.</p>
+<h2 id="sec-24-1"><span class="secnum">24.1</span> Introduction</h2>
+<h3 id="sec-24-1-1"><span class="secnum">24.1.1</span> Why the unit moves again</h3>
+<p>The series this note belongs to has moved its unit of analysis twice. In
+\(\chSci\) the unit is a single mortal scientist: a cost-accounted
+rho computation that forms hypotheses in a namespace logic, pays for its
+assays, and dies when its stack runs out. In \(\chComp\) the unit is a
+learner: a population of such computations together with their reservoirs,
+serving as a namespace, with a distribution over it, composed with other
+learners by parallel composition. That note ends by asking whether the
+series individual/lineage/composite continues.</p>
+<p>It does, and the reason it does is that composition of learners yields a
+learner, so the construction is closed under an associative operator. But
+closure alone gives arbitrary nesting and no scale structure: a soup of
+composites has no distinguished levels. Something must pick out
+<em>skill</em>, <em>organism</em>, <em>pod</em>, <em>species</em>, <em>biosphere</em>
+as rungs rather than as arbitrary cuts, and the companion notes do not say
+what.</p>
+<p>Two things were also missing from the economics. \(\chComp\) works in a
+single token flavor, so its conservation law is the flat statement that a
+fixed supply \(\Theta\) is never minted. Real coordination between
+communities is not a transfer of one fungible fuel; it is
+<em>conversion</em>, at rates, between resources that are not interchangeable
+— and the arbitrage machinery of [<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>] exists precisely to handle
+that. And \(\chComp\) has no geometry: its composition operator is
+indifferent to whether the two learners are adjacent or a galaxy apart,
+though nothing in the framework says the cost of reaching across should be
+the same in both cases.</p>
+<p>This note supplies all three, and they turn out to be one thing.</p>
+<h3 id="sec-24-1-2"><span class="secnum">24.1.2</span> The move, stated once</h3>
+<p>Give each community its own token flavor. Adjoin enzymes between flavors
+and weight each enzyme by its dissipation \(\theta\). The resulting weighted
+graph is the geometry the framework was missing; its cycle space is a code
+on prices; and the isoperimetry of that graph is the criterion for when a
+region may stop trading and start sharing — that is, for when a
+composition of learners becomes an individual.</p>
+<h3 id="sec-24-1-3"><span class="secnum">24.1.3</span> What we claim, and what we do not</h3>
+<p>We claim: that the enzyme is derivable as a fourth access profile rather
+than importable as a new kind of thing (§<a class="xref" href="24-enzymes-and-individuals.html#sec-24-4" data-ref="eng:sec:organism">24.4</a>); that
+interposition supplies an error model natively, with \(\theta\) as its
+metering defect and stranding as its irreversibility
+(§<a class="xref" href="24-enzymes-and-individuals.html#sec-24-5" data-ref="eng:sec:medium">24.5</a>); that the
+detection strength of a price is \(1-\Reff\) and the total is \(\bt\)
+(§<a class="xref" href="24-enzymes-and-individuals.html#sec-24-6" data-ref="eng:sec:code">24.6</a>, Theorem <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-2" data-ref="eng:thm:foster">24.2</a>); that inventory-holding
+enzymes make arbitrage a property of a marking (§<a class="xref" href="24-enzymes-and-individuals.html#sec-24-3" data-ref="eng:sec:fork">24.3</a>); that
+merger is available exactly inside an isoperimetric threshold
+(§<a class="xref" href="24-enzymes-and-individuals.html#sec-24-8" data-ref="eng:sec:indiv">24.8</a>, Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-15" data-ref="eng:prop:indiv">24.15</a>), with partial closure of
+the medium namespace as its structural form
+(Definition <a class="xref" href="24-enzymes-and-individuals.html#definition-24-6" data-ref="eng:def:indiv">24.6</a>); and that a finite critical radius, together
+with the tower of media, forces the hierarchy that \(\chComp\) could
+only permit (§<a class="xref" href="24-enzymes-and-individuals.html#sec-24-9" data-ref="eng:sec:hier">24.9</a>).</p>
+<p>We do not claim to have derived the rates. [<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>] takes them as given
+and so, in the main, do we; §<a class="xref" href="24-enzymes-and-individuals.html#sec-24-12" data-ref="eng:sec:rates">24.12</a> says what it would take to
+derive them and why the numbers of \(\chGame\) are the natural candidate.
+We do not claim the error channel has been identified: §<a class="xref" href="24-enzymes-and-individuals.html#sec-24-8-6" data-ref="eng:sec:whicheps">24.8.6</a>
+inherits, unresolved, the “which \(\varepsilon\) is binding” question of
+[<a class="cite" href="bibliography.html#bib-compaut" data-cite="compaut">60</a>]. We do not claim the correspondence with observed biology is
+more than suggestive, though §<a class="xref" href="24-enzymes-and-individuals.html#sec-24-6-4" data-ref="eng:sec:decay">24.6.4</a> notes that the ecological
+pyramid falls out of Proposition 2 of [<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>] with no adjustment, which
+is a check we did not arrange.</p>
+<h2 id="sec-24-2"><span class="secnum">24.2</span> What this chapter carries forward</h2>
+<p>From \(\chSci\): the cut and the three grades of access (perception,
+interaction, reflection); the assay via the <code>where</code> clause; the
+conservation law \(\sigma + \kappa = \sigma_0 = \Theta\); the access profile
+distinguishing a <em>source</em> (persistent emitter, rate-limited,
+non-exclusive, non-adaptive) from <em>prey</em> (linear send, exhaustible,
+exclusive, adaptive); the relaxation lattice and its ultrametric; and the
+freshness-by-quotation proposition, that for any context \(C\) with
+\(C[P] \neq P\) the name \(@C[P]\) does not occur in \(P\).</p>
+<p>From \(\chGame\): the two routes to any predicate — <em>read</em> it,
+priced by formula depth, if the environment has computed it into legible
+structure, or <em>drive</em> it, priced by rendezvous — and the observation
+that the interesting question is not whether the work is done but who is
+billed for it.</p>
+<p>From \(\chComp\): the learner as three layers (population, namespace,
+distribution) with the distribution <em>inside</em>; composition as parallel
+composition; the factorization theorem, that namespace disjointness is
+equivalent to absence of a spanning redex and to \(\mu_{12} =
+\mu_1 \otimes \mu_2\); the grading vector
+\(\mathbf{k} = (k_{\mathrm{met}}, k_{\mathrm{src}}, k_{\mathrm{prb}},
+k_{\mathrm{mat}})\) over the four typed namespaces \(\Met, \Src, \Prb, \Mat\);
+merger \(\Merge\) as a separate operator; the instability of non-interference
+and its repair by rooting; and competitive dilution in closed form.</p>
+<p>From [<a class="cite" href="bibliography.html#bib-CARho" data-cite="CARho">61</a>] and [<a class="cite" href="bibliography.html#bib-CE" data-cite="CE">62</a>]: signatures as names, token stacks as
+first-class terms, wrapping by construction, the cost monad
+\((\mathrm{Cost}, \eta, \mu)\) on \(\mathrm{ciGSLT}\) and its non-idempotence,
+and located resource stacks.</p>
+<p>From [<a class="cite" href="bibliography.html#bib-finrho" data-cite="finrho">64</a>]: the correction that a stack floating in the
+associative–commutative soup is ambient authority, repaired by holding
+every stack on a channel; the acceptance gate; the netting result; and the
+four cost-accounting patterns.</p>
+<p>From [<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>]: conversion systems, enzymes, rates with
+\(r(a{\to}b)\,r(b{\to}a) = 1\); the log-rate cochain \(\ell\); the equivalence
+of arbitrage-freedom, exactness of \(\ell\), and existence of a valuation
+\(\nu\); the graph–Hodge splitting into energy and arbitrage components;
+\(\dim\ker\delta^\ast = \bt\); arbitrage-removal as an idempotent reflection;
+the first law (conservation of \(\nu\) in the lossless regime); the second
+(dissipation \(\theta\) makes \(\nu\) a Lyapunov function); and the insistence
+that \(\nu\) is a unit of account and never a medium of exchange.</p>
+<p>From [<a class="cite" href="bibliography.html#bib-compaut" data-cite="compaut">60</a>]: the crossover between a shared substrate and
+autonomous replication, at critical radius \(r^\ast \sim
+\sqrt{\rho v / \varepsilon}\) in an error rate \(\varepsilon\), a repair
+throughput \(\rho\), and a communication speed \(v\); and the closing
+conjecture that this crossover and the factoring of the OSLF-generated
+logic over a population are two views of one threshold. That conjecture is
+what §<a class="xref" href="24-enzymes-and-individuals.html#sec-24-8" data-ref="eng:sec:indiv">24.8</a> cashes.</p>
+<p>From [<a class="cite" href="bibliography.html#bib-KnotsNote" data-cite="KnotsNote">22</a>]: the persistent boundary-forwarder lemma, which is what
+makes an encoding compositional and which supplies
+Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-3" data-ref="eng:prop:wlog">24.3</a>; and the diagnosis, made there, that a
+mediating process written with a linear receipt models one passage rather
+than a passage-way.</p>
+<p>From [<a class="cite" href="bibliography.html#bib-SPJ2000" data-cite="SPJ2000">66</a>]: the combinators <code>zero</code>, <code>one</code>,
+<code>give</code>, <code>and</code>, <code>or</code>, <code>scale</code>,
+<code>truncate</code>, <code>get</code>, and observables.</p>
+<h2 id="sec-24-3"><span class="secnum">24.3</span> Flavors, enzymes, and a fork in the conservation law</h2>
+<h3 id="sec-24-3-1"><span class="secnum">24.3.1</span> Communities are flavors</h3>
+<section class="thm plain thm-definition" id="definition-24-1" data-kind="Definition" data-num="24.1"><header><span class="thm-kind">Definition 24.1</span> <span class="thm-name">The flavor of a learner</span><a class="permalink" href="#definition-24-1" aria-label="Link to Definition 24.1">¶</a></header><p>
+A <em>flavored learner</em> is a learner \(\Lrn\) in the sense of
+§<a class="xref" href="23-composing-learners.html#sec-23-3" data-ref="com:S3">23.3</a> of \(\chComp\) together with a distinguished signature
+\(c(\Lrn) \in \Sig\), its <em>flavor</em>: the signature at the head of every
+stack held at a name in \(\Met(\Lrn)\).</p></section>
+<p>The flavor is not new apparatus. [<a class="cite" href="bibliography.html#bib-CARho" data-cite="CARho">61</a>] already replaces one
+universal fuel by a family of signature-indexed resources, one per
+economically empowered actor; [<a class="cite" href="bibliography.html#bib-CARho" data-cite="CARho">61</a>, \S6] calls the collapse to a
+single \(s_0\) the monochromatic limit. \(\chComp\) works in that limit.
+Taking a community’s flavor to be its own signature is the natural
+un-collapsing, and it is what makes “Terran food and alt-Earth food may
+not be mutually nutritive” a statement the calculus can express: two
+learners whose \(\Met\) stacks carry incomparable signatures cannot eat each
+other’s tokens, however adjacent they are.</p>
+<section class="thm plain thm-definition" id="definition-24-2" data-kind="Definition" data-num="24.2"><header><span class="thm-kind">Definition 24.2</span> <span class="thm-name">Enzyme</span><a class="permalink" href="#definition-24-2" aria-label="Link to Definition 24.2">¶</a></header><p>
+An <em>enzyme</em> between flavors \(a\) and \(b\) is a persistent process
+holding two located reserves, one of each flavor, and offering a linear
+swap: it accepts one \(a\)-token and releases \(r(a{\to}b)\) \(b\)-tokens from
+its own inventory. Its <em>toll</em> is the metering charge of the rendezvous
+that performs the swap.</p></section>
+<section class="thm remarkish thm-remark" id="remark-24-1" data-kind="Remark" data-num="24.1"><header><span class="thm-kind">Remark 24.1</span> <span class="thm-name">On the word, and the one we did not use</span><a class="permalink" href="#remark-24-1" aria-label="Link to Remark 24.1">¶</a></header><p>
+We flirted with <em>engine</em>, and it nearly won. An engine converts between two
+reservoirs at a rate, dissipates as it goes, and has an efficiency; the vocabulary
+arrives pre-loaded with the quantities this chapter needs. The payoff was real and it
+was specific — Remark <a class="xref" href="24-enzymes-and-individuals.html#remark-24-13" data-ref="eng:ecological-pyramid">24.13</a>’s observation that a trophic ratio
+of one in ten is a toll of \(\theta = \ln 10\) is a thermodynamic statement, and
+<em>engine</em> is the word that makes it audible.</p>
+<p>We dropped it because that payoff is the nineteenth century’s, and so is everything
+else that comes with it. Engines are Carnot’s. Reservoirs, efficiency and heat death are
+the furniture of the physics that produced them, and the furniture arrives whether or
+not it was sent for. This book’s move is that the ledger is informational before it is
+thermal: erasure is what costs, and \(\theta\) is a rendezvous toll rather than a
+temperature. To name the object after a steam engine is to import a settled picture at
+precisely the point where the reader should be unsettled. The interlude that opens
+The Turn has its narrator distrust the word <em>inspiration</em> for smelling of the
+nineteenth century, of laudanum and s\’eance. <em>Engine</em> smells of the same decade,
+and is worth distrusting for the same reason.</p>
+<p><em>Enzyme</em> is the twentieth century’s word for the same job, and the better fit
+besides. An enzyme is specific to a substrate pair; it persists while what it binds does
+not, which is exactly Remark <a class="xref" href="24-enzymes-and-individuals.html#remark-24-3" data-ref="eng:persistence-load-bearing">24.3</a>; and its one
+distinguishing degree of freedom is its rate, which is the only property separating the
+fourth row of Table <a class="xref" href="24-enzymes-and-individuals.html#tab-24-1" data-ref="eng:tab:profiles">24.1</a> from a source and from prey. It also settles
+a debt. In a reaction network the no-arbitrage condition around a cycle is the
+Wegscheider condition for detailed balance, and the potential whose existence it is
+equivalent to is a chemical potential. The virtual token has a second name, and chemists
+have been using it since 1901. That identification is ours and we have not checked it
+against the chemical-kinetics literature; a reader who knows that literature should
+treat it as a conjecture with a citation attached rather than a result.</p>
+<p>What is surrendered is the market register — Coase, mycorrhizal trade, and the
+financial combinators the reaction language is built from. Those are kept as analogies
+and the noun is left biochemical, on the grounds that a reader who has just been told
+tokens have flavors is not helped by being told they are burned.</p></section>
+<h3 id="sec-24-3-2"><span class="secnum">24.3.2</span> The fork</h3>
+<p>There is a conservation collision here that must be settled before
+anything else, because the two notes being joined conserve different
+things. \(\chComp\) conserves tokens <em>per flavor</em>: \(\Theta\) is
+fixed and never minted. [<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>] conserves the scalar \(\nu\): an enzyme
+consumes one \(a\) and releases \(r\) units of \(b\), which is not per-flavor
+conserving at all. One must give.</p>
+<ul><li><p><strong>Enzymes hold inventory.</strong> A swap is against stock, so
+per-flavor totals <em>are</em> conserved and \(r\) is the ratio at which
+inventory is exchanged. The cost: enzymes deplete, \(r\) moves with the
+marking, and \(\ell\) becomes a function of state.</p></li><li><p><strong>Conserve only \(\nu\).</strong> Flavors interconvert at fixed
+rates and \(\Theta_\nu\) is the invariant. This matches [<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>] exactly
+but abandons the per-signature ledger the scientist note runs on.</p></li></ul>
+<p>We take (i). It preserves the more specific law, it keeps enzymes mortal
+(an enzyme that runs out of one flavor stops being an enzyme, which is what
+we want of an organism), and its cost — state-dependence — is where the
+content is.</p>
+<section class="thm plain thm-proposition" id="proposition-24-1" data-kind="Proposition" data-num="24.1"><header><span class="thm-kind">Proposition 24.1</span> <span class="thm-name">Arbitrage is a property of a marking</span><a class="permalink" href="#proposition-24-1" aria-label="Link to Proposition 24.1">¶</a></header><p>
+Under (i) the log-rate cochain is a function \(\ell(M)\) of the marking \(M\)
+of the enzyme reserves. Consequently the Hodge splitting
+\(\ell = \ell_{\mathrm{en}} + \ell_{\mathrm{arb}}\) of [<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>, \S4] must
+be taken pointwise in \(M\), and arbitrage-freedom is a condition on a
+<em>state</em> of the ecology rather than on the ecology.</p></section>
+<section class="proof"><header>Proof</header><p>Immediate from Definition <a class="xref" href="24-enzymes-and-individuals.html#definition-24-2" data-ref="eng:def:engine">24.2</a>: the rate is computed from the
+reserves, and a swap changes the reserves. Appendix <a class="xref" href="24-enzymes-and-individuals.html#sec-24-16" data-ref="eng:app:repro">24.16</a>,
+block (4), exhibits a triangle of constant-product enzymes whose cycle
+yield is exactly \(1\) at the balanced marking and departs monotonically as
+one enzyme is drained; six trades of ten units carry
+\(\log \oint \ell\) from \(0\) to \(-1.003\).</p></section>
+<section class="thm remarkish thm-remark" id="remark-24-2" data-kind="Remark" data-num="24.2"><header><span class="thm-kind">Remark 24.2</span> <span class="thm-name">Trading is what removes arbitrage</span><a class="permalink" href="#remark-24-2" aria-label="Link to Remark 24.2">¶</a></header><p>
+Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-1" data-ref="eng:prop:marking">24.1</a> is not a defect. In [<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>] the
+projection \(\Pi\) onto the exact cochains is a least-squares correction
+performed by nobody in particular; the note flags that the operational
+content of “shaking the arbitrage out” is left abstract. Under (i) it is
+concrete and it is metabolic: an arbitrageur is a computation that traces a
+cycle of yield \(> 1\), and each pass moves the reserves in the direction
+that reduces the yield. Arbitrage-removal is not applied to the system, it
+is <em>eaten out</em> of the system, and the eating is metered like anything
+else. This is the sense in which the idempotent reflection of
+[<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>, Prop. 3.4] is realized rather than postulated.</p></section>
+<section class="thm plain thm-corollary" id="corollary-24-1" data-kind="Corollary" data-num="24.1"><header><span class="thm-kind">Corollary 24.1</span> <span class="thm-name">Residual arbitrage</span><a class="permalink" href="#corollary-24-1" aria-label="Link to Corollary 24.1">¶</a></header><p>
+Since each pass of a cycle costs the arbitrageur at least one token, and
+the yield per pass falls monotonically toward \(1\), there is a level of
+arbitrage below which removal is unprofitable. A mortal ecology therefore
+carries a floor of arbitrage set by its own metering, and the floor is
+higher the poorer the ecology.</p></section>
+<p>Corollary <a class="xref" href="24-enzymes-and-individuals.html#corollary-24-1" data-ref="eng:cor:residual">24.1</a> is \(\chSci\), Corollary <a class="xref" href="21-the-mortal-scientist.html#corollary-21-1" data-ref="sci:cor:poverty">21.1</a> — poverty is
+confining — one level up and in a second currency. A rich ecology has
+efficient prices for the same reason a rich scientist can afford deep
+inquiry.</p>
+<h3 id="sec-24-3-3"><span class="secnum">24.3.3</span> The reflexive observable</h3>
+<p>In [<a class="cite" href="bibliography.html#bib-SPJ2000" data-cite="SPJ2000">66</a>] an observable is a time-varying quantity both parties
+agree on, and it is exogenous: the weather, a stock price, a block height.
+Under (i) the observable that sets an enzyme’s rate reads the enzyme’s own
+inventory. This is the one place the combinator language had to be
+extended, and it is worth naming, because it is what turns a contract into
+an organism: the contract’s terms depend on the contract’s state.</p>
+<h2 id="sec-24-4"><span class="secnum">24.4</span> The enzyme is an organism</h2>
+<h3 id="sec-24-4-1"><span class="secnum">24.4.1</span> A fourth access profile</h3>
+<p>§<a class="xref" href="21-the-mortal-scientist.html#sec-21-10" data-ref="sci:S10">21.10</a> of \(\chSci\) separates two ways of being food. A <em>source</em> is
+a persistent emitter: rate-limited, non-exclusive, non-adaptive,
+inexhaustible on the timescale of one learner though finite in the
+aggregate. <em>Prey</em> is a linear send: exhaustible, exclusive, adaptive.
+The distinction is not a distinction of sort or of rewrite rule but of
+multiplicity — a fact about the cut.</p>
+<p>The enzyme is a third way, and it is obtained by taking the same four
+attributes and choosing a combination the table did not previously contain.</p>
+<figure class="float tabfloat" id="tab-24-1"><p>\(\fitwidth\){</p>
+<div class="tablewrap"><table><thead><tr><th></th><th><strong>persistent</strong></th><th><strong>exclusive</strong></th><th><strong>exhaustible</strong></th><th><strong>adaptive</strong></th></tr></thead><tbody><tr><td>Source</td><td>yes</td><td>no</td><td>in aggregate</td><td>no</td></tr><tr><td>Prey</td><td>no</td><td>yes</td><td>yes</td><td>yes</td></tr><tr><td>Scientist</td><td>—as prey, plus grade-3 exposure—</td><td></td><td></td><td></td></tr><tr><td><strong>Enzyme</strong></td><td><strong>yes</strong></td><td><strong>no</strong></td><td><strong>per flavor</strong></td><td><strong>in rate</strong></td></tr></tbody></table></div>
+<p>}</p><figcaption><span class="fignum">Table 24.1</span> The enzyme as a fourth access profile. It is source-like in
+persistence and non-exclusivity, prey-like in exhaustibility, and unique
+in that what adapts is not its behavior under attack but its
+<em>terms</em>.</figcaption></figure>
+<section class="thm plain thm-proposition" id="proposition-24-2" data-kind="Proposition" data-num="24.2"><header><span class="thm-kind">Proposition 24.2</span> <span class="thm-name">The enzyme is derived, not imported</span><a class="permalink" href="#proposition-24-2" aria-label="Link to Proposition 24.2">¶</a></header><p>
+The profile in Table <a class="xref" href="24-enzymes-and-individuals.html#tab-24-1" data-ref="eng:tab:profiles">24.1</a> requires no new sort, no new
+rewrite rule, and no new GSLT. A persistent receipt on a quote channel
+supplies persistence and non-exclusivity; two located reserves supply
+per-flavor exhaustibility; and computing the rate from those reserves
+supplies rate-adaptivity. All three are available in the host calculus of
+\(\chSci\).</p></section>
+<section class="proof"><header>Proof</header><p>Appendix <a class="xref" href="24-enzymes-and-individuals.html#sec-24-15" data-ref="eng:app:rho">24.15</a> exhibits the term. Persistence is <code><=</code>;
+location is a channel, per [<a class="cite" href="bibliography.html#bib-finrho" data-cite="finrho">64</a>, \S2.2]; the rate is a
+<code>for</code>-comprehension over the reserve channels that replaces what it
+reads.</p></section>
+<section class="thm remarkish thm-remark" id="remark-24-3" data-kind="Remark" data-num="24.3"><header><span class="thm-kind">Remark 24.3</span> <span class="thm-name">The persistence is load-bearing</span><a class="permalink" href="#remark-24-3" aria-label="Link to Remark 24.3">¶</a></header><p>
+An enzyme written with a linear receipt models one conversion, not a
+converter — the same bug found and fixed in the knot encoding, where
+crossing gates written with <code><-</code> evaporate after a single
+visitation and model one passage through the diagram rather than the
+diagram. The correct shape is a <em>persistent issuer</em> offering
+<em>linear</em> contracts: the enzyme persists, the substrate binding does
+not.</p></section>
+<section class="thm remarkish thm-remark" id="remark-24-4" data-kind="Remark" data-num="24.4"><header><span class="thm-kind">Remark 24.4</span> <span class="thm-name">What the enzyme eats</span><a class="permalink" href="#remark-24-4" aria-label="Link to Remark 24.4">¶</a></header><p>
+[<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>, \S6] introduces dissipation \(\theta(a{\to}b) \geq 0\) as a
+modeling parameter and reads the resulting inequality as the second law.
+Here \(\theta\) is not posited. Every rendezvous is metered, and the swap is
+a rendezvous, so \(\theta\) <em>is</em> the toll — and it accrues to the
+enzyme’s own stack, because something has to fund the enzyme’s continued
+existence and nothing else is available. The second law and the enzyme’s
+metabolism are the same fact. An enzyme whose traffic falls below its burn
+rate starves, exactly as a scientist does.</p></section>
+<section class="thm remarkish thm-remark" id="remark-24-5" data-kind="Remark" data-num="24.5"><header><span class="thm-kind">Remark 24.5</span> <span class="thm-name">Not a decomposer</span><a class="permalink" href="#remark-24-5" aria-label="Link to Remark 24.5">¶</a></header><p>
+It is tempting to call the enzyme a decomposer, on the grounds that it
+lives on what others cannot metabolize. The better analogue is the
+mycorrhizal network [<a class="cite" href="bibliography.html#bib-kiers" data-cite="kiers">71</a>]: it does not consume waste, it makes two
+otherwise incommensurable metabolisms mutually available and takes a cut.
+That literature is also the right prior art for
+§<a class="xref" href="24-enzymes-and-individuals.html#sec-24-6-3" data-ref="eng:sec:bridge">24.6.3</a>, since it studies exchange rates set by partner choice
+and outside options rather than by no-arbitrage [<a class="cite" href="bibliography.html#bib-noe" data-cite="noe">70</a>].</p></section>
+<h3 id="sec-24-4-2"><span class="secnum">24.4.2</span> The combinators as reaction language</h3>
+<p>With the organism identified, the combinators of [<a class="cite" href="bibliography.html#bib-SPJ2000" data-cite="SPJ2000">66</a>] sit one
+level down: they name the enzyme’s reactions, not the enzyme.</p>
+<p><code>one</code>\((k)\) is the funded unit transfer; <code>give</code> swaps which
+signature funds the leg, which [<a class="cite" href="bibliography.html#bib-finrho" data-cite="finrho">64</a>, \S3.1] observes is exactly the
+two-sided surface of the cut made operational. <code>scale</code>\((o,c)\)
+carries the rate, and by [<a class="cite" href="bibliography.html#bib-finrho" data-cite="finrho">64</a>, \S3.6] scaling multiplies the amount
+moved and <em>not</em> the fuel demand — cost counts funded rendezvous, not
+magnitude. <code>and</code> is the atomic join, under which the partial-funding
+hazard is structurally impossible.</p>
+<section class="thm remarkish thm-observation" id="observation-24-1" data-kind="Observation" data-num="24.1"><header><span class="thm-kind">Observation 24.1</span> <span class="thm-name">The swap is the netted futures shape</span><a class="permalink" href="#observation-24-1" aria-label="Link to Observation 24.1">¶</a></header><p>
+An enzyme’s conversion is
+<span class="math-d">\[\texttt{and}\bigl(\texttt{scale}(o,\texttt{one}(a)),\;
+                    \texttt{give}(\texttt{one}(b))\bigr),\]</span>
+Pattern (A) of [<a class="cite" href="bibliography.html#bib-finrho" data-cite="finrho">64</a>, Tab. 1], bilateral cash settlement. That
+note shows the apparatus rewards the netted form: one transfer in the
+data-dependent direction instead of two gross legs, atomic by construction
+and costing one token instead of two.</p></section>
+<section class="thm plain thm-corollary" id="corollary-24-2" data-kind="Corollary" data-num="24.2"><header><span class="thm-kind">Corollary 24.2</span> <span class="thm-name">Netting is thermodynamic</span><a class="permalink" href="#corollary-24-2" aria-label="Link to Corollary 24.2">¶</a></header><p>
+Since \(\theta\) is the toll (Remark <a class="xref" href="24-enzymes-and-individuals.html#remark-24-4" data-ref="eng:rem:eats">24.4</a>), netting halves the
+dissipation on every conversion. What [<a class="cite" href="bibliography.html#bib-finrho" data-cite="finrho">64</a>] presents as a
+settlement optimization is, in this reading, a reduction of the second-law
+loss along every edge of the enzyme graph, and hence — by
+§<a class="xref" href="24-enzymes-and-individuals.html#sec-24-6-4" data-ref="eng:sec:decay">24.6.4</a> — an increase in the profitable radius.</p></section>
+<p>The temporal combinators do work too, and §<a class="xref" href="24-enzymes-and-individuals.html#sec-24-11" data-ref="eng:sec:credit">24.11</a> takes them up.</p>
+<h2 id="sec-24-5"><span class="secnum">24.5</span> The medium</h2>
+<h3 id="sec-24-5-1"><span class="secnum">24.5.1</span> Interposition is without loss of generality</h3>
+<p>The host calculus takes communication to be perfect. It does so without
+loss of generality, because imperfection can be modeled as an additional
+process rather than an additional rule: races and higher-order channels
+suffice. Generalize
+<span class="math-d">\[\texttt{for}(y \leftarrow x)P \mid x!(Q)
+  \qquad\text{to}\qquad
+  \texttt{for}(y \leftarrow x_1)P \mid C(x_1,x_2) \mid x_2!(Q),\]</span>
+where \(C\) is any process joining the two endpoints. The simplest \(C\) is a
+persistent two-way forwarder; richer ones do arbitrarily more.</p>
+<section class="thm plain thm-proposition" id="proposition-24-3" data-kind="Proposition" data-num="24.3"><header><span class="thm-kind">Proposition 24.3</span> <span class="thm-name">The perfect case is a special case</span><a class="permalink" href="#proposition-24-3" aria-label="Link to Proposition 24.3">¶</a></header><p>
+When \(C\) is the persistent two-way forwarder on \((x_1,x_2)\), the interposed
+term is weakly bisimilar to the direct one. Hence nothing is lost by
+working in the general form, and the perfect-communication calculus is
+recovered as the identity medium.</p></section>
+<section class="proof"><header>Proof</header><p>This is the boundary-forwarder lemma of the knot encoding
+[<a class="cite" href="bibliography.html#bib-KnotsNote" data-cite="KnotsNote">22</a>], whose persistence is exactly what makes the encoding
+compositional. The forwarding steps are \(\tau\) and are absorbed by weak
+bisimulation; persistence is required, since a linear forwarder relays once
+and then is not a channel.</p></section>
+<section class="thm plain thm-definition" id="definition-24-3" data-kind="Definition" data-num="24.3"><header><span class="thm-kind">Definition 24.3</span> <span class="thm-name">Loss and corruption</span><a class="permalink" href="#definition-24-3" aria-label="Link to Definition 24.3">¶</a></header><p>
+A medium <em>drops</em> when it receives on \(x_1\) and emits nothing, and
+<em>corrupts</em> when it emits a value other than the one received. Write
+\(p \in (0,1]\) for the per-hop probability that a message is relayed
+faithfully.</p></section>
+<section class="thm remarkish thm-remark" id="remark-24-6" data-kind="Remark" data-num="24.6"><header><span class="thm-kind">Remark 24.6</span> <span class="thm-name">Interposition is not cost-preserving, and that is \(\theta\)</span><a class="permalink" href="#remark-24-6" aria-label="Link to Remark 24.6">¶</a></header><p>
+Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-3" data-ref="eng:prop:wlog">24.3</a> is a statement about behavior, not about
+metering: a single gated rendezvous becomes at least two. So interposition
+is not a morphism in the cost-accounted category of [<a class="cite" href="bibliography.html#bib-CE" data-cite="CE">62</a>] — it
+multiplies the gated transitions rather than preserving them — and the
+defect is exactly the dissipation \(\theta\) that §<a class="xref" href="24-enzymes-and-individuals.html#sec-24-4" data-ref="eng:sec:organism">24.4</a>
+attributes to the enzyme. This is the third instance in the series of one
+pattern: in §<a class="xref" href="23-composing-learners.html#sec-23-4-3" data-ref="com:S4.3">23.4.3</a> of \(\chComp\) the lax comparison map’s defect is the
+interaction; here the interposition’s defect is the cost of distance.
+Distance is not a parameter of this calculus. Distance is interposition,
+and its price is the failure of a map to be strict.</p></section>
+<h3 id="sec-24-5-2"><span class="secnum">24.5.2</span> A ladder of media</h3>
+<figure class="float tabfloat" id="tab-24-2"><p>\(\fitwidth\){</p>
+<div class="tablewrap"><table><thead><tr><th><strong>Rung</strong></th><th><strong>What \(C\) does</strong></th><th><strong>What it contributes</strong></th></tr></thead><tbody><tr><td>relay</td><td>forwards faithfully</td><td>\(\theta_{\mathrm{toll}}\) only</td></tr><tr><td>lossy</td><td>drops with probability \(1-p\)</td><td>\(\theta_{\mathrm{loss}}\),
+                                              stranding</td></tr><tr><td>corrupting</td><td>emits a wrong value</td><td>the syndrome of
+                                              Theorem <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-1" data-ref="eng:thm:detect">24.1</a></td></tr><tr><td>reading</td><td>forwards and retains</td><td>grade-one access to all
+                                              traffic</td></tr><tr><td>converting</td><td>swaps flavor against inventory</td><td>the enzyme of
+                                              Definition <a class="xref" href="24-enzymes-and-individuals.html#definition-24-2" data-ref="eng:def:engine">24.2</a></td></tr></tbody></table></div>
+<p>}</p><figcaption><span class="fignum">Table 24.2</span> Media classified by behavior. The enzyme is the top rung, so the
+fourth access profile of Table <a class="xref" href="24-enzymes-and-individuals.html#tab-24-1" data-ref="eng:tab:profiles">24.1</a> is not a separate kind of
+thing but the most behaviorally elaborate interposition.</figcaption></figure>
+<section class="thm remarkish thm-remark" id="remark-24-7" data-kind="Remark" data-num="24.7"><header><span class="thm-kind">Remark 24.7</span> <span class="thm-name">The intermediary learns most</span><a class="permalink" href="#remark-24-7" aria-label="Link to Remark 24.7">¶</a></header><p>
+A reading medium on a bridge has grade-one access to everything crossing
+it. §<a class="xref" href="24-enzymes-and-individuals.html#sec-24-10" data-ref="eng:sec:incomm">24.10</a> argues that commerce across an incommensurable
+boundary can only be epistemic; Table <a class="xref" href="24-enzymes-and-individuals.html#tab-24-2" data-ref="eng:tab:ladder">24.2</a> adds that the
+boundary itself is an epistemic asset, and that whoever runs the forwarder
+is best placed to harvest it. This is not a decoration: it predicts that
+intermediaries accumulate information rents, which is what intermediaries
+observably do.</p></section>
+<h3 id="sec-24-5-3"><span class="secnum">24.5.3</span> Loss is stranding, and stranding is exergy</h3>
+<section class="thm plain thm-proposition" id="proposition-24-4" data-kind="Proposition" data-num="24.4"><header><span class="thm-kind">Proposition 24.4</span> <span class="thm-name">Dropped tokens are stranded, not destroyed</span><a class="permalink" href="#proposition-24-4" aria-label="Link to Proposition 24.4">¶</a></header><p>
+Under fork (i) the per-flavor totals are conserved by construction. A
+message dropped by a lossy medium is therefore not annihilated: it rests on
+a channel no process will receive on. Total value \(\nu\) is conserved;
+<em>available</em> value strictly decreases.</p></section>
+<section class="thm plain thm-corollary" id="corollary-24-3" data-kind="Corollary" data-num="24.3"><header><span class="thm-kind">Corollary 24.3</span> <span class="thm-name">The second law, with a mechanism</span><a class="permalink" href="#corollary-24-3" aria-label="Link to Corollary 24.3">¶</a></header><p>
+The free-energy reading that [<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>, Rmk. 6.2] wants and can only
+posit is here realized. Exergy is \(\nu\) minus the measure of the stranded
+set, and it is monotone because stranding is irreversible: recovering a
+stranded message would require a process that can name the channel it rests
+on, which by construction is the medium that failed.</p></section>
+<section class="thm plain thm-proposition" id="proposition-24-5" data-kind="Proposition" data-num="24.5"><header><span class="thm-kind">Proposition 24.5</span> <span class="thm-name">The two dissipations add</span><a class="permalink" href="#proposition-24-5" aria-label="Link to Proposition 24.5">¶</a></header><p>
+Along a path of \(d\) hops, tolls accumulate additively and reliability
+compounds as \(p^d\). Writing
+\(\theta = \theta_{\mathrm{toll}} + \theta_{\mathrm{loss}}\) with
+\(\theta_{\mathrm{loss}} = -\log p\), both contributions are additive in the
+cost metric and the delivered value is \(\nu e^{-\theta d}\) as before.</p></section>
+<p>So Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-12" data-ref="eng:prop:radius">24.12</a>’s profitable radius is partly an
+information horizon and not only an economic one: a pathway can price
+itself out either by charging too much or by losing too much, and the two
+enter the same exponent.</p>
+<section class="thm remarkish thm-remark" id="remark-24-8" data-kind="Remark" data-num="24.8"><header><span class="thm-kind">Remark 24.8</span> <span class="thm-name">Corruption is where the syndrome comes from</span><a class="permalink" href="#remark-24-8" aria-label="Link to Remark 24.8">¶</a></header><p>
+Theorem <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-1" data-ref="eng:thm:detect">24.1</a> treats a corrupted rate \(a\mathbf{1}_e\) as given.
+Table <a class="xref" href="24-enzymes-and-individuals.html#tab-24-2" data-ref="eng:tab:ladder">24.2</a> says where it comes from: a corrupting medium on the
+quote path of enzyme \(e\). The price code is not detecting an abstract
+misquotation; it is detecting the medium.</p></section>
+<h3 id="sec-24-5-4"><span class="secnum">24.5.4</span> The medium is a namespace, and it is higher order</h3>
+<p>Since \(C\) is a process, \(@C\) is a name, and \(*@C = C\) recovers the process.
+Media are therefore nameable, and the media of a region form a namespace.</p>
+<section class="thm plain thm-definition" id="definition-24-4" data-kind="Definition" data-num="24.4"><header><span class="thm-kind">Definition 24.4</span> <span class="thm-name">Medium namespace</span><a class="permalink" href="#definition-24-4" aria-label="Link to Definition 24.4">¶</a></header><p>
+For a region \(B\), put
+<span class="math-d">\[\Chn(B) \;=\; \bigl\{\, @C \;:\; C \text{ mediates a rendezvous
+  within } B \,\bigr\}.\]</span></p></section>
+<p>This namespace is higher order in two senses, and both do work. First,
+\(C\)’s free names are the endpoints it joins, so \(@C\) sits one level up
+the reflection tower from the names it carries: a medium is a name for a
+carrier of names. Second, a rich \(C\) is itself realized by interposition,
+so media are mediated by media.</p>
+<section class="thm plain thm-proposition" id="proposition-24-6" data-kind="Proposition" data-num="24.6"><header><span class="thm-kind">Proposition 24.6</span> <span class="thm-name">The tower</span><a class="permalink" href="#proposition-24-6" aria-label="Link to Proposition 24.6">¶</a></header><p>
+\(\Chn\) at one level is the endpoint namespace at the next: the media over
+which a region’s parts communicate are the channels of the region taken as
+a part of something larger. The tower is well-founded downwards, since by
+the no-self-code theorem a name codes a strictly smaller term, and bounded
+upwards by Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-12" data-ref="eng:prop:radius">24.12</a>, since a level whose media exceed
+the profitable radius has no traffic to mediate.</p></section>
+<p>Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-6" data-ref="eng:prop:tower">24.6</a> is the fractal of §<a class="xref" href="24-enzymes-and-individuals.html#sec-24-9" data-ref="eng:sec:hier">24.9</a> stated on
+the naming side rather than by analogy, and it supplies the generating step
+that closure under \(\mid\) could not: <em>the outside of one level is the
+inside of the next</em>.</p>
+<h3 id="sec-24-5-5"><span class="secnum">24.5.5</span> Inside, outside, and porosity</h3>
+<p>Individuality is not total closure. An individual that could not be
+impinged upon could not eat and could not learn. The right notion is
+partial closure, and the partition it needs is already in the corpus.</p>
+<section class="thm plain thm-definition" id="definition-24-5" data-kind="Definition" data-num="24.5"><header><span class="thm-kind">Definition 24.5</span> <span class="thm-name">Three kinds of medium</span><a class="permalink" href="#definition-24-5" aria-label="Link to Definition 24.5">¶</a></header><p>
+Relative to a region \(B\), a medium is <em>internal</em> if both endpoints lie
+in \(B\), <em>boundary</em> if exactly one does, and <em>both-type</em> if it
+supports rendezvous of each kind. This is the channel classification of
+§<a class="xref" href="21-the-mortal-scientist.html#sec-21-12-6" data-ref="sci:S12.6">21.12.6</a> of \(\chSci\) applied one level up, to media rather than to
+endpoints. Write \(\Chn_{\mathrm{in}}(B)\), \(\Chn_{\partial}(B)\).</p></section>
+<section class="thm plain thm-definition" id="definition-24-6" data-kind="Definition" data-num="24.6"><header><span class="thm-kind">Definition 24.6</span> <span class="thm-name">Individual</span><a class="permalink" href="#definition-24-6" aria-label="Link to Definition 24.6">¶</a></header><p>
+A region \(B\) is an <em>individual</em> when \(\Chn_{\mathrm{in}}(B)\) is closed
+— every medium of an internal rendezvous is nameable from within \(B\) —
+while \(\Chn_{\partial}(B)\) is not. Internal communication may be
+arbitrarily complex; what is required is not simplicity but ownership.</p></section>
+<section class="thm plain thm-proposition" id="proposition-24-7" data-kind="Proposition" data-num="24.7"><header><span class="thm-kind">Proposition 24.7</span> <span class="thm-name">Perfect closure is death</span><a class="permalink" href="#proposition-24-7" aria-label="Link to Proposition 24.7">¶</a></header><p>
+If \(\Chn_{\partial}(B) = \emptyset\) then \(B\) has no grade-one or grade-two
+access across its cut. By §<a class="xref" href="21-the-mortal-scientist.html#sec-21-5" data-ref="sci:S5">21.5</a> of \(\chSci\) it cannot harvest, so
+\(\sigma\) is monotone decreasing and \(B\) starves; and it can run no assay,
+so it cannot revise. Total closure is fatal in both currencies.</p></section>
+<p>Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-7" data-ref="eng:prop:closuredeath">24.7</a> is the individuation-level analogue of
+the game note’s result that a solved science is a dead ecology. Perfection
+of a boundary and perfection of a theory fail in the same way.</p>
+<section class="thm plain thm-proposition" id="proposition-24-8" data-kind="Proposition" data-num="24.8"><header><span class="thm-kind">Proposition 24.8</span> <span class="thm-name">Porosity requires redex pathways</span><a class="permalink" href="#proposition-24-8" aria-label="Link to Proposition 24.8">¶</a></header><p>
+An open boundary name is not yet porosity. For the environment to impinge,
+a boundary channel must carry a chain of redexes reaching a redex on an
+internal channel; symmetrically, for the individual to act, an internal
+redex must reach a boundary one. A boundary channel with no such pathway is
+a stranding site in the sense of Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-4" data-ref="eng:prop:strand">24.4</a>: messages
+arriving there are conserved and unavailable.</p></section>
+<section class="thm remarkish thm-remark" id="remark-24-9" data-kind="Remark" data-num="24.9"><header><span class="thm-kind">Remark 24.9</span> <span class="thm-name">The same undecidability, and the same remedy</span><a class="permalink" href="#remark-24-9" aria-label="Link to Remark 24.9">¶</a></header><p>
+“Has a redex pathway to an internal redex” is undecidable in general, for
+the reason §<a class="xref" href="21-the-mortal-scientist.html#sec-21-12-5" data-ref="sci:S12.5">21.12.5</a> of \(\chSci\) gives for “will communicate”. We
+inherit that note’s remedy: take the syntactic over-approximation — the
+interaction graph on shared names — and accept that it over-counts.</p></section>
+<section class="thm plain thm-definition" id="definition-24-7" data-kind="Definition" data-num="24.7"><header><span class="thm-kind">Definition 24.7</span> <span class="thm-name">Integration depth</span><a class="permalink" href="#definition-24-7" aria-label="Link to Definition 24.7">¶</a></header><p>
+The <em>integration depth</em> of a percept is the length of the redex
+pathway of Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-8" data-ref="eng:prop:pathway">24.8</a> from the boundary channel at
+which it enters to the internal redex at which it is used. Depth one is
+reflex; greater depth composes information from more of the surface.</p></section>
+<section class="thm plain thm-proposition" id="proposition-24-9" data-kind="Proposition" data-num="24.9"><header><span class="thm-kind">Proposition 24.9</span> <span class="thm-name">Deep integration is exponentially fragile</span><a class="permalink" href="#proposition-24-9" aria-label="Link to Proposition 24.9">¶</a></header><p>
+A percept of integration depth \(d\) traverses \(d\) hops of internal medium
+and survives with probability \(p^d\). Its cost is \(d\) metered rendezvous.
+Hence for saturating gains \(Y(d)\) the net value \(Y(d)p^d - cd\) has an
+interior maximum whose location falls with \(p\).</p></section>
+<section class="thm plain thm-corollary" id="corollary-24-4" data-kind="Corollary" data-num="24.4"><header><span class="thm-kind">Corollary 24.4</span> <span class="thm-name">Ownership is what buys depth</span><a class="permalink" href="#corollary-24-4" aria-label="Link to Corollary 24.4">¶</a></header><p>
+Integration depth is not purchased with budget alone. It is purchased with
+reliability, and reliability is available only on a medium the individual
+can name — since retransmission requires grade-two access to \(@C\).
+Definition <a class="xref" href="24-enzymes-and-individuals.html#definition-24-6" data-ref="eng:def:indiv">24.6</a> is therefore not a stipulation: closure of the
+internal medium is the condition under which deep integration is
+affordable, and deep integration is what distinguishes an individual from a
+bag of reflexes.</p></section>
+<p>Computed in Appendix <a class="xref" href="24-enzymes-and-individuals.html#sec-24-16" data-ref="eng:app:repro">24.16</a>, block (5), with \(Y_0 = 100\),
+\(Y(d) = Y_0(1-2^{-d})\), \(c=2\): optimal depth \(d^\ast = 5\) at \(p = 0.999\)
+and \(p=0.99\), falling to \(3\) at \(p = 0.95\) and \(0.90\) and to \(2\) at
+\(p = 0.75\), with net value falling from \(86.4\) to \(38.2\) across that range.
+An organism with an unrepaired medium is not merely slower; it is
+structurally shallower.</p>
+<section class="thm remarkish thm-remark" id="remark-24-10" data-kind="Remark" data-num="24.10"><header><span class="thm-kind">Remark 24.10</span> <span class="thm-name">Two axes</span><a class="permalink" href="#remark-24-10" aria-label="Link to Remark 24.10">¶</a></header><p>
+Table <a class="xref" href="24-enzymes-and-individuals.html#tab-24-2" data-ref="eng:tab:ladder">24.2</a> classifies media by <em>behavior</em>; Definition 
+<a class="xref" href="24-enzymes-and-individuals.html#definition-24-5" data-ref="eng:def:three">24.5</a> classifies them by <em>ownership</em>. Individuation lives on
+the second axis only. An enzyme may be internal or boundary, and which it
+is decides whether the region containing it is one economy or two; what it
+does decides how much it costs to be either.</p></section>
+<section class="thm remarkish thm-remark" id="remark-24-11" data-kind="Remark" data-num="24.11"><header><span class="thm-kind">Remark 24.11</span> <span class="thm-name">Individuation is a fixed point</span><a class="permalink" href="#remark-24-11" aria-label="Link to Remark 24.11">¶</a></header><p>
+Definition <a class="xref" href="24-enzymes-and-individuals.html#definition-24-6" data-ref="eng:def:indiv">24.6</a> partitions \(\Chn(B)\) relative to a choice of
+\(B\), and \(B\) was to be determined by the criterion. This is a fixed-point
+condition rather than a construction, and its multiple solutions are the
+levels of §<a class="xref" href="24-enzymes-and-individuals.html#sec-24-9" data-ref="eng:sec:hier">24.9</a>: the circularity is the fractality. We state the
+condition and do not claim an algorithm for finding its solutions.</p>
+<p>Which fixed point, though, is a question with an answer, and
+Chapter <a class="xref" href="18-scopes-and-the-fixed-points-that-generate-them.html#top" data-ref="ch:scope">18</a> supplies the vocabulary for it: a solution is a
+<em>generator</em> for the region’s scope, and
+Remark <a class="xref" href="18-scopes-and-the-fixed-points-that-generate-them.html#remark-18-4" data-ref="sco:rmk:munu">18.4</a> argues that a budgeted inhabitant can only
+occupy a least one, since a membership test that does not terminate is
+a cost with no receipt.</p></section>
+<h2 id="sec-24-6"><span class="secnum">24.6</span> The enzyme graph</h2>
+<h3 id="sec-24-6-1"><span class="secnum">24.6.1</span> Two graphs, one geometry</h3>
+<p>There are now two graphs in play and they must not be confused. The
+<em>composition graph</em> has learners as vertices and shared names as
+edges; its edge data is the grading vector \(\mathbf{k}\), and
+§<a class="xref" href="23-composing-learners.html#sec-23-5" data-ref="com:S5">23.5</a> of \(\chComp\) reads ecological relations off it. The <em>enzyme
+graph</em> \(\Gamma\) has flavors as vertices and enzymes as edges; its edge data
+is the log-rate \(\ell\) and the dissipation \(\theta\).</p>
+<p>They are related but not identical. An enzyme is a shared name, hence a
+spanning redex, hence an edge of the composition graph; and since the
+shared name is one at which stacks are held and drawn, it is of type
+\(\Met\). So:</p>
+<section class="thm plain thm-proposition" id="proposition-24-10" data-kind="Proposition" data-num="24.10"><header><span class="thm-kind">Proposition 24.10</span> <span class="thm-name">Conversion is metabolic overlap</span><a class="permalink" href="#proposition-24-10" aria-label="Link to Proposition 24.10">¶</a></header><p>
+Two learners linked by an enzyme have \(k_{\mathrm{met}} \geq 1\). Hence by
+the factorization theorem of §<a class="xref" href="23-composing-learners.html#sec-23-4-2" data-ref="com:S4.2">23.4.2</a> of \(\chComp\) they are not
+probabilistically independent, and by
+Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-13" data-ref="eng:prop:nomet2">24.13</a> below their overlap cannot be positive-sum in
+tokens.</p></section>
+<section class="thm remarkish thm-remark" id="remark-24-12" data-kind="Remark" data-num="24.12"><header><span class="thm-kind">Remark 24.12</span> <span class="thm-name">The vertices are the atomic flavors</span><a class="permalink" href="#remark-24-12" aria-label="Link to Remark 24.12">¶</a></header><p>
+By [<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>, Prop. 4.4] a valuation is a homomorphism out of \(\Sig\) and
+induces no enzyme; in particular no enzyme converts a compound authority
+\(s_1 * s_2\) into a single \(s'\), since that would launder the multi-signature
+guarantee. Compound signatures are therefore priced but unreachable: they
+are vertices of no enzyme. Throughout, \(\Gamma\) is taken on the atomic
+flavors, and \(\bt\) is computed there.</p></section>
+<section class="thm plain thm-definition" id="definition-24-8" data-kind="Definition" data-num="24.8"><header><span class="thm-kind">Definition 24.8</span> <span class="thm-name">The cost metric</span><a class="permalink" href="#definition-24-8" aria-label="Link to Definition 24.8">¶</a></header><p>
+Weight each edge of \(\Gamma\) by its dissipation \(\theta\) and let \(d_\theta\)
+be the induced path metric. This is the geometry the composition note
+lacked, and it is the only geometry available: the framework has no ambient
+space, so “far” can only mean <em>expensive</em>, in the sense of the
+geometric weight of [<a class="cite" href="bibliography.html#bib-CE" data-cite="CE">62</a>].</p></section>
+<h3 id="sec-24-6-2"><span class="secnum">24.6.2</span> The cycle space is a code</h3>
+<p>Recall from [<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>] that \(\ell\) is arbitrage-free iff it is exact,
+\(\ell = -\delta p\), and that \(C^1 = \operatorname{im}\delta \oplus
+\ker\delta^\ast\) splits orthogonally into the exact (gradient) and cycle
+parts, with \(\dim\ker\delta^\ast = \bt(\Gamma)\). Write \(\Pi_{\Cut}\) and
+\(\Pi_{\Cyc}\) for the two projections, and for an enzyme \(e\) let \(\Reff(e)\)
+be its effective resistance in \(\Gamma\) with unit conductances. Recall the
+standard identity \(\Reff(e) = (\Pi_{\Cut})_{ee}\).</p>
+<section class="thm plain thm-definition" id="definition-24-9" data-kind="Definition" data-num="24.9"><header><span class="thm-kind">Definition 24.9</span> <span class="thm-name">Syndrome</span><a class="permalink" href="#definition-24-9" aria-label="Link to Definition 24.9">¶</a></header><p>
+For an observed log-rate cochain \(\ell\), the <em>syndrome</em> is
+\(\ell_{\mathrm{arb}} = \Pi_{\Cyc}\,\ell\). It is zero iff the observed rates
+are consistent with some price list.</p></section>
+<section class="thm plain thm-theorem" id="theorem-24-1" data-kind="Theorem" data-num="24.1"><header><span class="thm-kind">Theorem 24.1</span> <span class="thm-name">Detection strength</span><a class="permalink" href="#theorem-24-1" aria-label="Link to Theorem 24.1">¶</a></header><p>
+Let the true rates be exact and let a single enzyme \(e\) be corrupted by
+\(a\) in log-rate, \(\ell = \ell_{\mathrm{true}} + a\,\mathbf{1}_e\). Then
+<span class="math-d">\[\| \ell_{\mathrm{arb}} \|^2 \;=\; a^2\bigl(1 - \Reff(e)\bigr).\]</span>
+In particular the corruption is undetectable iff \(\Reff(e) = 1\) iff \(e\) is
+a bridge of \(\Gamma\).</p></section>
+<section class="proof"><header>Proof</header><p>\(\ell_{\mathrm{true}}\) is exact so \(\Pi_{\Cyc}\ell_{\mathrm{true}} = 0\) and
+\(\ell_{\mathrm{arb}} = a\,\Pi_{\Cyc}\mathbf{1}_e\). Since \(\Pi_{\Cyc}\) is an
+orthogonal projection,
+\(\|\Pi_{\Cyc}\mathbf{1}_e\|^2 = (\Pi_{\Cyc})_{ee} = 1 - (\Pi_{\Cut})_{ee}
+= 1 - \Reff(e)\). An edge lies in no cycle iff it is a bridge, and
+\(\mathbf{1}_e \perp \ker\delta^\ast\) iff \(\Pi_{\Cyc}\mathbf{1}_e = 0\);
+equivalently \(\Reff(e) = 1\), which for unit conductances characterizes
+bridges.</p></section>
+<section class="thm plain thm-theorem" id="theorem-24-2" data-kind="Theorem" data-num="24.2"><header><span class="thm-kind">Theorem 24.2</span> <span class="thm-name">The code’s total strength is \(\bt\)</span><a class="permalink" href="#theorem-24-2" aria-label="Link to Theorem 24.2">¶</a></header><p>
+For any connected enzyme graph,
+<span class="math-d">\[\sum_{e \in E} \bigl(1 - \Reff(e)\bigr)
+  \;=\; |E| - (|V| - 1) \;=\; \bt(\Gamma).\]</span></p></section>
+<section class="proof"><header>Proof</header><p>Foster’s theorem [<a class="cite" href="bibliography.html#bib-foster" data-cite="foster">67</a>] gives \(\sum_e \Reff(e) = |V| - 1\);
+equivalently \(\operatorname{tr}\Pi_{\Cut} = \operatorname{rank}\delta =
+|V|-1\). Subtract from \(|E| = \operatorname{tr} I\).</p></section>
+<p>Theorem <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-2" data-ref="eng:thm:foster">24.2</a> is the sharp form of the note’s second claim. A
+price system carries a fixed budget of self-checking, equal to the number
+of independent arbitrage cycles, and the geometry of the enzyme graph
+decides how that budget is distributed across enzymes. Dense regions get
+most of it; bridges get none. Verified numerically in
+Appendix <a class="xref" href="24-enzymes-and-individuals.html#sec-24-16" data-ref="eng:app:repro">24.16</a>: for the barbell of two \(K_5\)’s joined by a single
+enzyme, \(\bt = 12\) and \(\sum_e(1-\Reff) = 12.000000\), with the bridge
+contributing \(0\) and each cluster edge contributing \(0.6\).</p>
+<section class="thm plain thm-proposition" id="proposition-24-11" data-kind="Proposition" data-num="24.11"><header><span class="thm-kind">Proposition 24.11</span> <span class="thm-name">Series enzymes are confusable</span><a class="permalink" href="#proposition-24-11" aria-label="Link to Proposition 24.11">¶</a></header><p>
+Two corrupted enzymes \(e, f\) produce the same syndrome direction iff
+\(\Pi_{\Cyc}\mathbf{1}_e \parallel \Pi_{\Cyc}\mathbf{1}_f\), which holds iff
+\(e\) and \(f\) lie in exactly the same cycles. Hence enzymes in series — a
+chain through vertices of degree two — cannot be told apart by the code,
+while enzymes in parallel can.</p></section>
+<p>In \(C_6\), where \(\bt = 1\), all \(15\) edge pairs are confusable: a
+one-dimensional cycle space detects that <em>something</em> is wrong and
+never what. In the barbell, no pair is. The code localizes exactly when the
+ecology is dense.</p>
+<section class="thm plain thm-corollary" id="corollary-24-5" data-kind="Corollary" data-num="24.5"><header><span class="thm-kind">Corollary 24.5</span> <span class="thm-name">Density buys detection</span><a class="permalink" href="#corollary-24-5" aria-label="Link to Corollary 24.5">¶</a></header><p>
+In a \(d\)-regular enzyme graph on \(n\) flavors the mean detection strength is
+exactly \(1 - 2(n-1)/(nd)\), approaching \(1 - 2/d\). Measured: \(0.344\) at
+\(d=3\), \(0.672\) at \(d=6\), \(0.902\) at \(d=20\) for \(n=60\).</p></section>
+<h3 id="sec-24-6-3"><span class="secnum">24.6.3</span> Bridges carry no pricing discipline</h3>
+<p>Theorem <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-1" data-ref="eng:thm:detect">24.1</a> has a consequence that reframes the interstellar
+picture. A thin pathway between two dense components is a cut edge; cut
+edges lie in no cycle; so no-arbitrage constrains a bridge rate <em>not
+at all</em>. Path-independence is vacuous when there is one path.</p>
+<section class="thm plain thm-corollary" id="corollary-24-6" data-kind="Corollary" data-num="24.6"><header><span class="thm-kind">Corollary 24.6</span> <span class="thm-name">The numeraire is global but uninformative across a cut</span><a class="permalink" href="#corollary-24-6" aria-label="Link to Corollary 24.6">¶</a></header><p>
+If \(\Gamma\) is connected then a valuation \(\nu\) exists globally and is
+unique up to gauge, by [<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>, Thm. 3.3]. But the rate on a bridge is
+unconstrained by the no-arbitrage condition: any value of it extends to a
+consistent \(\nu\). Within a dense component each rate is over-determined by
+many independent cycles; across a bridge it is under-determined.</p></section>
+<p>So the right statement is about <em>redundancy</em>, not existence. This also
+inverts the compression proposition of [<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>, \S5]: the collapse from
+\(O(n^2)\) bilateral rates to \(O(n)\) prices is exactly the redundancy, read
+as a code. Compression and error correction are the same \(\bt\) counted from
+opposite ends, which is precisely the trade-off [<a class="cite" href="bibliography.html#bib-compaut" data-cite="compaut">60</a>] is about.</p>
+<figure class="float figfloat" id="fig-24-1"><p>\(\fitwidth{
+<figure class="tikz"><img src="../figures/fb5b29b9916b.svg" alt="Diagram"></figure>}\)</p><figcaption><span class="fignum">Figure 24.1</span> The price code on a barbell enzyme graph. Twenty intra-cluster
+enzymes each carry \(0.6\) of detection strength; the bridge carries none.
+The total is \(\bt\) exactly (Theorem <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-2" data-ref="eng:thm:foster">24.2</a>). A misquoted rate
+inside a cluster produces a syndrome and is localizable; a misquoted rate
+on the bridge is invisible.</figcaption></figure>
+<h3 id="sec-24-6-4"><span class="secnum">24.6.4</span> Decay along a pathway</h3>
+<p>By [<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>, Prop. 6.1], dissipation makes \(\nu\) non-increasing along
+enzyme operations. Along a path of length \(d\) in the cost metric the
+delivered value is \(\nu e^{-\theta d}\). Set against the foraging
+inequality’s requirement that a harvest exceed the cost of obtaining it,
+and taking a round-trip toll linear in \(d\), a conversion at distance \(d\) is
+profitable iff \(Y e^{-\theta d} > c\,d\).</p>
+<section class="thm plain thm-proposition" id="proposition-24-12" data-kind="Proposition" data-num="24.12"><header><span class="thm-kind">Proposition 24.12</span> <span class="thm-name">Profitable radius</span><a class="permalink" href="#proposition-24-12" aria-label="Link to Proposition 24.12">¶</a></header><p>
+For \(Y, c > 0\) and \(\theta > 0\) the profitable set is an interval
+\([0, d^\ast)\) with \(d^\ast\) the unique root of \(Y e^{-\theta d} = cd\).
+There is a horizon on conversion set by metering, not by any speed limit.</p></section>
+<p>Computed in Appendix <a class="xref" href="24-enzymes-and-individuals.html#sec-24-16" data-ref="eng:app:repro">24.16</a> for \(Y = 1000\), \(c = 20\): \(d^\ast =
+19.17\) at \(\theta = 0.05\), \(8.73\) at \(\theta = 0.2\), \(1.52\) at \(\theta =
+\ln 10\), \(0.82\) at \(\theta = 5\).</p>
+<section class="thm remarkish thm-remark" id="remark-24-13" data-kind="Remark" data-num="24.13"><header><span class="thm-kind">Remark 24.13</span> <span class="thm-name">The ecological pyramid is \(\theta\)</span><a class="permalink" href="#remark-24-13" aria-label="Link to Remark 24.13">¶</a></header><p>
+Predation is an enzyme: it converts prey-flavor into predator-flavor, and
+it is spectacularly lossy. The classical figure of roughly ten per cent
+transfer efficiency per trophic level [<a class="cite" href="bibliography.html#bib-lindeman" data-cite="lindeman">69</a>] is
+\(r = 1/10\), i.e.  \(\theta = \ln 10 = 2.303\) per enzyme. The energy pyramid
+is then exactly the exponential decay of \(\nu\) along a path of enzymes,
+which is Proposition 6.1 of [<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>] with no adjustment. We did not
+arrange this and record it as a check rather than a result.</p></section>
+<h2 id="sec-24-7"><span class="secnum">24.7</span> What conversion does to composition</h2>
+<p>We audit the six results of \(\chComp\) under the addition of enzymes.</p>
+<h5 id="p-25">Factorization survives and is sharpened.</h5>
+<p>An enzyme is a
+spanning redex, so composed learners linked by one are dependent
+(Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-10" data-ref="eng:prop:convmet">24.10</a>). Two invariants of the same graph now
+coexist: \(\mathbf{k}\) counts edges of dependence, \(\bt\) counts cycles of
+it.</p>
+<h5 id="p-26">No metabolic mutualism needs qualification.</h5>
+<p>The proposition of
+§<a class="xref" href="23-composing-learners.html#sec-23-6-1" data-ref="com:S6.1">23.6.1</a> of \(\chComp\) says that when overlap is confined to \(\Met\) and
+\(\Src\), \(\Delta_1 + \Delta_2 \leq 0\). Two things must be said.</p>
+<section class="thm plain thm-proposition" id="proposition-24-13" data-kind="Proposition" data-num="24.13"><header><span class="thm-kind">Proposition 24.13</span> <span class="thm-name">Dead stock</span><a class="permalink" href="#proposition-24-13" aria-label="Link to Proposition 24.13">¶</a></header><p>
+Under (i) the total token supply of each flavor is conserved by every
+enzyme operation, and by [<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>, Prop. 5.1] the total \(\nu\) is
+conserved in the frictionless limit and strictly decreases under \(\theta\).
+So conversion is never positive-sum in value. But residual life is stack
+divided by burn rate, and a token whose signature a learner cannot spend
+contributes zero to its residual life and non-zero to the other’s. Hence
+conversion can strictly increase \(\sum_i \sigma_i / b_i\) while conserving
+\(\nu\).</p></section>
+<section class="thm remarkish thm-remark" id="remark-24-14" data-kind="Remark" data-num="24.14"><header><span class="thm-kind">Remark 24.14</span> <span class="thm-name">An honest gap in the source</span><a class="permalink" href="#remark-24-14" aria-label="Link to Remark 24.14">¶</a></header><p>
+The proof sketch in §<a class="xref" href="23-composing-learners.html#sec-23-6-1" data-ref="com:S6.1">23.6.1</a> of \(\chComp\) argues that a transfer over a
+shared metabolic name is “strictly negative in aggregate residual life
+whenever the two burn rates differ”. That step is directional: with
+\(\sum_i \sigma_i/b_i\) as the aggregate, a transfer toward the slower burner
+raises it. In one flavor the asymmetry is easy to miss because the
+transfers that raise the aggregate are exactly the ones a predator has no
+reason to make. Flavors make it conspicuous, because dead stock is worth
+zero to its holder by construction, so the profitable direction and the
+aggregate-raising direction coincide. We therefore read the composition
+note’s proposition as correct about \(\nu\) and in need of the qualification
+above about residual life, and we take the qualification to be the content
+of “gains from trade” in this setting.</p></section>
+<section class="thm plain thm-corollary" id="corollary-24-7" data-kind="Corollary" data-num="24.7"><header><span class="thm-kind">Corollary 24.7</span> <span class="thm-name">The slogan, amended</span><a class="permalink" href="#corollary-24-7" aria-label="Link to Corollary 24.7">¶</a></header><p>
+<em>Cooperation is epistemic; competition is metabolic</em> — except where
+the metabolisms are incommensurable, in which case conversion is
+cooperative in residual life and still competitive in value. The
+positive-sum region is exactly the region where signatures do not match.</p></section>
+<h5 id="p-27">Competitive dilution is re-coupled.</h5>
+<p>§<a class="xref" href="23-composing-learners.html#sec-23-9" data-ref="com:S9">23.9</a> of \(\chComp\) shows
+that learners sharing a rate-limited source take shares \(\propto 1/\text{cost}\)
+and that the dilution is regressive. Enzymes reinstate that competition
+across boundaries that rooting had made clean: an enzyme is a shared name,
+so conversion turns effective \(k_{\mathrm{src}} = 0\) into effective
+competition.</p>
+<section class="thm plain thm-corollary" id="corollary-24-8" data-kind="Corollary" data-num="24.8"><header><span class="thm-kind">Corollary 24.8</span> <span class="thm-name">Markets sell back modularity</span><a class="permalink" href="#corollary-24-8" aria-label="Link to Corollary 24.8">¶</a></header><p>
+Rooting-by-quotation makes disjointness a theorem and thereby purchases
+modularity; an enzyme sells it back at the price of the toll. Modularity
+and tradability are opposed, and the grading vector prices the trade.</p></section>
+<h5 id="p-28">Phase, merger, succession.</h5>
+<p>Phase remains non-compositional.
+Merger is now sharply distinguished from composition-with-enzymes: merger
+identifies namespaces, an enzyme prices them, and §<a class="xref" href="24-enzymes-and-individuals.html#sec-24-8" data-ref="eng:sec:indiv">24.8</a> says
+when each is available. Succession — a change of the grading vector
+forced by source exhaustion — acquires a second mechanism: an enzyme’s
+reserve running out changes \(\Gamma\)’s topology, and by
+Theorem <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-2" data-ref="eng:thm:foster">24.2</a> the code’s total strength changes with it.</p>
+<section class="thm plain thm-corollary" id="corollary-24-9" data-kind="Corollary" data-num="24.9"><header><span class="thm-kind">Corollary 24.9</span> <span class="thm-name">Extinction degrades the price system</span><a class="permalink" href="#corollary-24-9" aria-label="Link to Corollary 24.9">¶</a></header><p>
+Removing an enzyme from a cycle reduces \(\bt\) by one and redistributes
+\(\Reff\); removing the last enzyme on a cut disconnects \(\Gamma\) and
+destroys the common numeraire. Loss of a converter is loss of
+commensurability, not merely of throughput.</p></section>
+<h2 id="sec-24-8"><span class="secnum">24.8</span> Individuation: where a namespace closes</h2>
+<h3 id="sec-24-8-1"><span class="secnum">24.8.1</span> The three parameters, found inside the framework</h3>
+<p>[<a class="cite" href="bibliography.html#bib-compaut" data-cite="compaut">60</a>] locates the boundary between a shared substrate and
+autonomous replication at a critical radius \(r^\ast \sim
+\sqrt{\rho v/\varepsilon}\). To transpose it we must find \(\varepsilon\),
+\(\rho\), and \(v\) inside the present framework rather than import them.</p>
+<ul><li><p>\(\varepsilon\), the <strong>error rate</strong>, is the per-hop drop-or-corrupt
+rate \(1-p\) of the interposed medium (§<a class="xref" href="24-enzymes-and-individuals.html#sec-24-5" data-ref="eng:sec:medium">24.5</a>). This is the
+channel [<a class="cite" href="bibliography.html#bib-compaut" data-cite="compaut">60</a>] is parameterized on — error rate on transmission
+— and interposition supplies it natively rather than by analogy.</p></li><li><p>\(\rho\), the <strong>repair throughput</strong>, is the rate of
+retransmission, which by Corollary <a class="xref" href="24-enzymes-and-individuals.html#corollary-24-4" data-ref="eng:cor:owndepth">24.4</a> is available only
+where the medium is nameable.</p></li><li><p>\(v\), the <strong>communication speed</strong>, is \(1/\theta\). There is no
+speed in a cost-accounted calculus, but there is the temporal stack, and by
+[<a class="cite" href="bibliography.html#bib-CE" data-cite="CE">62</a>, Prop. 4.1] time is the count of forced redexes. An expensive
+pathway simply <em>is</em> a slow one, and by
+Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-5" data-ref="eng:prop:twotheta">24.5</a> it is expensive for two reasons that enter
+the same exponent.</p></li></ul>
+<p>Accidental name collision, which an earlier draft of this section took as
+the error channel, is a second and different one: its failure mode is loss
+of disjointness rather than loss of a message, and its repair is re-rooting
+by freshness-by-quotation rather than retransmission. §<a class="xref" href="23-composing-learners.html#sec-23-7" data-ref="com:S7">23.7</a> of \(\chComp\)
+proves it occurs. Hypothesis error is a third. §<a class="xref" href="24-enzymes-and-individuals.html#sec-24-8-6" data-ref="eng:sec:whicheps">24.8.6</a>
+returns to the question of which binds.</p>
+<section class="thm remarkish thm-remark" id="remark-24-15" data-kind="Remark" data-num="24.15"><header><span class="thm-kind">Remark 24.15</span> <span class="thm-name">Why the medium channel is the one that individuates</span><a class="permalink" href="#remark-24-15" aria-label="Link to Remark 24.15">¶</a></header><p>
+Collision threatens the <em>identity</em> of names and is repaired by
+re-quoting, which a region can do unilaterally. Loss threatens the
+<em>delivery</em> of messages and is repaired by retransmission, which a
+region can do only over media it owns. Since Definition <a class="xref" href="24-enzymes-and-individuals.html#definition-24-6" data-ref="eng:def:indiv">24.6</a>
+turns on ownership of the internal medium, it is the transmission channel
+that fixes the individuation threshold, and collision that fixes how
+finely a namespace may be subdivided within it.</p></section>
+<h3 id="sec-24-8-2"><span class="secnum">24.8.2</span> The structural form: partial closure</h3>
+<p>Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-15" data-ref="eng:prop:indiv">24.15</a> below gives a quantitative threshold.
+Definition <a class="xref" href="24-enzymes-and-individuals.html#definition-24-6" data-ref="eng:def:indiv">24.6</a> gives a structural one — the internal medium
+is closed, the boundary medium is not — and the two are the same
+condition seen from two sides.</p>
+<section class="thm plain thm-proposition" id="proposition-24-14" data-kind="Proposition" data-num="24.14"><header><span class="thm-kind">Proposition 24.14</span> <span class="thm-name">Closure is what makes repair possible</span><a class="permalink" href="#proposition-24-14" aria-label="Link to Proposition 24.14">¶</a></header><p>
+Retransmission over a medium \(C\) requires grade-two access to \(@C\), so
+\(\rho\) is supported only on \(\Chn_{\mathrm{in}}(B)\). A region whose
+internal media are not all nameable from within has \(\rho\) effectively
+reduced on the unnameable part, and by
+Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-15" data-ref="eng:prop:indiv">24.15</a> its sustainable radius falls accordingly.</p></section>
+<section class="thm plain thm-corollary" id="corollary-24-10" data-kind="Corollary" data-num="24.10"><header><span class="thm-kind">Corollary 24.10</span> <span class="thm-name">Bridges fail twice</span><a class="permalink" href="#corollary-24-10" aria-label="Link to Corollary 24.10">¶</a></header><p>
+A boundary medium belongs to no region’s closed internal namespace, so
+neither party can unilaterally repair it. Together with
+Theorem <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-1" data-ref="eng:thm:detect">24.1</a> — a bridge lies on no cycle and so carries no
+syndrome — a thin pathway is uncorrectable for two independent reasons:
+nothing checks its rates, and nobody owns its medium.</p></section>
+<h3 id="sec-24-8-3"><span class="secnum">24.8.3</span> Isoperimetry replaces dimension</h3>
+<p>The derivation in [<a class="cite" href="bibliography.html#bib-compaut" data-cite="compaut">60</a>] balances errors accumulating over a volume
+\(r^d\) against repair delivered through a cross-section \(r^{d-1}\), with a
+propagation factor \(v/r\). On a graph there is no dimension; the analogues
+are the ball \(B(r)\) and its edge boundary \(\partial B(r)\), and their ratio
+is the isoperimetric ratio \(h(B) = |\partial B| / |B|\).</p>
+<section class="thm plain thm-proposition" id="proposition-24-15" data-kind="Proposition" data-num="24.15"><header><span class="thm-kind">Proposition 24.15</span> <span class="thm-name">Individuation threshold</span><a class="permalink" href="#proposition-24-15" aria-label="Link to Proposition 24.15">¶</a></header><p>
+A region \(B\) of the enzyme graph may close over its namespace — may be
+merged, in the sense of §<a class="xref" href="23-composing-learners.html#sec-23-8" data-ref="com:S8">23.8</a> of \(\chComp\) — iff repair keeps pace with
+collision, that is iff
+<span class="math-d">\[\rho\,|\partial B|\,\frac{1}{\theta\,r} \;\geq\; \varepsilon\,|B|,
+  \qquad\text{equivalently}\qquad
+  h(B) \;\geq\; \frac{\varepsilon\theta}{\rho}\, r .\]</span>
+Writing \(\kappa = \varepsilon\theta/\rho\), the individual is the largest
+ball satisfying \(h(B(r)) \geq \kappa r\).</p></section>
+<section class="thm plain thm-corollary" id="corollary-24-11" data-kind="Corollary" data-num="24.11"><header><span class="thm-kind">Corollary 24.11</span> <span class="thm-name">Recovering \(r^\ast\)</span><a class="permalink" href="#corollary-24-11" aria-label="Link to Corollary 24.11">¶</a></header><p>
+On a graph of polynomial growth \(d\) one has \(h(B(r)) \sim c/r\), so the
+condition becomes \(c/r \geq \kappa r\) and
+\(r^\ast = \sqrt{c/\kappa} = \sqrt{c\rho/\varepsilon\theta}\), which is the
+formula of [<a class="cite" href="bibliography.html#bib-compaut" data-cite="compaut">60</a>] with \(v = 1/\theta\).</p></section>
+<h3 id="sec-24-8-4"><span class="secnum">24.8.4</span> Expansion</h3>
+<section class="thm plain thm-theorem" id="theorem-24-3" data-kind="Theorem" data-num="24.3"><header><span class="thm-kind">Theorem 24.3</span> <span class="thm-name">Density buys exponentially larger individuals</span><a class="permalink" href="#theorem-24-3" aria-label="Link to Theorem 24.3">¶</a></header><p>
+If \(\Gamma\) restricted to \(B\) is an expander, \(h(B(r)) \geq h_0 > 0\)
+uniformly, then \(r^\ast = h_0/\kappa\) is linear rather than square-root in
+\(\rho/\varepsilon\theta\); and since an expander has diameter
+\(O(\log|B|)\), the merged population satisfies
+\(|B(r^\ast)| = e^{\Omega(r^\ast)}\). On a graph of polynomial growth \(d\) the
+merged population is only \(|B(r^\ast)| = O((r^\ast)^d)\).</p></section>
+<section class="proof"><header>Proof</header><p>The first claim is Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-15" data-ref="eng:prop:indiv">24.15</a> with \(h\) bounded below.
+The second is the standard fact that a family with \(h \geq h_0\) has
+diameter \(O(h_0^{-1}\log n)\), so balls grow exponentially in radius.</p></section>
+<p>Theorem <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-3" data-ref="eng:thm:expander">24.3</a> is the point at which the three threads of this
+note become one. The “densely connected component” of the motivating
+picture, the region where the price code is strong, and the region that may
+close over its namespace are all the same region, and expansion is the
+common criterion. Effective resistance is small exactly where expansion is
+good; by Theorem <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-1" data-ref="eng:thm:detect">24.1</a> detection is strong exactly where
+effective resistance is small; and by Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-15" data-ref="eng:prop:indiv">24.15</a> merger
+is sustainable exactly where the boundary keeps up with the bulk.</p>
+<p>Appendix <a class="xref" href="24-enzymes-and-individuals.html#sec-24-16" data-ref="eng:app:repro">24.16</a>, block (2), computes the merged population at four
+values of \(\kappa\) for a cycle, a \(20\times 20\) grid, and random \(3\)- and
+\(6\)-regular graphs on \(400\) vertices. At \(\kappa = 0.10\) the cycle sustains
+an individual of \(5\) flavors, the grid \(85\), the \(3\)-regular graph \(160\),
+and the \(6\)-regular graph \(365\) — the whole population.</p>
+<figure class="float figfloat" id="fig-24-2"><p>\(\fitwidth{
+<figure class="tikz"><img src="../figures/9f68e993387a.svg" alt="Diagram"></figure>}\)</p><figcaption><span class="fignum">Figure 24.2</span> Individuation as a crossing. A region may be merged while its
+isoperimetric ratio lies above the line \(\kappa r\), \(\kappa =
+\varepsilon\theta/\rho\). Polynomially growing graphs cross early and give
+\(r^\ast \propto \kappa^{-1/2}\); an expander holds \(h\) up and crosses late,
+giving \(r^\ast \propto \kappa^{-1}\) and, since balls grow exponentially in
+\(r\), an individual exponentially larger in population.</figcaption></figure>
+<h3 id="sec-24-8-5"><span class="secnum">24.8.5</span> What merger deletes</h3>
+<p>The intuition that centralization buys compression and loses error
+correction is right, and the framework can say precisely what is lost,
+because merger destroys two different things.</p>
+<section class="thm plain thm-proposition" id="proposition-24-16" data-kind="Proposition" data-num="24.16"><header><span class="thm-kind">Proposition 24.16</span> <span class="thm-name">Merger sets \(\bt = 0\)</span><a class="permalink" href="#proposition-24-16" aria-label="Link to Proposition 24.16">¶</a></header><p>
+A merged region has one flavor, hence no enzymes internal to it, hence no
+cycles in \(\Gamma\) restricted to it. By Theorem <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-2" data-ref="eng:thm:foster">24.2</a> its total
+detection strength is zero. Centralization does not degrade the price code;
+it deletes it.</p></section>
+<section class="thm plain thm-proposition" id="proposition-24-17" data-kind="Proposition" data-num="24.17"><header><span class="thm-kind">Proposition 24.17</span> <span class="thm-name">Merger destroys independence</span><a class="permalink" href="#proposition-24-17" aria-label="Link to Proposition 24.17">¶</a></header><p>
+By the factorization theorem of §<a class="xref" href="23-composing-learners.html#sec-23-4-2" data-ref="com:S4.2">23.4.2</a> of \(\chComp\), disjointness is
+equivalent to \(\mu_{12} = \mu_1 \otimes \mu_2\). Merger identifies
+namespaces, so the joint distribution of a merged region does not factor
+and failures are correlated.</p></section>
+<p>These are detection and containment respectively, and they attach to
+\(\varepsilon\) and \(\rho\) respectively. It is worth noting that the second
+is exactly the third bullet of [<a class="cite" href="bibliography.html#bib-compaut" data-cite="compaut">60</a>, \S1] — the Fisher
+information matrix is block-diagonal in the autonomous case and densely
+off-diagonal in the shared case — restated in the composition note’s own
+vocabulary. The two notes agreed before either knew it.</p>
+<p>Against these, merger buys: no toll on internal transfers, since there are
+no enzymes to pay; no arbitrage, since there are no cycles to carry it; and
+the coordination compression of [<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>, \S5] in its limiting form,
+where one does not even need the \(n\) prices. That is the trade, priced on
+both sides in one currency.</p>
+<h3 id="sec-24-8-6"><span class="secnum">24.8.6</span> Which \(\varepsilon\) binds</h3>
+<p>[<a class="cite" href="bibliography.html#bib-compaut" data-cite="compaut">60</a>] asks which error channel is rate-limiting in a cell and
+conjectures proteostasis rather than genome integrity. We inherit the
+question with three candidates, each with its own repair process and its
+own throughput: <em>transmission loss</em>, repaired by retransmission and
+used above; <em>name collision</em>, repaired by re-rooting; and
+<em>hypothesis error</em> — the degrading prediction that the motivation
+mechanism of §<a class="xref" href="21-the-mortal-scientist.html#sec-21-2" data-ref="sci:S2">21.2</a> of \(\chSci\) punishes — repaired by revision. They
+may well bind at different levels of the hierarchy, and the levels are
+where the question becomes sharp: an organism’s internal medium is
+repairable and a pod’s is not, so transmission should bind higher up and
+collision lower down. The composition rule proposed in [<a class="cite" href="bibliography.html#bib-compaut" data-cite="compaut">60</a>],
+\(r^\ast = \min_i r^\ast_i\), applies; which \(i\) attains the minimum at each
+rung is open.</p>
+<section class="thm remarkish thm-remark" id="remark-24-16" data-kind="Remark" data-num="24.16"><header><span class="thm-kind">Remark 24.16</span> <span class="thm-name">A second criterion, and it is not this one</span><a class="permalink" href="#remark-24-16" aria-label="Link to Remark 24.16">¶</a></header><p>
+Everything in §<a class="xref" href="24-enzymes-and-individuals.html#sec-24-8" data-ref="eng:S8">24.8</a> draws the boundary <em>economically</em>:
+close where repair is cheaper than exposure.
+That is a criterion about who pays for what, and it is the only one this
+chapter supplies.
+There is a second, and Chapter <a class="xref" href="59-not-every-cut-is-an-aperture.html#top" data-ref="ch:apr">59</a> — in the Prestige, and a
+long way ahead — supplies it: close where no internal cut carries
+observable choice, drawing the line around the regions that are
+determinate in the sense of Definition <a class="xref" href="59-not-every-cut-is-an-aperture.html#definition-59-1" data-ref="ndo:def:aperture">59.1</a>.
+Chapter <a class="xref" href="60-where-does-agency-live.html#top" data-ref="ch:agy">60</a> then shows that neither criterion implies the
+other.
+Being worth owning and being determinate are independent properties, and
+most organisms have the first without the second: an animal is an
+economic individual whose interior is full of live races.</p>
+<p>Read forward, this says that the individuation fixed point of
+§<a class="xref" href="24-enzymes-and-individuals.html#sec-24-8" data-ref="eng:S8">24.8</a> has a companion it does not know about, and that the
+fixed point’s several solutions are not the only slack in the account.
+Read backward from Chapter <a class="xref" href="60-where-does-agency-live.html#top" data-ref="ch:agy">60</a>, it says that the semantic
+criterion, which that chapter cannot cash on its own, has an economic
+partner already worked out here.
+Neither chapter closes the gap.
+It is named in both so that a reader does not have to notice it alone.</p></section>
+<h2 id="sec-24-9"><span class="secnum">24.9</span> The hierarchy</h2>
+<h3 id="sec-24-9-1"><span class="secnum">24.9.1</span> Closure gives nesting; \(r^\ast\) gives levels</h3>
+<p>Composition of learners yields a learner, so the construction is closed
+under an associative operator and self-similarity costs nothing. But
+closure permits arbitrary nesting; it does not select levels.</p>
+<section class="thm plain thm-proposition" id="proposition-24-18" data-kind="Proposition" data-num="24.18"><header><span class="thm-kind">Proposition 24.18</span> <span class="thm-name">Levels are forced by a finite \(r^\ast\)</span><a class="permalink" href="#proposition-24-18" aria-label="Link to Proposition 24.18">¶</a></header><p>
+If \(r^\ast\) is finite, then a population exceeding \(|B(r^\ast)|\) cannot be
+maintained as one closed namespace, and the only way to continue scaling is
+by replication of \(r^\ast\)-sized units composed with enzymes. Each
+composite has its own effective \(\varepsilon, \rho, \theta\), hence its own
+\(r^\ast\). The hierarchy is a sequence of critical radii.</p></section>
+<p>The generating step is Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-6" data-ref="eng:prop:tower">24.6</a>: the outside of one
+level is the inside of the next. An orca’s boundary media — calls, touch,
+the water — are the pod’s internal media, and the pod is an individual
+exactly to the extent that it can name and repair them. So the tower of
+media and the tower of individuals are the same tower, and neither has to
+be posited alongside the other.</p>
+<p>This is also the argument of [<a class="cite" href="bibliography.html#bib-compaut" data-cite="compaut">60</a>, \S6] connecting \(r^\ast\) to
+West’s allometry [<a class="cite" href="bibliography.html#bib-west" data-cite="west">72</a>]: the invariance of the terminal unit is a consequence
+rather than a premise, and fractal replication above it is forced. Here the
+same argument produces the levels the composition note could only permit.
+The sequence terminates where \(\theta \to \infty\) and even the cheapest
+channel prices out.</p>
+<h3 id="sec-24-9-2"><span class="secnum">24.9.2</span> The shutoff ordering</h3>
+<p>Which components of \(\mathbf{k}\) survive a given pathway cost? Price the
+<em>maintenance</em> of each type of overlap.</p>
+<section class="thm remarkish thm-observation" id="observation-24-2" data-kind="Observation" data-num="24.2"><header><span class="thm-kind">Observation 24.2</span> <span class="thm-name">Ordering by maintenance cost</span><a class="permalink" href="#observation-24-2" aria-label="Link to Observation 24.2">¶</a></header><p>
+\(\Met\) pooling requires continuous rendezvous and is the most expensive to
+maintain. \(\Mat\) requires periodic rendezvous. \(\Src\) requires
+co-availability at a rate-limited emitter. \(\Prb\) requires only that a
+legible surface stand where both can read it, and by the read-versus-drive
+distinction of §<a class="xref" href="22-learning-to-play.html#sec-22-5-1" data-ref="gam:S5.1">22.5.1</a> of \(\chGame\) a written surface costs nothing to leave
+standing. Hence as \(\theta\) rises the components extinguish in the order
+\(\Met\), \(\Mat\), \(\Src\), \(\Prb\).</p></section>
+<figure class="float tabfloat" id="tab-24-3"><p>\(\fitwidth\){</p>
+<div class="tablewrap"><table><thead><tr><th><strong>Boundary</strong></th><th><strong>Operator</strong></th><th><strong>Surviving overlap</strong></th><th><strong>Relation</strong></th></tr></thead><tbody><tr><td>within a skill set</td><td>\(\Merge\)</td><td>all</td><td>one budget, one namespace</td></tr><tr><td>organism / organism</td><td>\(\mid\) + enzyme</td><td>\(\Met\) (transfer), \(\Src\), \(\Prb\), \(\Mat\)</td><td>kin, trade, culture</td></tr><tr><td>deme / deme</td><td>\(\mid\) + enzyme</td><td>\(\Src\), \(\Prb\), \(\Mat\)</td><td>competition, culture</td></tr><tr><td>species / species</td><td>\(\mid\) + enzyme</td><td>\(\Src\), \(\Prb\)</td><td>predation, eavesdropping</td></tr><tr><td>biosphere / biosphere</td><td>\(\mid\) only</td><td>\(\Prb\)</td><td>signals</td></tr><tr><td>beyond \(d^\ast\)</td><td>—</td><td>none</td><td>nothing</td></tr></tbody></table></div>
+<p>}</p><figcaption><span class="fignum">Table 24.3</span> The hierarchy as a shutoff sequence. Each row is a level boundary,
+identified by which component of the grading vector has gone to zero and
+whether merger is still available. The ordering is
+Observation <a class="xref" href="24-enzymes-and-individuals.html#observation-24-2" data-ref="eng:obs:order">24.2</a>; the availability of \(\Merge\) is
+Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-15" data-ref="eng:prop:indiv">24.15</a>.</figcaption></figure>
+<h3 id="sec-24-9-3"><span class="secnum">24.9.3</span> The grading vector is stratified, and has a fifth component</h3>
+<section class="thm plain thm-proposition" id="proposition-24-19" data-kind="Proposition" data-num="24.19"><header><span class="thm-kind">Proposition 24.19</span> <span class="thm-name">A fifth typed namespace</span><a class="permalink" href="#proposition-24-19" aria-label="Link to Proposition 24.19">¶</a></header><p>
+\(\Chn\) is a typed namespace in the sense of
+\(\chComp\), Definition <a class="xref" href="23-composing-learners.html#definition-23-3" data-ref="com:def:typed">23.3</a>, and overlap in it is not reducible to overlap in
+the other four. Two learners sharing a medium can observe each other’s
+traffic and can congest each other, relations that
+\(\Met, \Src, \Prb, \Mat\) cannot express: eavesdropping, jamming, and
+contention for bandwidth. Hence
+<span class="math-d">\[\mathbf{k} \;=\; \bigl(k_{\mathrm{met}},\, k_{\mathrm{src}},\,
+  k_{\mathrm{prb}},\, k_{\mathrm{mat}},\, k_{\mathrm{chn}}\bigr).\]</span></p></section>
+<section class="thm remarkish thm-remark" id="remark-24-17" data-kind="Remark" data-num="24.17"><header><span class="thm-kind">Remark 24.17</span> <span class="thm-name">This is very likely the arena</span><a class="permalink" href="#remark-24-17" aria-label="Link to Remark 24.17">¶</a></header><p>
+\(\chComp\) leaves open whether the vector is complete and names the
+<em>arena</em> as the candidate fifth type; \(\chGame\) realizes the arena
+as the process routing moves between players. A router is a medium. We
+therefore conjecture that the arena namespace and \(\Chn\) are the same
+namespace reached from two directions. We record this here rather than
+amending \(\chComp\), so that the two notes do not disagree in print
+before that note is revised.</p></section>
+<section class="thm plain thm-corollary" id="corollary-24-12" data-kind="Corollary" data-num="24.12"><header><span class="thm-kind">Corollary 24.12</span> <span class="thm-name">Composition and merger are the two halves of
+\(k_{\mathrm{chn}}\)</span><a class="permalink" href="#corollary-24-12" aria-label="Link to Corollary 24.12">¶</a></header><p>
+Sharing a <em>boundary</em> medium is composition: the learners talk,
+interfere, and can trade. Sharing an <em>internal</em> medium is merger, by
+Definition <a class="xref" href="24-enzymes-and-individuals.html#definition-24-6" data-ref="eng:def:indiv">24.6</a>. So the fifth component’s in/out split is
+exactly the distinction §<a class="xref" href="23-composing-learners.html#sec-23-8" data-ref="com:S8">23.8</a> of \(\chComp\) draws between its two
+operators, which is evidence that the split is a refinement rather than an
+epicycle.</p></section>
+<section class="thm plain thm-corollary" id="corollary-24-13" data-kind="Corollary" data-num="24.13"><header><span class="thm-kind">Corollary 24.13</span> <span class="thm-name">\(\mathbf{k}\) is a sequence</span><a class="permalink" href="#corollary-24-13" aria-label="Link to Corollary 24.13">¶</a></header><p>
+By Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-6" data-ref="eng:prop:tower">24.6</a> the grading vector is relative to a
+stratum, so the object that describes a composite fully is a sequence of
+vectors, one per level of the medium tower. Table <a class="xref" href="24-enzymes-and-individuals.html#tab-24-3" data-ref="eng:tab:levels">24.3</a> reads
+off the sequence for one lineage.</p></section>
+<p>Table <a class="xref" href="24-enzymes-and-individuals.html#tab-24-3" data-ref="eng:tab:levels">24.3</a> has a pleasing consequence and a testable one. The
+pleasing one: the last surviving channel is \(\Prb\), which is exactly the
+channel \(\chComp\), Observation <a class="xref" href="23-composing-learners.html#observation-23-2" data-ref="com:obs:amort">23.2</a>, identifies as the only positive-sum one,
+because formulae are not conserved. The testable one: the depth of the
+hierarchy is the length of the grading vector, so the open question of
+whether there is a fifth typed namespace — the arena — is the question
+of whether there is a fifth level.</p>
+<h3 id="sec-24-9-4"><span class="secnum">24.9.4</span> An orca</h3>
+<p>An orca must solve hunting, position in the pod, mating, and care of young.
+Suppose each is undergirded by a learner in the sense of \(\chComp\).
+Then:</p>
+<p>The skills share one budget, so within the organism there is one flavor, no
+enzymes, and \(\bt = 0\): <em>there is no market inside an individual</em>. This
+is Coase’s theory of the firm [<a class="cite" href="bibliography.html#bib-coase" data-cite="coase">73</a>] arriving unbidden.</p>
+<p>Two claims must be kept apart here, and an earlier draft of this note ran
+them together. That there is no <em>market</em> inside an individual is a
+claim about flavor change: no rung-five medium, no conversion, allocation
+by hierarchy rather than by price. That there is no <em>mediation</em> inside
+an individual would be a claim about the lower rungs of
+Table <a class="xref" href="24-enzymes-and-individuals.html#tab-24-2" data-ref="eng:tab:ladder">24.2</a>, and it is false — an orca’s internal
+communication is as elaborate as anything it does, and by
+Corollary <a class="xref" href="24-enzymes-and-individuals.html#corollary-24-4" data-ref="eng:cor:owndepth">24.4</a> that elaboration is precisely what closure of
+the internal medium buys. Mediation is not allocation. The boundary of the
+individual is where the token flavor changes <em>and</em> where the medium
+stops being owned; the two coincide because an unowned medium cannot
+sustain a shared budget.</p>
+<p>The pod is not merged. Provisioning and food-sharing are transfers at
+rates, hence composition with enzymes, and the framework predicts what is
+observed: reciprocity with terms, not pooling.</p>
+<p>Competitive dilution becomes a theory of skill acquisition. Skills at a
+shared rate-limited source take shares \(\propto 1/\text{cost}\), and the
+regressive corollary of §<a class="xref" href="23-composing-learners.html#sec-23-9" data-ref="com:S9">23.9</a> of \(\chComp\) says dilution costs the
+unfinished learner its depth and the finished one nothing. Inside one
+organism this says a mature skill crowds out a developing one <em>without
+any contact between them</em>, which is automatization and the critical period,
+with a closed form.</p>
+<p>And the instability of non-interference becomes development. Skills inside
+one organism are rooted at the same quotation, so name coincidence is not
+accidental but generic: the individual is precisely the regime in which the
+disjointness theorem fails by construction. That is why skills interfere,
+and why they transfer.</p>
+<section class="thm remarkish thm-remark" id="remark-24-18" data-kind="Remark" data-num="24.18"><header><span class="thm-kind">Remark 24.18</span> <span class="thm-name">The orca claim is empirical, not definitional</span><a class="permalink" href="#remark-24-18" aria-label="Link to Remark 24.18">¶</a></header><p>
+“Each skill is backed by a learner” has content only if the skill
+learners have distinct populations. If they are merely different formulae
+held by one population, this is one learner with a large relaxation lattice
+and the composition apparatus adds nothing. The discriminator is
+\(\chSci\), Proposition <a class="xref" href="21-the-mortal-scientist.html#proposition-21-4" data-ref="sci:prop:confinement">21.4</a>: a single learner cannot leave its ball. So if
+skills let each other escape basins, they must be separate populations, and
+transfer between skills is the test.</p></section>
+<h2 id="sec-24-10"><span class="secnum">24.10</span> Incommensurability</h2>
+<p>Life elsewhere may not be organized around the same chemistry, and in this
+framework that is not a matter of expense but of topology.</p>
+<section class="thm plain thm-proposition" id="proposition-24-20" data-kind="Proposition" data-num="24.20"><header><span class="thm-kind">Proposition 24.20</span> <span class="thm-name">No enzyme, no numeraire</span><a class="permalink" href="#proposition-24-20" aria-label="Link to Proposition 24.20">¶</a></header><p>
+If no enzyme links the flavors of two learners then \(\Gamma\) is
+disconnected, the connectedness hypothesis of [<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>, Thm. 3.3] fails,
+and there is no common valuation: each component carries its own \(\nu\) with
+its own gauge. Incommensurability is disconnection.</p></section>
+<section class="thm plain thm-theorem" id="theorem-24-4" data-kind="Theorem" data-num="24.4"><header><span class="thm-kind">Theorem 24.4</span> <span class="thm-name">Commerce across an incommensurable boundary is epistemic</span><a class="permalink" href="#theorem-24-4" aria-label="Link to Theorem 24.4">¶</a></header><p>
+Let \(\Lrn_1, \Lrn_2\) have disjoint \(\Met\) and \(\Src\) namespaces and no
+enzyme between their flavors. Then no token can pass between them. But by
+\(\chComp\), Observation <a class="xref" href="23-composing-learners.html#observation-23-1" data-ref="com:obs:two">23.1</a>, a formula is not conserved: a quotation \(@P\)
+is inert while held, transmissible, and inspectable at grade three, and one
+learner’s coming to hold it does not deprive the other. Hence the only
+available commerce is over \(\Prb\).</p></section>
+<p>Theorem <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-4" data-ref="eng:thm:epistemic">24.4</a> is the slogan of §<a class="xref" href="23-composing-learners.html#sec-23-6" data-ref="com:S6">23.6</a> of \(\chComp\) scaled up
+one level: between biospheres, cooperation is not merely the cheapest
+positive-sum channel but the <em>only</em> channel. Signals cross; food does
+not. That is also consistent with Observation <a class="xref" href="24-enzymes-and-individuals.html#observation-24-2" data-ref="eng:obs:order">24.2</a>, since \(\Prb\)
+is the last component to extinguish, and the two arguments are
+independent.</p>
+<section class="thm plain thm-proposition" id="proposition-24-21" data-kind="Proposition" data-num="24.21"><header><span class="thm-kind">Proposition 24.21</span> <span class="thm-name">First contact is a coincidence, not a construction</span><a class="permalink" href="#proposition-24-21" aria-label="Link to Proposition 24.21">¶</a></header><p>
+An enzyme requires a rendezvous, hence a shared name. Two ecologies rooted
+at independent quotations are disjoint by
+§<a class="xref" href="23-composing-learners.html#sec-23-7" data-ref="com:S7">23.7</a> of \(\chComp\); but by the same section’s remark, independently
+manufactured names can coincide accidentally, and the exposure lemma of
+§<a class="xref" href="21-the-mortal-scientist.html#sec-21-9" data-ref="sci:S9">21.9</a> of \(\chSci\) already records that closure is luck rather than
+construction. So the establishment of a first enzyme between ecologies is a
+structural coincidence whose probability is bounded by the name-growth
+constraint of the no-self-code theorem.</p></section>
+<p>We stop here. The obvious next question — what a population of expanding,
+converting ecologies does under these constraints, and whether
+Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-12" data-ref="eng:prop:radius">24.12</a>’s horizon reproduces or refutes the grabby
+aliens hypothesis [<a class="cite" href="bibliography.html#bib-hanson" data-cite="hanson">74</a>] — is left to §<a class="xref" href="24-enzymes-and-individuals.html#sec-24-14" data-ref="eng:sec:open">24.14</a>.</p>
+<h2 id="sec-24-11"><span class="secnum">24.11</span> Credit, default, and the discount rate</h2>
+<p>The temporal combinators <code>truncate</code>\((t,c)\) and <code>get</code>\((c)\)
+denote claims on future value. In an ecology with a fixed \(\Theta\) this
+looks impossible: credit smells like minting. It is not.</p>
+<section class="thm plain thm-proposition" id="proposition-24-22" data-kind="Proposition" data-num="24.22"><header><span class="thm-kind">Proposition 24.22</span> <span class="thm-name">Credit is not minting</span><a class="permalink" href="#proposition-24-22" aria-label="Link to Proposition 24.22">¶</a></header><p>
+A forward is a located slot whose release is gated on a temporal
+condition. Nothing is created: the tokens exist and are held, and what
+transfers is the right to receive on the slot. This is exactly the funding
+slot of [<a class="cite" href="bibliography.html#bib-finrho" data-cite="finrho">64</a>, \S3.2], with the guard on the temporal stack rather
+than on a signature.</p></section>
+<section class="thm plain thm-proposition" id="proposition-24-23" data-kind="Proposition" data-num="24.23"><header><span class="thm-kind">Proposition 24.23</span> <span class="thm-name">The discount rate is the hazard rate</span><a class="permalink" href="#proposition-24-23" aria-label="Link to Proposition 24.23">¶</a></header><p>
+A borrower that fails to repay in this setting is a starved borrower: by
+[<a class="cite" href="bibliography.html#bib-MC" data-cite="MC">65</a>, Def. 1] and the metabolic law of §<a class="xref" href="21-the-mortal-scientist.html#sec-21-5" data-ref="sci:S5">21.5</a> of \(\chSci\), failure
+to fund is death. Credit risk is therefore mortality risk exactly, and the
+rate at which a lender discounts a future claim is the borrower’s hazard
+rate, which the framework computes from stack over burn rate.</p></section>
+<section class="thm remarkish thm-remark" id="remark-24-19" data-kind="Remark" data-num="24.19"><header><span class="thm-kind">Remark 24.19</span> <span class="thm-name">Options price the exploration budget</span><a class="permalink" href="#remark-24-19" aria-label="Link to Remark 24.19">¶</a></header><p>
+The choice combinators come with the conservative-bound discipline of
+[<a class="cite" href="bibliography.html#bib-finrho" data-cite="finrho">64</a>, \S3.5]: reserve the maximum over branches, refund the
+unforced remainder. That is the exact structure of the question
+§<a class="xref" href="21-the-mortal-scientist.html#sec-21-6" data-ref="sci:S6">21.6</a> of \(\chSci\) leaves open — how much should a learner pay to keep
+an unresolved hypothesis open? An option on a revision move has a premium,
+a strike in metered units, and a refund on lapse, and the search-strategy
+catalog can be re-read as a portfolio problem. We flag this and do not
+pursue it.</p></section>
+<h2 id="sec-24-12"><span class="secnum">24.12</span> On deriving the rates</h2>
+<p>[<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>] takes the rate function \(r\) as given, and so has this note. It
+should be derivable. The natural candidate is that the rate between two
+flavors is the ratio of marginal inquiry-yield per metered unit, which
+\(\chGame\) computes exactly for its ladders: the non-modal rungs of the
+noughts ladder deliver \(+0.444\) of total gain for \(87.9\) of \(255.9\) units,
+and the Nim ladders of \(\chComp\) give returns that are flat in one
+environment and rising in another.</p>
+<p>If that identification holds, then \(\nu\) is a field over the ladder rather
+than a bare price list, and the composition note’s headline — whether
+truth is affordable is a property of the environment, not the learner —
+becomes a statement about exchange rates: communities working environments
+where truth is cheap should systematically price their tokens differently
+from communities where it is dear. This is checkable inside the existing
+simulations and we regard it as the most tractable of the open problems.</p>
+<h2 id="sec-24-13"><span class="secnum">24.13</span> What is shown, and what is not</h2>
+<p>Shown, in the sense of proved from the imported apparatus:
+Theorems <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-1" data-ref="eng:thm:detect">24.1</a>, <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-2" data-ref="eng:thm:foster">24.2</a> and <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-3" data-ref="eng:thm:expander">24.3</a>;
+Propositions <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-1" data-ref="eng:prop:marking">24.1</a>, <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-10" data-ref="eng:prop:convmet">24.10</a>, <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-11" data-ref="eng:prop:series">24.11</a>,
+<a class="xref" href="24-enzymes-and-individuals.html#proposition-24-15" data-ref="eng:prop:indiv">24.15</a>, <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-12" data-ref="eng:prop:radius">24.12</a>; and the merger propositions of
+§<a class="xref" href="24-enzymes-and-individuals.html#sec-24-8" data-ref="eng:sec:indiv">24.8</a>. These are graph theory and linear algebra over a
+structure the earlier notes construct; they inherit whatever the earlier
+notes’ constructions are worth.</p>
+<p>Shown by computation: the numbers of Appendix <a class="xref" href="24-enzymes-and-individuals.html#sec-24-16" data-ref="eng:app:repro">24.16</a>, which are
+exact where rational arithmetic was used and float otherwise.</p>
+<p>Not shown: that the rates are what §<a class="xref" href="24-enzymes-and-individuals.html#sec-24-12" data-ref="eng:sec:rates">24.12</a> conjectures; which of
+the three error channels of §<a class="xref" href="24-enzymes-and-individuals.html#sec-24-8-6" data-ref="eng:sec:whicheps">24.8.6</a> binds at which level;
+that \(\Chn\) is \(\chComp\)’s arena, which is
+conjectured and not proved; that the
+identification of \(v\) with \(1/\theta\) is the only defensible one, as
+opposed to the most natural; that inventory enzymes are the right reading
+of the conservation fork, as against (ii); that the isoperimetric balance
+in Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-15" data-ref="eng:prop:indiv">24.15</a> has the right propagation factor, which is
+inherited from [<a class="cite" href="bibliography.html#bib-compaut" data-cite="compaut">60</a>] and is heuristic there. The orca discussion
+is illustration, not evidence, and §<a class="xref" href="24-enzymes-and-individuals.html#sec-24-9" data-ref="eng:sec:hier">24.9</a> flags the test that
+would make it evidence.</p>
+<p>Not attempted: coherence of the lax monoidal structure of \(\chComp\);
+any dynamics on \(\Gamma\) beyond the quasi-static drift of
+Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-1" data-ref="eng:prop:marking">24.1</a>; any treatment of strategic behavior by
+enzymes, which is where biological market theory [<a class="cite" href="bibliography.html#bib-noe" data-cite="noe">70</a>] would enter.</p>
+<h2 id="sec-24-14"><span class="secnum">24.14</span> Open problems</h2>
+<ol><li id="item-47-1"><p><strong>Which \(\varepsilon\) binds, and at which level.</strong> Name
+collision and hypothesis error are two channels with two repair processes.
+Make \(r^\ast = \min_i r^\ast_i\) precise and determine the minimizing \(i\) at
+each rung of Table <a class="xref" href="24-enzymes-and-individuals.html#tab-24-3" data-ref="eng:tab:levels">24.3</a>.</p></li><li id="item-47-2"><p><strong>Derive the rates.</strong> Execute §<a class="xref" href="24-enzymes-and-individuals.html#sec-24-12" data-ref="eng:sec:rates">24.12</a> against the
+existing ladders and test whether exchange rates track environmental
+structure as predicted.</p></li><li id="item-47-3"><p><strong>Dynamics on the enzyme graph.</strong> Under (i) the marking drifts,
+so \(\bt\) is fixed but \(\Reff\) moves and enzymes can die. Run the composite
+of §<a class="xref" href="23-composing-learners.html#sec-23-10" data-ref="com:S10">23.10</a> of \(\chComp\) with enzymes under a Gillespie scheme and ask
+whether the ecology self-organizes toward an expander.</p></li><li id="item-47-4"><p><strong>Is \(\Chn\) the arena?</strong> Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-19" data-ref="eng:prop:fifth">24.19</a> adds a
+fifth typed namespace and conjectures it is \(\chComp\)’s arena.
+Settling this requires revising that note’s relations table with a fifth
+column and checking that the entries — eavesdropping, jamming,
+contention — are not already derivable from the other four.</p></li><li id="item-47-5"><p><strong>Reordering.</strong> Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-4" data-ref="eng:prop:strand">24.4</a> covers dropping
+and Table <a class="xref" href="24-enzymes-and-individuals.html#tab-24-2" data-ref="eng:tab:ladder">24.2</a> covers corruption, but a medium may also
+reorder, which is a race rather than a fault and which stranding does not
+describe. Whether reordering is a third dissipation or a change in the
+observed transition system is open.</p></li><li id="item-47-6"><p><strong>A syntactic criterion for porosity.</strong>
+Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-8" data-ref="eng:prop:pathway">24.8</a> needs a decidable test that
+over-approximates the existence of a redex pathway from a boundary
+channel to an internal redex. Reuse the interaction graph of
+§<a class="xref" href="21-the-mortal-scientist.html#sec-21-12-5" data-ref="sci:S12.5">21.12.5</a> of \(\chSci\) and measure the over-count.</p></li><li id="item-47-7"><p><strong>The assay trichotomy under loss.</strong> A lossy medium introduces
+a second source of the \(\bot\) outcome that has nothing to do with budget,
+and the learner cannot tell the two apart from inside. Budget-relative
+refutation is therefore not well defined without a hypothesis about the
+channel — so a learner must do science on its own medium. This is a
+correction owed to §<a class="xref" href="21-the-mortal-scientist.html#sec-21-4" data-ref="sci:S4">21.4</a> of \(\chSci\) rather than a problem for this
+note, and we flag it here because this note is what raises it.</p></li><li id="item-47-8"><p><strong>Merger as a quotient, arbitrage-removal as a reflection.</strong>
+\(\Merge\) identifies flavors; \(\Pi\) projects rates. Both take a conversion
+structure to a simpler one, and [<a class="cite" href="bibliography.html#bib-vtok" data-cite="vtok">63</a>, \S4] shows the second is an
+idempotent reflection. Is there an adjunction relating them, with
+Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-15" data-ref="eng:prop:indiv">24.15</a> as the condition under which the left adjoint
+exists?</p></li><li id="item-47-9"><p><strong>OSLF factoring and the crossover.</strong> [<a class="cite" href="bibliography.html#bib-compaut" data-cite="compaut">60</a>] conjectures
+that \(r^\ast\) and the factoring of the generated logic over a population
+are two views of one threshold. Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-15" data-ref="eng:prop:indiv">24.15</a> gives the
+first a graph-theoretic form; give the second one and compare.</p></li><li id="item-47-10"><p><strong>Grabby aliens.</strong> With Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-12" data-ref="eng:prop:radius">24.12</a>’s horizon,
+Theorem <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-4" data-ref="eng:thm:epistemic">24.4</a>’s restriction to signals, and the coincidence
+bound on first contact, the expansion of a converting ecology is bounded by
+profitability rather than by light speed. Whether that reproduces, softens,
+or refutes the selection effects of [<a class="cite" href="bibliography.html#bib-hanson" data-cite="hanson">74</a>] is a question this
+framework can now pose.</p></li></ol>
+<h2 id="sec-24-15"><span class="secnum">24.15</span> Appendix: An enzyme, in rholang</h2>
+<p>The listing below gives located reserves, the reflexive observable, the
+acceptance gate, the combinators, and the enzyme itself as a persistent
+issuer offering a linear swap. Conventions follow \(\chGame\): a parameter
+written <code>c</code> is a name and <code>@d</code> is data; a channel is passed as
+<code>*c</code>, since \(@(*c) = c\); persistent receipts use <code><=</code>.
+Guards marked <code>//! ideal</code> use the <code>where</code> clause in a form the
+current transpiler does not accept.</p>
+<div class="pullquote"><p>
+<em>Listing withheld from this printing.</em> The source of <code>engine.rho</code> was not committed alongside the other artefacts of this part and is not reproduced here; the construction it realizes is given in full in §<a class="xref" href="24-enzymes-and-individuals.html#sec-24-4" data-ref="eng:S4">24.4</a> and §<a class="xref" href="24-enzymes-and-individuals.html#sec-24-5" data-ref="eng:S5">24.5</a> above.</p></div>
+<p>Three things to watch, tying the code to the propositions. The
+<code>quote</code> face and the <code>swap</code> face are different names, because
+perception must not be able to act — grade one and grade two separated by
+choice of namespace, as in §<a class="xref" href="22-learning-to-play.html#sec-22-4-1" data-ref="gam:S4.1">22.4.1</a> of \(\chGame\). The toll accrues to the
+enzyme’s own slot on every swap, which is Remark <a class="xref" href="24-enzymes-and-individuals.html#remark-24-4" data-ref="eng:rem:eats">24.4</a>: \(\theta\) is
+not a parameter but a rendezvous. And <code>Observable</code> reads the
+reserves and replaces them, which is Proposition <a class="xref" href="24-enzymes-and-individuals.html#proposition-24-1" data-ref="eng:prop:marking">24.1</a>: the
+rate is a function of the marking, so the term itself refuses to let
+arbitrage be a static property.</p>
+<h2 id="sec-24-16"><span class="secnum">24.16</span> Appendix: Reproducing the numbers</h2>
+<p>All figures in this note come from <code>engines.py</code>, four blocks.</p>
+<h5 id="p-50">(1) The price code.</h5>
+<p>Barbell of two \(K_5\)’s joined by one
+enzyme: \(|V| = 10\), \(|E| = 21\), \(\bt = 12\). An exact cochain has syndrome
+\(2.3 \times 10^{-15}\). Corrupting a single edge by \(a = 1\) gives
+\(\|\ell_{\mathrm{arb}}\|^2 = 0.6\) for every intra-cluster edge
+(\(\Reff = 0.4\)) and \(0\) for the bridge (\(\Reff = 1\)); the identity of
+Theorem <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-1" data-ref="eng:thm:detect">24.1</a> holds to \(1.8\times10^{-15}\). The Foster identity
+of Theorem <a class="xref" href="24-enzymes-and-individuals.html#theorem-24-2" data-ref="eng:thm:foster">24.2</a> is verified at \(12.000000 = \bt\) for the
+barbell, and separately for \(K_5\) (\(6\)), \(C_6\) (\(1\)), the \(5\times5\) grid
+(\(16\)) and a random \(3\)-regular graph on \(60\) vertices (\(31\)). Confusable
+pairs: \(0\) in the barbell, all \(15\) in \(C_6\). Mean detection strength for
+random \(d\)-regular graphs on \(60\) vertices: \(0.344, 0.508, 0.672, 0.803,
+0.902\) at \(d = 3,4,6,10,20\), against the \(1-2/d\) asymptote.</p>
+<h5 id="p-51">(2) Individuation.</h5>
+<p>Isoperimetric profiles for \(C_{400}\), the
+\(20\times20\) grid, and random \(3\)- and \(6\)-regular graphs on \(400\)
+vertices, and the largest ball satisfying \(h(B(r)) \geq \kappa r\):</p>
+<div class="centered"><p>
+\(\fitwidth\){</p>
+<div class="tablewrap"><table><thead><tr><th>\(\kappa\)</th><th>\(C_{400}\)</th><th>grid</th><th>\(3\)-regular</th><th>\(6\)-regular</th></tr></thead><tbody><tr><td>\(0.30\)</td><td>\(3\)</td><td>\(25\)</td><td>\(22\)</td><td>\(151\)</td></tr><tr><td>\(0.10\)</td><td>\(5\)</td><td>\(85\)</td><td>\(160\)</td><td>\(365\)</td></tr><tr><td>\(0.03\)</td><td>\(11\)</td><td>\(219\)</td><td>\(258\)</td><td>\(365\)</td></tr><tr><td>\(0.01\)</td><td>\(19\)</td><td>\(315\)</td><td>\(349\)</td><td>\(365\)</td></tr></tbody></table></div>
+<p>}</p></div>
+<h5 id="p-52">(3) Decay.</h5>
+<p>\(Y = 1000\), \(c = 20\), \(d^\ast\) solving
+\(Ye^{-\theta d} = cd\): \(19.172\) at \(\theta = 0.05\); \(8.728\) at \(0.20\);
+\(1.518\) at \(\ln 10\); \(0.822\) at \(5.0\).</p>
+<h5 id="p-53">(4) Inventory enzymes.</h5>
+<p>A triangle of constant-product enzymes,
+each with reserves \((100,100)\), has cycle yield exactly \(1\). Draining one
+enzyme in steps of ten carries the yield through
+<span class="math-d">\[0.827,\; 0.683,\; 0.562,\; 0.457,\; 0.367,\]</span>
+that is, \(\log \oint \ell\) from \(0\) to \(-1.0033\). Computed in exact
+rationals.</p>
+<h5 id="p-54">(5) Porosity.</h5>
+<p>With \(Y_0 = 100\), \(Y(d) = Y_0(1-2^{-d})\),
+\(c = 2\), and net value \(Y(d)p^d - cd\), the optimal integration depth and
+its net value are:</p>
+<div class="centered"><p>
+\(\fitwidth\){</p>
+<div class="tablewrap"><table><thead><tr><th>\(p\)</th><th>\(d^\ast\)</th><th>net</th><th>\(p^{d^\ast}\)</th></tr></thead><tbody><tr><td>\(0.999\)</td><td>\(5\)</td><td>\(86.392\)</td><td>\(0.9950\)</td></tr><tr><td>\(0.990\)</td><td>\(5\)</td><td>\(82.127\)</td><td>\(0.9510\)</td></tr><tr><td>\(0.950\)</td><td>\(3\)</td><td>\(69.020\)</td><td>\(0.8574\)</td></tr><tr><td>\(0.900\)</td><td>\(3\)</td><td>\(57.788\)</td><td>\(0.7290\)</td></tr><tr><td>\(0.750\)</td><td>\(2\)</td><td>\(38.188\)</td><td>\(0.5625\)</td></tr></tbody></table></div>
+<p>}</p></div>
+<nav class="pager"><a class="prev" href="23-composing-learners.html"><span>Previous</span>Composing Learners</a><a class="next" href="25-a-network-that-learns-by-rewriting.html"><span>Next</span>A Network That Learns by Rewriting</a></nav>
+</main>
+<aside class="margin" id="margin" aria-live="polite"></aside>
+</div>
+<button class="railtoggle" id="railtoggle" aria-expanded="false">Contents</button>
+
+</body>
+</html>

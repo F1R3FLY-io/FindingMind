@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interactive GSLTs, and the Site of Interaction · Finding Mind</title>
+<link rel="canonical" href="https://findingmind.com/read/08-interactive-gslts-and-the-site-of-interaction.html">
+<meta name="description" content="Interactive GSLTs, and the Site of Interaction">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../book.css">
+<link rel="stylesheet" href="../katex/katex.min.css">
+<script defer src="../katex/katex.min.js"></script>
+<script defer src="../katex/auto-render.min.js"></script>
+<script defer src="../macros.js"></script>
+<script defer src="../reader.js"></script>
+</head>
+<body class="readpage">
+
+<a class="skip" href="#main">Skip to text</a>
+<div class="reader">
+<nav class="rail" aria-label="Contents"><div class="rail-in"><a class="rail-home" href="../index.html">Finding Mind</a><h2 class="rail-act">The Pledge</h2><a class="rail-ch" href="permitted-say.html"><span class="rn rn-i">⁂</span><span class="rt">The Permitted Say</span></a><a class="rail-ch" href="01-prolegomena-to-finding-mind.html"><span class="rn">1</span><span class="rt">Prolegomena to Finding Mind</span></a><a class="rail-ch" href="02-the-ordinary-world.html"><span class="rn">2</span><span class="rt">The Ordinary World</span></a><a class="rail-ch" href="03-information-causation-and-the-blind-spot.html"><span class="rn">3</span><span class="rt">Information, Causation, and the Blind Spot</span></a><a class="rail-ch" href="04-finding-the-shape.html"><span class="rn">4</span><span class="rt">Finding the Shape</span></a><a class="rail-ch" href="05-inside-and-outside-and-what-it-means-to-assume.html"><span class="rn">5</span><span class="rt">Inside and Outside, and What it Means to Assume the Virtue</span></a><a class="rail-ch" href="how-to-read-this-book.html"><span class="rn rn-i">⁂</span><span class="rt">How to Read This Book</span></a><a class="rail-ch" href="related-work-and-where-this-differs.html"><span class="rn rn-i">⁂</span><span class="rt">Related Work, and Where This Differs</span></a><h2 class="rail-act">The Turn</h2><a class="rail-ch" href="foam-born.html"><span class="rn rn-i">⁂</span><span class="rt">The Foam-Born</span></a><h3 class="rail-part">The Machinery: From GSLTs to Cost-Accounted Theories</h3><a class="rail-ch" href="06-what-a-language-presentation-is-and-why-it-com.html"><span class="rn">6</span><span class="rt">What a Language Presentation Is, and Why It Comes First</span></a><a class="rail-ch" href="07-graph-structured-lambda-theories.html"><span class="rn">7</span><span class="rt">Graph-Structured Lambda Theories</span></a><a class="rail-ch" aria-current="page" href="08-interactive-gslts-and-the-site-of-interaction.html"><span class="rn">8</span><span class="rt">Interactive GSLTs, and the Site of Interaction</span></a><a class="rail-ch" href="09-continued-interactive-gslts.html"><span class="rn">9</span><span class="rt">Continued Interactive GSLTs</span></a><a class="rail-ch" href="10-the-category-of-gslts.html"><span class="rn">10</span><span class="rt">The Category of GSLTs</span></a><a class="rail-ch" href="11-the-cost-monad.html"><span class="rn">11</span><span class="rt">The Cost Monad</span></a><a class="rail-ch" href="12-the-history-monad.html"><span class="rn">12</span><span class="rt">The History Monad</span></a><a class="rail-ch" href="13-weighting-rates-from-the-generated-logic.html"><span class="rn">13</span><span class="rt">Weighting: Rates from the Generated Logic</span></a><a class="rail-ch" href="14-cost-accounted-rho.html"><span class="rn">14</span><span class="rt">Cost-Accounted Rho</span></a><a class="rail-ch" href="15-conversion-enzymes-and-the-virtual-token.html"><span class="rn">15</span><span class="rt">Conversion, Enzymes, and the Virtual Token</span></a><a class="rail-ch" href="16-the-labeled-transition-system-and-context-deco.html"><span class="rn">16</span><span class="rt">The Labeled Transition System and Context-Decorated HML</span></a><a class="rail-ch" href="17-what-goes-into-a-logic.html"><span class="rn">17</span><span class="rt">What Goes Into a Logic</span></a><a class="rail-ch" href="18-scopes-and-the-fixed-points-that-generate-them.html"><span class="rn">18</span><span class="rt">Scopes, and the Fixed Points that Generate Them</span></a><a class="rail-ch" href="19-generating-type-systems-oslf-and-the-hypercube.html"><span class="rn">19</span><span class="rt">Generating Type Systems: OSLF and the Hypercube</span></a><a class="rail-ch" href="20-instruments-making-structure-visible-to-bisimu.html"><span class="rn">20</span><span class="rt">Instruments: Making Structure Visible to Bisimulation</span></a><h3 class="rail-part">Ecology as Cognitive Architecture</h3><a class="rail-ch" href="21-the-mortal-scientist.html"><span class="rn">21</span><span class="rt">The Mortal Scientist</span></a><a class="rail-ch" href="22-learning-to-play.html"><span class="rn">22</span><span class="rt">Learning to Play</span></a><a class="rail-ch" href="23-composing-learners.html"><span class="rn">23</span><span class="rt">Composing Learners</span></a><a class="rail-ch" href="24-enzymes-and-individuals.html"><span class="rn">24</span><span class="rt">Enzymes and Individuals</span></a><a class="rail-ch" href="25-a-network-that-learns-by-rewriting.html"><span class="rn">25</span><span class="rt">A Network That Learns by Rewriting</span></a><h3 class="rail-part">Suffering: Homeostasis and the Learner&#x27;s Own Account</h3><a class="rail-ch" href="26-suffering-a-learner-s-view-of-its-own-account.html"><span class="rn">26</span><span class="rt">Suffering: A Learner’s View of Its Own Account</span></a><h3 class="rail-part">Situating the Learner: A Variety of Possible Physics</h3><a class="rail-ch" href="27-the-learner-s-world-already-has-a-physics.html"><span class="rn">27</span><span class="rt">The Learner’s World Already Has a Physics</span></a><a class="rail-ch" href="28-the-reversibility-construction.html"><span class="rn">28</span><span class="rt">The Reversibility Construction</span></a><a class="rail-ch" href="29-causal-structure-and-time.html"><span class="rn">29</span><span class="rt">Causal Structure and Time</span></a><a class="rail-ch" href="30-decoration-one-map-many-semirings.html"><span class="rn">30</span><span class="rt">Decoration: One Map, Many Semirings</span></a><a class="rail-ch" href="31-conservation-and-what-it-costs-to-have-it.html"><span class="rn">31</span><span class="rt">Conservation, and What It Costs to Have It</span></a><a class="rail-ch" href="32-extended-modal-operators.html"><span class="rn">32</span><span class="rt">Extended Modal Operators</span></a><a class="rail-ch" href="33-complex-amplitudes-and-where-the-coherence-is.html"><span class="rn">33</span><span class="rt">Complex Amplitudes, and Where the Coherence Is</span></a><a class="rail-ch" href="34-synthesis-the-full-structure.html"><span class="rn">34</span><span class="rt">Synthesis: The Full Structure</span></a><a class="rail-ch" href="35-entropy-and-the-cost-of-staying-level.html"><span class="rn">35</span><span class="rt">Entropy, and the Cost of Staying Level</span></a><a class="rail-ch" href="36-discussion-and-future-directions.html"><span class="rn">36</span><span class="rt">Discussion and Future Directions</span></a><h3 class="rail-part">Why Scientists Get Misled: Emergent Ontology in Massive Agent Populations</h3><a class="rail-ch" href="37-introduction.html"><span class="rn">37</span><span class="rt">Introduction</span></a><a class="rail-ch" href="38-ontological-isolation.html"><span class="rn">38</span><span class="rt">Ontological Isolation</span></a><a class="rail-ch" href="39-agents-and-the-scientific-method.html"><span class="rn">39</span><span class="rt">Agents and the Scientific Method</span></a><a class="rail-ch" href="40-behavioral-primes.html"><span class="rn">40</span><span class="rt">Behavioral Primes</span></a><a class="rail-ch" href="41-massive-populations-and-communication-degradat.html"><span class="rn">41</span><span class="rt">Massive Populations and Communication Degradation</span></a><a class="rail-ch" href="42-the-logical-topology-and-compactness.html"><span class="rn">42</span><span class="rt">The Logical Topology and Compactness</span></a><a class="rail-ch" href="43-coherence-clusters-and-their-nerve.html"><span class="rn">43</span><span class="rt">Coherence Clusters and Their Nerve</span></a><a class="rail-ch" href="44-the-apparent-ontology.html"><span class="rn">44</span><span class="rt">The Apparent Ontology</span></a><a class="rail-ch" href="45-open-gaps-and-future-work.html"><span class="rn">45</span><span class="rt">Open Gaps and Future Work</span></a><a class="rail-ch" href="46-discussion.html"><span class="rn">46</span><span class="rt">Discussion</span></a><h3 class="rail-part">Origins of Life: Assembly Theory, Phase Transitions, and Replication</h3><a class="rail-ch" href="47-introduction.html"><span class="rn">47</span><span class="rt">Introduction</span></a><a class="rail-ch" href="48-assembly-theory-causal-depth-and-copy-number.html"><span class="rn">48</span><span class="rt">Assembly Theory: Causal Depth and Copy Number</span></a><a class="rail-ch" href="49-replication-as-a-fixed-point.html"><span class="rn">49</span><span class="rt">Replication as a Fixed Point</span></a><a class="rail-ch" href="50-smith-s-phase-transition-and-the-density-of-at.html"><span class="rn">50</span><span class="rt">Smith’s Phase Transition and the Density of Attractors</span></a><a class="rail-ch" href="51-metabolism-energy-gradients-and-the-ecosystem.html"><span class="rn">51</span><span class="rt">Metabolism, Energy Gradients, and the Ecosystem</span></a><a class="rail-ch" href="52-assembly-index-and-the-depth-of-the-fractal-le.html"><span class="rn">52</span><span class="rt">Assembly Index and the Depth of the Fractal Learner</span></a><a class="rail-ch" href="53-scope-and-manufacture.html"><span class="rn">53</span><span class="rt">Scope and Manufacture</span></a><a class="rail-ch" href="54-open-gaps.html"><span class="rn">54</span><span class="rt">Open Gaps</span></a><a class="rail-ch" href="55-discussion.html"><span class="rn">55</span><span class="rt">Discussion</span></a><h3 class="rail-part">Conclusion</h3><a class="rail-ch" href="what-has-been-built.html"><span class="rn rn-i">⁂</span><span class="rt">What Has Been Built</span></a><a class="rail-ch" href="a-view-from-inside-the-framework.html"><span class="rn rn-i">⁂</span><span class="rt">A View from Inside the Framework</span></a><a class="rail-ch" href="what-remains-to-be-done.html"><span class="rn rn-i">⁂</span><span class="rt">What Remains to Be Done</span></a><h2 class="rail-act">The Prestige</h2><a class="rail-ch" href="begotten.html"><span class="rn rn-i">⁂</span><span class="rt">begotten not made</span></a><h3 class="rail-part">The Method, and What It Left Out</h3><a class="rail-ch" href="56-how-the-trick-was-done.html"><span class="rn">56</span><span class="rt">How the Trick Was Done</span></a><a class="rail-ch" href="57-everything-so-far-was-turing-complete.html"><span class="rn">57</span><span class="rt">Everything So Far Was Turing Complete</span></a><a class="rail-ch" href="58-the-tower-of-oracle-extensions.html"><span class="rn">58</span><span class="rt">The Tower of Oracle Extensions</span></a><a class="rail-ch" href="59-not-every-cut-is-an-aperture.html"><span class="rn">59</span><span class="rt">Not Every Cut Is an Aperture</span></a><a class="rail-ch" href="60-where-does-agency-live.html"><span class="rn">60</span><span class="rt">Where Does Agency Live?</span></a><a class="rail-ch" href="61-choice-principles-are-the-types-schedulers-are.html"><span class="rn">61</span><span class="rt">Choice Principles are the Types; Schedulers are the Terms</span></a><a class="rail-ch" href="62-consciousness-and-the-world-it-comes-with.html"><span class="rn">62</span><span class="rt">Consciousness, and the World It Comes With</span></a><a class="rail-ch" href="63-what-these-chapters-owe.html"><span class="rn">63</span><span class="rt">What These Chapters Owe</span></a><h3 class="rail-part">Reference, Simulation, Reception, and a Future Metaphysics</h3><a class="rail-ch" href="64-what-a-symbol-system-would-have-to-be.html"><span class="rn">64</span><span class="rt">What a Symbol System Would Have to Be</span></a><a class="rail-ch" href="65-if-this-is-a-simulation-which-kind.html"><span class="rn">65</span><span class="rt">If This Is a Simulation, Which Kind</span></a><a class="rail-ch" href="66-what-it-is-like-to-be-a-bot.html"><span class="rn">66</span><span class="rt">What It Is Like to Be a Bot</span></a><a class="rail-ch" href="67-how-life-like-is-life-like-enough.html"><span class="rn">67</span><span class="rt">How Life-Like Is Life-Like Enough?</span></a><a class="rail-ch" href="68-any-future-metaphysics.html"><span class="rn">68</span><span class="rt">Any Future Metaphysics</span></a><a class="rail-ch" href="right-sizing.html"><span class="rn rn-i">⁂</span><span class="rt">Right-Sizing</span></a></div></nav>
+<main id="main" class="text ">
+<header class="chead"><p class="kicker">Chapter 8</p><h1>Interactive GSLTs, and the Site of Interaction</h1></header>
+<h2 id="sec-8-1"><span class="secnum">8.1</span> Naming the site of interaction</h2>
+<p>A GSLT is any multi-sorted rewrite theory. Most of what we want to do requires more:
+we want to know <em>where</em> the theory’s programs meet whatever they compute against.</p>
+<section class="thm plain thm-definition" id="definition-8-1" data-kind="Definition" data-num="8.1"><header><span class="thm-kind">Definition 8.1</span> <span class="thm-name">Interactive GSLT</span><a class="permalink" href="#definition-8-1" aria-label="Link to Definition 8.1">¶</a></header><p>
+A GSLT \(G = (\Sigma,E,R)\) is <strong>interactive</strong> when it carries, over and above the
+triple:</p>
+<ul><li><p>a distinguished <em>interacting sort</em> \(P\) of programs;</p></li><li><p>a binary <em>interaction constructor</em> \(K(P,E)\), representing the interaction
+    of a program with an environment \(E\) — an operand of the interacting sort, with
+    \(E = P\) in the process-calculus instances;</p></li><li><p>at least one base rewrite rule in \(R\) whose left-hand side features \(K\) — the
+    <em>interaction rule</em> — generating a labelled transition system on \(P\) modulo
+    \(\equiv\) on which bisimulation is the intended equivalence.</p></li></ul></section>
+<section class="thm plain thm-definition" id="definition-8-2" data-kind="Definition" data-num="8.2"><header><span class="thm-kind">Definition 8.2</span> <span class="thm-name">The category \(\catiGSLT\)</span><a class="permalink" href="#definition-8-2" aria-label="Link to Definition 8.2">¶</a></header><p>\(\catiGSLT\) is the category whose objects are interactive GSLTs and whose morphisms are
+theory maps — sort- and operator-preserving translations respecting \(\equiv\) and \(R\)
+— that are bisimulation-preserving on the interacting sort.</p></section>
+<p>The constructor \(K\) and the \(K\)-headed rule are exactly what a bare GSLT lacks. A GSLT
+is any multi-sorted rewrite theory; an interactive GSLT <em>names a site of
+interaction and a rule that fires there</em>. The motivating instances span calculi with and
+without binding: CCS [<a class="cite" href="bibliography.html#bib-milnerCC" data-cite="milnerCC">84</a>] with \(P\) the processes, \(K = {\mid}\) and
+interaction by complementary actions; the rho calculus with \(K = {\mid}\) and \(R \ni
+\textsc{Comm}\); the \(\lambda\)-calculus with \(P\) the terms, \(K = \mathrm{App}\), \(\equiv\)
+\(= \alpha\) and \(R \ni \beta\); and the interaction categories of Abramsky, Gay and
+Nagarajan [<a class="cite" href="bibliography.html#bib-AbramskyGayNagarajan1996" data-cite="AbramskyGayNagarajan1996">114</a>], where \(K\) is composition along a shared
+interface.</p>
+<h2 id="sec-8-2"><span class="secnum">8.2</span> The interaction cut</h2>
+<p>Definition <a class="xref" href="08-interactive-gslts-and-the-site-of-interaction.html#definition-8-1" data-ref="ob:def:igslt">8.1</a> asks only that <em>some</em> rule mention \(K\). In every
+instance we care about, that rule has a great deal more shape, and naming the shape is
+what makes the constructions of Part III possible. Write the generating rule of \(R\) as
+<span class="math-d">\[\frac{(C_p', C_e') = \compute(I, J, C_p, C_e)}
+       {K\bigl(K_p(I, C_p),\, K_e(J, C_e)\bigr) \longrightarrow K'\bigl(C_p', C_e'\bigr)}
+  \tag{$\dagger$}\]</span>
+distinguishing:</p>
+<dl><dt>the interaction constructor \(K\),</dt><dd><p>which brings two operands into contact. In rho
+  and CCS, \(K = {\mid}\); in \(\lambda\), \(K = \mathrm{App}\).</p></dd><dt>two introductions \(K_p(I,C_p)\) and \(K_e(J,C_e)\),</dt><dd><p>each a constructor separating an
+  <em>interaction surface</em> (\(I\), \(J\)) — the part that must match for the cut to fire
+  — from a <em>continuation</em>: \(C_p\) the program continuation, the rest of the
+  computation, and \(C_e\) the environment continuation, the rest of the environment.</p></dd><dt>the contraction \(\compute\),</dt><dd><p>a partial operation that, on a surface match,
+  combines the two continuations into residuals \(C_p', C_e'\) repackaged by \(K'\).</p></dd></dl>
+<p>The factoring is Milner’s [<a class="cite" href="bibliography.html#bib-Milner1992" data-cite="Milner1992">125</a>]. In the polyadic \(\pi\)-calculus the input
+\(\mathrm{for}(y \leftarrow x)P\) is the pair \((x, \lambda y.P)\) and the output \(x!(u).Q\)
+is the pair \((x, [u,Q])\): the subjects \(x\) are the surfaces that must match, the objects
+\(\lambda y.P\) and \([u,Q]\) are the continuations, and the contraction is Milner’s
+<em>pseudo-application</em>, returning \(P\{u/y\} \mid Q\).</p>
+<div class="centered"><p><figure class="tikz"><img src="../figures/765c92127583.svg" alt="Diagram"></figure></p></div>
+<p>We call \((\dagger)\) an <em>interaction cut</em>: two introductions meet along matching
+surfaces and a contraction combines their continuations. Both sides are structured —
+the eliminand is not a bare term but an introduction carrying its own continuation.</p>
+<section class="thm remarkish thm-remark" id="remark-8-1" data-kind="Remark" data-num="8.1"><header><span class="thm-kind">Remark 8.1</span> <span class="thm-name">Binding is not the point</span><a class="permalink" href="#remark-8-1" aria-label="Link to Remark 8.1">¶</a></header><p>Pseudo-application factors into two parts: the substitution \(P\{u/y\}\), by which a
+datum migrates from the environment continuation into the program continuation through
+a binder, and the release \(\mid Q\) of the environment’s residual. Binding is therefore
+<em>one mode by which information migrates</em> under the contraction, not an intrinsic
+feature of the cut. CCS realises the same shape with no migration at all, and is in this
+sense the paradigmatic instance.</p></section>
+<h2 id="sec-8-3"><span class="secnum">8.3</span> Surfaces: nominal and structural</h2>
+<p>A surface may be carried in either of two ways, and which one a calculus uses is
+dictated entirely by the equational theory of \(K\).</p>
+<p>It may be carried <em>nominally</em>, as an explicit \(I\) or \(J\) that must match — as the
+subject \(x\) does in rho and \(\pi\), or as complementary labels do in CCS. Or it may be
+carried <em>structurally</em>, by the rigidity of \(K\): when \(K\) is free, carrying no
+equations at all, position itself is unforgeable and the context \(K([\,],-)\) <em>is</em>
+the surface. A nominally degenerate — absent — surface is then not a missing match
+condition but one carried by the geometry of \(K\) instead.</p>
+<p>The \(\lambda\)-calculus is exactly this case on the environment side. \(\mathrm{App}\) is
+free, and its rigidity supplies the surface that no explicit \(J\) records. Each
+application comprises a location together with a function and an argument; the location
+is the surface, the function is the program and the argument is the environment — or
+dually. A variable, we note, is not a surface, though it is closely related to one.</p>
+<p>The dividing line is <em>freeness</em>, not commutativity. An equation on \(K\) is a
+congruence step: it rewrites adjacency without firing a cut. Associativity re-brackets
+adjacency, a unit law inserts and deletes neighbours, idempotence copies them, and
+associative–commutativity dissolves position altogether into a freely mixed soup. Each
+forges position, and only a free \(K\) admits no such move. We return to the consequences
+in Section <a class="xref" href="11-the-cost-monad.html#sec-11-5" data-ref="ob:subsec:capabilities">11.5</a>.</p>
+<h2 id="sec-8-4"><span class="secnum">8.4</span> Discriminating examples: three machines that are not interactive</h2>
+<p>It is easy to accumulate examples of a definition and hard to see what the definition
+excludes. We therefore work three non-examples in detail. They are not exotic: they are
+the machines with which most readers first learned what computation is.</p>
+<h2 id="sec-8-5"><span class="secnum">8.5</span> Turing machines</h2>
+<p>A Turing machine is unproblematically a GSLT. Its sorts are states, tape symbols, and
+configurations; its operators build a configuration from a state, a tape, and a head
+position; its rewrites are the transition table together with the mechanics of moving
+the head. One can write the presentation down and a machine will accept it.</p>
+<p>What it is not is <em>interactive</em> in the sense of Definition <a class="xref" href="08-interactive-gslts-and-the-site-of-interaction.html#definition-8-1" data-ref="ob:def:igslt">8.1</a>. To make
+it interactive one must exhibit an interaction constructor \(K(P,E)\) and a \(K\)-headed
+rule. The only plausible candidate for the site of interaction is the contact between
+the finite control and the tape: that is, after all, where the machine’s steps happen.
+But the definition asks that \(E\) be an operand of the interacting sort, and the tape is
+not of the sort of the control. The candidate cut is heterogeneous, and \(K(P,E)\) has no
+well-sorted instance.</p>
+<section class="thm plain thm-nonexample" id="nonexample-8-1" data-kind="Non-example" data-num="8.1"><header><span class="thm-kind">Non-example 8.1</span> <span class="thm-name">Turing machines</span><a class="permalink" href="#nonexample-8-1" aria-label="Link to Non-example 8.1">¶</a></header><p>
+The Turing machine has no naive presentation as an interactive GSLT. The cut would be
+between automaton and tape, which are of different kinds.</p></section>
+<p>The failure is worth dwelling on because it is not a failure of expressive power. A
+Turing machine can compute anything a rho calculus term can compute. What it lacks is a
+<em>site</em>: a place in the syntax where two things of the same kind are brought into
+contact, such that one could ask what else might have been brought into contact there
+instead. The absence of such a site is precisely the absence of an environment in which
+the machine could be placed — which is another way of saying that a Turing machine is
+a model of a closed computation, and interactivity is about open ones.</p>
+<h2 id="sec-8-6"><span class="secnum">8.6</span> Moore and Mealy machines</h2>
+<p>The transducers fail in the same way and differ from each other in an instructive
+second respect.</p>
+<p>A Moore machine emits an output determined by its current state alone; a Mealy machine
+emits an output determined by its current state <em>and</em> the input symbol just
+consumed. Both are automata reading a stream, and for both the only candidate cut is
+between the machine and the stream — again heterogeneous, again no well-sorted
+\(K(P,E)\). On the first axis, then, the three machines fail identically, and one might
+think a single non-example would have sufficed.</p>
+<p>It does not, because the pair discriminates along a <em>second</em> axis: the migration
+classification of Remark <a class="xref" href="09-continued-interactive-gslts.html#remark-9-2" data-ref="ob:rem:migration">9.2</a> below. Were one to force an interaction-cut
+reading on these machines, the Moore machine’s output is a function of the state alone,
+so nothing of the environment reaches the emitted value; the contraction would be pure
+release, the null-migration corner occupied by CCS. The Mealy machine’s output depends
+on the consumed symbol, so the environment’s datum does reach the residual; the
+contraction would migrate. Two machines that fail interactivity for the same reason
+nevertheless sit at different points of the classification that organises the successes.</p>
+<section class="thm plain thm-nonexample" id="nonexample-8-2" data-kind="Non-example" data-num="8.2"><header><span class="thm-kind">Non-example 8.2</span> <span class="thm-name">Moore and Mealy machines</span><a class="permalink" href="#nonexample-8-2" aria-label="Link to Non-example 8.2">¶</a></header><p>Neither transducer has a naive presentation as an interactive GSLT, for the reason of
+Non-example <a class="xref" href="08-interactive-gslts-and-the-site-of-interaction.html#nonexample-8-1" data-ref="ob:nonex:turing">8.1</a>. Under a forced reading they would occupy the
+null-migration and binding-migration positions respectively.</p></section>
+<h2 id="sec-8-7"><span class="secnum">8.7</span> Presentation versus encoding</h2>
+<p>The reader will object that Turing machines can obviously be <em>run</em> inside a process
+calculus, and that the objection above is therefore pedantic. The objection is correct
+and the distinction it presses on is the important one.</p>
+<p>There is a difference between a theory <em>having</em> a presentation and a theory
+<em>admitting an encoding into</em> one that does. Encoding a Turing machine into the rho
+calculus — reifying the tape as a collection of processes communicating on channels,
+and the head as a process that moves among them — produces a rho term whose behaviour
+simulates the machine. That is a genuine and useful construction. But the result is a
+statement about rho, not about
+Turing machines. The interaction sites in the encoded term are rho’s sites, and the
+questions one can ask of them are questions about rho contexts.</p>
+<p>This distinction is the entire subject of Chapter <a class="xref" href="10-the-category-of-gslts.html#top" data-ref="ch:catgslt">10</a>, where the
+morphisms of the category \(\catGSLT\) turn out to be exactly the well-behaved encodings, and
+where the conditions under which an encoding tells you something about the source rather
+than merely about the target are isolated.</p>
+<nav class="pager"><a class="prev" href="07-graph-structured-lambda-theories.html"><span>Previous</span>Graph-Structured Lambda Theories</a><a class="next" href="09-continued-interactive-gslts.html"><span>Next</span>Continued Interactive GSLTs</a></nav>
+</main>
+<aside class="margin" id="margin" aria-live="polite"></aside>
+</div>
+<button class="railtoggle" id="railtoggle" aria-expanded="false">Contents</button>
+
+</body>
+</html>

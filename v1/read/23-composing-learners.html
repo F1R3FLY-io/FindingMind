@@ -1,0 +1,1032 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Composing Learners · Finding Mind</title>
+<link rel="canonical" href="https://findingmind.com/read/23-composing-learners.html">
+<meta name="description" content="Composing Learners">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../book.css">
+<link rel="stylesheet" href="../katex/katex.min.css">
+<script defer src="../katex/katex.min.js"></script>
+<script defer src="../katex/auto-render.min.js"></script>
+<script defer src="../macros.js"></script>
+<script defer src="../reader.js"></script>
+</head>
+<body class="readpage">
+
+<a class="skip" href="#main">Skip to text</a>
+<div class="reader">
+<nav class="rail" aria-label="Contents"><div class="rail-in"><a class="rail-home" href="../index.html">Finding Mind</a><h2 class="rail-act">The Pledge</h2><a class="rail-ch" href="permitted-say.html"><span class="rn rn-i">⁂</span><span class="rt">The Permitted Say</span></a><a class="rail-ch" href="01-prolegomena-to-finding-mind.html"><span class="rn">1</span><span class="rt">Prolegomena to Finding Mind</span></a><a class="rail-ch" href="02-the-ordinary-world.html"><span class="rn">2</span><span class="rt">The Ordinary World</span></a><a class="rail-ch" href="03-information-causation-and-the-blind-spot.html"><span class="rn">3</span><span class="rt">Information, Causation, and the Blind Spot</span></a><a class="rail-ch" href="04-finding-the-shape.html"><span class="rn">4</span><span class="rt">Finding the Shape</span></a><a class="rail-ch" href="05-inside-and-outside-and-what-it-means-to-assume.html"><span class="rn">5</span><span class="rt">Inside and Outside, and What it Means to Assume the Virtue</span></a><a class="rail-ch" href="how-to-read-this-book.html"><span class="rn rn-i">⁂</span><span class="rt">How to Read This Book</span></a><a class="rail-ch" href="related-work-and-where-this-differs.html"><span class="rn rn-i">⁂</span><span class="rt">Related Work, and Where This Differs</span></a><h2 class="rail-act">The Turn</h2><a class="rail-ch" href="foam-born.html"><span class="rn rn-i">⁂</span><span class="rt">The Foam-Born</span></a><h3 class="rail-part">The Machinery: From GSLTs to Cost-Accounted Theories</h3><a class="rail-ch" href="06-what-a-language-presentation-is-and-why-it-com.html"><span class="rn">6</span><span class="rt">What a Language Presentation Is, and Why It Comes First</span></a><a class="rail-ch" href="07-graph-structured-lambda-theories.html"><span class="rn">7</span><span class="rt">Graph-Structured Lambda Theories</span></a><a class="rail-ch" href="08-interactive-gslts-and-the-site-of-interaction.html"><span class="rn">8</span><span class="rt">Interactive GSLTs, and the Site of Interaction</span></a><a class="rail-ch" href="09-continued-interactive-gslts.html"><span class="rn">9</span><span class="rt">Continued Interactive GSLTs</span></a><a class="rail-ch" href="10-the-category-of-gslts.html"><span class="rn">10</span><span class="rt">The Category of GSLTs</span></a><a class="rail-ch" href="11-the-cost-monad.html"><span class="rn">11</span><span class="rt">The Cost Monad</span></a><a class="rail-ch" href="12-the-history-monad.html"><span class="rn">12</span><span class="rt">The History Monad</span></a><a class="rail-ch" href="13-weighting-rates-from-the-generated-logic.html"><span class="rn">13</span><span class="rt">Weighting: Rates from the Generated Logic</span></a><a class="rail-ch" href="14-cost-accounted-rho.html"><span class="rn">14</span><span class="rt">Cost-Accounted Rho</span></a><a class="rail-ch" href="15-conversion-enzymes-and-the-virtual-token.html"><span class="rn">15</span><span class="rt">Conversion, Enzymes, and the Virtual Token</span></a><a class="rail-ch" href="16-the-labeled-transition-system-and-context-deco.html"><span class="rn">16</span><span class="rt">The Labeled Transition System and Context-Decorated HML</span></a><a class="rail-ch" href="17-what-goes-into-a-logic.html"><span class="rn">17</span><span class="rt">What Goes Into a Logic</span></a><a class="rail-ch" href="18-scopes-and-the-fixed-points-that-generate-them.html"><span class="rn">18</span><span class="rt">Scopes, and the Fixed Points that Generate Them</span></a><a class="rail-ch" href="19-generating-type-systems-oslf-and-the-hypercube.html"><span class="rn">19</span><span class="rt">Generating Type Systems: OSLF and the Hypercube</span></a><a class="rail-ch" href="20-instruments-making-structure-visible-to-bisimu.html"><span class="rn">20</span><span class="rt">Instruments: Making Structure Visible to Bisimulation</span></a><h3 class="rail-part">Ecology as Cognitive Architecture</h3><a class="rail-ch" href="21-the-mortal-scientist.html"><span class="rn">21</span><span class="rt">The Mortal Scientist</span></a><a class="rail-ch" href="22-learning-to-play.html"><span class="rn">22</span><span class="rt">Learning to Play</span></a><a class="rail-ch" aria-current="page" href="23-composing-learners.html"><span class="rn">23</span><span class="rt">Composing Learners</span></a><a class="rail-ch" href="24-enzymes-and-individuals.html"><span class="rn">24</span><span class="rt">Enzymes and Individuals</span></a><a class="rail-ch" href="25-a-network-that-learns-by-rewriting.html"><span class="rn">25</span><span class="rt">A Network That Learns by Rewriting</span></a><h3 class="rail-part">Suffering: Homeostasis and the Learner&#x27;s Own Account</h3><a class="rail-ch" href="26-suffering-a-learner-s-view-of-its-own-account.html"><span class="rn">26</span><span class="rt">Suffering: A Learner’s View of Its Own Account</span></a><h3 class="rail-part">Situating the Learner: A Variety of Possible Physics</h3><a class="rail-ch" href="27-the-learner-s-world-already-has-a-physics.html"><span class="rn">27</span><span class="rt">The Learner’s World Already Has a Physics</span></a><a class="rail-ch" href="28-the-reversibility-construction.html"><span class="rn">28</span><span class="rt">The Reversibility Construction</span></a><a class="rail-ch" href="29-causal-structure-and-time.html"><span class="rn">29</span><span class="rt">Causal Structure and Time</span></a><a class="rail-ch" href="30-decoration-one-map-many-semirings.html"><span class="rn">30</span><span class="rt">Decoration: One Map, Many Semirings</span></a><a class="rail-ch" href="31-conservation-and-what-it-costs-to-have-it.html"><span class="rn">31</span><span class="rt">Conservation, and What It Costs to Have It</span></a><a class="rail-ch" href="32-extended-modal-operators.html"><span class="rn">32</span><span class="rt">Extended Modal Operators</span></a><a class="rail-ch" href="33-complex-amplitudes-and-where-the-coherence-is.html"><span class="rn">33</span><span class="rt">Complex Amplitudes, and Where the Coherence Is</span></a><a class="rail-ch" href="34-synthesis-the-full-structure.html"><span class="rn">34</span><span class="rt">Synthesis: The Full Structure</span></a><a class="rail-ch" href="35-entropy-and-the-cost-of-staying-level.html"><span class="rn">35</span><span class="rt">Entropy, and the Cost of Staying Level</span></a><a class="rail-ch" href="36-discussion-and-future-directions.html"><span class="rn">36</span><span class="rt">Discussion and Future Directions</span></a><h3 class="rail-part">Why Scientists Get Misled: Emergent Ontology in Massive Agent Populations</h3><a class="rail-ch" href="37-introduction.html"><span class="rn">37</span><span class="rt">Introduction</span></a><a class="rail-ch" href="38-ontological-isolation.html"><span class="rn">38</span><span class="rt">Ontological Isolation</span></a><a class="rail-ch" href="39-agents-and-the-scientific-method.html"><span class="rn">39</span><span class="rt">Agents and the Scientific Method</span></a><a class="rail-ch" href="40-behavioral-primes.html"><span class="rn">40</span><span class="rt">Behavioral Primes</span></a><a class="rail-ch" href="41-massive-populations-and-communication-degradat.html"><span class="rn">41</span><span class="rt">Massive Populations and Communication Degradation</span></a><a class="rail-ch" href="42-the-logical-topology-and-compactness.html"><span class="rn">42</span><span class="rt">The Logical Topology and Compactness</span></a><a class="rail-ch" href="43-coherence-clusters-and-their-nerve.html"><span class="rn">43</span><span class="rt">Coherence Clusters and Their Nerve</span></a><a class="rail-ch" href="44-the-apparent-ontology.html"><span class="rn">44</span><span class="rt">The Apparent Ontology</span></a><a class="rail-ch" href="45-open-gaps-and-future-work.html"><span class="rn">45</span><span class="rt">Open Gaps and Future Work</span></a><a class="rail-ch" href="46-discussion.html"><span class="rn">46</span><span class="rt">Discussion</span></a><h3 class="rail-part">Origins of Life: Assembly Theory, Phase Transitions, and Replication</h3><a class="rail-ch" href="47-introduction.html"><span class="rn">47</span><span class="rt">Introduction</span></a><a class="rail-ch" href="48-assembly-theory-causal-depth-and-copy-number.html"><span class="rn">48</span><span class="rt">Assembly Theory: Causal Depth and Copy Number</span></a><a class="rail-ch" href="49-replication-as-a-fixed-point.html"><span class="rn">49</span><span class="rt">Replication as a Fixed Point</span></a><a class="rail-ch" href="50-smith-s-phase-transition-and-the-density-of-at.html"><span class="rn">50</span><span class="rt">Smith’s Phase Transition and the Density of Attractors</span></a><a class="rail-ch" href="51-metabolism-energy-gradients-and-the-ecosystem.html"><span class="rn">51</span><span class="rt">Metabolism, Energy Gradients, and the Ecosystem</span></a><a class="rail-ch" href="52-assembly-index-and-the-depth-of-the-fractal-le.html"><span class="rn">52</span><span class="rt">Assembly Index and the Depth of the Fractal Learner</span></a><a class="rail-ch" href="53-scope-and-manufacture.html"><span class="rn">53</span><span class="rt">Scope and Manufacture</span></a><a class="rail-ch" href="54-open-gaps.html"><span class="rn">54</span><span class="rt">Open Gaps</span></a><a class="rail-ch" href="55-discussion.html"><span class="rn">55</span><span class="rt">Discussion</span></a><h3 class="rail-part">Conclusion</h3><a class="rail-ch" href="what-has-been-built.html"><span class="rn rn-i">⁂</span><span class="rt">What Has Been Built</span></a><a class="rail-ch" href="a-view-from-inside-the-framework.html"><span class="rn rn-i">⁂</span><span class="rt">A View from Inside the Framework</span></a><a class="rail-ch" href="what-remains-to-be-done.html"><span class="rn rn-i">⁂</span><span class="rt">What Remains to Be Done</span></a><h2 class="rail-act">The Prestige</h2><a class="rail-ch" href="begotten.html"><span class="rn rn-i">⁂</span><span class="rt">begotten not made</span></a><h3 class="rail-part">The Method, and What It Left Out</h3><a class="rail-ch" href="56-how-the-trick-was-done.html"><span class="rn">56</span><span class="rt">How the Trick Was Done</span></a><a class="rail-ch" href="57-everything-so-far-was-turing-complete.html"><span class="rn">57</span><span class="rt">Everything So Far Was Turing Complete</span></a><a class="rail-ch" href="58-the-tower-of-oracle-extensions.html"><span class="rn">58</span><span class="rt">The Tower of Oracle Extensions</span></a><a class="rail-ch" href="59-not-every-cut-is-an-aperture.html"><span class="rn">59</span><span class="rt">Not Every Cut Is an Aperture</span></a><a class="rail-ch" href="60-where-does-agency-live.html"><span class="rn">60</span><span class="rt">Where Does Agency Live?</span></a><a class="rail-ch" href="61-choice-principles-are-the-types-schedulers-are.html"><span class="rn">61</span><span class="rt">Choice Principles are the Types; Schedulers are the Terms</span></a><a class="rail-ch" href="62-consciousness-and-the-world-it-comes-with.html"><span class="rn">62</span><span class="rt">Consciousness, and the World It Comes With</span></a><a class="rail-ch" href="63-what-these-chapters-owe.html"><span class="rn">63</span><span class="rt">What These Chapters Owe</span></a><h3 class="rail-part">Reference, Simulation, Reception, and a Future Metaphysics</h3><a class="rail-ch" href="64-what-a-symbol-system-would-have-to-be.html"><span class="rn">64</span><span class="rt">What a Symbol System Would Have to Be</span></a><a class="rail-ch" href="65-if-this-is-a-simulation-which-kind.html"><span class="rn">65</span><span class="rt">If This Is a Simulation, Which Kind</span></a><a class="rail-ch" href="66-what-it-is-like-to-be-a-bot.html"><span class="rn">66</span><span class="rt">What It Is Like to Be a Bot</span></a><a class="rail-ch" href="67-how-life-like-is-life-like-enough.html"><span class="rn">67</span><span class="rt">How Life-Like Is Life-Like Enough?</span></a><a class="rail-ch" href="68-any-future-metaphysics.html"><span class="rn">68</span><span class="rt">Any Future Metaphysics</span></a><a class="rail-ch" href="right-sizing.html"><span class="rn rn-i">⁂</span><span class="rt">Right-Sizing</span></a></div></nav>
+<main id="main" class="text ">
+<header class="chead"><p class="kicker">Chapter 23</p><h1>Composing Learners</h1></header>
+<p>
+The individual is confined. That is not a remark about ambition; it is a
+proposition, and it is the reason this chapter exists. The hypothesis space
+is a tree with an ultrametric on it, and in an ultrametric a walk whose
+steps are all shorter than some radius never leaves the ball it began in.
+A learner that revises carefully cannot reach the theory it needs. The
+noughts-and-crosses measurement makes this concrete and slightly comic: the
+move that would rescue a confined population costs nothing and no individual
+can make it.</p>
+<p>So the unit has to move, and this chapter moves it. A learner is redefined
+as a distribution over a <em>population</em> — scientists, computations
+holding no hypothesis at all, and reservoirs — with that population serving
+as a namespace. The operator that composes two such learners is parallel
+composition, which is to say no new machinery whatever. Everything
+interesting is then controlled by one dial: how much the two namespaces
+overlap, and in which of several typed namespaces the overlap sits.</p>
+<p>Turned to zero, the dial gives independence, and independence turns out to
+be a theorem rather than a hope — though an unstable one, since two
+learners manufacturing names privately can collide by accident, and buying
+back the guarantee costs a naming discipline. Turned up, the same dial
+generates the standard table of ecological relations — competition,
+predation, mutualism, commensalism, theft — as sign conditions rather than
+as an inventory borrowed from biology. And it yields an asymmetry i think is
+the most interesting thing in the chapter: because tokens are conserved but
+formulae are not, cooperation can only ever be epistemic and competition is
+always metabolic. Two learners can both come out ahead in what they know.
+They cannot both come out ahead in what they hold.</p>
+<h2 id="sec-23-1"><span class="secnum">23.1</span> Introduction</h2>
+<h3 id="sec-23-1-1"><span class="secnum">23.1.1</span> Why the unit moves up</h3>
+<p>The mortal scientist of \(\chSci\) is an individual: a term with a metabolic channel, a
+hypothesis in guard position, and a walk on the relaxation lattice. Twice in that note the
+individual turns out to be the wrong unit. Corollary <a class="xref" href="21-the-mortal-scientist.html#corollary-21-3" data-ref="sci:cor:induction">21.3</a> there observes that destructive assay
+leaves an individual-level hypothesis worthless after its own first test, so the <em>subject</em> of
+a hypothesis must be a namespace rather than a specimen. And Proposition <a class="xref" href="21-the-mortal-scientist.html#proposition-21-4" data-ref="sci:prop:confinement">21.4</a> observes that an
+ultrametric walk of short steps never leaves the ball it began in, so the <em>holder</em> of a
+hypothesis cannot repair a shallow commitment; \S12 of that note supplies recombination, and
+\S17.2 states plainly that a population is required rather than preferred.</p>
+<p>The worked example makes both visible on numbers §<a class="xref" href="22-learning-to-play.html#sec-22-9" data-ref="gam:S9">22.9</a> of \(\chGame\). The corner-opening
+mutant that invades the resident population differs from it by a revision of distance \(2^{-1}\),
+is unreachable to any individual by deepening, and is free to a lineage because the cost falls on
+an offspring holding no confirmations to invalidate.</p>
+<p>So the individual is already not the unit of learning; the lineage is. This note asks what happens
+when the lineage is not the unit either.</p>
+<h3 id="sec-23-1-2"><span class="secnum">23.1.2</span> The move, stated once</h3>
+<p>A learner is a distribution over a population: scientists, mortal computations holding no
+hypothesis, and resource reservoirs. That population is carried by names, and by Proposition <a class="xref" href="22-learning-to-play.html#proposition-22-1" data-ref="gam:prop:fresh">22.1</a>
+of \(\chGame\) those names are manufactured by quotation rather than drawn from a stock of
+atoms, so the family is generated by a decidable predicate and can be <em>described</em>. Hence a
+learner is a namespace, in the sense the hypothesis language already uses for the subject of a
+hypothesis.</p>
+<p>Learners compose by parallel composition, because in this calculus there is nothing else for
+composition to be. When the namespaces are disjoint the composed learners have non-interacting
+capabilities. When they overlap they can interact internally, and that interaction includes both
+cooperation and competition.</p>
+<section class="thm remarkish thm-remark" id="remark-23-1" data-kind="Remark" data-num="23.1"><header><span class="thm-kind">Remark 23.1</span> <span class="thm-name">The knower and the known become one kind of thing</span><a class="permalink" href="#remark-23-1" aria-label="Link to Remark 23.1">¶</a></header><p>
+This is the observation we would lead with. Corollary <a class="xref" href="21-the-mortal-scientist.html#corollary-21-3" data-ref="sci:cor:induction">21.3</a> of \(\chSci\) forces the
+<em>object</em> of inquiry to be a namespace; the present move makes the <em>subject</em> of inquiry
+one as well. The two sides of the cut are then described in the same vocabulary, by the same name
+predicates, at the same prices. That is not tidiness for its own sake: it is what makes a
+composed learner able to hold a hypothesis about its own components, and what makes the
+distinction between an internal interaction and an external one a matter of where one draws the
+cut rather than a matter of sort. Remark <a class="xref" href="21-the-mortal-scientist.html#remark-21-15" data-ref="sci:rem:cut">21.15</a> of \(\chSci\) said trophic type is a fact about
+the cut. The same is now true of learnerhood.</p></section>
+<h3 id="sec-23-1-3"><span class="secnum">23.1.3</span> What we are claiming, and what we are not</h3>
+<p>We claim that composition of learners is parallel composition on terms, union on namespaces, and
+<em>undetermined</em> on distributions; that the determination of the third is exactly the content
+of the interaction, and that it factors precisely when the namespaces are disjoint; that a single
+grade of separation is too coarse and a typed vector of grades recovers the ecological relations
+rather than importing them; that under conservation cooperation and competition are structurally
+different rather than opposite in sign; that non-interference is an observation and not a
+guarantee unless purchased; and that a composite’s phase is not a function of its parts’ phases,
+which we exhibit on exact numbers.</p>
+<p>We do not claim to have proved a monoidal-category theorem: §<a class="xref" href="23-composing-learners.html#sec-23-4" data-ref="com:sec:comp">23.4</a> states the
+comparison map and the conditions for it to be invertible, and leaves the coherence to the
+open problems. We do not claim the access-rate model of §<a class="xref" href="23-composing-learners.html#sec-23-10" data-ref="com:sec:dilution">23.10</a> is canonical; it is
+one modeling choice, flagged as such, and the alternative is worked. As in \(\chGame\), guards
+below are written in the ideal logic and the current interpreter accepts only the arithmetic and
+pattern fragment of the <code>where</code> clause; occurrences that specify rather than perform a
+check are marked.</p>
+<h2 id="sec-23-2"><span class="secnum">23.2</span> What this chapter carries forward</h2>
+<p>The cut, the three grades of access, the conservation law, and the trophic
+profiles are as in the two preceding chapters and are not restated. Four things
+are worth having in front of the reader, because the argument turns on their
+exact form.</p>
+<h5 id="p-5">The logic is generated, and there is no restriction.</h5>
+<p>Feeding the presentation of the rho calculus to the OSLF family yields one structural connective
+per term former, one context-labeled modality per rewrite rule and redex position, and—because
+\(\mid\) carries an associative–commutative theory—a separating conjunction. A name is a quoted
+process, so \(n \models @\varphi \iff n = @P\) with \(P \models \varphi\): this is namespace
+logic [<a class="cite" href="bibliography.html#bib-NamespaceLogic" data-cite="NamespaceLogic">39</a>], in which one describes a namespace by a property rather than enumerating
+it. Following §<a class="xref" href="22-learning-to-play.html#sec-22-2" data-ref="gam:S2">22.2</a> of \(\chGame\) we treat <code>new</code> as sugar and drop the hidden-name
+quantifier: freshness is manufactured by quotation, and graded separation is graded over a
+<em>described namespace</em> rather than over a restriction vector,
+<span class="math-d">\[P \models \varphi \sep{\Nsp}{k} \psi
+  \iff
+  P \equiv Q \mid R,\ Q \models \varphi,\ R \models \psi,\
+  \bigl|\, \fn(Q) \cap \fn(R) \cap \Nsp \,\bigr| = k .\]</span>
+Everything below that a modal logic could not do is done with \(\sep{\Nsp}{k}\), and
+§<a class="xref" href="23-composing-learners.html#sec-23-5" data-ref="com:sec:typed">23.5</a> turns on the choice of \(\Nsp\).</p>
+<section class="thm plain thm-proposition" id="proposition-23-1" data-kind="Proposition" data-num="23.1"><header><span class="thm-kind">Proposition 23.1</span> <span class="thm-name">Freshness by quotation, {\(\chGame\), Prop. <a class="xref" href="22-learning-to-play.html#proposition-22-1" data-ref="gam:prop:fresh">22.1</a>}</span><a class="permalink" href="#proposition-23-1" aria-label="Link to Proposition 23.1">¶</a></header><p>
+Let \(P\) be a process and \(C[-]\) any context with \(C[P] \neq P\). Then \(@C[P] \notin n(P)\). Hence a
+name fresh in \(P\) is manufactured by quoting any term properly containing \(P\), with no registry
+and no consultation.</p></section>
+<h5 id="p-6">Conservation and the game.</h5>
+<p>Tokens are conserved: \(\sigma + \kappa = \sigma_0 = \Theta\), with \(\sigma\) held in live stacks
+and \(\kappa\) migrated into the record. There is no primary producer. Under the internalizing
+encoding \(\llbracket - \rrbracket : \mathcal{C}(\rt) \to \rt\) a located stack becomes a message
+at a metabolic channel \(m_P\), and harvest is an ordinary receipt on \(m_P\) performed by someone
+else; the predatory contexts are exactly the non-image contexts holding a metabolic
+name \(\chSci\), Theorem <a class="xref" href="21-the-mortal-scientist.html#theorem-21-1" data-ref="sci:thm:predator">21.1</a>. A <em>game</em> is a choice of admitted context class \(\mathcal{A}\)
+with \(\llbracket \mathcal{C}(\rt)\text{-}\Ctx \rrbracket \subseteq \mathcal{A} \subseteq
+\rt\text{-}\Ctx\).</p>
+<h5 id="p-7">The hypothesis space, and confinement.</h5>
+<p>Beneath the characteristic formula \(\chi_P\) sits a lattice of progressively weaker formulae
+obtained by forgetting conjuncts; revision is a walk on it, the metric is the \(\nu\)-stratified
+ultrametric \(d(\varphi,\psi) = 2^{-n}\), and distance, modal depth, and cost are one graded
+structure. Confinement (Proposition <a class="xref" href="21-the-mortal-scientist.html#proposition-21-4" data-ref="sci:prop:confinement">21.4</a> of \(\chSci\)) says a walk whose steps are all
+shorter than \(2^{-n}\) never leaves the ball of radius \(2^{-n}\) it began in; cost-monotonicity
+(Proposition <a class="xref" href="21-the-mortal-scientist.html#proposition-21-5" data-ref="sci:prop:movecost">21.5</a>) says the escaping move is the expensive one; and bounded branching
+(Proposition <a class="xref" href="21-the-mortal-scientist.html#proposition-21-6" data-ref="sci:prop:branching">21.6</a>) with its corollary <em>poverty is confining</em> says the number of siblings a
+scientist may evaluate is its stack divided by the cost of checking one.</p>
+<h5 id="p-8">Ecologies as a fibration.</h5>
+<p>A configuration is a partition of \(\Theta\) across loci together with a structural assignment; an
+ecology is a configuration with a distribution over reachable configurations. The assignment of
+ecologies to theories is a fibration rather than a functor, with a canonical section given by
+taking cost as the weight map, and functoriality requires logic-preserving morphisms because the
+senses are structural §<a class="xref" href="21-the-mortal-scientist.html#sec-21-15" data-ref="sci:S15">21.15</a> of \(\chSci\). The present note is largely an argument that this
+fibration wants a tensor.</p>
+<h2 id="sec-23-3"><span class="secnum">23.3</span> The learner</h2>
+<h3 id="sec-23-3-1"><span class="secnum">23.3.1</span> Three layers, and the distribution is one of them</h3>
+<p>What we have been calling a learner has three components, and it is worth separating them before
+asking what composition does, because composition acts differently on each.</p>
+<ol><li id="item-11-1"><p><strong>A population.</strong> A term: a parallel composition of scientists, of mortal
+computations holding no hypothesis, and of reservoirs. This is an object of the calculus.</p></li><li id="item-11-2"><p><strong>A namespace.</strong> The family of names the population carries—metabolic channels,
+source channels, probe channels, mating channels—described by a name predicate rather than
+listed, which by Proposition <a class="xref" href="23-composing-learners.html#proposition-23-1" data-ref="com:prop:fresh">23.1</a> is available because the names are manufactured
+from material the population already holds.</p></li><li id="item-11-3"><p><strong>A distribution.</strong> A weighting on the configurations reachable from the population,
+in the sense of §<a class="xref" href="21-the-mortal-scientist.html#sec-21-13" data-ref="sci:S13">21.13</a> of \(\chSci\): the microcanonical ensemble at fixed \(\Theta\), sampled by
+the construction of Chapter <a class="xref" href="13-weighting-rates-from-the-generated-logic.html#top" data-ref="ch:weight">13</a>.</p></li></ol>
+<p>We take the third to be part of the learner rather than a decoration on it. The alternative—a
+learner is the population, and the distribution is a decoration indexed over it—would put
+composition in the base of the fibration of §<a class="xref" href="21-the-mortal-scientist.html#sec-21-15" data-ref="sci:S15">21.15</a> of \(\chSci\), where it is uninformative:
+two populations composed in the base are just two populations. Putting the distribution inside
+the learner puts composition in the total space, which is where the interaction lives.</p>
+<section class="thm plain thm-definition" id="definition-23-1" data-kind="Definition" data-num="23.1"><header><span class="thm-kind">Definition 23.1</span> <span class="thm-name">Learner</span><a class="permalink" href="#definition-23-1" aria-label="Link to Definition 23.1">¶</a></header><p>
+A learner is a triple \(\Lrn = (P, \Nsp, \mu)\) with \(P\) a \(\rt\) term, \(\Nsp\) a name predicate
+satisfied by exactly the names \(P\) carries in the sense of Definition <a class="xref" href="23-composing-learners.html#definition-23-3" data-ref="com:def:typed">23.3</a> below, and
+\(\mu\) a distribution over the configurations reachable from \(P\) at total \(\Theta_{\Lrn} =
+\sum \sigma_i(0)\). We write \(\Nsp(\Lrn)\) and \(\mu(\Lrn)\) for the components.</p></section>
+<section class="thm remarkish thm-remark" id="remark-23-2" data-kind="Remark" data-num="23.2"><header><span class="thm-kind">Remark 23.2</span> <span class="thm-name">The population is not a bag of learners</span><a class="permalink" href="#remark-23-2" aria-label="Link to Remark 23.2">¶</a></header><p>
+Definition <a class="xref" href="23-composing-learners.html#definition-23-1" data-ref="com:def:learner">23.1</a> does not say the population is a set of individual learners composed
+somehow. It says the population, weighted, <em>is</em> the learner, and that individual scientists
+inside it are components with no special status—exactly as a lineage in §<a class="xref" href="21-the-mortal-scientist.html#sec-21-12-10" data-ref="sci:S12.10">21.12.10</a> of \(\chSci\)
+is a learner without any of its members being the learner. The nesting is real and the note uses
+it: §<a class="xref" href="23-composing-learners.html#sec-23-12" data-ref="com:sec:units">23.12</a> shows the three units of learning are distinguished by nothing but the
+revision distance each can reach.</p></section>
+<h2 id="sec-23-4"><span class="secnum">23.4</span> Composition</h2>
+<h3 id="sec-23-4-1"><span class="secnum">23.4.1</span> One operator, three actions</h3>
+<section class="thm plain thm-definition" id="definition-23-2" data-kind="Definition" data-num="23.2"><header><span class="thm-kind">Definition 23.2</span> <span class="thm-name">Composition</span><a class="permalink" href="#definition-23-2" aria-label="Link to Definition 23.2">¶</a></header><p>
+For learners \(\Lrn_1 = (P_1,\Nsp_1,\mu_1)\) and \(\Lrn_2 = (P_2,\Nsp_2,\mu_2)\),
+<span class="math-d">\[\Lrn_1 \mid \Lrn_2 \;:=\; \bigl(\,P_1 \mid P_2,\ \ \Nsp_1 \vee \Nsp_2,\ \ \mu_{12}\,\bigr),
+  \qquad \Theta_{\Lrn_1 \mid \Lrn_2} = \Theta_{\Lrn_1} + \Theta_{\Lrn_2},\]</span>
+where \(\Nsp_1 \vee \Nsp_2\) is the disjunction of the two name predicates and \(\mu_{12}\) is the
+distribution over configurations reachable from \(P_1 \mid P_2\).</p></section>
+<p>On the first component the operator is the calculus’ own parallel composition: associative and
+commutative up to structural congruence, free, and adding nothing. On the second it is
+disjunction of predicates, which is again free, and is where describing rather than enumerating
+pays—one does not have to compute a union of two sets of names, one takes an \(\vee\) of two
+formulae. On the third the operator is not determined by its arguments at all. That is the
+entire subject of this section.</p>
+<section class="thm plain thm-proposition" id="proposition-23-2" data-kind="Proposition" data-num="23.2"><header><span class="thm-kind">Proposition 23.2</span> <span class="thm-name">Conservation composes, and only conservation does</span><a class="permalink" href="#proposition-23-2" aria-label="Link to Proposition 23.2">¶</a></header><p>
+\(\Theta\) is additive under composition, and it is the only quantity in §<a class="xref" href="21-the-mortal-scientist.html#sec-21-13" data-ref="sci:S13">21.13</a> of \(\chSci\)
+that is. The order parameters are not: \(\iota\), the fraction of \(\Theta\) internal to scientists,
+is a stack-weighted mean of the parts’ values, and \(\delta\), the mean concealment depth of
+external stacks, is not a function of the parts’ values at all, because each learner’s members
+become candidate subjects for the other and enter the other’s mean.</p></section>
+<section class="proof"><header>Proof</header><p>Additivity of \(\Theta\) is immediate from the ledger law and the fact that composition mints
+nothing. For \(\iota\), write \(\iota_i = \sigma^{\mathrm{sci}}_i / \Theta_i\); then
+\(\iota_{12} = (\sigma^{\mathrm{sci}}_1 + \sigma^{\mathrm{sci}}_2)/(\Theta_1+\Theta_2)\), the
+weighted mean. For \(\delta\), the mean is taken over the external stacks <em>available to</em> a
+learner, and \(P_2\)’s stacks are external to \(P_1\) and were not in \(P_1\)’s index set. So
+\(\delta_{12}\) depends on the depth at which each learner’s stacks lie relative to the other’s
+senses, a quantity computed from the pair and not held by either.</p></section>
+<p>That \(\delta\) is a property of the pair is the first sign that composition is not going to be
+innocent, and §<a class="xref" href="23-composing-learners.html#sec-23-9" data-ref="com:sec:phase">23.9</a> makes it a measurement.</p>
+<h3 id="sec-23-4-2"><span class="secnum">23.4.2</span> Disjointness is factorization</h3>
+<section class="thm plain thm-theorem" id="theorem-23-1" data-kind="Theorem" data-num="23.1"><header><span class="thm-kind">Theorem 23.1</span> <span class="thm-name">Factorization</span><a class="permalink" href="#theorem-23-1" aria-label="Link to Theorem 23.1">¶</a></header><p>
+Let \(\Lrn_1, \Lrn_2\) be learners and let \(\Nsp = \Nsp_1 \vee \Nsp_2\). The following are
+equivalent.</p>
+<ol><li id="item-15-1"><p>\(P_1 \mid P_2 \models \top \sep{\Nsp}{0} \top\) with the split at \(P_1, P_2\): the two
+namespaces share no name.</p></li><li id="item-15-2"><p>No reduction of \(P_1 \mid P_2\) has its redex spanning the two parands.</p></li><li id="item-15-3"><p>\(\mu_{12} = \mu_1 \otimes \mu_2\): the composite’s distribution is the product of the
+parts’.</p></li></ol></section>
+<section class="proof"><header>Proof</header><p>\((1)\Rightarrow(2)\): the rho calculus has one interaction rule, and it requires a send and a
+receipt on structurally equal names. A redex spanning the parands therefore witnesses a name in
+\(\fn(P_1) \cap \fn(P_2) \cap \Nsp\), contradicting \(k=0\). \((2)\Rightarrow(3)\): with no spanning
+redex, every step of \(P_1\mid P_2\) is a step of one parand in a context that does not participate,
+so the reachable configurations are pairs of independently reachable configurations, and the
+weight of a pair is the product of the weights since the cost of a step is charged to the parand
+taking it and the ledger is additive. \((3)\Rightarrow(1)\): if a name is shared, some
+configuration in which the corresponding rendezvous has fired has weight not equal to the product
+of its marginals—the two parands’ stacks after such a step are correlated by the transfer.</p></section>
+<section class="thm remarkish thm-remark" id="remark-23-3" data-kind="Remark" data-num="23.3"><header><span class="thm-kind">Remark 23.3</span> <span class="thm-name">Why this is the right statement</span><a class="permalink" href="#remark-23-3" aria-label="Link to Remark 23.3">¶</a></header><p>
+Theorem <a class="xref" href="23-composing-learners.html#theorem-23-1" data-ref="com:thm:factor">23.1</a> is what makes “the namespaces are disjoint” worth saying. Disjointness
+of <em>names</em> is a syntactic condition; independence of <em>distributions</em> is the thing one
+actually wants when composing learners, because it is what licenses reasoning about each in
+isolation. The theorem says the syntactic condition is exactly the probabilistic one, and the
+graded separation \(\sep{\Nsp}{k}\) measures the gap when it fails. We know of no way to say this
+without a spatial layer: a purely behavioral logic cannot state the split at all, which is
+[<a class="cite" href="bibliography.html#bib-ClassifierNote" data-cite="ClassifierNote">23</a>, Rem. 5] arriving in a new place.</p></section>
+<h3 id="sec-23-4-3"><span class="secnum">23.4.3</span> The lax structure map is the interaction</h3>
+<p>Composition of learners is a candidate monoidal structure on the total space of the fibration
+\(\pi : \mathrm{Eco} \to \mathrm{GSLT}_{\mathcal{C}}\) of §<a class="xref" href="21-the-mortal-scientist.html#sec-21-15" data-ref="sci:S15">21.15</a> of \(\chSci\), with unit the
+empty learner \((\mathbf{0}, \bot, \delta_{\varnothing})\). The obvious question is whether the
+canonical section \(s\)—cost as the weight map—is monoidal, and the answer is no, in a way we
+think is more useful than a yes.</p>
+<section class="thm plain thm-proposition" id="proposition-23-3" data-kind="Proposition" data-num="23.3"><header><span class="thm-kind">Proposition 23.3</span> <span class="thm-name">Laxity, and what its defect measures</span><a class="permalink" href="#proposition-23-3" aria-label="Link to Proposition 23.3">¶</a></header><p>
+There is a comparison morphism
+<span class="math-d">\[\lambda_{\Lrn_1,\Lrn_2} \;:\; s(\Lrn_1) \otimes s(\Lrn_2) \longrightarrow s(\Lrn_1 \mid \Lrn_2)\]</span>
+sending a pair of independently sampled trajectories to the interleaving in which no spanning
+redex fires. It is an isomorphism if and only if the grade is zero, and in general it is not
+epi: the configurations in the image are exactly those reachable without interaction. The
+deviation—the mass \(\mu_{12}\) assigns outside the image of \(\lambda\)—is the probability that
+the composite does something neither part could do.</p></section>
+<section class="proof"><header>Proof</header><p>Existence: the non-interacting interleavings of two independent trajectories are reachable in the
+composite, and their weights are the products, since costs are additive. Iso at \(k=0\): Theorem
+<a class="xref" href="23-composing-learners.html#theorem-23-1" data-ref="com:thm:factor">23.1</a>. Failure of surjectivity at \(k>0\): a spanning redex is enabled and fires with
+positive rate under any weight map assigning positive weight to enabled steps, and the resulting
+configuration is not a product of independently reachable ones.</p></section>
+<section class="thm remarkish thm-remark" id="remark-23-4" data-kind="Remark" data-num="23.4"><header><span class="thm-kind">Remark 23.4</span> <span class="thm-name">The good news is that laxity is a number</span><a class="permalink" href="#remark-23-4" aria-label="Link to Remark 23.4">¶</a></header><p>
+Conjecture 82 of \(\chSci\) guesses that the induced map on distributions is only lax and
+that the natural target is distributions ordered by stochastic dominance. Composition sharpens
+the guess into something one can compute: the defect of \(\lambda\) is the total interaction, and
+\(\sep{\Nsp}{k}\) resolves it by which names carry it. Cooperation and competition are then not two
+phenomena to be modeled but two <em>signs</em> of one measured quantity, and §<a class="xref" href="23-composing-learners.html#sec-23-6" data-ref="com:sec:coop">23.6</a> says
+which sign each namespace can carry.</p></section>
+<h2 id="sec-23-5"><span class="secnum">23.5</span> Typed overlap: the grading vector</h2>
+<h3 id="sec-23-5-1"><span class="secnum">23.5.1</span> One grade is not enough</h3>
+<p>The preceding chapter’s Proposition <a class="xref" href="22-learning-to-play.html#proposition-22-2" data-ref="gam:prop:parands">22.2</a> is the lesson in miniature. There the connective was
+\(\sep{\Nsp}{0}\) and the concept was <em>fork</em>; grading over line names made the formula true of
+pairs of threats sharing a gap, which are not forks, and grading over square names made it exact.
+The choice of \(\Nsp\) was not a parameter of the encoding but the whole content of it.</p>
+<p>At the level of learners the same demand recurs, and the namespace of a learner is not
+homogeneous. A shared metabolic channel and a shared probe channel are both “an overlap of one
+name” and they are not remotely the same relation.</p>
+<section class="thm plain thm-definition" id="definition-23-3" data-kind="Definition" data-num="23.3"><header><span class="thm-kind">Definition 23.3</span> <span class="thm-name">Typed namespaces</span><a class="permalink" href="#definition-23-3" aria-label="Link to Definition 23.3">¶</a></header><p>
+For a learner \(\Lrn\) with population \(P\), the namespace \(\Nsp(\Lrn)\) decomposes into four
+sub-namespaces, each given by a name predicate:</p>
+<ul><li><p>\(\Met(\Lrn)\), the <em>metabolic</em> names: the channels at which \(P\)’s components hold their
+stacks, in the sense of \(\chSci\), Definition <a class="xref" href="21-the-mortal-scientist.html#definition-21-7" data-ref="sci:def:metabolic">21.7</a>;</p></li><li><p>\(\Src(\Lrn)\), the <em>source</em> names: the channels of persistent emitters \(P\) draws on,
+the access profile of \(\chSci\), Definition <a class="xref" href="21-the-mortal-scientist.html#definition-21-11" data-ref="sci:def:source">21.11</a>;</p></li><li><p>\(\Prb(\Lrn)\), the <em>probe</em> names: the channels on which \(P\)’s scientists install
+assays, which by §<a class="xref" href="21-the-mortal-scientist.html#sec-21-12-6" data-ref="sci:S12.6">21.12.6</a> of \(\chSci\) are both-type channels supporting dialogue of depth at
+least two;</p></li><li><p>\(\Mat(\Lrn)\), the <em>mating</em> names: the channels on which genomes are disclosed and
+recombined.</p></li></ul></section>
+<section class="thm plain thm-definition" id="definition-23-4" data-kind="Definition" data-num="23.4"><header><span class="thm-kind">Definition 23.4</span> <span class="thm-name">Grading vector</span><a class="permalink" href="#definition-23-4" aria-label="Link to Definition 23.4">¶</a></header><p>
+For learners \(\Lrn_1,\Lrn_2\) the grading vector is
+<span class="math-d">\[\mathbf{k}(\Lrn_1,\Lrn_2) \;=\;
+  \bigl(k_{\mathrm{met}},\, k_{\mathrm{src}},\, k_{\mathrm{prb}},\, k_{\mathrm{mat}}\bigr),
+  \qquad
+  k_{\tau} = \bigl|\, \fn(P_1)\cap \fn(P_2) \cap \Nsp_{\tau} \,\bigr| ,\]</span>
+the componentwise grade at which \(P_1 \sep{\Nsp_\tau}{k_\tau} P_2\) holds. Composition is
+<em>non-interacting</em> when \(\mathbf{k} = \mathbf{0}\).</p></section>
+<figure class="float figfloat" id="fig-23-1"><p>{!}{
+\(\fitwidth{
+<figure class="tikz"><img src="../figures/4986aaa6524b.svg" alt="Diagram"></figure>}\)}</p><figcaption><span class="fignum">Figure 23.1</span> Two composed learners and their grading vector. A single scalar \(k\) would report
+“\(2\)” and say nothing; the typed vector says the two share a metabolic channel and a
+reservoir, cannot read each other’s assays, and cannot interbreed. Those are four independent
+dials and §<a class="xref" href="23-composing-learners.html#sec-23-5-2" data-ref="com:sec:relations">23.5.2</a> reads the ecological relation off them.</figcaption></figure>
+<h3 id="sec-23-5-2"><span class="secnum">23.5.2</span> The relations, derived</h3>
+<p>The point of typing the overlap is that the classical table of ecological relations then falls
+out as sign conditions on the components, rather than being imported as a taxonomy. Write
+\(\Delta_i\) for the change in learner \(i\)’s expected residual life under composition relative to
+isolation.</p>
+<figure class="float tabfloat" id="tab-23-1"><p>\(\fitwidth\){</p>
+<div class="tablewrap"><table><thead><tr><th>overlap</th><th>relation</th><th>\((\Delta_1,\Delta_2)\)</th><th>mechanism</th></tr></thead><tbody><tr><td>\(\mathbf{k}=\mathbf{0}\)</td><td>neutralism</td><td>\((0,0)\)</td><td>Theorem <a class="xref" href="23-composing-learners.html#theorem-23-1" data-ref="com:thm:factor">23.1</a>: \(\mu\) factors</td></tr><tr><td>\(k_{\mathrm{src}}>0\) only</td><td>exploitative competition</td><td>\((-,-)\)</td><td>dilution of a finite reserve (§<a class="xref" href="23-composing-learners.html#sec-23-10" data-ref="com:sec:dilution">23.10</a>)</td></tr><tr><td>\(k_{\mathrm{met}}>0\), asymmetric</td><td>predation</td><td>\((+,-)\)</td><td>harvest as a receipt, \(\chSci\), Def. <a class="xref" href="21-the-mortal-scientist.html#definition-21-8" data-ref="sci:def:harvest">21.8</a></td></tr><tr><td>\(k_{\mathrm{met}}=1\), pooled</td><td>mutualism (metabolic)</td><td>\((+,+)\)</td><td>the composite of \(\chSci\), Prop. <a class="xref" href="21-the-mortal-scientist.html#proposition-21-14" data-ref="sci:prop:composite">21.14</a></td></tr><tr><td>\(k_{\mathrm{prb}}>0\), one-way</td><td>commensalism (epistemic)</td><td>\((+,0)\)</td><td>reading a surface another paid for</td></tr><tr><td>\(k_{\mathrm{prb}}>0\), two-way</td><td>mutualism (epistemic)</td><td>\((+,+)\)</td><td>§<a class="xref" href="23-composing-learners.html#sec-23-6" data-ref="com:sec:coop">23.6</a>: formulae are not conserved</td></tr><tr><td>\(k_{\mathrm{prb}}>0\), theft</td><td>exploitation (epistemic)</td><td>\((+,-)\)</td><td>§<a class="xref" href="21-the-mortal-scientist.html#sec-21-10" data-ref="sci:S10">21.10</a> of \(\chSci\): holding a model exposes it</td></tr><tr><td>\(k_{\mathrm{mat}}>0\)</td><td><em>not composition</em></td><td>—</td><td>§<a class="xref" href="23-composing-learners.html#sec-23-8" data-ref="com:sec:merger">23.8</a>: the learners are one</td></tr></tbody></table></div>
+<p>}</p><figcaption><span class="fignum">Table 23.1</span> Ecological relations as sign conditions on the grading vector. Nothing in this table is
+posited; each row is a consequence already proved in \(\chSci\) together with a choice of
+which \(\Nsp_\tau\) carries the overlap.</figcaption></figure>
+<section class="thm plain thm-proposition" id="proposition-23-4" data-kind="Proposition" data-num="23.4"><header><span class="thm-kind">Proposition 23.4</span> <span class="thm-name">Symbiosis is minimal metabolic overlap</span><a class="permalink" href="#proposition-23-4" aria-label="Link to Proposition 23.4">¶</a></header><p>
+Let \(\Lrn_1 \mid \Lrn_2\) have \(k_{\mathrm{met}} = 1\) with the shared name a pooling channel—a
+metabolic channel on which both parands both receive and reissue—and \(k_\tau = 0\) otherwise.
+Then the composite is exactly the construction of \(\chSci\), Proposition <a class="xref" href="21-the-mortal-scientist.html#proposition-21-14" data-ref="sci:prop:composite">21.14</a>: two specialists
+sharing a metabolic channel, each free to tune its access profile independently, with the yield
+pooled. Hence Proposition <a class="xref" href="21-the-mortal-scientist.html#proposition-21-13" data-ref="sci:prop:worstofboth">21.13</a> there, which dominates the mixed strategy for an atom, does not
+apply.</p></section>
+<section class="thm remarkish thm-remark" id="remark-23-5" data-kind="Remark" data-num="23.5"><header><span class="thm-kind">Remark 23.5</span> <span class="thm-name">The organism boundary is a grade</span><a class="permalink" href="#remark-23-5" aria-label="Link to Remark 23.5">¶</a></header><p>
+Read with Remark <a class="xref" href="21-the-mortal-scientist.html#remark-21-15" data-ref="sci:rem:cut">21.15</a> of \(\chSci\), Proposition <a class="xref" href="23-composing-learners.html#proposition-23-4" data-ref="com:prop:symb">23.4</a> says the difference between
+“one dual-feeding organism” and “two specialists in symbiosis” is the value of
+\(k_{\mathrm{met}}\) and where one chooses to draw the cut, not a fact about either. The
+endosymbiotic reading is available and we note it without leaning on it [<a class="cite" href="bibliography.html#bib-Margulis" data-cite="Margulis">59</a>]: what the
+formalism contributes is that the boundary has a number attached to it.</p></section>
+<section class="thm plain thm-proposition" id="proposition-23-5" data-kind="Proposition" data-num="23.5"><header><span class="thm-kind">Proposition 23.5</span> <span class="thm-name">The grading namespace must be typed</span><a class="permalink" href="#proposition-23-5" aria-label="Link to Proposition 23.5">¶</a></header><p>
+Let \(\Nsp = \Met \vee \Src \vee \Prb \vee \Mat\) and suppose one grades only over \(\Nsp\). Then
+\(\sep{\Nsp}{k}\) cannot distinguish a composite in exploitative competition (\(k_{\mathrm{src}}=1\),
+rest zero) from one in symbiosis (\(k_{\mathrm{met}}=1\), rest zero), since both satisfy
+\(\sep{\Nsp}{1}\); and the two have opposite signs in Table <a class="xref" href="23-composing-learners.html#tab-23-1" data-ref="com:tab:relations">23.1</a>. Hence the vector
+of Definition <a class="xref" href="23-composing-learners.html#definition-23-4" data-ref="com:def:vector">23.4</a> is not a refinement of convenience.</p></section>
+<p>This is the same argument as \(\chGame\), Proposition <a class="xref" href="22-learning-to-play.html#proposition-22-2" data-ref="gam:prop:parands">22.2</a>, one level up, and we take the recurrence as
+evidence that choosing the grading namespace is where the modeling work in this framework
+actually happens.</p>
+<h2 id="sec-23-6"><span class="secnum">23.6</span> Cooperation and competition are structurally unlike</h2>
+<h3 id="sec-23-6-1"><span class="secnum">23.6.1</span> Two currencies, one conservation law</h3>
+<p>Under Remark <a class="xref" href="21-the-mortal-scientist.html#remark-21-10" data-ref="sci:science-entropy-production">21.10</a> of \(\chSci\) every metabolic transfer is zero-sum: predation is the
+purchase of somebody else’s remaining time. It follows immediately that cooperation cannot be a
+token transfer leaving both parties richer, and one might conclude that a conserved world has no
+room for mutualism at all. It does, and the room is in exactly one place.</p>
+<section class="thm remarkish thm-observation" id="observation-23-1" data-kind="Observation" data-num="23.1"><header><span class="thm-kind">Observation 23.1</span> <span class="thm-name">Tokens are conserved; formulae are not</span><a class="permalink" href="#observation-23-1" aria-label="Link to Observation 23.1">¶</a></header><p>
+\(\Theta\) is fixed and never minted. A formula is a different kind of object: a genome is a
+quotation, \(@P\) does not reduce, quotation is free while held, and inspection by a name predicate
+is grade-three access, the cheapest on the ladder. Nothing forbids two learners from holding the
+same formula, and one learner’s coming to hold it does not deprive the other. The ecology is
+conserved; the epistemics are not.</p></section>
+<section class="thm plain thm-proposition" id="proposition-23-6" data-kind="Proposition" data-num="23.6"><header><span class="thm-kind">Proposition 23.6</span> <span class="thm-name">No metabolic mutualism</span><a class="permalink" href="#proposition-23-6" aria-label="Link to Proposition 23.6">¶</a></header><p>
+Let \(\Lrn_1 \mid \Lrn_2\) have \(k_{\mathrm{prb}} = k_{\mathrm{mat}} = 0\), so that all overlap is
+metabolic or source. Then \(\Delta_1 + \Delta_2 \leq 0\), with equality only when no shared name
+carries a transfer.</p></section>
+<section class="proof"><header>Proof</header><p>Residual life is stack divided by burn rate. Every step over a shared metabolic or source name
+either moves tokens from one parand to the other, which is zero-sum in stack and strictly
+negative in aggregate residual life whenever the two burn rates differ, or debits both parands
+for the rendezvous, which is negative. Pooling (Proposition <a class="xref" href="23-composing-learners.html#proposition-23-4" data-ref="com:prop:symb">23.4</a>) is the boundary case
+in which the transfer is a loop and the aggregate is unchanged; even there the rendezvous is
+metered, so equality requires no transfer at all.</p></section>
+<p>So the only positive-sum overlap is epistemic, and it has two mechanisms, both already in the
+companion notes.</p>
+<h3 id="sec-23-6-2"><span class="secnum">23.6.2</span> Cost relocation, and who is billed</h3>
+<section class="thm remarkish thm-observation" id="observation-23-2" data-kind="Observation" data-num="23.2"><header><span class="thm-kind">Observation 23.2</span> <span class="thm-name">Cooperation is amortized perception</span><a class="permalink" href="#observation-23-2" aria-label="Link to Observation 23.2">¶</a></header><p>
+There are two routes to any predicate about an environment: <em>read</em> it, if the environment
+has computed it into legible structure, priced by formula depth; or <em>drive</em> it, by taking
+steps and watching, priced by rendezvous §<a class="xref" href="22-learning-to-play.html#sec-22-5-1" data-ref="gam:S5.1">22.5.1</a> of \(\chGame\). If \(\Lrn_1\)’s components compute a
+predicate into structure standing at a name in \(\Prb(\Lrn_1) \cap \Prb(\Lrn_2)\), then \(\Lrn_2\)
+reads at grade one what it would otherwise drive at grade two. The total metering for both
+learners to know the predicate falls, and no token has been created.</p></section>
+<p>Remark <a class="xref" href="22-learning-to-play.html#remark-22-9" data-ref="gam:why-this-artefact-encoding">22.9</a> of \(\chGame\) makes the point that putting threats into the term relocates a cost from
+the scientist’s budget to the world’s, and that the interesting quantity is not whether the work
+is done but who is billed for it. Composition is what makes that question have two answers
+inside one system. A shared legible surface is stigmergy, and it is the only mechanism by which
+two mortal learners in a conserved world can both come out ahead.</p>
+<section class="thm plain thm-proposition" id="proposition-23-7" data-kind="Proposition" data-num="23.7"><header><span class="thm-kind">Proposition 23.7</span> <span class="thm-name">Epistemic overlap can be strictly positive-sum</span><a class="permalink" href="#proposition-23-7" aria-label="Link to Proposition 23.7">¶</a></header><p>
+Let \(\varphi\) be a predicate both learners require, costing \(\kappa_{\mathrm{drive}}\) to
+establish by interaction and \(\kappa_{\mathrm{read}}(d) < \kappa_{\mathrm{drive}}\) to read from
+structure, and let \(\kappa_{\mathrm{write}}\) be the cost to \(\Lrn_1\) of computing it into
+structure at a shared probe name. Then \(\Delta_1 + \Delta_2 > 0\) whenever
+<span class="math-d">\[2\,\kappa_{\mathrm{drive}} \;>\; \kappa_{\mathrm{drive}} + \kappa_{\mathrm{write}} +
+  \kappa_{\mathrm{read}}(d),\]</span>
+that is, whenever writing once and reading once costs less than driving twice. This is not
+available over \(\Met\) or \(\Src\) by Proposition <a class="xref" href="23-composing-learners.html#proposition-23-6" data-ref="com:prop:nomet">23.6</a>.</p></section>
+<section class="thm remarkish thm-remark" id="remark-23-6" data-kind="Remark" data-num="23.6"><header><span class="thm-kind">Remark 23.6</span> <span class="thm-name">And the same overlap can be theft</span><a class="permalink" href="#remark-23-6" aria-label="Link to Remark 23.6">¶</a></header><p>
+The mechanism cuts both ways and the notes already say so. Holding a hypothesis requires
+exposing it, because a guard is surface, so \(\Prb\) overlap that lets \(\Lrn_2\) read \(\Lrn_1\)’s
+confirmed structure also lets it read \(\Lrn_1\)’s theory without experimenting §<a class="xref" href="21-the-mortal-scientist.html#sec-21-10" data-ref="sci:S10">21.10</a> of \(\chSci\).
+Whether epistemic overlap is mutualism or exploitation is not settled by the grade; it is settled
+by whether the reading learner reciprocates, which is the plagiarism equilibrium left open
+as Problem 2 there. What the present framing adds is that the question is well posed as a sign
+condition on one component of \(\mathbf{k}\).</p></section>
+<div class="centered"><p><em>Cooperation is epistemic; competition is metabolic.</em></p></div>
+<h2 id="sec-23-7"><span class="secnum">23.7</span> Non-interference is not stable</h2>
+<p>Disjointness of namespaces is the condition under which composition is innocent, so it matters
+whether it can be relied upon. It cannot, by default, and the reason is one the companion note
+already records for a different purpose.</p>
+<section class="thm plain thm-proposition" id="proposition-23-8" data-kind="Proposition" data-num="23.8"><header><span class="thm-kind">Proposition 23.8</span> <span class="thm-name">Disjointness is an observation, not a guarantee</span><a class="permalink" href="#proposition-23-8" aria-label="Link to Proposition 23.8">¶</a></header><p>
+Let \(\Lrn_1 \mid \Lrn_2\) have \(\mathbf{k} = \mathbf{0}\) at some configuration. Because name
+manufacture is decentralized and freshness is scope-relative (\(\chSci\), Remark <a class="xref" href="21-the-mortal-scientist.html#remark-21-3" data-ref="sci:rem:sugar">21.3</a>), the two
+populations may subsequently manufacture structurally equal names at loci private to each. Hence
+\(\mathbf{k} = \mathbf{0}\) at one configuration does not entail \(\mathbf{k} = \mathbf{0}\) at a
+successor, and neither learner need have taken any step aimed at the other.</p></section>
+<section class="proof"><header>Proof</header><p>This is Remark <a class="xref" href="21-the-mortal-scientist.html#remark-21-14" data-ref="sci:rem:luck">21.14</a> of \(\chSci\)—closure is luck, not construction—together with
+Proposition <a class="xref" href="21-the-mortal-scientist.html#proposition-21-26" data-ref="sci:prop:accidental">21.26</a> there, that decentralization makes recombination generative precisely because two
+parents may independently hold structurally equal names. What is a source of novelty within a
+lineage is a source of unplanned coupling between learners.</p></section>
+<section class="thm plain thm-corollary" id="corollary-23-1" data-kind="Corollary" data-num="23.1"><header><span class="thm-kind">Corollary 23.1</span> <span class="thm-name">There is no modular composition for free</span><a class="permalink" href="#corollary-23-1" aria-label="Link to Corollary 23.1">¶</a></header><p>
+One cannot compose two learners and certify non-interference from the parts alone. Certification
+requires either a global check at each configuration, which is model checking and is priced, or a
+discipline on name manufacture.</p></section>
+<p>The discipline exists, it is cheap, and it is the one the board of §<a class="xref" href="22-learning-to-play.html#sec-22-4" data-ref="gam:S4">22.4</a> of \(\chGame\) already uses.</p>
+<section class="thm plain thm-proposition" id="proposition-23-9" data-kind="Proposition" data-num="23.9"><header><span class="thm-kind">Proposition 23.9</span> <span class="thm-name">Rooting makes disjointness a theorem</span><a class="permalink" href="#proposition-23-9" aria-label="Link to Proposition 23.9">¶</a></header><p>
+Let \(\Lrn_1\) and \(\Lrn_2\) manufacture every private name by quoting a term properly containing a
+distinguished root \(r_1\), respectively \(r_2\), with \(r_1 \neq r_2\) and neither root occurring in
+the other’s population. Then no name manufactured by \(\Lrn_1\) is structurally equal to a name
+manufactured by \(\Lrn_2\), and \(\mathbf{k}\) is constant along every reduction that does not
+introduce a name from outside.</p></section>
+<section class="proof"><header>Proof</header><p>By Proposition <a class="xref" href="23-composing-learners.html#proposition-23-1" data-ref="com:prop:fresh">23.1</a> a manufactured name is \(@C[r_i]\) for a context \(C\) with
+\(C[r_i] \neq r_i\), so it codes a term properly containing \(r_i\). Structural equality of
+\(@C[r_1]\) and \(@C'[r_2]\) would give \(C[r_1] \equiv C'[r_2]\), and by well-foundedness of the
+coding—a name occurring in a term codes a strictly smaller term—this forces \(r_1\) to occur in
+\(C'[r_2]\), contradicting the hypothesis that \(r_1\) does not occur in \(\Lrn_2\)’s population.</p></section>
+<section class="thm remarkish thm-remark" id="remark-23-7" data-kind="Remark" data-num="23.7"><header><span class="thm-kind">Remark 23.7</span> <span class="thm-name">Modularity is purchasable, and the price is a naming discipline</span><a class="permalink" href="#remark-23-7" aria-label="Link to Remark 23.7">¶</a></header><p>
+This is the same trick as the board’s three name families \(@[*b,k]\), \(@[*b,\texttt{"m"},k]\),
+\(@[*b,\texttt{"t"},s]\), which are pairwise disjoint by construction and which is what makes
+grading over \(\Th_b\) available in the first place. Applied to learners it says: root each
+learner’s namespace at its own quotation and non-interference becomes a property one can rely on
+rather than one one must keep checking. It also says that a learner which <em>wants</em> to
+interact must import a name from outside its own root, which is a step, which is metered. Under
+rooting, every interaction has an identifiable first cause with a price attached—which is a
+better situation than the notes have had so far, where accidental coupling was possible and
+untraceable.</p></section>
+<h2 id="sec-23-8"><span class="secnum">23.8</span> Merger</h2>
+<p>Overlap in the mating namespace is not a kind of interaction. It is the failure of the two
+learners to be two.</p>
+<section class="thm plain thm-proposition" id="proposition-23-10" data-kind="Proposition" data-num="23.10"><header><span class="thm-kind">Proposition 23.10</span> <span class="thm-name">Mating overlap collapses the pair</span><a class="permalink" href="#proposition-23-10" aria-label="Link to Proposition 23.10">¶</a></header><p>
+By \(\chSci\), Proposition <a class="xref" href="21-the-mortal-scientist.html#proposition-21-18" data-ref="sci:prop:species">21.18</a>, two computations can recombine exactly at their homologous loci, so
+conspecificity is agreement of path sets and reproductive isolation is namespace disjointness. If
+\(k_{\mathrm{mat}} > 0\) and the shared names are homologous, then genomes cross the boundary,
+alleles from each appear in the other’s descendants, and after finitely many generations neither
+population’s namespace is described by its original predicate.</p></section>
+<section class="thm plain thm-definition" id="definition-23-5" data-kind="Definition" data-num="23.5"><header><span class="thm-kind">Definition 23.5</span> <span class="thm-name">Merger</span><a class="permalink" href="#definition-23-5" aria-label="Link to Definition 23.5">¶</a></header><p>
+The merger \(\Lrn_1 \Merge \Lrn_2\) is the learner
+<span class="math-d">\[\bigl(\,P_1 \mid P_2,\ \ \Nsp_1 \vee \Nsp_2,\ \ \mu_{\Merge}\,\bigr)\]</span>
+whose distribution ranges over configurations reachable under a recombination discipline admitting
+homologous loci <em>across</em> the two populations, together with the identification of the two
+mating namespaces.</p></section>
+<p>Merger and composition agree on the first two components of Definition <a class="xref" href="23-composing-learners.html#definition-23-1" data-ref="com:def:learner">23.1</a> and
+differ on the third, which is precisely why the third had to be part of the learner. As operators
+they behave differently in ways worth recording.</p>
+<section class="thm plain thm-proposition" id="proposition-23-11" data-kind="Proposition" data-num="23.11"><header><span class="thm-kind">Proposition 23.11</span> <span class="thm-name">Merger is not composition</span><a class="permalink" href="#proposition-23-11" aria-label="Link to Proposition 23.11">¶</a></header><p>
+Composition is associative and commutative up to \(\equiv\) and admits the empty learner as a unit.
+Merger is commutative but is neither associative in general—\((\Lrn_1 \Merge \Lrn_2) \Merge
+\Lrn_3\) and \(\Lrn_1 \Merge (\Lrn_2 \Merge \Lrn_3)\) admit different homology relations, since
+homology is not transitive across intermediate path sets—nor unital in the same sense, since
+\(\Lrn \Merge \mathbf{0}\) imposes an identification that \(\Lrn \mid \mathbf{0}\) does not.
+Moreover merger is irreversible: no composition of the merged learner recovers the parts, because
+the alleles have crossed.</p></section>
+<section class="thm remarkish thm-remark" id="remark-23-8" data-kind="Remark" data-num="23.8"><header><span class="thm-kind">Remark 23.8</span> <span class="thm-name">Why we want it separate</span><a class="permalink" href="#remark-23-8" aria-label="Link to Remark 23.8">¶</a></header><p>
+There is a temptation to treat merger as composition at high \(k_{\mathrm{mat}}\) and be done. We
+resist it for two reasons. First, the sign structure of Table <a class="xref" href="23-composing-learners.html#tab-23-1" data-ref="com:tab:relations">23.1</a> has no entry
+for it: merger is not \((+,+)\) or \((+,-)\), because after it there are no two parties to assign
+signs to. Second, and more usefully, merger is the operator that changes the <em>identity</em> of a
+learner while composition changes only its situation, and §<a class="xref" href="23-composing-learners.html#sec-23-12" data-ref="com:sec:units">23.12</a> needs that
+distinction: a lineage escapes confinement by recombination <em>within</em> itself, and a
+federation escapes by composition <em>with</em> another. Merger is the third thing, and it escapes
+by ceasing to be the learner that was confined.</p></section>
+<h2 id="sec-23-9"><span class="secnum">23.9</span> Phase is not compositional</h2>
+<p>Figure 2 of \(\chSci\) divides the \((\iota,\delta)\) plane into three regions: at low \(\delta\)
+food lies in the open and senses suffice, so a theory is overhead; at high \(\iota\) or high
+\(\delta\) discovery costs more than it returns and everything starves; in between, hypothesis
+formation pays. The boundaries are where the foraging inequality changes sign.</p>
+<section class="thm plain thm-proposition" id="proposition-23-12" data-kind="Proposition" data-num="23.12"><header><span class="thm-kind">Proposition 23.12</span> <span class="thm-name">Phase is not preserved</span><a class="permalink" href="#proposition-23-12" aria-label="Link to Proposition 23.12">¶</a></header><p>
+There exist learners \(\Lrn_1, \Lrn_2\) each of which lies in the science-pays band in isolation
+and whose composite lies outside it. Specifically:</p>
+<ol><li id="item-27-1"><p><em>Downward, into foraging-suffices.</em> If \(\Lrn_2\)’s components lie shallow to \(\Lrn_1\)’s
+senses—\(\delta\) small in the pair, which by Remark <a class="xref" href="22-learning-to-play.html#remark-22-2" data-ref="gam:concealment-price-wall">22.2</a> of \(\chGame\) means few plies of
+lookahead are needed to model them—then \(\Lrn_1\)’s cheapest rung dominates its theory-holding
+rungs, since the prey is legible without inquiry.</p></li><li id="item-27-2"><p><em>Downward, into starvation.</em> If composition raises \(\iota\) past the upper boundary,
+which it does whenever \(\Lrn_2\) is stack-rich and reservoir-poor, then no available locus
+satisfies the foraging inequality for either party.</p></li><li id="item-27-3"><p><em>Upward, out of starvation.</em> If \(\Lrn_1\) is below its minimum viable endowment and
+\(k_{\mathrm{met}}=1\) is a pooling channel, then Proposition <a class="xref" href="23-composing-learners.html#proposition-23-4" data-ref="com:prop:symb">23.4</a> rescues it.</p></li></ol></section>
+<p>The interesting case is none of these three, because all three are couplings a modeller can see
+coming. The case worth measuring is the one in which the two learners never perceive each other
+at all.</p>
+<h2 id="sec-23-10"><span class="secnum">23.10</span> Competitive dilution, measured</h2>
+<h3 id="sec-23-10-1"><span class="secnum">23.10.1</span> The model, and its one choice</h3>
+<p>Take \(\mathbf{k} = (0,1,0,0)\): two learners sharing exactly one source name and nothing else.
+Neither can perceive the other—no probe name is shared, so no assay of either reaches the
+other’s surface—neither can harvest the other, and neither can interbreed with it. By
+Table <a class="xref" href="23-composing-learners.html#tab-23-1" data-ref="com:tab:relations">23.1</a> the relation is exploitative competition, and the only channel of
+influence is \(\Theta\) itself.</p>
+<p>The source is a single contract, hence rate-limited and non-exclusive (\(\chSci\), Definition <a class="xref" href="21-the-mortal-scientist.html#definition-21-11" data-ref="sci:def:source">21.11</a>).
+We must say how the two learners’ calls interleave, and this is the note’s one genuinely free
+modeling choice.</p>
+<section class="thm plain thm-definition" id="definition-23-6" data-kind="Definition" data-num="23.6"><header><span class="thm-kind">Definition 23.6</span> <span class="thm-name">Access rate</span><a class="permalink" href="#definition-23-6" aria-label="Link to Definition 23.6">¶</a></header><p>
+A learner calling a source completes one assay per \(c\) metered units, where \(c\) is its expected
+metering per assay at the rung it holds. Learners queue at the source as fast as they complete
+assays, so learner \(i\)’s share of the source’s payouts is
+<span class="math-d">\[s_i \;=\; \frac{1/c_i}{\sum_j 1/c_j}.\]</span></p></section>
+<p>The alternative—equal shares regardless of cost—is defensible if one reads the contract as
+serving callers round-robin rather than first-come. We work Definition <a class="xref" href="23-composing-learners.html#definition-23-6" data-ref="com:def:rate">23.6</a> and note in
+§<a class="xref" href="23-composing-learners.html#sec-23-14" data-ref="com:sec:notshown">23.14</a> what changes under the alternative: the dilution survives, the asymmetry
+does not.</p>
+<section class="thm plain thm-proposition" id="proposition-23-13" data-kind="Proposition" data-num="23.13"><header><span class="thm-kind">Proposition 23.13</span> <span class="thm-name">Competitive dilution</span><a class="permalink" href="#proposition-23-13" aria-label="Link to Proposition 23.13">¶</a></header><p>
+Let two learners share one source of reserve \(R_0\) paying quantum \(q\) per assay, at price \(p\)
+tokens per metered unit, with expected meterings \(c_1, c_2\) per assay, both self-funding
+(\(q > p c_i\)). Then over the life of the source, learner \(i\) receives
+<span class="math-d">\[G_i \;=\; \frac{R_0}{q}\cdot \frac{c_{j}}{c_i + c_{j}} \qquad (j \neq i)\]</span>
+assays and accumulates \(\Sigma_i = G_i\,(q - p c_i)\). Consequently the number of assays of any
+deficit-running rung of cost \(c^\ast > q/p\) that learner \(i\) can subsequently fund is
+<span class="math-d">\[D_i \;=\; \frac{\Sigma_i}{p c^\ast - q}
+  \;=\; D_i^{\text{alone}} \cdot \frac{c_{j}}{c_i + c_{j}} ,\]</span>
+so that <em>each learner retains exactly its own share of the reservoir as a fraction of the
+inquiry it could afford in isolation</em>. The factor is independent of \(R_0\), \(q\), \(p\) and \(c^\ast\).</p></section>
+<section class="proof"><header>Proof</header><p>Immediate from Definition <a class="xref" href="23-composing-learners.html#definition-23-6" data-ref="com:def:rate">23.6</a>: composition scales \(G_i\) by \(s_i\) and everything
+downstream is linear in \(G_i\).</p></section>
+<section class="thm plain thm-corollary" id="corollary-23-2" data-kind="Corollary" data-num="23.2"><header><span class="thm-kind">Corollary 23.2</span> <span class="thm-name">Dilution is regressive</span><a class="permalink" href="#corollary-23-2" aria-label="Link to Corollary 23.2">¶</a></header><p>
+A learner whose best affordable rung is self-funding loses assays but no <em>depth</em>, since the
+rung it holds needs no surplus. A learner still climbing—whose next rung runs a deficit and must
+be funded from accumulated surplus—loses depth in exact proportion to its share. Hence
+competition at a shared reservoir costs the unfinished science strictly more than the finished
+one, and costs nothing at all to a learner that has stopped.</p></section>
+<section class="thm remarkish thm-remark" id="remark-23-9" data-kind="Remark" data-num="23.9"><header><span class="thm-kind">Remark 23.9</span> <span class="thm-name">Competition is a mechanism of confinement</span><a class="permalink" href="#remark-23-9" aria-label="Link to Remark 23.9">¶</a></header><p>
+Corollary <a class="xref" href="21-the-mortal-scientist.html#corollary-21-1" data-ref="sci:cor:poverty">21.1</a> of \(\chSci\) says poverty is confining: a scientist whose stack affords few
+evaluations per move takes the cheapest available move, the cheapest moves are the shortest, and
+by Proposition <a class="xref" href="21-the-mortal-scientist.html#proposition-21-4" data-ref="sci:prop:confinement">21.4</a> short moves cannot leave their ball. Proposition <a class="xref" href="23-composing-learners.html#proposition-23-13" data-ref="com:prop:dilution">23.13</a> exhibits
+a mechanism of impoverishment that requires no contact whatever. A learner can be confined to a
+shallow theory by a competitor that cannot see it, cannot model it, and has no hypothesis about
+it—only a name in common. We think this is the most surprising consequence of the composition
+operator, and it is the classical competitive exclusion principle [<a class="cite" href="bibliography.html#bib-Hardin" data-cite="Hardin">57</a>, <a class="cite" href="bibliography.html#bib-Tilman" data-cite="Tilman">58</a>] arriving
+in an epistemic currency rather than a demographic one.</p></section>
+<h2 id="sec-23-11"><span class="secnum">23.11</span> The worked example: two games, one wall</h2>
+<h3 id="sec-23-11-1"><span class="secnum">23.11.1</span> A second environment</h3>
+<p>The game note laddered noughts-and-crosses and found the complete theory dominated. To compose we
+need a second learner, and the second environment should differ in the one respect that matters:
+whether its complete theory is affordable.</p>
+<p>We take Nim, normal play [<a class="cite" href="bibliography.html#bib-Bouton" data-cite="Bouton">55</a>]. The ladder is built by the same method and priced by the
+same schedule \(\kappa(d) = 2^d\), with the cost of a decision at rung \(r\) equal to \(|M| \cdot
+\sum_{\text{rules } 1..r} \kappa(d_{\text{rule}})\) and \(|M|\) the number of legal moves.</p>
+<div class="centered"><p>
+\(\fitwidth\){</p>
+<div class="tablewrap"><table><thead><tr><th>rung</th><th>formula added</th><th>kind and depth</th><th>\(\kappa\)</th></tr></thead><tbody><tr><td>\(0\)</td><td>\(\top\)</td><td>—</td><td>\(0\)</td></tr><tr><td>\(1\)</td><td>\(\exists s.\ \mathrm{One}(s) \wedge \mathrm{Takes}(s)\)</td><td>spatial, depth 1</td><td>\(2\)</td></tr><tr><td>\(2\)</td><td>\(\exists s.\ \mathrm{Two} \wedge \mathrm{Equalizes}(s)\)</td><td>spatial, depth 1</td><td>\(2\)</td></tr><tr><td>\(3\)</td><td>\(\chi_{\mathrm{Nim}} := \exists s.\ \mathrm{NimSum}_0(s)\)</td><td>name-level, depth 0</td><td>\(1\)</td></tr></tbody></table></div>
+<p>}</p></div>
+<p>Rung 1 says: exactly one heap is nonempty, take it. Rung 2 says: exactly two heaps are nonempty,
+equalize them. Rung 3 is Bouton’s theorem: move to a position whose nim-sum is zero. All three
+are predicates on the heap sizes, read off the reflected structure of the position by a name
+predicate; none contains a modality, and rung 3 in particular requires no lookahead at all.</p>
+<section class="thm remarkish thm-observation" id="observation-23-3" data-kind="Observation" data-num="23.3"><header><span class="thm-kind">Observation 23.3</span> <span class="thm-name">The complete theory of Nim is name-level</span><a class="permalink" href="#observation-23-3" aria-label="Link to Observation 23.3">¶</a></header><p>
+\(\chi_{\mathrm{Nim}}\) is exact and contains no modality and no fixed point. This is Remark <a class="xref" href="21-the-mortal-scientist.html#remark-21-6" data-ref="sci:rem:structural">21.6</a> of
+\(\chSci\)—a finite theory is complete exactly when the environment’s regularity is
+structural—in its sharpest available form: Nim’s regularity is so structural that its complete
+theory sits at depth zero, where noughts-and-crosses needs \(\nu X.\forall s.[K_s](\neg
+\mathrm{Lost} \wedge \exists t. \langle\langle K_t\rangle\rangle X)\) and nine unfoldings.</p></section>
+<h3 id="sec-23-11-2"><span class="secnum">23.11.2</span> The ladder pays, and here it keeps paying</h3>
+<p>All figures are exact over all plays, symmetrized over which side moves first, against a
+uniform-random opponent, computed by memoized recursion (Appendix <a class="xref" href="23-composing-learners.html#sec-23-17" data-ref="com:app:repro">23.17</a>).</p>
+<figure class="float tabfloat" id="tab-23-2"><p>\(\fitwidth\){</p>
+<div class="tablewrap"><table><thead><tr><th>rung</th><th>added rule</th><th>win</th><th>loss</th><th>cost</th><th>\(\Delta\)win</th><th>return</th></tr></thead><tbody><tr><td>l}{<em>Nim\((3,4,5)\)   nim-sum \(=2\), an N-position; branching \(12\)</em>}</td></tr><tr><td>\(0\)</td><td>\(\top\)</td><td>\(0.5000\)</td><td>\(0.5000\)</td><td>\(0.0\)</td><td>—</td><td>—</td></tr><tr><td>\(1\)</td><td>take-all</td><td>\(0.6567\)</td><td>\(0.3433\)</td><td>\(38.9\)</td><td>\(+0.1567\)</td><td>\(+0.00403\)</td></tr><tr><td>\(2\)</td><td>equalize</td><td>\(0.8899\)</td><td>\(0.1101\)</td><td>\(80.4\)</td><td>\(+0.2332\)</td><td>\(+0.00562\)</td></tr><tr><td>\(3\)</td><td>\(\chi_{\mathrm{Nim}}\)</td><td>\(0.9966\)</td><td>\(0.0034\)</td><td>\(99.6\)</td><td>\(+0.1067\)</td><td>\(+0.00555\)</td></tr><tr><td>l}{<em>Nim\((1,2,3)\)   nim-sum \(=0\), a P-position; branching \(6\)</em>}</td></tr><tr><td>\(0\)</td><td>\(\top\)</td><td>\(0.5000\)</td><td>\(0.5000\)</td><td>\(0.0\)</td><td>—</td><td>—</td></tr><tr><td>\(1\)</td><td>take-all</td><td>\(0.5917\)</td><td>\(0.4083\)</td><td>\(15.2\)</td><td>\(+0.0917\)</td><td>\(+0.00602\)</td></tr><tr><td>\(2\)</td><td>equalize</td><td>\(0.7958\)</td><td>\(0.2042\)</td><td>\(31.4\)</td><td>\(+0.2042\)</td><td>\(+0.01262\)</td></tr><tr><td>\(3\)</td><td>\(\chi_{\mathrm{Nim}}\)</td><td>\(0.9000\)</td><td>\(0.1000\)</td><td>\(38.5\)</td><td>\(+0.1042\)</td><td>\(+0.01476\)</td></tr></tbody></table></div>
+<p>}</p><figcaption><span class="fignum">Table 23.2</span> Two Nim ladders, exact. Contrast Table 1 of \(\chGame\), where marginal return falls by
+more than two orders of magnitude along the ladder and the complete theory is dominated on both
+axes. Here return is flat in Nim\((3,4,5)\) and <em>rising</em> in Nim\((1,2,3)\), where the complete
+theory is the best purchase available.</figcaption></figure>
+<section class="thm remarkish thm-observation" id="observation-23-4" data-kind="Observation" data-num="23.4"><header><span class="thm-kind">Observation 23.4</span> <span class="thm-name">Whether truth is affordable is a property of the environment</span><a class="permalink" href="#observation-23-4" aria-label="Link to Observation 23.4">¶</a></header><p>
+Three environments, three answers. In noughts-and-crosses \(\chi\) costs \(679.2\), wins \(0.873\), and
+is strictly dominated by a name-level heuristic winning \(0.918\) at \(255.9\). In Nim\((3,4,5)\)
+\(\chi_{\mathrm{Nim}}\) costs \(99.6\), wins \(0.9966\), and is not dominated: it is more expensive than
+the rung below and strictly better. In Nim\((1,2,3)\) it is the best marginal purchase on the whole
+ladder, returning \(+0.0148\) per metered unit where the rung below returns \(+0.0126\) and the rung
+below that \(+0.0060\). The returns <em>rise</em>.</p></section>
+<p>This is worth stating carefully because it is the hinge of the composition argument. Remark <a class="xref" href="21-the-mortal-scientist.html#remark-21-9" data-ref="sci:rem:yieldbias">21.9</a> of
+\(\chSci\)—yield, not truth—says a lineage under selection drifts toward yield-biased
+search wherever yield and discrimination disagree. Table <a class="xref" href="23-composing-learners.html#tab-23-2" data-ref="com:tab:nim">23.2</a> shows they do not always
+disagree. Whether they do is fixed by the environment: by how much of its regularity is
+structural rather than reduction-following (Remark <a class="xref" href="21-the-mortal-scientist.html#remark-21-6" data-ref="sci:rem:structural">21.6</a> there), and by the branching factor, which
+by Proposition <a class="xref" href="22-learning-to-play.html#proposition-22-3" data-ref="gam:prop:moves">22.3</a> of \(\chGame\) is the arity of the quantification over redex positions. So
+<em>is truth affordable?</em> is not a question about scientists. It is a question about worlds, and
+composition is the operator that puts two answers into one budget.</p>
+<section class="thm remarkish thm-remark" id="remark-23-10" data-kind="Remark" data-num="23.10"><header><span class="thm-kind">Remark 23.10</span> <span class="thm-name">\(\chi\) in a lost position is a fall-through to \(\top\)</span><a class="permalink" href="#remark-23-10" aria-label="Link to Remark 23.10">¶</a></header><p>
+Nim\((1,2,3)\) has nim-sum zero, so the first player has no move to a zero position and
+\(\chi_{\mathrm{Nim}}\) fires no rule; the policy falls through to uniform choice. It still wins
+\(0.800\) as first player because the random opponent errs and the complete theory punishes the
+error the moment it appears—but it has nothing to say about how to <em>provoke</em> one. As
+second player it wins \(1.000\). That the complete theory is silent on exploiting a fallible
+opponent is Observation <a class="xref" href="22-learning-to-play.html#observation-22-6" data-ref="gam:obs:chi">22.6</a> of \(\chGame\) in a domain where \(\chi\) is otherwise cheap and good,
+which is some evidence that the phenomenon is about completeness rather than about cost.</p></section>
+<figure class="float figfloat" id="fig-23-2"><p>\(\fitwidth{
+<div class="tikz-missing">[diagram]</div>}\)</p><figcaption><span class="fignum">Figure 23.2</span> Three ladders on one pair of axes. The noughts-and-crosses curve turns down at its last
+rung—the complete theory costs more and wins less than the heuristic beneath it. Both Nim
+curves rise to the end, and the Nim\((1,2,3)\) curve rises fastest at the top. Composition puts
+learners with curves of both shapes under one conserved \(\Theta\).</figcaption></figure>
+<h3 id="sec-23-11-3"><span class="secnum">23.11.3</span> The composite</h3>
+<p>Let \(\Lrn_A\) be a population playing noughts-and-crosses and \(\Lrn_B\) a population playing
+Nim\((1,2,3)\), each against the practice wall of §<a class="xref" href="22-learning-to-play.html#sec-22-3-2" data-ref="gam:S3.2">22.3.2</a> of \(\chGame\), rooted at distinct quotations
+so that Proposition <a class="xref" href="23-composing-learners.html#proposition-23-9" data-ref="com:prop:root">23.9</a> applies. They share exactly the wall:
+\(\mathbf{k} = (0,1,0,0)\). The wall’s reserve is \(R_0 = 12{,}000\) at quantum \(q = 6\), and the
+price is \(p = 0.05\) tokens per metered unit, as in that note’s world.</p>
+<p>At \(p = 0.05\) and \(q = 6\) a rung is self-funding exactly when its expected metering is below
+\(q/p = 120\). For the noughts ladder that admits rungs \(0,1,2\) and excludes \(3,4,5,6\); so
+\(\Lrn_A\)’s deepest self-funding rung is rung 2, at \(c_A = 77.8\) and a net of \(+2.11\) tokens per
+assay, and every deeper rung must be funded out of accumulated surplus. For \(\Lrn_B\), \(\chi_{\mathrm{Nim}}\)
+costs \(c_B = 38.5\), net \(+4.08\): <em>the complete theory of \(\Lrn_B\)’s environment is
+self-funding, and the incomplete theory of \(\Lrn_A\)’s environment is not.</em></p>
+<figure class="float tabfloat" id="tab-23-3"><p>\(\fitwidth\){</p>
+<div class="tablewrap"><table><thead><tr><th></th><th>share of wall</th><th>assays</th><th>terminal surplus</th><th>rung-5 assays funded</th></tr></thead><tbody><tr><td>\(\Lrn_A\) alone</td><td>\(1.000\)</td><td>\(2000\)</td><td>\(4220\)</td><td>\(621\)</td></tr><tr><td>\(\Lrn_A\) composed</td><td>\(0.331\)</td><td>\(662\)</td><td>\(1397\)</td><td>\(206\)</td></tr><tr><td>\(\Lrn_B\) composed</td><td>\(0.669\)</td><td>\(1338\)</td><td>\(5452\)</td><td>— (none needed)</td></tr></tbody></table></div>
+<p>}</p><figcaption><span class="fignum">Table 23.3</span> The composite, exactly. \(\Lrn_A\) retains \(0.331\) of the deep inquiry it could afford
+alone—identically its share of the wall, per Proposition <a class="xref" href="23-composing-learners.html#proposition-23-13" data-ref="com:prop:dilution">23.13</a>—and loses
+\(66.9\%\). \(\Lrn_B\) loses \(33.1\%\) of its assays and none of its depth, because the rung it holds
+is self-funding. Neither learner perceives, models, or touches the other.</figcaption></figure>
+<section class="thm remarkish thm-observation" id="observation-23-5" data-kind="Observation" data-num="23.5"><header><span class="thm-kind">Observation 23.5</span> <span class="thm-name">The measurement</span><a class="permalink" href="#observation-23-5" aria-label="Link to Observation 23.5">¶</a></header><p>
+\(\Lrn_A\)’s affordable depth falls from \(621\) assays of rung-5 play to \(206\). The mechanism is
+entirely \(\Theta\): \(\Lrn_B\) holds no hypothesis about \(\Lrn_A\), has no probe name in common with
+it, could not derive its metabolic channel if it wanted to, and would gain nothing by doing so.
+It simply finishes its assays faster, because its environment admitted a cheap complete theory,
+and therefore reaches the wall more often.</p></section>
+<section class="thm remarkish thm-observation" id="observation-23-6" data-kind="Observation" data-num="23.6"><header><span class="thm-kind">Observation 23.6</span> <span class="thm-name">And it is regressive</span><a class="permalink" href="#observation-23-6" aria-label="Link to Observation 23.6">¶</a></header><p>
+\(\Lrn_B\) is unaffected in depth. Its best rung is self-funding, so the surplus it forgoes buys it
+nothing it needs. \(\Lrn_A\) is affected in depth alone, because everything it still wants to learn
+runs a deficit. The learner with the finished science pays in currency it does not spend; the
+learner with the unfinished science pays in the only currency that matters to it.</p></section>
+<figure class="float figfloat" id="fig-23-3"><p>\(\fitwidth{
+<figure class="tikz"><img src="../figures/f46ca1de7c72.svg" alt="Diagram"></figure>}\)</p><figcaption><span class="fignum">Figure 23.3</span> Competitive dilution. The curve is \(D_A(c_B) = D_A^{\text{alone}} \cdot
+c_B/(c_A + c_B)\) with \(c_A = 77.8\), exactly as Proposition <a class="xref" href="23-composing-learners.html#proposition-23-13" data-ref="com:prop:dilution">23.13</a> gives it. As the
+competitor’s science gets cheaper, the affordable depth of the learner whose science is still
+unfinished goes to zero.</figcaption></figure>
+<h3 id="sec-23-11-4"><span class="secnum">23.11.4</span> Succession is a change of the grading vector</h3>
+<p>The wall is finite, so this composite has an ending, and the ending is where the typing of the
+overlap earns its keep.</p>
+<section class="thm plain thm-proposition" id="proposition-23-14" data-kind="Proposition" data-num="23.14"><header><span class="thm-kind">Proposition 23.14</span> <span class="thm-name">Exhaustion forces a change of type</span><a class="permalink" href="#proposition-23-14" aria-label="Link to Proposition 23.14">¶</a></header><p>
+Let \(\Lrn_1 \mid \Lrn_2\) have \(\mathbf{k} = (0,1,0,0)\) with the shared source exhaustible. When
+the source is exhausted, the foraging inequality fails at every source locus for both learners.
+The composite then either dies or acquires \(k_{\mathrm{met}} > 0\) or \(k_{\mathrm{prb}} > 0\);
+that is, succession in the sense of \(\chSci\), Proposition <a class="xref" href="21-the-mortal-scientist.html#proposition-21-15" data-ref="sci:prop:succession">21.15</a>, is precisely a change in which
+component of the grading vector is nonzero.</p></section>
+<section class="thm plain thm-corollary" id="corollary-23-3" data-kind="Corollary" data-num="23.3"><header><span class="thm-kind">Corollary 23.3</span> <span class="thm-name">The change is priced, and priced asymmetrically</span><a class="permalink" href="#corollary-23-3" aria-label="Link to Corollary 23.3">¶</a></header><p>
+Acquiring \(k_{\mathrm{met}} > 0\) requires deriving a name in the other learner’s metabolic
+namespace, which under capability gating is real work: a hypothesis describing that namespace
+must be formed and installed as a guard. By Proposition <a class="xref" href="21-the-mortal-scientist.html#proposition-21-6" data-ref="sci:prop:branching">21.6</a> of \(\chSci\) the branching a
+learner can survey is its stack divided by the cost of one check. Hence the transition is
+available to whichever learner retains apparatus for forming namespace hypotheses about adaptive
+subjects—which by Corollary <a class="xref" href="21-the-mortal-scientist.html#corollary-21-5" data-ref="sci:cor:intelligence">21.5</a> there is the prey-feeder, and in this composite is the learner
+whose science was unfinished.</p></section>
+<p>In the worked composite, \(\Lrn_B\) ends the source phase holding \(5452\) tokens and \(\Lrn_A\) holds
+\(1397\); \(\Lrn_B\)’s stack is \(3.90\) times \(\Lrn_A\)’s. By the foraging inequality that stack is
+worth opening at any concealment depth these prices make affordable. So the learner that was
+confined during the source phase is the one positioned to harvest at succession, and the capital
+it harvests was accumulated by the learner that confined it.</p>
+<section class="thm remarkish thm-remark" id="remark-23-11" data-kind="Remark" data-num="23.11"><header><span class="thm-kind">Remark 23.11</span> <span class="thm-name">Offered as a structure, not a moral</span><a class="permalink" href="#remark-23-11" aria-label="Link to Remark 23.11">¶</a></header><p>
+We resist reading anything edifying into this. What the framework says is narrow and checkable:
+a cheap complete theory is a source-like access profile—non-adaptive, converged, with no
+standing revision cost—and by Corollary <a class="xref" href="21-the-mortal-scientist.html#corollary-21-5" data-ref="sci:cor:intelligence">21.5</a> of \(\chSci\) the apparatus for modeling
+adaptive subjects is a heterotroph’s expense, not carried by anything that does not need it. A
+learner that has finished its science has, by construction, stopped paying for the machinery that
+would let it form a hypothesis about a competitor. That is not a punishment for being right. It
+is what being right in a closed domain costs, and it is the same fact as Proposition <a class="xref" href="22-learning-to-play.html#proposition-22-7" data-ref="gam:solved-science-dead-ecology">22.7</a> of
+\(\chGame\): a solved science is a dead ecology.</p></section>
+<h2 id="sec-23-12"><span class="secnum">23.12</span> The three units of learning</h2>
+<p>Collecting the three notes, the units of learning are distinguished by exactly one thing: the
+revision distance each can reach.</p>
+<figure class="float tabfloat" id="float-36"><p>\(\fitwidth\){</p>
+<div class="tablewrap"><table><thead><tr><th>unit</th><th>mechanism</th><th>reachable move</th><th>authority</th></tr></thead><tbody><tr><td>individual</td><td>walk the relaxation lattice</td><td>confined below \(2^{-n}\)</td><td>\(\chSci\), Prop. <a class="xref" href="21-the-mortal-scientist.html#proposition-21-4" data-ref="sci:prop:confinement">21.4</a></td></tr><tr><td>lineage</td><td>crossover at a shallow locus</td><td>\(2^{-1}\)</td><td>§<a class="xref" href="21-the-mortal-scientist.html#sec-21-12-10" data-ref="sci:S12.10">21.12.10</a> of \(\chSci\), §<a class="xref" href="22-learning-to-play.html#sec-22-9-3" data-ref="gam:S9.3">22.9.3</a> of \(\chGame\)</td></tr><tr><td>composed learner</td><td>adopt another root</td><td>the whole tree</td><td>§<a class="xref" href="23-composing-learners.html#sec-23-4" data-ref="com:sec:comp">23.4</a>, Prop. <a class="xref" href="23-composing-learners.html#proposition-23-9" data-ref="com:prop:root">23.9</a></td></tr></tbody></table></div>
+<p>}</p></figure>
+<section class="thm plain thm-proposition" id="proposition-23-15" data-kind="Proposition" data-num="23.15"><header><span class="thm-kind">Proposition 23.15</span> <span class="thm-name">Composition reaches what no lineage reaches</span><a class="permalink" href="#proposition-23-15" aria-label="Link to Proposition 23.15">¶</a></header><p>
+A lineage’s recombination acts at loci of its own genomes, so every allele it can install already
+occurs in one of its members and every namespace it can come to describe is generated from its own
+root. Under Proposition <a class="xref" href="23-composing-learners.html#proposition-23-9" data-ref="com:prop:root">23.9</a> a change of root is therefore unreachable by
+recombination. It is reachable by composition, since \(\Nsp_1 \vee \Nsp_2\) contains names
+manufactured from both roots and the composite may install guards over either.</p></section>
+<section class="thm remarkish thm-remark" id="remark-23-12" data-kind="Remark" data-num="23.12"><header><span class="thm-kind">Remark 23.12</span> <span class="thm-name">The series, and where it stops</span><a class="permalink" href="#remark-23-12" aria-label="Link to Remark 23.12">¶</a></header><p>
+The game note measured the middle row: the corner-opening allele was unreachable to any
+individual by deepening, free to a lineage by crossover, and the invasion was unconditional. The
+top row is the analogue one step up, and its content is that whatever a lineage’s early
+commitments fixed—not merely its opening, but the family of names its whole hypothesis language
+is generated from—is fixed for good against every mechanism internal to it. Composition is the
+only operator in these notes that changes it, and merger (§<a class="xref" href="23-composing-learners.html#sec-23-8" data-ref="com:sec:merger">23.8</a>) is the only one
+that changes the learner’s identity along with it. We do not know whether the series continues,
+and Problem <a class="xref" href="23-composing-learners.html#item-43-6" data-ref="com:op:series">6</a> asks.</p></section>
+<h2 id="sec-23-13"><span class="secnum">23.13</span> Composition is the exit from the dead ecology</h2>
+<p>Proposition <a class="xref" href="22-learning-to-play.html#proposition-22-7" data-ref="gam:solved-science-dead-ecology">22.7</a> of \(\chGame\) says a population all of whose members hold theories that draw
+against one another performs no harvest, burns tokens to live, and starves; and that the better
+its science the sooner it dies. Remark <a class="xref" href="22-learning-to-play.html#remark-22-12" data-ref="gam:what-would-keep-alive">22.12</a> there lists three exits and takes none of them: enlarge
+the game so \(\chi\) is unaffordable, let the rules drift, or admit an external source.</p>
+<p>The first exit is composition.</p>
+<section class="thm plain thm-proposition" id="proposition-23-16" data-kind="Proposition" data-num="23.16"><header><span class="thm-kind">Proposition 23.16</span> <span class="thm-name">Composition restores harvest</span><a class="permalink" href="#proposition-23-16" aria-label="Link to Proposition 23.16">¶</a></header><p>
+Let \(\Lrn\) be a learner in the terminal state of \(\chGame\), Proposition <a class="xref" href="22-learning-to-play.html#proposition-22-7" data-ref="gam:solved-science-dead-ecology">22.7</a>: harvest rate zero,
+\(\chi\) held by every member, \(\sigma\) declining monotonically. Let \(\Lrn'\) be any learner whose
+probe namespace is generated from a distinct root, so that \(\Lrn\) holds no hypothesis satisfied
+by \(\Lrn'\)’s components. Then in \(\Lrn \mid \Lrn'\) with \(k_{\mathrm{met}} > 0\) the foraging
+inequality is satisfiable again, because \(\Lrn'\)’s stacks are concealed at a depth \(\Lrn\) has not
+paid to see, and paying is once more a purchase with a return.</p></section>
+<section class="thm remarkish thm-remark" id="remark-23-13" data-kind="Remark" data-num="23.13"><header><span class="thm-kind">Remark 23.13</span> <span class="thm-name">Enlarging the game and composing are the same operation</span><a class="permalink" href="#remark-23-13" aria-label="Link to Remark 23.13">¶</a></header><p>
+This is the content we would most like a reader to take away. “Enlarge the game so that the
+complete theory is unaffordable” sounds like a modeling intervention—a change of domain
+imposed from outside. Under Definition <a class="xref" href="23-composing-learners.html#definition-23-2" data-ref="com:def:comp">23.2</a> it is an operation <em>inside</em> the
+framework, performed by the ecology on itself, requiring no new rewrite rule and no new sort. A
+science that has closed reopens by meeting a science that has not. The heat death of \(\chGame\)
+was never a property of noughts-and-crosses; it was a property of a world with one game in it.</p></section>
+<h2 id="sec-23-14"><span class="secnum">23.14</span> What this shows, and what it does not</h2>
+<h5 id="p-39">Shown.</h5>
+<p>That a learner may be taken to be a weighted population and hence a namespace, and that under
+that reading composition is parallel composition on terms, disjunction on namespaces, and
+undetermined on distributions (§<a class="xref" href="23-composing-learners.html#sec-23-3" data-ref="com:sec:learner">23.3</a>–§<a class="xref" href="23-composing-learners.html#sec-23-4" data-ref="com:sec:comp">23.4</a>). That disjointness of
+namespaces is exactly factorization of the distribution, so the lax comparison map’s defect
+<em>is</em> the interaction and is a quantity rather than a caveat (Theorem <a class="xref" href="23-composing-learners.html#theorem-23-1" data-ref="com:thm:factor">23.1</a>,
+Proposition <a class="xref" href="23-composing-learners.html#proposition-23-3" data-ref="com:prop:lax">23.3</a>). That a typed grading vector recovers the ecological relations as
+sign conditions (§<a class="xref" href="23-composing-learners.html#sec-23-5" data-ref="com:sec:typed">23.5</a>). That conservation makes epistemic overlap the only
+positive-sum overlap (§<a class="xref" href="23-composing-learners.html#sec-23-6" data-ref="com:sec:coop">23.6</a>). That non-interference is unstable by default and
+purchasable by rooting (§<a class="xref" href="23-composing-learners.html#sec-23-7" data-ref="com:sec:stability">23.7</a>). That phase is not compositional
+(§<a class="xref" href="23-composing-learners.html#sec-23-9" data-ref="com:sec:phase">23.9</a>) and that competitive dilution confines a learner without contact, in a closed
+form and on exact numbers (§<a class="xref" href="23-composing-learners.html#sec-23-10" data-ref="com:sec:dilution">23.10</a>–§<a class="xref" href="23-composing-learners.html#sec-23-11" data-ref="com:sec:worked">23.11</a>).</p>
+<h5 id="p-40">Not shown.</h5>
+<p>We have not proved a monoidal-category theorem: Proposition <a class="xref" href="23-composing-learners.html#proposition-23-3" data-ref="com:prop:lax">23.3</a> gives the comparison
+map and its invertibility condition, and the coherence conditions, the unit laws up to the
+identifications merger imposes, and the relationship to the fibration’s section are left open.
+Definition <a class="xref" href="23-composing-learners.html#definition-23-6" data-ref="com:def:rate">23.6</a> is a modeling choice; under the round-robin alternative each learner
+receives half the payouts and the retained fraction becomes \(1/2\) for both, so the
+<em>dilution</em> survives and the <em>regressiveness</em> weakens to whatever asymmetry the rungs
+themselves carry—in the worked composite \(\Lrn_A\) would retain \(0.500\) rather than \(0.331\), and
+still lose depth where \(\Lrn_B\) loses none. As in \(\chGame\) the measurements are exact
+computations over policies rather than observations of a running population: the ecology of
+Appendix <a class="xref" href="23-composing-learners.html#sec-23-16" data-ref="com:app:world">23.16</a> is written and not run to a fixed point, so every claim about invasion
+and succession is a claim about payoffs. And the Nim ladders, like the noughts ladder, are
+priced by a schedule that is a choice.</p>
+<h5 id="p-41">The honest summary.</h5>
+<p>The composition operator was, going in, an obvious formality—parallel composition is already
+there, and saying that learners compose by it looks like a restatement. What the exercise
+produced instead was three things we did not put in: that the probabilistic content of
+composition is exactly a graded separation, that a typed grading vector is forced rather than
+convenient, and that two learners which cannot perceive each other can nonetheless confine each
+other’s inquiry by a measurable amount.</p>
+<h2 id="sec-23-15"><span class="secnum">23.15</span> Open problems</h2>
+<ol><li id="item-43-1"><p><strong>Coherence.</strong> Is \((\mathrm{Eco}, \mid, \mathbf{0})\) lax monoidal with
+\(\lambda\) of Proposition <a class="xref" href="23-composing-learners.html#proposition-23-3" data-ref="com:prop:lax">23.3</a> as the structure map, and is a section of
+\(\chSci\), Remark <a class="xref" href="21-the-mortal-scientist.html#remark-21-25" data-ref="sci:prop:section">21.25</a>, lax monoidal over it? Since that remark withdraws the claim
+that any one section is canonical, the question now has a second half: does the answer depend on which
+monotone cost-to-rate map was chosen, and if it does not, that independence is itself the canonicity
+the earlier claim wanted. The obstruction to strictness is located; the coherence conditions are not
+checked.</p></li><li id="item-43-2"><p><strong>Is the grading vector complete?</strong> Definition <a class="xref" href="23-composing-learners.html#definition-23-3" data-ref="com:def:typed">23.3</a> gives four
+sub-namespaces because four are what the companion notes distinguish. Is there a fifth? The
+candidate is the <em>arena</em> namespace: the names by which an admitted context class
+\(\mathcal{A}\) is realized (\(\chGame\), Observation <a class="xref" href="22-learning-to-play.html#observation-22-1" data-ref="gam:arena-admitted-context-class">22.1</a>). Two learners sharing an arena but no other name
+play the same game against different opponents, which is neither of the relations in
+Table <a class="xref" href="23-composing-learners.html#tab-23-1" data-ref="com:tab:relations">23.1</a>.</p></li><li id="item-43-3"><p><strong>Optimal \(\mathbf{k}\).</strong> Given a distribution over environments, is there an optimal
+grading vector for a learner to hold—an amount of overlap that maximizes expected residual
+life? §<a class="xref" href="23-composing-learners.html#sec-23-6" data-ref="com:sec:coop">23.6</a> says the \(\Prb\) component should be positive and the \(\Met\) component
+should be zero or pooled, but the trade-off against the exposure of Lemma <a class="xref" href="21-the-mortal-scientist.html#lemma-21-1" data-ref="sci:lem:exposure">21.1</a>
+of \(\chSci\) is not worked.</p></li><li id="item-43-4"><p><strong>Run the composite.</strong> Appendix <a class="xref" href="23-composing-learners.html#sec-23-16" data-ref="com:app:world">23.16</a> specifies a two-learner world;
+§<a class="xref" href="23-composing-learners.html#sec-23-11" data-ref="com:sec:worked">23.11</a> computes payoffs. Sampling trajectories by the Gillespie construction
+of Chapter <a class="xref" href="13-weighting-rates-from-the-generated-logic.html#top" data-ref="ch:weight">13</a> would turn Table <a class="xref" href="23-composing-learners.html#tab-23-3" data-ref="com:tab:composite">23.3</a> from a payoff calculation into an
+ensemble result, and would settle whether the succession of Proposition <a class="xref" href="23-composing-learners.html#proposition-23-14" data-ref="com:prop:succession">23.14</a>
+actually occurs or whether \(\Lrn_A\) starves first.</p></li><li id="item-43-5"><p><strong>The plagiarism equilibrium, now well posed.</strong> Problem 2 of \(\chSci\) asked
+whether honest science survives theory theft. With the grading vector it becomes: for which
+\(k_{\mathrm{prb}}\) is the two-way reading equilibrium stable against a one-way reader, and does
+the answer depend on the shape of the ladder (Observation <a class="xref" href="23-composing-learners.html#observation-23-4" data-ref="com:obs:env">23.4</a>) in each learner’s
+environment?</p></li><li id="item-43-6"><p><strong>Does the series continue?</strong> Individual, lineage, composite: each
+reaches a revision the one below cannot. Is there a fourth unit, and if so what does it reach?
+The natural candidate is a distribution over <em>composites</em>—a distribution over grading
+vectors rather than over configurations—and we do not know whether that is a new object or the
+same one at a coarser resolution.</p></li><li id="item-43-7"><p><strong>Cheapness versus completeness.</strong> Observation <a class="xref" href="23-composing-learners.html#observation-23-4" data-ref="com:obs:env">23.4</a> shows that whether \(\chi\)
+is a good purchase varies by environment. Is there a criterion—presumably in terms of Remark <a class="xref" href="21-the-mortal-scientist.html#remark-21-6" data-ref="sci:rem:structural">21.6</a>
+of \(\chSci\), how much of the environment’s regularity is structural, together with the
+branching factor—that predicts the shape of the ladder without computing it? For a composite
+this would predict who dilutes whom in advance of any measurement.</p></li></ol>
+<h2 id="sec-23-16"><span class="secnum">23.16</span> Appendix: A composite world, in rholang</h2>
+<p>The listing below is the composite of §<a class="xref" href="23-composing-learners.html#sec-23-11" data-ref="com:sec:worked">23.11</a>: two learners rooted at distinct
+quotations, sharing exactly one source name, with the typed namespaces of
+Definition <a class="xref" href="23-composing-learners.html#definition-23-3" data-ref="com:def:typed">23.3</a> written as name predicates and the grading vector as a family of
+graded separations over them. Guards using a structural or modal connective are marked
+<code>//!  ideal</code> and specify a check rather than perform one; everything else runs.
+Conservation is auditable by inspection: <code>Wall</code>, <code>Harvest</code> and <code>Beget</code> move
+tokens, <code>Live</code> debits them, and nothing mints.</p>
+<p><pre class="code"><code>// ============================================================================
+// TWO LEARNERS, ONE WALL
+// ============================================================================
+//
+// Companion listing to &quot;Composing Learners&quot;.  The world is literally
+//
+//     Wall  |  L_A  |  L_B
+//
+// and every claim of the note is a claim about what that bar does.
+//
+// ROOTING (Prop. &quot;Rooting makes disjointness a theorem&quot;).  Each learner
+// manufactures every private name by quoting a term containing its OWN root.
+// L_A&#x27;s names are @[*rootA, ...] and L_B&#x27;s are @[*rootB, ...].  By freshness-
+// by-quotation no name of one is structurally equal to a name of the other,
+// so k = 0 holds on every component of the grading vector EXCEPT the wall,
+// whose name neither learner manufactured and both were handed.  That single
+// imported name is the whole of the coupling.
+//
+// TYPED NAMESPACES (Def. &quot;Typed namespaces&quot;).  Four predicates per learner:
+//
+//   Met(r) := @[ *r, &quot;m&quot;, _ ]      metabolic: where stacks rest
+//   Src(r) := @[ *r, &quot;s&quot;, _ ]      source: emitters drawn upon
+//   Prb(r) := @[ *r, &quot;p&quot;, _ ]      probe: where assays are installed
+//   Mat(r) := @[ *r, &quot;g&quot;, _ ]      mating: where genomes are disclosed
+//
+// The grading vector of the composite is then the four-tuple
+//
+//   k_tau = | fn(L_A) /\ fn(L_B) /\ N_tau |
+//
+// and the note&#x27;s claim is that this world has k = (0,1,0,0).
+
+new stdout(`rho:io:stdout`), display, wall, rootA, rootB,
+    Live, Wall, Assay, Ladder, Body, Harvest, Beget, Merge, Learner
+in {
+
+  for (@line &lt;= display) { stdout!(line) }
+
+  // ==========================================================================
+  // METABOLISM.  Reclaim - debit - reissue.  Between the receipt and the send
+  // the stack is a message in flight, which is what Harvest exploits.
+  // ==========================================================================
+  | contract Live(m, @burn, step) = {
+      for (@sigma &lt;- m) {
+        match sigma &gt; burn {
+          true  =&gt; { m!(sigma - burn) | *step | Live!(*m, burn, *step) }
+          false =&gt; { display!((&quot;DIED&quot;, &quot;could not fund a step&quot;)) }
+        }
+      }
+    }
+
+  // ==========================================================================
+  // THE SHARED SOURCE.  One contract, hence rate-limited; non-exclusive, since
+  // anyone holding the name may call it; non-adaptive; and finite.
+  //
+  // This contract IS the entire overlap.  Note what it does NOT do: it does
+  // not know who is calling, does not adapt to callers, and cannot be used by
+  // one caller to observe another.  Competitive dilution is delivered by a
+  // process with no model of anybody.
+  // ==========================================================================
+  | contract Wall(w, @quantum, @reserve) = {
+      for (ret &lt;- w) {
+        match reserve &gt;= quantum {
+          true  =&gt; { ret!(quantum) | Wall!(*w, quantum, reserve - quantum) }
+          false =&gt; { ret!(0)       | Wall!(*w, quantum, 0) }   // exhausted
+        }
+      }
+    }
+
+  // ==========================================================================
+  // THE ASSAY.  Unchanged from the companion notes: the hypothesis sits in
+  // GUARD position, so playing IS testing and confirmation IS the rendezvous.
+  // The probe name is manufactured from the learner&#x27;s own root, which is why
+  // k_prb = 0 -- neither learner can install a guard that the other&#x27;s activity
+  // could ever satisfy, because the names do not meet.
+  // ==========================================================================
+  | contract Assay(r, @g, @hyp, ret) = {
+      new probe in {
+        @[*r, &quot;p&quot;, g]!(*probe)                     // probe in Prb(r)
+        | wall!(*probe)                            // the ONE shared name
+        //! ideal: structural guards
+        | for (@pos &lt;- probe where pos |= hyp)    { ret!((&quot;confirm&quot;, pos)) }
+        | for (@pos &lt;- probe where ~(pos |= hyp)) { ret!((&quot;refute&quot;,  pos)) }
+      }
+    }
+
+  // ==========================================================================
+  // THE LADDERS.  Two environments, two shapes.  L_A&#x27;s ladder is the
+  // noughts-and-crosses ladder of the game note: chi is dominated and every
+  // rung above 2 runs a metabolic deficit at the wall&#x27;s quantum.  L_B&#x27;s is the
+  // Nim ladder: chi_Nim is a NAME-LEVEL predicate of depth zero, so the
+  // complete theory of L_B&#x27;s environment is self-funding.
+  //
+  //! ideal throughout.
+  // ==========================================================================
+  | contract Ladder(@which, @r, ret) = {
+      match (which, r) {
+        // -- L_A: noughts-and-crosses, costs 0 / 40.9 / 77.8 / ... / 679.2
+        (&quot;ttt&quot;, 2) =&gt; { ret!( @{ exists s. Emp(s) and
+                                 (Thr(s, me) or Thr(s, them)) } ) }
+        (&quot;ttt&quot;, 5) =&gt; { ret!( @{ exists s. Emp(s) and
+                                 (Thr(s, me) or Thr(s, them))
+                                 or &lt;&lt;K s&gt;&gt; Fork(me)
+                                 or forall t. &lt;&lt;K s&gt;&gt;[K t] ~Fork(them)
+                                 or Central(s) } ) }
+        (&quot;ttt&quot;, 6) =&gt; { ret!( @{ nu X. forall s.
+                                 [K s]( ~Lost and exists t. &lt;&lt;K t&gt;&gt; X ) } ) }
+        // -- L_B: Nim.  Note the absence of any modality anywhere.
+        (&quot;nim&quot;, 1) =&gt; { ret!( @{ exists s. One and Takes(s) } ) }
+        (&quot;nim&quot;, 2) =&gt; { ret!( @{ exists s. (One and Takes(s))
+                                 or (Two and Equalises(s)) } ) }
+        (&quot;nim&quot;, 3) =&gt; { ret!( @{ exists s. (One and Takes(s))
+                                 or (Two and Equalises(s))
+                                 or NimSumZero(s) } ) }        // chi_Nim
+      }
+    }
+
+  // ==========================================================================
+  // A LEARNER.  Not a scientist: a POPULATION, rooted, weighted by the stacks
+  // its members hold.  What makes it one learner rather than several is the
+  // root, which is what its whole namespace is generated from.
+  // ==========================================================================
+  | contract Learner(r, @which, @rung, @burn, @members) = {
+      match members {
+        [] =&gt; { Nil }
+        [h ...t] =&gt; {
+            Body!(*r, which, rung, burn, h)
+          | Learner!(*r, which, rung, burn, t)
+        }
+      }
+    }
+
+  | contract Body(r, @which, @rung, @burn, @i) = {
+      new hyp, score in {
+          @[*r, &quot;m&quot;, i]!(400)                       // the stack: in Met(r)
+        | score!(0, 0)
+        | Ladder!(which, rung, *hyp)
+        | Live!(@[*r, &quot;m&quot;, i], burn, @{
+              new ret in {
+                  for (@h &lt;- hyp) { hyp!(h) | Assay!(*r, i, h, *ret) }
+                | for (@o &lt;- ret) {
+                    for (@c, @f &lt;- score) {
+                      match o {
+                        (&quot;confirm&quot;, q) =&gt; { score!(c + 1, f)
+                                            | for (@s &lt;- @[*r,&quot;m&quot;,i]) {
+                                                @[*r,&quot;m&quot;,i]!(s + q) } }
+                        _              =&gt; { score!(c, f + 1) }
+                      }
+                    }
+                  }
+              }
+          })
+      }
+    }
+
+  // ==========================================================================
+  // SUCCESSION.  When the wall returns 0 forever, the only credit left is in
+  // another learner&#x27;s Met namespace -- which is a namespace this learner has
+  // never described, because k_prb = 0 kept it invisible.  Acquiring it is a
+  // step, and the step is metered: a hypothesis over Met(rOther) must be
+  // formed and installed.  That is the change of grading vector, and it is
+  // available only to a learner that still carries the apparatus.
+  // ==========================================================================
+  | contract Harvest(@rSelf, @i, @rOther, ret) = {
+      //! ideal -- the guard is a name predicate over the OTHER root&#x27;s
+      // metabolic namespace.  Forming it is what costs; firing it is a comm.
+      for (@mPrey &lt;- @[*rSelf, &quot;p&quot;, &quot;hunt&quot;]
+             where mPrey |= @{ Met(rOther) }) {
+        for (@sigma &lt;- @{mPrey}) {
+          for (@own &lt;- @[*rSelf, &quot;m&quot;, i]) {
+              @[*rSelf, &quot;m&quot;, i]!(own + sigma)
+            | ret!((&quot;harvest&quot;, sigma))
+            | display!((&quot;HARVEST across roots&quot;, sigma))
+          }
+        }
+      }
+    }
+
+  | contract Beget(m, @alleles, @endow, ret) = {
+      for (@sigma &lt;- m where sigma &gt; endow + 40) {
+          m!(sigma - endow)
+        | match alleles {
+            [w, rg] =&gt; {
+              new childM, code in {
+                  code!( @{ Body!(*childM, w, rg, 2 + rg, endow) } )  // inert
+                | for (g &lt;- code) { *g | childM!(endow) }             // metered
+                | ret!((&quot;born&quot;, w, rg))
+              }
+            }
+          }
+      }
+    }
+
+  // ==========================================================================
+  // MERGER -- a DIFFERENT OPERATOR, and this is the point of the section.
+  //
+  // Composition is the bar.  It is free, it is associative and commutative,
+  // and it leaves both learners identifiable afterwards.  Merger identifies
+  // the two MATING namespaces, which is a step, is metered, and is
+  // irreversible: after it there is no composition recovering the parts,
+  // because alleles have crossed roots.
+  //
+  // Note that Merge is a CONTRACT and `|` is not.  That asymmetry is the
+  // formal content of &quot;merger is a separate operator&quot;.
+  // ==========================================================================
+  | contract Merge(@rA, @rB, ret) = {
+      new rC in {
+          // the merged learner&#x27;s mating namespace admits homologous loci
+          // across BOTH roots; this identification is what cannot be undone
+          @[*rC, &quot;g&quot;, &quot;admits&quot;]!([rA, rB])
+        | ret!(*rC)
+      }
+    }
+
+  // ==========================================================================
+  // THE WORLD.   Theta = 12000 (wall) + 3 x 400 (L_A) + 3 x 400 (L_B) = 14400.
+  //
+  // The composite is the bar between the two Learner calls.  Delete either and
+  // the other&#x27;s numbers change -- by exactly the factor of Prop. &quot;competitive
+  // dilution&quot;, and by nothing else, since no other name is shared.
+  // ==========================================================================
+  | Wall!(*wall, 6, 12000)
+
+  | Learner!(*rootA, &quot;ttt&quot;, 2, 4, [0, 1, 2])   // noughts: rung 2, c = 77.8
+  | Learner!(*rootB, &quot;nim&quot;, 3, 5, [0, 1, 2])   // nim: chi_Nim, c = 38.5
+
+  // --------------------------------------------------------------------------
+  // WHAT TO WATCH
+  //
+  // * The overlap is ONE NAME.  `wall` is the only identifier appearing in
+  //   both Learner subtrees.  Everything else is manufactured under a root.
+  //   k = (0,1,0,0), and it stays there by construction, not by luck.
+  //
+  // * Nobody models anybody.  No guard anywhere mentions the other root.
+  //   L_B has no hypothesis about L_A and would gain nothing from one.  The
+  //   dilution happens anyway.
+  //
+  // * L_B finishes and L_A does not.  L_B holds the complete theory of its
+  //   environment at burn 5; L_A holds an incomplete one at burn 4 and cannot
+  //   afford the rungs it still wants.  The one still climbing is the one the
+  //   competition costs.
+  //
+  // * And it ends.  When the wall returns 0, Assay&#x27;s confirm guard stops
+  //   crediting, Live keeps debiting, and the only remaining credit is inside
+  //   the other root&#x27;s Met namespace.  Reaching it is Harvest, and Harvest&#x27;s
+  //   guard is a hypothesis somebody has to be able to afford to form.
+  // --------------------------------------------------------------------------
+}</code></pre></p>
+<h2 id="sec-23-17"><span class="secnum">23.17</span> Appendix: Reproducing the numbers</h2>
+<p>All figures in §<a class="xref" href="23-composing-learners.html#sec-23-11" data-ref="com:sec:worked">23.11</a> are exact computations, not samples. The noughts-and-crosses
+ladder figures—win rates \(0.437\), \(0.668\), \(0.798\), \(0.831\), \(0.836\), \(0.918\), \(0.873\) and
+expected meterings \(0.0\), \(40.9\), \(77.8\), \(134.9\), \(245.7\), \(255.9\), \(679.2\)—are quoted from
+Table 1
+of \(\chGame\) and were not recomputed here.</p>
+<p>The Nim ladders are computed by <code>compose.py</code>, which enumerates positions as sorted tuples
+of heap sizes, evaluates each rung by memoized recursion over all plays with uniform tie-breaking
+within a rung and a uniform-random opponent, and charges \(|M| \cdot \sum_{1..r} \kappa\) at each
+decision of the policy player with \(\kappa(d) = 2^d\) and depths \(1, 1, 0\) for the three rules.
+Probabilities are carried as exact rationals and converted to decimal only for display. Figures
+are symmetrized over which side moves first; the unsymmetrized figures are reported separately
+where the color asymmetry is the point.</p>
+<p>The composite of §<a class="xref" href="23-composing-learners.html#sec-23-11" data-ref="com:sec:worked">23.11</a> uses \(R_0 = 12{,}000\), \(q = 6\), \(p = 0.05\), shares by
+Definition <a class="xref" href="23-composing-learners.html#definition-23-6" data-ref="com:def:rate">23.6</a>, and the identity of Proposition <a class="xref" href="23-composing-learners.html#proposition-23-13" data-ref="com:prop:dilution">23.13</a>; the
+computation is a few lines and is included in the same script for auditability rather than for
+difficulty.</p>
+<nav class="pager"><a class="prev" href="22-learning-to-play.html"><span>Previous</span>Learning to Play</a><a class="next" href="24-enzymes-and-individuals.html"><span>Next</span>Enzymes and Individuals</a></nav>
+</main>
+<aside class="margin" id="margin" aria-live="polite"></aside>
+</div>
+<button class="railtoggle" id="railtoggle" aria-expanded="false">Contents</button>
+
+</body>
+</html>

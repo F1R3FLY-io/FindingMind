@@ -358,3 +358,33 @@ body.plainpage .page{max-width:52rem;margin:0 auto;padding:clamp(2.5rem,7vh,5rem
 .lrow.owed .ln{color:var(--apple)}
 .lrow.owed .lk{color:var(--apple)}
 .unnamed{color:var(--ink-3);font-style:italic}
+
+/* ---- utility links in the reader rail --------------------------------- */
+.rail-util{display:block;font-size:.82rem;color:var(--ink-3);text-decoration:none;
+  padding:.15rem 0}
+.rail-util:hover{color:var(--ink)}
+.rail-util:first-of-type{margin-top:.2rem}
+.tocutil{font-size:.9rem;color:var(--ink-2);margin:-1.4rem 0 2rem}
+
+/* ---- contact form ------------------------------------------------------ */
+.contact{max-width:34rem}
+.field{margin:0 0 1.3rem}
+.field label{display:block;font-size:.9rem;margin-bottom:.35rem;font-weight:600}
+.field .hint{font-weight:400;color:var(--ink-3);font-size:.85em}
+.field input,.field textarea{
+  font:inherit;font-size:1rem;width:100%;padding:.6rem .75rem;color:var(--ink);
+  background:var(--vellum);border:1px solid var(--rule);border-radius:0;
+}
+.field textarea{resize:vertical;line-height:1.5}
+.field input:focus,.field textarea:focus{border-color:var(--gold-lit);outline:none;
+  box-shadow:0 0 0 3px rgba(185,141,47,.18)}
+.submit{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin:1.8rem 0 0}
+.contact button.go{font:inherit;font-size:1rem;cursor:pointer;
+  background:var(--gold-lit);color:#17120a;border:1px solid var(--gold-lit);
+  padding:.68rem 1.7rem}
+.contact button.go:hover{background:#d3a742}
+#c-status{font-size:.9rem;color:var(--ink-2)}
+#c-status.ok{color:var(--green)}
+#c-status.bad{color:var(--apple)}
+.fallback{max-width:34rem;margin-top:2.4rem;padding-top:1.2rem;
+  border-top:1px solid var(--rule);font-size:.88rem;color:var(--ink-2)}

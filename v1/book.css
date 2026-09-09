@@ -1,0 +1,360 @@
+/* ===========================================================================
+   Finding Mind — web edition
+   Palette sampled from the hero panel (k-means over the artwork), not invented.
+   One type family, Source Serif 4, using its optical-size axis for display,
+   text and margin sizes. Mono only where the book itself is mono.
+   =========================================================================== */
+
+:root{
+  --lead:#14100a;          /* the leading between panes; hero ground */
+  --lead-2:#1e180f;
+  --vellum:#f3ecd8;        /* the robes; reading ground */
+  --vellum-2:#eae1c8;
+  --ink:#241c11;
+  --ink-2:#5a4c36;
+  --ink-3:#8a7a5e;
+  --rule:#d8ceb2;
+  --gold:#8a6516;          /* haloes */
+  --gold-lit:#b98d2f;
+  --green:#3d6b4a;         /* the serpent */
+  --apple:#9c130e;         /* the one red: reserved for what is unproved */
+  --measure:34rem;
+
+  --f: "Source Serif 4","Iowan Old Style",Palatino,Georgia,serif;
+  --m: "IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--vellum); color:var(--ink);
+  font-family:var(--f); font-optical-sizing:auto;
+  font-size:20px; line-height:1.6; font-weight:380;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto}
+a{color:inherit;text-decoration:underline;text-decoration-thickness:.5px;
+  text-underline-offset:.2em;text-decoration-color:var(--rule)}
+a:hover{text-decoration-color:var(--gold-lit)}
+:focus-visible{outline:2px solid var(--gold-lit);outline-offset:3px;border-radius:1px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:1rem;top:1rem;z-index:99;background:var(--vellum);padding:.6rem 1rem;
+  border:1px solid var(--ink)}
+.col{max-width:var(--measure);margin-inline:auto}
+
+/* ===================== HOME ============================================== */
+
+body.home{background:var(--lead);color:var(--vellum)}
+body.home a{text-decoration-color:#4a3f2c}
+body.home a:hover{text-decoration-color:var(--gold-lit)}
+
+.hero{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,26rem);
+  gap:clamp(2rem,5vw,5rem);align-items:center;
+  max-width:76rem;margin:0 auto;padding:clamp(1.5rem,4vh,3.5rem) clamp(1.2rem,4vw,3rem) clamp(3rem,8vh,6rem);
+}
+.hero-art{position:relative;justify-self:end;width:100%}
+.hero-art img{
+  display:block;width:100%;
+  /* the panel is lit from behind, as glass is */
+  box-shadow:0 0 0 1px #2b2415, 0 40px 90px -30px #000, 0 0 140px -40px #d9b25e;
+}
+.hero-type h1{
+  font-size:clamp(3.2rem,7vw,5.4rem);line-height:.9;margin:0;
+  font-weight:400;letter-spacing:-.02em;font-variation-settings:"opsz" 60;
+}
+.hero-type .sub{
+  margin:1rem 0 0;font-size:1.24rem;font-style:italic;color:#cbbf9f;
+  max-width:22ch;line-height:1.35;
+}
+.hero-type .byline{margin:1.6rem 0 0;font-size:1.02rem;color:#e6dcc0}
+.actions{margin:2.2rem 0 0;display:flex;gap:.9rem;flex-wrap:wrap}
+.go,.alt{
+  display:inline-block;padding:.72rem 1.5rem;text-decoration:none;font-size:1rem;
+  border:1px solid var(--gold);
+}
+.go{background:var(--gold-lit);color:#17120a;border-color:var(--gold-lit)}
+.go:hover{background:#d3a742}
+.alt{color:#e6dcc0}
+.alt:hover{background:#211a10}
+.hero-type .meta{margin:1.5rem 0 0;font-size:.9rem;color:#8d8265}
+
+.argument{background:var(--vellum);color:var(--ink);padding:clamp(4rem,10vh,7rem) 1.4rem}
+.argument .lede{font-size:1.3rem;line-height:1.45}
+.argument .turn{
+  font-size:1.5rem;font-style:italic;margin:2rem 0;padding-left:1.1rem;
+  border-left:3px solid var(--apple);
+}
+.notation{
+  display:grid;grid-template-columns:auto 1fr;gap:.35rem 1.1rem;align-items:baseline;
+  margin:2rem 0;padding:1.1rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  font-size:.98rem;
+}
+.notation b{font-family:var(--m);font-weight:500;color:var(--green)}
+.notation span{color:var(--ink-2)}
+
+.acts{background:var(--vellum);color:var(--ink);padding:0 1.4rem clamp(4rem,10vh,7rem)}
+.acts h2{font-size:1.9rem;font-weight:400;margin:0 0 .6rem}
+.acts>ol{list-style:none;padding:0;margin:2.5rem auto 0;max-width:52rem;
+  border-top:1px solid var(--rule)}
+.acts>ol li{border-bottom:1px solid var(--rule);padding:1.6rem 0}
+.acts h3{margin:0;font-size:1.4rem;font-weight:400}
+.acts h3 a{text-decoration:none}
+.acts h3 a:hover{text-decoration:underline;text-decoration-color:var(--gold-lit)}
+.acts li p{margin:.4rem 0 0;color:var(--ink-2);max-width:46ch}
+.acts .parts{font-size:.88rem;color:var(--ink-3);max-width:56ch}
+
+.apparatus{background:var(--vellum-2);color:var(--ink);padding:clamp(4rem,10vh,7rem) 1.4rem}
+.apparatus h2{font-size:1.9rem;font-weight:400;margin:0 0 .8rem;max-width:20ch}
+.feat{list-style:none;padding:0;margin:2.6rem auto 0;max-width:60rem;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2rem}
+.feat h3{margin:0 0 .4rem;font-size:1.1rem;font-weight:600}
+.feat p{margin:0;color:var(--ink-2);font-size:.98rem}
+
+.elsewhere{background:var(--vellum);color:var(--ink);padding:clamp(3.5rem,8vh,6rem) 1.4rem}
+.elsewhere h2{font-size:1.9rem;font-weight:400;margin:0 0 1.5rem}
+.cols{max-width:52rem;margin:0 auto;display:grid;gap:2.5rem;
+  grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.cols h3{font-size:1rem;font-weight:600;margin:0 0 .7rem}
+.links{list-style:none;padding:0;margin:0}
+.links li{border-top:1px solid var(--rule);padding:.7rem 0}
+.links li:last-child{border-bottom:1px solid var(--rule)}
+.foot{background:var(--vellum);color:var(--ink-2);padding:0 1.4rem 4rem;font-size:.95rem}
+
+/* ===================== READER ============================================ */
+
+body.readpage{background:var(--vellum)}
+.reader{
+  display:grid;
+  grid-template-columns:16rem minmax(0,1fr) 17rem;
+  align-items:start;
+  max-width:88rem;margin:0 auto;
+}
+.rail{position:sticky;top:0;height:100vh;overflow:auto;border-right:1px solid var(--rule);
+  padding:1.6rem 1rem 4rem;font-size:.86rem;line-height:1.35;
+  scrollbar-width:thin}
+.rail-home{display:block;font-size:1.05rem;text-decoration:none;margin-bottom:1.4rem;
+  padding-bottom:.9rem;border-bottom:1px solid var(--rule)}
+.rail-act{font-size:.78rem;letter-spacing:.06em;font-weight:600;margin:1.8rem 0 .5rem;
+  color:var(--gold);font-variant-caps:small-caps}
+.rail-part{font-size:.8rem;font-weight:400;font-style:italic;color:var(--ink-3);
+  margin:1rem 0 .35rem;line-height:1.25}
+.rail-ch{display:grid;grid-template-columns:1.7rem 1fr;gap:.3rem;padding:.24rem 0;
+  text-decoration:none;color:var(--ink-2)}
+.rail-ch:hover{color:var(--ink)}
+.rail-ch .rn{color:var(--ink-3);font-variant-numeric:tabular-nums;font-size:.8rem}
+.rail-ch[aria-current]{color:var(--ink);font-weight:600}
+.rail-ch[aria-current] .rn{color:var(--apple)}
+
+.text{padding:clamp(2rem,6vh,4.5rem) clamp(1.2rem,4vw,3.4rem) 6rem;max-width:44rem}
+.chead{margin:0 0 2.6rem}
+.kicker{margin:0 0 .5rem;font-size:.85rem;color:var(--apple);font-variant-caps:small-caps;
+  letter-spacing:.05em}
+.chead h1{font-size:clamp(2rem,4.2vw,2.9rem);font-weight:400;line-height:1.08;margin:0;
+  letter-spacing:-.015em;font-variation-settings:"opsz" 44;text-wrap:balance}
+.text p{margin:0 0 1.05em;max-width:36rem}
+.text h2,.text h3,.text h4,.text h5{font-weight:600;line-height:1.2;text-wrap:balance;
+  margin:2.4em 0 .7em;max-width:32rem}
+.text h2{font-size:1.5rem;font-weight:400;border-top:1px solid var(--rule);padding-top:1.4rem}
+.text h3{font-size:1.16rem}
+.text h4,.text h5{font-size:1rem}
+.secnum{color:var(--ink-3);font-variant-numeric:tabular-nums;margin-right:.5em;
+  font-size:.85em}
+.text ul,.text ol{max-width:34rem;padding-left:1.4rem}
+.text li{margin:0 0 .5em}
+.text dl{max-width:34rem}
+.text dt{font-weight:600;margin-top:.8em}
+.text dd{margin:0 0 .5em 1.2rem}
+em{font-style:italic}
+.sc{font-variant-caps:small-caps}
+code{font-family:var(--m);font-size:.86em;background:var(--vellum-2);padding:.05em .28em;
+  border-radius:2px}
+pre.code{font-family:var(--m);font-size:.8rem;line-height:1.5;background:var(--lead);
+  color:#e2d9bf;padding:1.1rem 1.2rem;overflow:auto;max-width:38rem;
+  border-left:3px solid var(--green)}
+pre.code code{background:none;padding:0;color:inherit}
+
+/* --- numbered results: the color says what kind of claim it is ----------- */
+.thm{
+  margin:1.8rem 0;padding:1rem 0 1rem 1.2rem;max-width:37rem;
+  border-left:3px solid var(--ink-3);background:linear-gradient(90deg,rgba(0,0,0,.028),transparent 60%);
+}
+.thm>header{font-size:.94rem;margin-bottom:.5rem;display:flex;gap:.5rem;align-items:baseline}
+.thm-kind{font-weight:700;letter-spacing:.01em}
+.thm-name{font-style:italic;color:var(--ink-2)}
+.thm p{margin:0 0 .7em}
+.thm p:last-child{margin-bottom:0}
+.permalink{margin-left:auto;opacity:0;text-decoration:none;color:var(--ink-3)}
+.thm:hover .permalink,.permalink:focus{opacity:1}
+
+.thm-definition,.thm-construction{border-left-color:var(--gold-lit)}
+.thm-definition .thm-kind,.thm-construction .thm-kind{color:var(--gold)}
+.thm-theorem,.thm-proposition,.thm-lemma,.thm-corollary,.thm-principle{
+  border-left-color:var(--green)}
+.thm-theorem .thm-kind,.thm-proposition .thm-kind,.thm-lemma .thm-kind,
+.thm-corollary .thm-kind,.thm-principle .thm-kind{color:var(--green)}
+.thm-conjecture,.thm-question,.thm-requirement,.thm-condition{border-left-color:var(--apple)}
+.thm-conjecture .thm-kind,.thm-question .thm-kind,.thm-requirement .thm-kind,
+.thm-condition .thm-kind{color:var(--apple)}
+.thm-remark,.thm-observation,.thm-example,.thm-nonexample{
+  border-left-color:var(--rule);font-size:.95rem}
+.thm-remark .thm-kind,.thm-observation .thm-kind,.thm-example .thm-kind{color:var(--ink-2)}
+
+.proof{margin:1.4rem 0;max-width:37rem;font-size:.96rem;color:var(--ink-2)}
+.proof>header{font-style:italic;font-weight:400;color:var(--ink);margin-bottom:.3rem}
+.proof>*:last-child::after{content:" \25a1";color:var(--ink-3)}
+
+/* --- cross references --------------------------------------------------- */
+.xref{
+  text-decoration:none;border-bottom:1px solid var(--gold-lit);
+  color:var(--gold);font-variant-numeric:tabular-nums;cursor:pointer;
+}
+.xref:hover{background:rgba(185,141,47,.14)}
+.cite{
+  text-decoration:none;color:var(--green);font-size:.82em;vertical-align:.25em;
+  font-variant-numeric:tabular-nums;border-bottom:1px solid rgba(61,107,74,.4);
+}
+.xref-dead{color:var(--ink-3);border-bottom:1px dotted var(--ink-3)}
+
+/* --- margin rail --------------------------------------------------------- */
+.margin{position:sticky;top:0;height:100vh;overflow:auto;padding:clamp(2rem,6vh,4.5rem) 1.1rem 4rem;
+  font-size:.84rem;line-height:1.45;color:var(--ink-2);border-left:1px solid var(--rule)}
+.margin:empty::before{content:"References you hover open here.";color:var(--ink-3);
+  font-style:italic;display:block;max-width:14rem}
+.mcard{border-left:2px solid var(--gold-lit);padding:.5rem 0 .6rem .7rem;margin:0 0 1rem;
+  animation:fade .18s ease}
+.mcard h4{margin:0 0 .3rem;font-size:.8rem;font-weight:700;color:var(--gold)}
+.mcard .mname{font-style:italic;font-weight:400;color:var(--ink-2)}
+.mcard p{margin:0 0 .4em}
+.mcard .go{all:unset;color:var(--ink-3);font-size:.76rem;cursor:pointer;text-decoration:underline}
+.mcard .katex{font-size:.95em}
+@keyframes fade{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
+
+/* --- figures, tables, floats -------------------------------------------- */
+figure{margin:2rem 0;max-width:38rem}
+figure.tikz img{display:block;margin:0 auto;max-width:100%}
+figcaption{font-size:.85rem;color:var(--ink-2);margin-top:.7rem;max-width:34rem}
+.fignum{font-weight:700;color:var(--ink)}
+.tablewrap{overflow-x:auto;margin:1.6rem 0;max-width:38rem}
+table{border-collapse:collapse;font-size:.86rem;width:100%}
+th,td{text-align:left;padding:.45rem .8rem .45rem 0;vertical-align:top;
+  border-bottom:1px solid var(--rule)}
+th{font-weight:700;border-bottom:1.5px solid var(--ink-3)}
+.tikz-missing{color:var(--ink-3);font-style:italic;margin:1.5rem 0}
+.math-d{display:block;overflow-x:auto;overflow-y:hidden;margin:1.2rem 0;max-width:38rem}
+.pullquote{margin:1.6rem 0 1.6rem 1.2rem;color:var(--ink-2);max-width:34rem;
+  border-left:2px solid var(--rule);padding-left:1rem}
+.centered{text-align:center}
+.frame{border:1px solid var(--rule);padding:1rem 1.2rem;margin:1.6rem 0;max-width:37rem;
+  background:var(--vellum-2)}
+.epigraph{margin:0 0 2.4rem;padding:0;font-style:italic;color:var(--ink-2);max-width:30rem}
+.epigraph cite{display:block;font-style:normal;font-size:.85rem;margin-top:.4rem;
+  color:var(--ink-3)}
+.asterism{text-align:center;color:var(--ink-3);margin:2rem 0;font-size:1.2rem}
+.qline{margin:0;font-style:italic}
+.footnotes{margin-top:4rem;border-top:1px solid var(--rule);padding-top:1.2rem;font-size:.88rem;
+  color:var(--ink-2);max-width:36rem}
+.footnotes h2{font-size:.9rem;font-weight:700;border:0;padding:0;margin:0 0 .6rem}
+sup.fn a{text-decoration:none;color:var(--apple)}
+
+/* --- interlude: the literary voice gets a different setting -------------- */
+.text.interlude{max-width:38rem}
+.text.interlude p{max-width:31rem;font-size:1.04rem;line-height:1.72}
+.text.interlude .chead h1{font-style:italic;font-weight:300}
+
+.pager{display:flex;justify-content:space-between;gap:2rem;margin-top:5rem;
+  border-top:1px solid var(--rule);padding-top:1.4rem;font-size:.95rem}
+.pager a{text-decoration:none;max-width:16rem}
+.pager a:hover{text-decoration:underline}
+.pager span{display:block;font-size:.78rem;color:var(--ink-3)}
+.pager .next{text-align:right;margin-left:auto}
+
+.railtoggle{display:none}
+
+/* ===================== PLAIN PAGES ======================================= */
+body.plainpage .page{max-width:52rem;margin:0 auto;padding:clamp(2.5rem,7vh,5rem) 1.4rem 6rem}
+.phead{margin-bottom:2.5rem}
+.back{font-size:.9rem;text-decoration:none;color:var(--ink-2)}
+.phead h1{font-size:clamp(2rem,4.5vw,2.8rem);font-weight:400;margin:.8rem 0 0;
+  font-variation-settings:"opsz" 44}
+.phead .lede{color:var(--ink-2);max-width:40ch;margin-top:.8rem}
+
+.toc-act{font-size:1.5rem;font-weight:400;margin:3rem 0 .3rem;color:var(--gold)}
+.toc-part{font-size:1rem;font-weight:400;font-style:italic;color:var(--ink-2);
+  margin:1.8rem 0 .5rem;border-bottom:1px solid var(--rule);padding-bottom:.4rem}
+.toc-part .pn{font-style:normal;color:var(--ink-3);margin-right:.7rem;font-size:.85rem}
+.toc-ch{display:grid;grid-template-columns:2.4rem 1fr auto;gap:1rem;padding:.42rem 0;
+  text-decoration:none;align-items:baseline;border-bottom:1px solid rgba(216,206,178,.5)}
+.toc-ch:hover{background:var(--vellum-2)}
+.toc-ch .cn{color:var(--ink-3);font-variant-numeric:tabular-nums;text-align:right}
+.toc-ch .cw{color:var(--ink-3);font-size:.8rem;font-variant-numeric:tabular-nums}
+.toc-int .ct{font-style:italic}
+
+.filters{margin-top:1.6rem}
+#q{font:inherit;font-size:1rem;padding:.6rem .8rem;width:100%;max-width:26rem;
+  background:var(--vellum);border:1px solid var(--rule);color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.9rem}
+.chips button{font:inherit;font-size:.8rem;padding:.25rem .7rem;cursor:pointer;
+  background:none;border:1px solid var(--rule);color:var(--ink-2);border-radius:99px}
+.chips button[aria-pressed="true"]{background:var(--ink);color:var(--vellum);
+  border-color:var(--ink)}
+.ledger{margin-top:1.6rem}
+.lrow{display:grid;grid-template-columns:7.5rem 3.5rem 1fr;gap:.8rem;padding:.4rem 0;
+  text-decoration:none;border-bottom:1px solid rgba(216,206,178,.6);font-size:.92rem}
+.lrow:hover{background:var(--vellum-2)}
+.lk{color:var(--ink-3);font-size:.82rem}
+.ln{font-variant-numeric:tabular-nums;color:var(--gold)}
+.empty{color:var(--ink-3);font-style:italic}
+.bib{padding-left:0;list-style:none;font-size:.92rem}
+.bib li{display:grid;grid-template-columns:2.6rem 1fr;gap:.8rem;padding:.55rem 0;
+  border-bottom:1px solid rgba(216,206,178,.6)}
+.bn{color:var(--ink-3);font-variant-numeric:tabular-nums;text-align:right}
+
+/* ===================== RESPONSIVE ======================================== */
+@media (max-width:1180px){
+  .reader{grid-template-columns:15rem minmax(0,1fr)}
+  .margin{display:none}
+}
+@media (max-width:900px){
+  body{font-size:19px}
+  .hero{grid-template-columns:1fr;padding-top:2rem}
+  .hero-art{justify-self:center;max-width:30rem}
+  .hero-type{text-align:left}
+  .reader{grid-template-columns:minmax(0,1fr)}
+  .rail{position:fixed;inset:0 auto 0 0;width:19rem;z-index:40;background:var(--vellum);
+    transform:translateX(-100%);transition:transform .22s ease;box-shadow:0 0 60px rgba(0,0,0,.25)}
+  body.rail-open .rail{transform:none}
+  .railtoggle{display:block;position:fixed;left:.8rem;bottom:.8rem;z-index:50;
+    font:inherit;font-size:.9rem;padding:.55rem 1.1rem;background:var(--ink);
+    color:var(--vellum);border:0;cursor:pointer}
+  .text{padding-bottom:5rem}
+  .lrow{grid-template-columns:1fr;gap:.1rem}
+  .lk{font-size:.75rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+@media print{
+  .rail,.margin,.railtoggle,.pager{display:none}
+  body{background:#fff;font-size:11pt}
+  .reader{display:block}
+}
+
+/* the home link stays put when the rail auto-scrolls to the current chapter */
+.rail{padding-top:0}
+.rail-home{position:sticky;top:0;z-index:2;background:var(--vellum);
+  margin:0 0 .6rem;padding:1.4rem 0 .8rem;border-bottom:1px solid var(--rule);
+  box-shadow:0 6px 10px -8px rgba(20,16,10,.35)}
+
+/* ledger: the red marks what the book has not proved */
+.owedline{display:flex;gap:1rem;align-items:baseline;margin:.9rem 0 0;font-size:.88rem}
+#owed{font:inherit;font-size:.88rem;padding:.3rem .8rem;cursor:pointer;background:none;
+  border:1px solid var(--apple);color:var(--apple);border-radius:99px}
+#owed[aria-pressed="true"]{background:var(--apple);color:var(--vellum)}
+#count{color:var(--ink-3);font-variant-numeric:tabular-nums}
+.chips button.owedchip{border-color:rgba(156,19,14,.45);color:var(--apple)}
+.chips button.owedchip[aria-pressed="true"]{background:var(--apple);border-color:var(--apple);
+  color:var(--vellum)}
+.lrow.owed .ln{color:var(--apple)}
+.lrow.owed .lk{color:var(--apple)}
+.unnamed{color:var(--ink-3);font-style:italic}
