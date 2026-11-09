@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Store Is the Denotation · Finding Mind</title>
+<link rel="canonical" href="https://findingmind.io/read/22-the-store-is-the-denotation.html">
+<meta name="description" content="The Store Is the Denotation">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../book.css">
+<link rel="stylesheet" href="../katex/katex.min.css">
+<script defer src="../katex/katex.min.js"></script>
+<script defer src="../katex/auto-render.min.js"></script>
+<script defer src="../macros.js"></script>
+<script defer src="../reader.js"></script>
+</head>
+<body class="readpage">
+
+<a class="skip" href="#main">Skip to text</a>
+<div class="reader">
+<nav class="rail" aria-label="Contents"><div class="rail-in"><a class="rail-home" href="../index.html">Finding Mind</a><a class="rail-util" href="ledger.html">The ledger</a><a class="rail-util" href="contact.html">Comments</a><h2 class="rail-act">The Pledge</h2><a class="rail-ch" href="permitted-say.html"><span class="rn rn-i">⁂</span><span class="rt">The Permitted Say</span></a><a class="rail-ch" href="01-prolegomena-to-finding-mind.html"><span class="rn">1</span><span class="rt">Prolegomena to Finding Mind</span></a><a class="rail-ch" href="02-the-ordinary-world.html"><span class="rn">2</span><span class="rt">The Ordinary World</span></a><a class="rail-ch" href="03-information-causation-and-the-blind-spot.html"><span class="rn">3</span><span class="rt">Information, Causation, and the Blind Spot</span></a><a class="rail-ch" href="04-finding-the-shape.html"><span class="rn">4</span><span class="rt">Finding the Shape</span></a><a class="rail-ch" href="05-inside-and-outside-and-what-it-means-to-assume.html"><span class="rn">5</span><span class="rt">Inside and Outside, and What it Means to Assume the Virtue</span></a><a class="rail-ch" href="how-to-read-this-book.html"><span class="rn rn-i">⁂</span><span class="rt">How to Read This Book</span></a><a class="rail-ch" href="related-work-and-where-this-differs.html"><span class="rn rn-i">⁂</span><span class="rt">Related Work, and Where This Differs</span></a><h2 class="rail-act">The Turn</h2><a class="rail-ch" href="foam-born.html"><span class="rn rn-i">⁂</span><span class="rt">The Foam-Born</span></a><h3 class="rail-part">The Machinery: From GSLTs to Cost-Accounted Theories</h3><a class="rail-ch" href="06-what-a-language-presentation-is-and-why-it-com.html"><span class="rn">6</span><span class="rt">What a Language Presentation Is, and Why It Comes First</span></a><a class="rail-ch" href="07-graph-structured-lambda-theories.html"><span class="rn">7</span><span class="rt">Graph-Structured Lambda Theories</span></a><a class="rail-ch" href="08-interactive-gslts-and-the-site-of-interaction.html"><span class="rn">8</span><span class="rt">Interactive GSLTs, and the Site of Interaction</span></a><a class="rail-ch" href="09-continued-interactive-gslts.html"><span class="rn">9</span><span class="rt">Continued Interactive GSLTs</span></a><a class="rail-ch" href="10-the-category-of-gslts.html"><span class="rn">10</span><span class="rt">The Category of GSLTs</span></a><a class="rail-ch" href="11-the-cost-monad.html"><span class="rn">11</span><span class="rt">The Cost Monad</span></a><a class="rail-ch" href="12-the-history-monad.html"><span class="rn">12</span><span class="rt">The History Monad</span></a><a class="rail-ch" href="13-grading-from-weight-maps-to-the-where-clause.html"><span class="rn">13</span><span class="rt">Grading: From Weight Maps to the Where-Clause</span></a><a class="rail-ch" href="14-interventions-at-the-cut.html"><span class="rn">14</span><span class="rt">Interventions at the Cut</span></a><a class="rail-ch" href="15-cost-accounted-rho.html"><span class="rn">15</span><span class="rt">Cost-Accounted Rho</span></a><a class="rail-ch" href="16-conversion-enzymes-and-the-virtual-token.html"><span class="rn">16</span><span class="rt">Conversion, Enzymes, and the Virtual Token</span></a><a class="rail-ch" href="17-the-labeled-transition-system-and-context-deco.html"><span class="rn">17</span><span class="rt">The Labeled Transition System and Context-Decorated HML</span></a><a class="rail-ch" href="18-what-goes-into-a-logic.html"><span class="rn">18</span><span class="rt">What Goes Into a Logic</span></a><a class="rail-ch" href="19-scopes-and-the-fixed-points-that-generate-them.html"><span class="rn">19</span><span class="rt">Scopes, and the Fixed Points that Generate Them</span></a><a class="rail-ch" href="20-generating-type-systems-oslf-and-the-hypercube.html"><span class="rn">20</span><span class="rt">Generating Type Systems: OSLF and the Hypercube</span></a><a class="rail-ch" href="21-instruments-making-structure-visible-to-bisimu.html"><span class="rn">21</span><span class="rt">Instruments: Making Structure Visible to Bisimulation</span></a><h3 class="rail-part">Realization: From the Calculus to the Machine</h3><a class="rail-ch" aria-current="page" href="22-the-store-is-the-denotation.html"><span class="rn">22</span><span class="rt">The Store Is the Denotation</span></a><a class="rail-ch" href="23-names-without-names-combinators-and-the-matrix.html"><span class="rn">23</span><span class="rt">Names Without Names: Combinators and the Matrix Machine</span></a><a class="rail-ch" href="24-what-the-machine-prices.html"><span class="rn">24</span><span class="rt">What the Machine Prices</span></a><h3 class="rail-part">Ecology as Cognitive Architecture</h3><a class="rail-ch" href="25-the-mortal-scientist.html"><span class="rn">25</span><span class="rt">The Mortal Scientist</span></a><a class="rail-ch" href="26-learning-to-play.html"><span class="rn">26</span><span class="rt">Learning to Play</span></a><a class="rail-ch" href="27-composing-learners.html"><span class="rn">27</span><span class="rt">Composing Learners</span></a><a class="rail-ch" href="28-enzymes-and-individuals.html"><span class="rn">28</span><span class="rt">Enzymes and Individuals</span></a><a class="rail-ch" href="29-a-network-that-learns-by-rewriting.html"><span class="rn">29</span><span class="rt">A Network That Learns by Rewriting</span></a><a class="rail-ch" href="30-tubular-agents.html"><span class="rn">30</span><span class="rt">Tubular Agents</span></a><h3 class="rail-part">Suffering: Homeostasis and the Learner&#x27;s Own Account</h3><a class="rail-ch" href="31-suffering-a-learner-s-view-of-its-own-account.html"><span class="rn">31</span><span class="rt">Suffering: A Learner’s View of Its Own Account</span></a><h3 class="rail-part">Situating the Learner: A Variety of Possible Physics</h3><a class="rail-ch" href="32-the-learner-s-world-already-has-a-physics.html"><span class="rn">32</span><span class="rt">The Learner’s World Already Has a Physics</span></a><a class="rail-ch" href="33-the-reversibility-construction.html"><span class="rn">33</span><span class="rt">The Reversibility Construction</span></a><a class="rail-ch" href="34-causal-structure-and-time.html"><span class="rn">34</span><span class="rt">Causal Structure and Time</span></a><a class="rail-ch" href="35-decoration-one-map-many-semirings.html"><span class="rn">35</span><span class="rt">Decoration: One Map, Many Semirings</span></a><a class="rail-ch" href="36-conservation-and-what-it-costs-to-have-it.html"><span class="rn">36</span><span class="rt">Conservation, and What It Costs to Have It</span></a><a class="rail-ch" href="37-extended-modal-operators.html"><span class="rn">37</span><span class="rt">Extended Modal Operators</span></a><a class="rail-ch" href="38-complex-amplitudes-and-where-the-coherence-is.html"><span class="rn">38</span><span class="rt">Complex Amplitudes, and Where the Coherence Is</span></a><a class="rail-ch" href="39-synthesis-the-full-structure.html"><span class="rn">39</span><span class="rt">Synthesis: The Full Structure</span></a><a class="rail-ch" href="40-entropy-and-the-cost-of-staying-level.html"><span class="rn">40</span><span class="rt">Entropy, and the Cost of Staying Level</span></a><a class="rail-ch" href="41-discussion-and-future-directions.html"><span class="rn">41</span><span class="rt">Discussion and Future Directions</span></a><h3 class="rail-part">Why Scientists Get Misled: Emergent Ontology in Massive Agent Populations</h3><a class="rail-ch" href="42-introduction.html"><span class="rn">42</span><span class="rt">Introduction</span></a><a class="rail-ch" href="43-ontological-isolation.html"><span class="rn">43</span><span class="rt">Ontological Isolation</span></a><a class="rail-ch" href="44-agents-and-the-scientific-method.html"><span class="rn">44</span><span class="rt">Agents and the Scientific Method</span></a><a class="rail-ch" href="45-behavioral-primes.html"><span class="rn">45</span><span class="rt">Behavioral Primes</span></a><a class="rail-ch" href="46-massive-populations-and-communication-degradat.html"><span class="rn">46</span><span class="rt">Massive Populations and Communication Degradation</span></a><a class="rail-ch" href="47-the-logical-topology-and-compactness.html"><span class="rn">47</span><span class="rt">The Logical Topology and Compactness</span></a><a class="rail-ch" href="48-coherence-clusters-and-their-nerve.html"><span class="rn">48</span><span class="rt">Coherence Clusters and Their Nerve</span></a><a class="rail-ch" href="49-the-apparent-ontology.html"><span class="rn">49</span><span class="rt">The Apparent Ontology</span></a><a class="rail-ch" href="50-open-gaps-and-future-work.html"><span class="rn">50</span><span class="rt">Open Gaps and Future Work</span></a><a class="rail-ch" href="51-discussion.html"><span class="rn">51</span><span class="rt">Discussion</span></a><h3 class="rail-part">Origins of Life: Assembly Theory, Phase Transitions, and Replication</h3><a class="rail-ch" href="52-introduction.html"><span class="rn">52</span><span class="rt">Introduction</span></a><a class="rail-ch" href="53-assembly-theory-causal-depth-and-copy-number.html"><span class="rn">53</span><span class="rt">Assembly Theory: Causal Depth and Copy Number</span></a><a class="rail-ch" href="54-replication-as-a-fixed-point.html"><span class="rn">54</span><span class="rt">Replication as a Fixed Point</span></a><a class="rail-ch" href="55-smith-s-phase-transition-and-the-density-of-at.html"><span class="rn">55</span><span class="rt">Smith’s Phase Transition and the Density of Attractors</span></a><a class="rail-ch" href="56-metabolism-energy-gradients-and-the-ecosystem.html"><span class="rn">56</span><span class="rt">Metabolism, Energy Gradients, and the Ecosystem</span></a><a class="rail-ch" href="57-assembly-index-and-the-depth-of-the-fractal-le.html"><span class="rn">57</span><span class="rt">Assembly Index and the Depth of the Fractal Learner</span></a><a class="rail-ch" href="58-scope-and-manufacture.html"><span class="rn">58</span><span class="rt">Scope and Manufacture</span></a><a class="rail-ch" href="59-open-gaps.html"><span class="rn">59</span><span class="rt">Open Gaps</span></a><a class="rail-ch" href="60-discussion.html"><span class="rn">60</span><span class="rt">Discussion</span></a><h3 class="rail-part">Conclusion</h3><a class="rail-ch" href="what-has-been-built.html"><span class="rn rn-i">⁂</span><span class="rt">What Has Been Built</span></a><a class="rail-ch" href="a-view-from-inside-the-framework.html"><span class="rn rn-i">⁂</span><span class="rt">A View from Inside the Framework</span></a><a class="rail-ch" href="what-remains-to-be-done.html"><span class="rn rn-i">⁂</span><span class="rt">What Remains to Be Done</span></a><h2 class="rail-act">The Prestige</h2><a class="rail-ch" href="begotten.html"><span class="rn rn-i">⁂</span><span class="rt">begotten not made</span></a><h3 class="rail-part">The Method, and What It Left Out</h3><a class="rail-ch" href="61-how-the-trick-was-done.html"><span class="rn">61</span><span class="rt">How the Trick Was Done</span></a><a class="rail-ch" href="62-everything-so-far-was-turing-complete.html"><span class="rn">62</span><span class="rt">Everything So Far Was Turing Complete</span></a><a class="rail-ch" href="63-the-tower-of-oracle-extensions.html"><span class="rn">63</span><span class="rt">The Tower of Oracle Extensions</span></a><a class="rail-ch" href="64-not-every-cut-is-an-aperture.html"><span class="rn">64</span><span class="rt">Not Every Cut Is an Aperture</span></a><a class="rail-ch" href="65-where-does-agency-live.html"><span class="rn">65</span><span class="rt">Where Does Agency Live?</span></a><a class="rail-ch" href="66-choice-principles-are-the-types-schedulers-are.html"><span class="rn">66</span><span class="rt">Choice Principles are the Types; Schedulers are the Terms</span></a><a class="rail-ch" href="67-consciousness-and-the-world-it-comes-with.html"><span class="rn">67</span><span class="rt">Consciousness, and the World It Comes With</span></a><a class="rail-ch" href="68-what-these-chapters-owe.html"><span class="rn">68</span><span class="rt">What These Chapters Owe</span></a><h3 class="rail-part">Reference, Simulation, Reception, and a Future Metaphysics</h3><a class="rail-ch" href="69-what-a-symbol-system-would-have-to-be.html"><span class="rn">69</span><span class="rt">What a Symbol System Would Have to Be</span></a><a class="rail-ch" href="70-on-lying-as-the-origin-of-meaning.html"><span class="rn">70</span><span class="rt">On Lying as the Origin of Meaning</span></a><a class="rail-ch" href="71-if-this-is-a-simulation-which-kind.html"><span class="rn">71</span><span class="rt">If This Is a Simulation, Which Kind</span></a><a class="rail-ch" href="72-what-it-is-like-to-be-a-bot.html"><span class="rn">72</span><span class="rt">What It Is Like to Be a Bot</span></a><a class="rail-ch" href="73-how-life-like-is-life-like-enough.html"><span class="rn">73</span><span class="rt">How Life-Like Is Life-Like Enough?</span></a><a class="rail-ch" href="74-inhabiting-choice.html"><span class="rn">74</span><span class="rt">Inhabiting Choice</span></a><a class="rail-ch" href="75-any-future-metaphysics.html"><span class="rn">75</span><span class="rt">Any Future Metaphysics</span></a><a class="rail-ch" href="right-sizing.html"><span class="rn rn-i">⁂</span><span class="rt">Right-Sizing</span></a></div></nav>
+<main id="main" class="text ">
+<header class="chead"><p class="kicker">Chapter 22</p><h1>The Store Is the Denotation</h1></header>
+<h2 id="sec-22-1"><span class="secnum">22.1</span> Two senses of “runs”</h2>
+<p>Everything in the Machinery part is a construction on a language presentation. The
+reader has been told, repeatedly, that the constructions are not metaphors: that a
+cost-accounted theory meters, that a graded clause resolves a race, that a \(\dok\)
+intervenes. Each of those verbs has two senses. In the first, “the theory meters” means
+that the rewrite relation, read as a mathematical object, has a component that decreases.
+In the second, it means that a machine somewhere is doing the subtracting, and that if one
+pulled the plug the subtracting would stop. The Pledge promised the second sense when it
+said that <em>the network is the computer</em> and pointed at the Groq and Cerebras dies
+and the FPGAs whose fabric comes and goes. This part is where the second sense is
+delivered, and it is delivered in two installments of very different maturity.</p>
+<p>The first installment is RSpace. It is a data structure, an algorithm over it, and a
+production store with several years of operation behind it, and this chapter’s claim is
+that the store <em>is the denotation</em>: that the compilation of rho into RSpace states is,
+term for term, a denotational semantics, with the structural laws of the calculus holding
+as literal equalities of hashtables. The second installment, in the next chapter, is a
+compiler from rho through a name-free combinator calculus to a matrix machine that runs on
+a graphics processor. It exists, it passes its tests, and it has not yet been measured on
+anything that matters; we will say exactly how nascent it is. The two are realizations of
+the same COMM rule on two hardware philosophies that reward opposite things, and the third
+chapter of the part asks what that opposition prices.</p>
+<p>A word about the voice. The Machinery part spoke of theories; this part speaks of a
+particular implementation, f1r3node, written in Rust, and of a particular compiler,
+Saph1r3. Where the book says what the code does, it has been checked against the code and
+its documentation at the time of writing; where it says what the code’s authors intend,
+it says so. The book does not become a manual here. It becomes a report on whether the
+abstractions of the preceding part are abstractions <em>of</em> anything, and the answer is
+that one of them has been running in production for some time and the other was compiled
+for the first time this autumn.</p>
+<h2 id="sec-22-2"><span class="secnum">22.2</span> The store</h2>
+<p>Modulo structural congruence the parallel fragment of rho, \((\Par, \nil)\), is the free
+commutative monoid, and the free commutative monoid on a set is the finite-multiset
+construction on it. Interpreting \(\Par\) as multiset union therefore makes the denotation a
+monoid homomorphism <em>on the nose</em>, and structural congruence of the parallel skeleton
+becomes literal equality of multisets — the tightest fit syntax and semantics can have.
+Bucketing the multiset by channel turns it into a hashtable. That hashtable is RSpace.</p>
+<section class="thm plain thm-definition" id="definition-22-1" data-kind="Definition" data-num="22.1"><header><span class="thm-kind">Definition 22.1</span> <span class="thm-name">Tables</span><a class="permalink" href="#definition-22-1" aria-label="Link to Definition 22.1">¶</a></header><p>
+A <em>table</em> is a finite partial map from names to <em>polarity-homogeneous</em>
+multisets of payloads: a key holds either a bag of output payloads
+\(x \mapsto \{\!|\,Q_1,\dots,Q_m\,|\!\}^{+}\) — <em>produces</em>, data — or a bag of
+input continuations \(x \mapsto \{\!|\,(y_1)P_1,\dots,(y_n)P_n\,|\!\}^{-}\) — <em>consumes</em>,
+abstractions — never a mixture. The keys are names, hence quoted processes: RSpace is
+<em>content-addressed</em>, and a channel’s identity is the hash of the process it quotes.</p></section>
+<section class="thm plain thm-definition" id="definition-22-2" data-kind="Definition" data-num="22.2"><header><span class="thm-kind">Definition 22.2</span> <span class="thm-name">The RSpace denotation</span><a class="permalink" href="#definition-22-2" aria-label="Link to Definition 22.2">¶</a></header><p>
+<span class="math-d">\[\begin{align*}
+  \sem{\nil}&=\varnothing, &
+  \sem{x!(Q)}&=\{\,\sem{x}\mapsto\{\!|\sem Q|\!\}^{+}\,\},\\
+  \sem{P\Par Q}&=\sem P \uplus_{k} \sem Q, &
+  \sem{\fork(y\leftarrow x)P}&=\{\,\sem{x}\mapsto\{\!|(y)\sem P|\!\}^{-}\,\},\\
+  \sem{*x} &= *\sem{x}, & \sem{@P} &= @\sem{P},
+\end{align*}\]</span>
+where \(\uplus_k\) is <em>key-wise</em> multiset union: the bags \(P\) and \(Q\) install at a key
+are united. Each prefix installs a singleton bag; \(\Par\) co-locates produces and consumes.
+A key whose two operands carry the same polarity stays homogeneous; a key receiving both
+polarities is a <em>redex</em>.</p></section>
+<section class="thm plain thm-proposition" id="proposition-22-1" data-kind="Proposition" data-num="22.1"><header><span class="thm-kind">Proposition 22.1</span> <span class="thm-name">Exact homomorphism</span><a class="permalink" href="#proposition-22-1" aria-label="Link to Proposition 22.1">¶</a></header><p>
+\(\sem{-}\) is a homomorphism of commutative monoids: \(\sem\nil=\varnothing\) and
+\(\sem{P\Par Q}=\sem P\uplus_k\sem Q\). Hence the parallel laws of structural congruence
+— associativity, commutativity, unit — hold as literal equalities of tables, and
+\(P\equiv Q \Rightarrow \sem P=\sem Q\).</p></section>
+<section class="proof"><header>Proof</header><p>\(\uplus_k\) inherits the commutative-monoid laws of multiset union key-wise, and the empty
+table is the unit. The prefix clauses are singletons, so reassociating or commuting a
+parallel composition reassociates or commutes the corresponding bag unions, which multiset
+equality absorbs. Multiset union has no idempotence to defeat: \(a!(0) \Par a!(0)\) installs a
+two-element bag at \(a\), distinct from the one-element bag of \(a!(0)\). Counts are kept.</p></section>
+<p>The reflection law \(*@P \equiv P\) is validated separately, and the source for this
+section [<a class="cite" href="bibliography.html#bib-qcs" data-cite="qcs">75</a>] derives it rather than assuming it: in a universe stratified into two
+sorts of set and two sorts of atom, with an involution swapping the colors, quotation is a
+seal followed by a swap, dereference undoes it, and \(*@P \equiv P\) is the statement that
+the swap is its own inverse. The book does not need the stratification and does not rehearse
+it. What it needs is that every generator of structural congruence holds in the table
+model — the parallel laws on the nose and reflection by the involution — so that a
+table is a well-defined function of a process modulo \(\equiv\).</p>
+<section class="thm plain thm-definition" id="definition-22-3" data-kind="Definition" data-num="22.3"><header><span class="thm-kind">Definition 22.3</span> <span class="thm-name">Eager reaction: the zip</span><a class="permalink" href="#definition-22-3" aria-label="Link to Definition 22.3">¶</a></header><p>
+A key \(x\) carrying both a produce-bag \(\{\!|Q_1,\dots,Q_m|\!\}^{+}\) and a consume-bag
+\(\{\!|(y_1)P_1,\dots,(y_n)P_n|\!\}^{-}\) is a redex. Eager reaction fires it: choose
+underlying lists of the two bags and <em>zip</em> them; each matched pair reacts by
+application, \((y_i)P_i \cdot Q_i = P_i\{@Q_i/y_i\}\), and the resulting process is merged
+by \(\uplus_k\) back into the table; the \(|m-n|\) unmatched payloads of the longer bag remain
+at \(x\) as a homogeneous surplus. Its normal forms are the tables with no mixed-polarity key.</p></section>
+<p>Which \(Q_i\) meets which \((y_j)P_j\), and which payloads survive as surplus, depend on the
+chosen list orderings. This is rho’s choice of which send meets which receive, now
+localized at the key — the <em>resolver</em> of Chapter <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#top" data-ref="ch:grading">13</a>, made into a
+datum one can point at. The denotation \(\sem{-}\) remains a function (plain \(\uplus_k\), no
+firing); reaction is the separate dynamics, a relation on tables confluent only up to the
+equivalence that forgets the pairing. And the minimal context \([\,]\Par x!(Q)\) that
+Chapter <a class="xref" href="17-the-labeled-transition-system-and-context-deco.html#top" data-ref="sec:lts-hml">17</a> uses to label a transition is exactly the minimal store insertion
+— one produce at key \(x\) — that turns a pending consume into a redex. <em>Context
+labels are RSpace puts.</em></p>
+<section class="thm remarkish thm-remark" id="remark-22-1" data-kind="Remark" data-num="22.1"><header><span class="thm-kind">Remark 22.1</span> <span class="thm-name">Store monad plus zip</span><a class="permalink" href="#remark-22-1" aria-label="Link to Remark 22.1">¶</a></header><p>
+The table functor carries a monad structure — the finite-multiset monad, lifted key-wise
+— and RSpace is this monad <em>together with</em> eager reaction, presented as a
+distributive law of the reaction over the store: a bialgebra in the sense of Turi and
+Plotkin [<a class="cite" href="bibliography.html#bib-turiplotkin" data-cite="turiplotkin">86</a>]. This is the precise content of the description one hears of
+RSpace as “strictly more than a monad”: the monad is the store, the surplus is the zip.
+Whether the bialgebra laws hold — whether eager reaction is confluent up to resource
+bisimilarity, whether the distributive law is one — is filed in the source as an
+obligation and not a theorem [<a class="cite" href="bibliography.html#bib-qcs" data-cite="qcs">75</a>, \S8]. The book reports it so.</p></section>
+<h2 id="sec-22-3"><span class="secnum">22.3</span> Two layers, and what each is adequate for</h2>
+<p>Forget multiplicities and flatten a table into its set of context-labeled transitions —
+a consume at \(x\) is an offer-input, a produce an offer-output, a mixed key an internal
+redex — and one has a natural transformation \(\pi\) from tables to the behavior functor
+of Chapter <a class="xref" href="17-the-labeled-transition-system-and-context-deco.html#top" data-ref="sec:lts-hml">17</a>. The RSpace model sits <em>above</em> the behavioral model and
+projects onto it:
+<span class="math-d">\[\text{Syntax} \xrightarrow{\ \sem{-}\ } \text{Tables (RSpace)}
+                \xrightarrow{\ \pi\ } \text{Behaviors},\]</span>
+and the composite is the context-behavior denotation the rest of the book works in.</p>
+<section class="thm plain thm-definition" id="definition-22-4" data-kind="Definition" data-num="22.4"><header><span class="thm-kind">Definition 22.4</span> <span class="thm-name">Resource bisimilarity</span><a class="permalink" href="#definition-22-4" aria-label="Link to Definition 22.4">¶</a></header><p>
+Two tables are <em>resource bisimilar</em> when they are bisimilar as coalgebras of the
+table functor: same keys, same multiplicities at each key, and matching successors under
+eager reaction. It refines context bisimilarity, with \(\pi\) the quotient that forgets
+multiplicity and keys.</p></section>
+<p>The source states two full-abstraction theorems [<a class="cite" href="bibliography.html#bib-qcs" data-cite="qcs">75</a>]: at the resource layer,
+resource bisimilarity coincides with equality in the final coalgebra of the table functor;
+at the behavioral layer, context bisimilarity coincides with equality in the final
+coalgebra of the behavior functor, and because the labels are contexts the behavioral
+equivalence is a congruence by construction, so full abstraction holds for a congruence
+with no closure step. Both proofs are sketches, and the obligations section of the source
+lists what would discharge them: existence of the final coalgebras at the right size,
+eager confluence, the bialgebra laws, and weak pullback preservation for the functors
+involved. We state the theorems as the source states them and at the confidence the source
+has.</p>
+<p>Why two layers, and not one? Because they answer different questions. The resource layer
+is <em>the machine</em>: it knows that there are two messages at \(a\) and not one, it knows
+which key is which, and it is what a validator must reproduce to the byte when it replays a
+block. The behavioral layer is <em>what a program means</em>: it does not care whether the
+two messages are one or two, only what the system can do in the presence of an observer.
+That the first projects onto the second is the whole of the claim that running the program
+on the store computes its meaning, and that the projection is a quotient — forgetting
+counts and keys — is the precise sense in which the machine knows more than the meaning
+does. Chapter <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#top" data-ref="ch:grading">13</a>’s multiplicity factor, which counted candidates by occurrence
+and not by term, was this quotient refused: a rate is a resource-layer quantity.</p>
+<section class="thm remarkish thm-remark" id="remark-22-2" data-kind="Remark" data-num="22.2"><header><span class="thm-kind">Remark 22.2</span> <span class="thm-name">What the formal model does not cover</span><a class="permalink" href="#remark-22-2" aria-label="Link to Remark 22.2">¶</a></header><p>
+The denotation above is for monadic single-channel input with no patterns. The store the
+next section describes implements joins (a consume waiting on several channels at once),
+spatial pattern matching on the received process, persistent produces and consumes, and
+non-consuming reads. None of these is in the formal model; the source names joins as
+future work. A reader should hold the two apart: the theorem is about a fragment, and the
+implementation is of the whole language. That the fragment’s theorem is the right shape
+for the whole is likely and is not proved.</p></section>
+<h2 id="sec-22-4"><span class="secnum">22.4</span> The store as built</h2>
+<p>f1r3node’s store is a Rust crate, <code>rspace++</code>, behind an interface generic in four
+types: channels \(C\), patterns \(P\), data \(A\) and continuations \(K\). For rho, \(C\) is a
+process (a channel is a quoted term), \(P\) is a binding pattern, \(A\) is a list of processes
+with a random-seed carrier, and \(K\) is a tagged continuation. The interface has a
+<em>produce</em> — put data on a channel, persistently or not — and a <em>consume</em> —
+wait on a <em>vector</em> of channels with a vector of patterns and a continuation,
+persistently or not, with a set of indices marked as non-consuming reads. Every construct of
+Definition <a class="xref" href="22-the-store-is-the-denotation.html#definition-22-2" data-ref="rs:def:rspace">22.2</a> is one call: a send is a produce, a receive is a consume,
+and the interpreter’s reduction loop, on evaluating a send, calls produce, and on
+evaluating a receive, calls consume, with the optional <code>where</code> clause passed as a
+guard the matcher evaluates per candidate — which is to say that the clause of
+Chapter <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#top" data-ref="ch:grading">13</a> already reaches the store.</p>
+<h5 id="p-4">Matching is the zip, with patterns.</h5>
+<p>When a produce arrives, the store looks up
+the joins registered on that channel, then the waiting continuations; candidates are
+shuffled with a random generator seeded from the deploy, the data on each joined channel is
+matched speculatively against its pattern, and failed attempts are rolled back. A match
+fires a COMM, feeding the continuation back to the interpreter with the matched data
+substituted. With no match, the item is stored. This is Definition <a class="xref" href="22-the-store-is-the-denotation.html#definition-22-3" data-ref="rs:def:zip">22.3</a> with
+two additions the formal model lacks — the join, which makes a redex a tuple of keys
+rather than one, and the pattern, which makes “matched” a structural question about the
+payload rather than a mere co-location — and one the formal model leaves open: the
+shuffle, which is the resolver, and which is seeded so that it is <em>reproducible</em>.</p>
+<h5 id="p-5">Hot store and history.</h5>
+<p>The working set is an in-memory map from channels to
+their data, continuations and joins. A <em>checkpoint</em> converts the working set’s
+mutations into updates of a 256-ary radix trie whose nodes are hashed with Blake2b-256, so
+the trie is a Merkle trie and its root is a 32-byte summary of the entire state; the trie
+lives in an embedded key-value store on disk, in three databases — history nodes,
+checkpoint roots, and cold leaf data. A checkpoint is a root hash together with the event
+log since the last one. That is the history monad of Chapter <a class="xref" href="12-the-history-monad.html#top" data-ref="ch:histmonad">12</a> with a
+particular representation: \(\Hist\) said a state carries a word of events; the trie says
+that the word may be summarized by a hash, that two states with the same hash are the same
+state, and that the summary may be recomputed by anyone holding the leaves. The
+representation is not incidental. It is what makes the next paragraph possible.</p>
+<h5 id="p-6">Replay.</h5>
+<p>A second implementation of the same interface, <code>ReplayRSpace</code>,
+takes a checkpoint and the recorded event log and <em>forces</em> the recorded COMMs: when
+the interpreter, re-running the same deploys from the same root, reaches a race, the replay
+store consults the log and resolves it as it was resolved the first time. Non-deterministic
+system processes — calls to an external model, to a network service — are replayed from
+their recorded outputs rather than re-executed. The replayer reaches the same root hash or
+it does not, and the comparison is the whole of what a validator checks. We will say more
+about this in the third chapter, because it is where the execution model of the shard and
+the three rungs of Chapter <a class="xref" href="14-interventions-at-the-cut.html#top" data-ref="ch:do">14</a> meet: the executing node resolves; the replaying
+node observes; and a counterfactual, in Chapter <a class="xref" href="14-interventions-at-the-cut.html#top" data-ref="ch:do">14</a>’s sense, is a replay from a
+pre-state with one record changed.</p>
+<h5 id="p-7">Charging.</h5>
+<p>A wrapper, <code>ChargingRSpace</code>, meters every store operation. It
+pre-charges for storage when a produce or consume is stored, refunds the pre-charges when a
+COMM fires and charges one combined COMM cost instead, and re-charges for persistent items
+that remain. A field on the COMM event records whether a produce or a consume triggered it,
+so that play and replay — in which task scheduling may cause a different operation to
+trigger the same COMM — charge identically. This is the cost monad of
+Chapter <a class="xref" href="11-the-cost-monad.html#top" data-ref="ch:costmonad">11</a> and the metered calculus of Chapter <a class="xref" href="15-cost-accounted-rho.html#top" data-ref="ch:carho">15</a> running, and
+it is worth noticing which of their features the implementation had to get right before
+the book had a name for it: the <em>order-independence</em> of charging, which the book
+derives from the requirement that a validator’s bill agree with the proposer’s, and which
+Proposition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#proposition-13-2" data-ref="wt:prop:gate">13.2</a> states as the gate deciding support while the weight
+distributes over it.</p>
+<h5 id="p-8">Merging.</h5>
+<p>A separate module analyzes event logs for conflicts: whether one
+event depends on another, whether two events race on a non-persistent operation, and why.
+This is what lets a block have more than one parent — two validators’ state changes
+merged when their logs do not conflict — and it is the first appearance in the
+implementation of the contention relation Chapter <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#top" data-ref="ch:grading">13</a> defined: two events
+conflict when they share a datum or a receipt, and independent events commute.</p>
+<h2 id="sec-22-5"><span class="secnum">22.5</span> What the machine knows that the calculus does not</h2>
+<p>Three facts about the store are not facts about rho, and the book’s honesty about the
+relationship between the two requires naming them.</p>
+<p><em>The store is locked, not lock-free.</em> The architecture document describes the store
+as lock-free; the code uses 4096 pre-allocated mutex stripes selected by channel hash,
+acquired in sorted order in two phases, with first-in-first-out waiters. Branches of a
+parallel composition are evaluated as concurrent tasks, and the stripes serialize their
+access to each channel. There is nothing wrong with this; it is how a general machine
+realizes a tuple space. But it means the realization has a scheduler, and the scheduler is
+not in the calculus. Determinism across nodes comes from three decisions, each outside
+rho: sends are evaluated before receives, the candidate shuffle is seeded from the deploy,
+and replay forces the log.</p>
+<p><em>Some joins are blocked.</em> A consume waiting twice on the same channel is refused by the
+implementation, because the candidate-extraction algorithm produces unmatched COMMs for
+overlapping patterns on one channel; and the cost of some same-channel joins involving
+persistent operations is acknowledged to be non-deterministic. These are documented
+limitations, with issue numbers. The calculus has no such restriction. The gap is small and
+it is real.</p>
+<p><em>The bottleneck is not where one would guess.</em> Measured, checkpoint durability is about
+one percent of the cost and spawning a replay runtime is under four milliseconds; the
+sustained throughput limit is the block replay pipeline, and the delay from block inclusion
+to finality is among its causes. Nothing in the repository relates the store to graphics
+processors or other accelerators; a design document lists them as a non-goal. The matrix
+note of the next chapter says why, from the other side: an RSpace-style interpreter does
+approximately the opposite of everything an accelerator rewards.</p>
+<p>That last sentence is the hinge of the part. The store is mature, correct in production,
+and shaped for a general machine. It is a hashtable of variably shaped terms reached by
+pointer, matched by a recursive walk, with conflicts resolved by locks. A graphics
+processor wants flat indexable state, uniform work across lanes, bulk-synchronous phases,
+and standard sparse primitives. Both machines run the same COMM rule. The question of the
+next chapter is what a compiler standing between them has to do.</p>
+<section class="thm remarkish thm-remark" id="remark-22-3" data-kind="Remark" data-num="22.3"><header><span class="thm-kind">Remark 22.3</span> <span class="thm-name">What this chapter claims, and at what confidence</span><a class="permalink" href="#remark-22-3" aria-label="Link to Remark 22.3">¶</a></header><p>
+<em>Implemented and operating</em>: every send is a produce and every receive a consume on a
+content-addressed store; channels are quoted processes; a rendezvous is literally the COMM
+rule; the whole state is summarized by one Merkle root; a validator replays the log and
+checks the root. <em>Formally stated, with short proofs</em>: the denotation is an exact
+monoid homomorphism, and reflection holds in the model. <em>Formally stated, proofs
+sketched, obligations filed</em>: full abstraction at both layers; the bialgebra laws; eager
+confluence. <em>Not modeled</em>: joins, patterns, persistence, peeks. The chapter has tried
+to keep these four registers apart on every page.</p></section>
+<nav class="pager"><a class="prev" href="21-instruments-making-structure-visible-to-bisimu.html"><span>Previous</span>Instruments: Making Structure Visible to Bisimulation</a><a class="next" href="23-names-without-names-combinators-and-the-matrix.html"><span>Next</span>Names Without Names: Combinators and the Matrix Machine</a></nav>
+</main>
+<aside class="margin" id="margin" aria-live="polite"></aside>
+</div>
+<button class="railtoggle" id="railtoggle" aria-expanded="false">Contents</button>
+
+</body>
+</html>

@@ -50,6 +50,9 @@ def main():
         url = base + "/" + ("" if rel == "index.html" else rel)
         urls.append(url)
         t = open(p, encoding="utf-8").read()
+        if 'name="robots" content="noindex"' in t:
+            urls.pop()          # a redirect stub: keep it out of the sitemap, leave it alone
+            continue
         t = re.sub(r'\n?<link rel="canonical"[^>]*>', "", t)
         tag = '\n<link rel="canonical" href="%s">' % html.escape(url)
         t = t.replace("</title>", "</title>" + tag, 1)

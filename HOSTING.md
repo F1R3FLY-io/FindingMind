@@ -4,76 +4,70 @@
 
 **GitHub Pages serves exactly one custom domain per site.** The `CNAME` file in the
 repository holds a single hostname, and the Pages settings page has a single "Custom
-domain" field. If you set `findingmind.com` on the repo, `findingmind.io` cannot also be
+domain" field. If you set `findingmind.io` on the repo, `findingmind.io` cannot also be
 served from it.
 
 So the shape is: **one canonical domain serves the site; every other domain 301-redirects
 to it.** That is also what you want for search — several domains serving identical text is
 duplicate content, and it splits whatever authority the site accumulates.
 
-Pick the canonical one now, because it goes into the `CNAME` file, the `<link
-rel="canonical">` tags, `robots.txt` and `sitemap.xml`. I've defaulted the build to
-`findingmind.com`; if that isn't the one, see step 4.
+The canonical domain is **`findingmind.io`**. It is in the `CNAME` file, the `<link
+rel="canonical">` tags, `robots.txt` and `sitemap.xml`, and `_build/build.sh` writes it
+by default. Steps 1–3 below are done and kept for the record; steps 5–7 are the DNS and
+organisation-level settings that have to stay in place.
 
 ---
 
-## Step 1 — Make a dedicated repository
+## Step 1 — Make a dedicated repository (done: `F1R3FLY-io/findingmind`)
 
 Put the book in its own repo rather than in `f1r3lang-io.github.io/finding-mind/`.
 
 Two reasons. First, a custom domain applies to the whole Pages site, so attaching
-`findingmind.com` to the existing repo would put the book at
-`findingmind.com/finding-mind/` rather than at the root, and would hand that domain to a
+`findingmind.io` to the existing repo would put the book at
+`findingmind.io/finding-mind/` rather than at the root, and would hand that domain to a
 repo full of unrelated design comps. Second, `F1R3FLY-io/f1r3lang-io.github.io` is a
 *project* repo, not an organization site — an org site would have to be named
 `f1r3fly-io.github.io` — so its Pages URL is already awkward.
 
 ```bash
-gh repo create F1R3FLY-io/finding-mind --public
-git clone https://github.com/F1R3FLY-io/finding-mind.git
-cd finding-mind
+gh repo create F1R3FLY-io/findingmind --public
+git clone https://github.com/F1R3FLY-io/findingmind.git
+cd findingmind
 ```
 
-## Step 2 — Copy the build in
+## Step 2 — Generate the build in place (done)
 
-Everything from the `finding-mind/` directory goes at the **root** of the repo, so that
-`index.html` sits next to `read/`, `book.css`, `katex/` and `figures/`.
-
-```bash
-cp -r /path/to/finding-mind/. .
-git add -A
-git commit -m "Finding Mind, draft23 web edition"
-git push
-```
+The generator lives in `_build/` and writes the site into the **root** of the repo, so
+that `index.html` sits next to `read/`, `book.css`, `katex/` and `figures/`. See
+"Rebuilding when a new draft lands" below.
 
 `.nojekyll` is already there and matters: without it GitHub runs Jekyll, which ignores
 directories beginning with an underscore, and `_build/` would silently vanish. It also
 makes deploys faster and stops Jekyll interpreting any `{{ }}` that appears in the text.
 
-If you'd rather not publish the generator, move `_build/` to a `tools` branch. It is 60 KB
-and harmless where it is.
+The generator in `_build/` is published along with the site; it is small and harmless
+where it is. Earlier full-site snapshots (`v1`–`v5`) were removed from the published tree
+and are kept under the git tag `site-archive-v1-v5`.
 
 ## Step 3 — Turn on Pages
 
 Settings → Pages → Build and deployment → **Deploy from a branch** → `main` → `/ (root)`.
 
-Wait for the green check, then confirm at `https://f1r3fly-io.github.io/finding-mind/`
+Wait for the green check, then confirm at `https://f1r3fly-io.github.io/findingmind/`
 that it renders. Do this before touching DNS, so that if something is wrong you know it is
 the site and not the domain.
 
-## Step 4 — Set the canonical domain
+## Step 4 — Set the canonical domain (done: `findingmind.io`)
 
-If your canonical domain is not `findingmind.com`, re-run the finalizer against the real
-one before pushing:
+`_build/build.sh` runs the finalizer for `findingmind.io` after every generation. To
+finalize for a different domain by hand:
 
 ```bash
-python3 deploy/finalize.py findingmind.io          # or whichever you choose
+python3 deploy/finalize.py findingmind.io --site findingmind   # run from the parent directory
 ```
 
-It rewrites `CNAME`, the `<link rel="canonical">` tag on all 81 pages, `robots.txt` and
-`sitemap.xml`. It is idempotent, so re-run it after every rebuild of the book. **This
-matters:** `_build/gen.py` wipes and regenerates the output directory, which would delete
-`CNAME` and unset your custom domain. Rebuild, then finalize, then push.
+It rewrites `CNAME`, the `<link rel="canonical">` tag on every page, `robots.txt` and
+`sitemap.xml`, and is idempotent. Rebuild, then finalize, then push.
 
 Then Settings → Pages → Custom domain → enter the same domain → Save. GitHub will read the
 `CNAME` file you already committed and agree with it.
@@ -108,8 +102,8 @@ issued automatically but can take fifteen minutes to a day; the checkbox stays g
 until it lands.
 
 ```bash
-dig findingmind.com +noall +answer -t A
-dig www.findingmind.com +noall +answer -t CNAME
+dig findingmind.io +noall +answer -t A
+dig www.findingmind.io +noall +answer -t CNAME
 ```
 
 If you already have a CAA record on the domain, it must permit `letsencrypt.org` or the
@@ -129,7 +123,7 @@ Move each mirror domain's nameservers to Cloudflare (free plan), then for each o
 2. Rules → Redirect Rules → Create.
    - When incoming requests match: **All incoming requests**
    - Then: **Dynamic** redirect, status **301**, expression
-     `concat("https://findingmind.com", http.request.uri.path)`
+     `concat("https://findingmind.io", http.request.uri.path)`
    - Preserve query string: on.
 
 That gives a real server-side 301 with a free certificate, it preserves deep links, and it
@@ -138,7 +132,7 @@ costs nothing. Repeat per domain; it's about two minutes each.
 ### B. Registrar URL forwarding
 
 Most registrars offer "URL forwarding" or "domain redirect". Set each mirror to forward to
-`https://findingmind.com` with a **permanent (301)** redirect and, if offered, **path
+`https://findingmind.io` with a **permanent (301)** redirect and, if offered, **path
 forwarding** on. Simplest option, but quality varies by registrar — some only do 302,
 some only forward the bare domain and drop the path, and a few use an HTML frame, which
 you do not want.
@@ -148,7 +142,7 @@ you do not want.
 If you want everything to stay on GitHub:
 
 ```bash
-python3 deploy/make-redirectors.py findingmind.com findingmind.io findingmind.org findingmind.net
+python3 deploy/make-redirectors.py findingmind.io findingmind.io findingmind.org findingmind.net
 ```
 
 This writes `deploy/redirectors/<domain>/` for each mirror, containing an `index.html`, a
@@ -176,13 +170,28 @@ its repo, anyone else on GitHub can claim it and serve their content on your hos
 
 ## Rebuilding when a new draft lands
 
+The book source is the `FindingMind/` directory of `F1R3FLY-io/publications`, which is a
+baseline plus the `draftN/` (and `draftN/src/`) delta directories. Assemble the current
+book first — copy the baseline somewhere, then copy each `draftN/{,src/}*.tex` over it in
+`sort -V` order, placing `pledge_*` in `ThePledge/`, `turn_*` in `TheTurn/`, `prestige_*`
+in `ThePrestige/`, `int_*` in `Interludes/`, `*.rho` in `TheTurn/code/`, and
+`finding_mind.tex`/`bibliography.tex` at the top — and point the build at it:
+
 ```bash
-python3 _build/gen.py                  # regenerates from the draft overlay
-python3 deploy/finalize.py findingmind.com
-git add -A && git commit -m "draft24" && git push
+_build/build.sh /path/to/assembled/FindingMind      # domain defaults to findingmind.io
+git add -A && git commit -m "site: draftNN" && git push
 ```
 
+`build.sh` sets `FM_BOOK`/`FM_OUT`/`FM_WORK` for `_build/gen.py`, renders the TikZ figures
+to SVG (needs `pdflatex` and `pdftocairo`), writes `read/`, `figures/`, `macros.js` and
+`index.html`, then runs the finalizer. The landing-page and contents counts (chapters,
+words, numbered results, cross-references) are computed from the source, not typed in.
 Pages redeploys in a minute or two.
+
+The comment form in `read/contact.html` posts to the FormSubmit endpoint named in
+`_build/contact.py`. Until `FORM_ENDPOINT` carries a real FormSubmit hash (activate once by
+posting to `https://formsubmit.co/<address>` and confirming the email they send), the form
+falls through to a plain POST that will fail, and the page shows the mailto fallback.
 
 ## Things worth knowing about the limits
 
@@ -202,6 +211,6 @@ default; if the book is going to read as a research artifact rather than a trade
 `.org` is defensible.
 
 **Whether the mirrors redirect to the root or to matching paths.** The setup above
-redirects `findingmind.io/read/ledger.html` to `findingmind.com/read/ledger.html`.
+redirects `findingmind.io/read/ledger.html` to `findingmind.io/read/ledger.html`.
 The alternative — sending everything to the front page — is simpler but breaks any deep
 link that ever gets shared on a mirror. Path-preserving is the right default.

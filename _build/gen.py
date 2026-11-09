@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 import os, re, json, html, shutil, sys
-sys.path.insert(0, "/home/claude/build")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from contact import contact_html, CONTACT_EMAIL
-from convert import (ROOT, OUT, B, convert_file, parse_macros, parse_bib,
+from convert import (ROOT, OUT, HERE, B, convert_file, parse_macros, parse_bib,
                      render_tikz, strip_comments, take_group, ROMAN)
+STATIC = os.path.join(HERE, "static")
 
 READ = os.path.join(OUT, "read")
 
@@ -57,6 +58,26 @@ def build_spine():
     return spine
 
 
+def chapter_refs(spine):
+    """label -> printed number for chapters and parts, so TikZ pictures that
+    say \\ref{ch:...} can be compiled standalone."""
+    refs = {}
+    for e in spine:
+        if e["t"] == "part":
+            for k in e.get("keys", []):
+                refs[k] = e["num"]
+        if e["t"] != "chapter" or not e.get("num"):
+            continue
+        raw = strip_comments(open(os.path.join(ROOT, e["path"])).read())
+        m = re.search(r"\\chapter\*?\s*\{", raw)
+        if not m:
+            continue
+        _, nx = take_group(raw, m.end() - 1)
+        for lm in re.finditer(r"\\label\{([^}]*)\}", raw[nx:nx + 400]):
+            refs[lm.group(1).strip()] = str(e["num"])
+    return refs
+
+
 SLUG_FIX = {}
 
 def slugify(s):
@@ -103,9 +124,9 @@ def page(title, bodyclass, content, root="", desc="Finding Mind", math=False):
 def main():
     os.makedirs(READ, exist_ok=True)
     parse_macros()          # populates the text-mode macro table first
-    render_tikz()
-    parse_bib()
     spine = build_spine()
+    render_tikz(chapter_refs(spine))
+    parse_bib()
 
     # part / act labels resolve to the contents page
     for e in spine:
@@ -212,7 +233,8 @@ def main():
     write_contents(items)
     write_ledger()
     write_bibliography()
-    write_landing(items)
+    xrefs = len(re.findall(r'class="xref"', "".join(e.get("body", "") for e in items)))
+    write_landing(items, len(ledger), xrefs)
     write_assets()
     print("chapters: %d   labels: %d   bib: %d   results: %d"
           % (len(chapters), len(B.labels), len(B.bib), len(ledger)))
@@ -288,7 +310,20 @@ def write_chapter(e, nav):
              root="../", desc=e["title"], math=True))
 
 
+def words_for(n):
+    small = ["zero","one","two","three","four","five","six","seven","eight","nine","ten",
+             "eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen",
+             "eighteen","nineteen"]
+    tens = ["","","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"]
+    if n < 20: return small[n]
+    if n < 100: return tens[n//10] + ("-" + small[n%10] if n%10 else "")
+    return str(n)
+
+
 def write_contents(items):
+    numbered = sum(1 for e in items if e["t"] == "chapter" and e.get("num"))
+    unnumbered = sum(1 for e in items if e["t"] == "chapter" and not e.get("num"))
+    interludes = sum(1 for e in items if e["t"] == "interlude")
     rows = []
     for e in items:
         if e["t"] == "act":
@@ -314,7 +349,7 @@ def write_contents(items):
 <div class="page">
 <header class="phead"><a class="back" href="../index.html">Finding Mind</a>
 <h1>Contents</h1>
-<p class="lede">Sixty-eight numbered chapters, five unnumbered ones and four interludes,
+<p class="lede">{words_for(numbered).capitalize()} numbered chapters, {words_for(unnumbered)} unnumbered ones and {words_for(interludes)} interludes,
 in three acts. Everything below is the current draft, generated from the book's own
 source.</p></header>
 <p class="tocutil"><a href="ledger.html">The ledger</a> \u00b7
@@ -404,8 +439,13 @@ def write_bibliography():
 
 # ------------------------------------------------------------------ landing
 
-def write_landing(items):
+def write_landing(items, nresults, nxrefs):
     chs = [e for e in items if e["t"] == "chapter"]
+    def rough(n):
+        return "{:,}".format(int(round(n, -2)))
+    def ch_url(key):
+        d = B.labels.get(key)
+        return ("read/" + d["url"]) if d else "read/contents.html"
     words = sum(e["words"] for e in items if "words" in e)
     first = next(e for e in items if e["t"] in ("chapter", "interlude"))
     acts = []
@@ -469,10 +509,31 @@ def write_landing(items):
   <ol>{actrows}</ol>
 </section>
 
+<section class="realization">
+  <div class="col">
+    <h2>From the calculus to the machine</h2>
+    <p>The construction is not only on paper. Three chapters in the Turn follow it down
+    to hardware: the tuple-space store that <em>is</em> the denotation of a running
+    program, a name-free presentation of the calculus that puts whole populations of
+    processes onto a GPU, and an honest account of what the machine prices and what it
+    does not yet deliver.</p>
+  </div>
+  <ul class="feat">
+    <li><h3><a href="{ch_url('ch:rspace')}">The store is the denotation</a></h3><p>RSpace,
+      the production store behind the F1R3FLY node, read as an exact model of the
+      calculus rather than an implementation of it.</p></li>
+    <li><h3><a href="{ch_url('ch:combinators')}">Names without names</a></h3><p>Rho
+      combinators and the matrix machine: a nascent GPU pathway, with the scaling claim
+      stated as a thesis and its gaps listed.</p></li>
+    <li><h3><a href="{ch_url('ch:price')}">What the machine prices</a></h3><p>Cost,
+      replay, and the price of an intervention, as the node actually charges for them.</p></li>
+  </ul>
+</section>
+
 <section class="apparatus">
   <div class="col">
-    <h2>Reading a book with 1,800 cross-references</h2>
-    <p>The print draft carries seven hundred numbered definitions, propositions, remarks and
+    <h2>Reading a book with {rough(nxrefs)} cross-references</h2>
+    <p>The print draft carries {rough(nresults)} numbered definitions, propositions, remarks and
     conjectures, and refers back to them constantly. On paper that means keeping a finger in
     four places at once. Here it does not.</p>
   </div>
@@ -527,14 +588,20 @@ def write_assets():
     macros = parse_macros()
     open(os.path.join(OUT, "macros.js"), "w").write(
         "window.BOOK_MACROS = " + json.dumps(macros, indent=0) + ";\n")
-    shutil.copy("/home/claude/assets/hero-full.jpg", os.path.join(OUT, "hero.jpg"))
+    hero = os.path.join(STATIC, "hero.jpg")
+    if os.path.exists(hero):
+        shutil.copy(hero, os.path.join(OUT, "hero.jpg"))
     for name in ["book.css", "reader.js", "favicon.svg"]:
-        shutil.copy(os.path.join("/home/claude/build/static", name),
-                    os.path.join(OUT, name))
+        src = os.path.join(STATIC, name)
+        dst = os.path.join(OUT, name)
+        if os.path.abspath(src) != os.path.abspath(dst):
+            shutil.copy(src, dst)
     kt = os.path.join(OUT, "katex")
-    if os.path.exists(kt):
-        shutil.rmtree(kt)
-    shutil.copytree("/home/claude/build/static/katex", kt)
+    ks = os.path.join(STATIC, "katex")
+    if os.path.isdir(ks) and os.path.abspath(ks) != os.path.abspath(kt):
+        if os.path.exists(kt):
+            shutil.rmtree(kt)
+        shutil.copytree(ks, kt)
 
 
 if __name__ == "__main__":

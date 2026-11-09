@@ -104,8 +104,10 @@ body.home a:hover{text-decoration-color:var(--gold-lit)}
 .acts li p{margin:.4rem 0 0;color:var(--ink-2);max-width:46ch}
 .acts .parts{font-size:.88rem;color:var(--ink-3);max-width:56ch}
 
-.apparatus{background:var(--vellum-2);color:var(--ink);padding:clamp(4rem,10vh,7rem) 1.4rem}
-.apparatus h2{font-size:1.9rem;font-weight:400;margin:0 0 .8rem;max-width:20ch}
+.apparatus,.realization{background:var(--vellum-2);color:var(--ink);padding:clamp(4rem,10vh,7rem) 1.4rem}
+.realization{background:var(--vellum)}
+.apparatus h2,.realization h2{font-size:1.9rem;font-weight:400;margin:0 0 .8rem;max-width:20ch}
+.realization .col p{color:var(--ink-2);max-width:60ch}
 .feat{list-style:none;padding:0;margin:2.6rem auto 0;max-width:60rem;
   display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2rem}
 .feat h3{margin:0 0 .4rem;font-size:1.1rem;font-weight:600}

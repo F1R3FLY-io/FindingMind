@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grading: From Weight Maps to the Where-Clause · Finding Mind</title>
+<link rel="canonical" href="https://findingmind.io/read/13-grading-from-weight-maps-to-the-where-clause.html">
+<meta name="description" content="Grading: From Weight Maps to the Where-Clause">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../book.css">
+<link rel="stylesheet" href="../katex/katex.min.css">
+<script defer src="../katex/katex.min.js"></script>
+<script defer src="../katex/auto-render.min.js"></script>
+<script defer src="../macros.js"></script>
+<script defer src="../reader.js"></script>
+</head>
+<body class="readpage">
+
+<a class="skip" href="#main">Skip to text</a>
+<div class="reader">
+<nav class="rail" aria-label="Contents"><div class="rail-in"><a class="rail-home" href="../index.html">Finding Mind</a><a class="rail-util" href="ledger.html">The ledger</a><a class="rail-util" href="contact.html">Comments</a><h2 class="rail-act">The Pledge</h2><a class="rail-ch" href="permitted-say.html"><span class="rn rn-i">⁂</span><span class="rt">The Permitted Say</span></a><a class="rail-ch" href="01-prolegomena-to-finding-mind.html"><span class="rn">1</span><span class="rt">Prolegomena to Finding Mind</span></a><a class="rail-ch" href="02-the-ordinary-world.html"><span class="rn">2</span><span class="rt">The Ordinary World</span></a><a class="rail-ch" href="03-information-causation-and-the-blind-spot.html"><span class="rn">3</span><span class="rt">Information, Causation, and the Blind Spot</span></a><a class="rail-ch" href="04-finding-the-shape.html"><span class="rn">4</span><span class="rt">Finding the Shape</span></a><a class="rail-ch" href="05-inside-and-outside-and-what-it-means-to-assume.html"><span class="rn">5</span><span class="rt">Inside and Outside, and What it Means to Assume the Virtue</span></a><a class="rail-ch" href="how-to-read-this-book.html"><span class="rn rn-i">⁂</span><span class="rt">How to Read This Book</span></a><a class="rail-ch" href="related-work-and-where-this-differs.html"><span class="rn rn-i">⁂</span><span class="rt">Related Work, and Where This Differs</span></a><h2 class="rail-act">The Turn</h2><a class="rail-ch" href="foam-born.html"><span class="rn rn-i">⁂</span><span class="rt">The Foam-Born</span></a><h3 class="rail-part">The Machinery: From GSLTs to Cost-Accounted Theories</h3><a class="rail-ch" href="06-what-a-language-presentation-is-and-why-it-com.html"><span class="rn">6</span><span class="rt">What a Language Presentation Is, and Why It Comes First</span></a><a class="rail-ch" href="07-graph-structured-lambda-theories.html"><span class="rn">7</span><span class="rt">Graph-Structured Lambda Theories</span></a><a class="rail-ch" href="08-interactive-gslts-and-the-site-of-interaction.html"><span class="rn">8</span><span class="rt">Interactive GSLTs, and the Site of Interaction</span></a><a class="rail-ch" href="09-continued-interactive-gslts.html"><span class="rn">9</span><span class="rt">Continued Interactive GSLTs</span></a><a class="rail-ch" href="10-the-category-of-gslts.html"><span class="rn">10</span><span class="rt">The Category of GSLTs</span></a><a class="rail-ch" href="11-the-cost-monad.html"><span class="rn">11</span><span class="rt">The Cost Monad</span></a><a class="rail-ch" href="12-the-history-monad.html"><span class="rn">12</span><span class="rt">The History Monad</span></a><a class="rail-ch" aria-current="page" href="13-grading-from-weight-maps-to-the-where-clause.html"><span class="rn">13</span><span class="rt">Grading: From Weight Maps to the Where-Clause</span></a><a class="rail-ch" href="14-interventions-at-the-cut.html"><span class="rn">14</span><span class="rt">Interventions at the Cut</span></a><a class="rail-ch" href="15-cost-accounted-rho.html"><span class="rn">15</span><span class="rt">Cost-Accounted Rho</span></a><a class="rail-ch" href="16-conversion-enzymes-and-the-virtual-token.html"><span class="rn">16</span><span class="rt">Conversion, Enzymes, and the Virtual Token</span></a><a class="rail-ch" href="17-the-labeled-transition-system-and-context-deco.html"><span class="rn">17</span><span class="rt">The Labeled Transition System and Context-Decorated HML</span></a><a class="rail-ch" href="18-what-goes-into-a-logic.html"><span class="rn">18</span><span class="rt">What Goes Into a Logic</span></a><a class="rail-ch" href="19-scopes-and-the-fixed-points-that-generate-them.html"><span class="rn">19</span><span class="rt">Scopes, and the Fixed Points that Generate Them</span></a><a class="rail-ch" href="20-generating-type-systems-oslf-and-the-hypercube.html"><span class="rn">20</span><span class="rt">Generating Type Systems: OSLF and the Hypercube</span></a><a class="rail-ch" href="21-instruments-making-structure-visible-to-bisimu.html"><span class="rn">21</span><span class="rt">Instruments: Making Structure Visible to Bisimulation</span></a><h3 class="rail-part">Realization: From the Calculus to the Machine</h3><a class="rail-ch" href="22-the-store-is-the-denotation.html"><span class="rn">22</span><span class="rt">The Store Is the Denotation</span></a><a class="rail-ch" href="23-names-without-names-combinators-and-the-matrix.html"><span class="rn">23</span><span class="rt">Names Without Names: Combinators and the Matrix Machine</span></a><a class="rail-ch" href="24-what-the-machine-prices.html"><span class="rn">24</span><span class="rt">What the Machine Prices</span></a><h3 class="rail-part">Ecology as Cognitive Architecture</h3><a class="rail-ch" href="25-the-mortal-scientist.html"><span class="rn">25</span><span class="rt">The Mortal Scientist</span></a><a class="rail-ch" href="26-learning-to-play.html"><span class="rn">26</span><span class="rt">Learning to Play</span></a><a class="rail-ch" href="27-composing-learners.html"><span class="rn">27</span><span class="rt">Composing Learners</span></a><a class="rail-ch" href="28-enzymes-and-individuals.html"><span class="rn">28</span><span class="rt">Enzymes and Individuals</span></a><a class="rail-ch" href="29-a-network-that-learns-by-rewriting.html"><span class="rn">29</span><span class="rt">A Network That Learns by Rewriting</span></a><a class="rail-ch" href="30-tubular-agents.html"><span class="rn">30</span><span class="rt">Tubular Agents</span></a><h3 class="rail-part">Suffering: Homeostasis and the Learner&#x27;s Own Account</h3><a class="rail-ch" href="31-suffering-a-learner-s-view-of-its-own-account.html"><span class="rn">31</span><span class="rt">Suffering: A Learner’s View of Its Own Account</span></a><h3 class="rail-part">Situating the Learner: A Variety of Possible Physics</h3><a class="rail-ch" href="32-the-learner-s-world-already-has-a-physics.html"><span class="rn">32</span><span class="rt">The Learner’s World Already Has a Physics</span></a><a class="rail-ch" href="33-the-reversibility-construction.html"><span class="rn">33</span><span class="rt">The Reversibility Construction</span></a><a class="rail-ch" href="34-causal-structure-and-time.html"><span class="rn">34</span><span class="rt">Causal Structure and Time</span></a><a class="rail-ch" href="35-decoration-one-map-many-semirings.html"><span class="rn">35</span><span class="rt">Decoration: One Map, Many Semirings</span></a><a class="rail-ch" href="36-conservation-and-what-it-costs-to-have-it.html"><span class="rn">36</span><span class="rt">Conservation, and What It Costs to Have It</span></a><a class="rail-ch" href="37-extended-modal-operators.html"><span class="rn">37</span><span class="rt">Extended Modal Operators</span></a><a class="rail-ch" href="38-complex-amplitudes-and-where-the-coherence-is.html"><span class="rn">38</span><span class="rt">Complex Amplitudes, and Where the Coherence Is</span></a><a class="rail-ch" href="39-synthesis-the-full-structure.html"><span class="rn">39</span><span class="rt">Synthesis: The Full Structure</span></a><a class="rail-ch" href="40-entropy-and-the-cost-of-staying-level.html"><span class="rn">40</span><span class="rt">Entropy, and the Cost of Staying Level</span></a><a class="rail-ch" href="41-discussion-and-future-directions.html"><span class="rn">41</span><span class="rt">Discussion and Future Directions</span></a><h3 class="rail-part">Why Scientists Get Misled: Emergent Ontology in Massive Agent Populations</h3><a class="rail-ch" href="42-introduction.html"><span class="rn">42</span><span class="rt">Introduction</span></a><a class="rail-ch" href="43-ontological-isolation.html"><span class="rn">43</span><span class="rt">Ontological Isolation</span></a><a class="rail-ch" href="44-agents-and-the-scientific-method.html"><span class="rn">44</span><span class="rt">Agents and the Scientific Method</span></a><a class="rail-ch" href="45-behavioral-primes.html"><span class="rn">45</span><span class="rt">Behavioral Primes</span></a><a class="rail-ch" href="46-massive-populations-and-communication-degradat.html"><span class="rn">46</span><span class="rt">Massive Populations and Communication Degradation</span></a><a class="rail-ch" href="47-the-logical-topology-and-compactness.html"><span class="rn">47</span><span class="rt">The Logical Topology and Compactness</span></a><a class="rail-ch" href="48-coherence-clusters-and-their-nerve.html"><span class="rn">48</span><span class="rt">Coherence Clusters and Their Nerve</span></a><a class="rail-ch" href="49-the-apparent-ontology.html"><span class="rn">49</span><span class="rt">The Apparent Ontology</span></a><a class="rail-ch" href="50-open-gaps-and-future-work.html"><span class="rn">50</span><span class="rt">Open Gaps and Future Work</span></a><a class="rail-ch" href="51-discussion.html"><span class="rn">51</span><span class="rt">Discussion</span></a><h3 class="rail-part">Origins of Life: Assembly Theory, Phase Transitions, and Replication</h3><a class="rail-ch" href="52-introduction.html"><span class="rn">52</span><span class="rt">Introduction</span></a><a class="rail-ch" href="53-assembly-theory-causal-depth-and-copy-number.html"><span class="rn">53</span><span class="rt">Assembly Theory: Causal Depth and Copy Number</span></a><a class="rail-ch" href="54-replication-as-a-fixed-point.html"><span class="rn">54</span><span class="rt">Replication as a Fixed Point</span></a><a class="rail-ch" href="55-smith-s-phase-transition-and-the-density-of-at.html"><span class="rn">55</span><span class="rt">Smith’s Phase Transition and the Density of Attractors</span></a><a class="rail-ch" href="56-metabolism-energy-gradients-and-the-ecosystem.html"><span class="rn">56</span><span class="rt">Metabolism, Energy Gradients, and the Ecosystem</span></a><a class="rail-ch" href="57-assembly-index-and-the-depth-of-the-fractal-le.html"><span class="rn">57</span><span class="rt">Assembly Index and the Depth of the Fractal Learner</span></a><a class="rail-ch" href="58-scope-and-manufacture.html"><span class="rn">58</span><span class="rt">Scope and Manufacture</span></a><a class="rail-ch" href="59-open-gaps.html"><span class="rn">59</span><span class="rt">Open Gaps</span></a><a class="rail-ch" href="60-discussion.html"><span class="rn">60</span><span class="rt">Discussion</span></a><h3 class="rail-part">Conclusion</h3><a class="rail-ch" href="what-has-been-built.html"><span class="rn rn-i">⁂</span><span class="rt">What Has Been Built</span></a><a class="rail-ch" href="a-view-from-inside-the-framework.html"><span class="rn rn-i">⁂</span><span class="rt">A View from Inside the Framework</span></a><a class="rail-ch" href="what-remains-to-be-done.html"><span class="rn rn-i">⁂</span><span class="rt">What Remains to Be Done</span></a><h2 class="rail-act">The Prestige</h2><a class="rail-ch" href="begotten.html"><span class="rn rn-i">⁂</span><span class="rt">begotten not made</span></a><h3 class="rail-part">The Method, and What It Left Out</h3><a class="rail-ch" href="61-how-the-trick-was-done.html"><span class="rn">61</span><span class="rt">How the Trick Was Done</span></a><a class="rail-ch" href="62-everything-so-far-was-turing-complete.html"><span class="rn">62</span><span class="rt">Everything So Far Was Turing Complete</span></a><a class="rail-ch" href="63-the-tower-of-oracle-extensions.html"><span class="rn">63</span><span class="rt">The Tower of Oracle Extensions</span></a><a class="rail-ch" href="64-not-every-cut-is-an-aperture.html"><span class="rn">64</span><span class="rt">Not Every Cut Is an Aperture</span></a><a class="rail-ch" href="65-where-does-agency-live.html"><span class="rn">65</span><span class="rt">Where Does Agency Live?</span></a><a class="rail-ch" href="66-choice-principles-are-the-types-schedulers-are.html"><span class="rn">66</span><span class="rt">Choice Principles are the Types; Schedulers are the Terms</span></a><a class="rail-ch" href="67-consciousness-and-the-world-it-comes-with.html"><span class="rn">67</span><span class="rt">Consciousness, and the World It Comes With</span></a><a class="rail-ch" href="68-what-these-chapters-owe.html"><span class="rn">68</span><span class="rt">What These Chapters Owe</span></a><h3 class="rail-part">Reference, Simulation, Reception, and a Future Metaphysics</h3><a class="rail-ch" href="69-what-a-symbol-system-would-have-to-be.html"><span class="rn">69</span><span class="rt">What a Symbol System Would Have to Be</span></a><a class="rail-ch" href="70-on-lying-as-the-origin-of-meaning.html"><span class="rn">70</span><span class="rt">On Lying as the Origin of Meaning</span></a><a class="rail-ch" href="71-if-this-is-a-simulation-which-kind.html"><span class="rn">71</span><span class="rt">If This Is a Simulation, Which Kind</span></a><a class="rail-ch" href="72-what-it-is-like-to-be-a-bot.html"><span class="rn">72</span><span class="rt">What It Is Like to Be a Bot</span></a><a class="rail-ch" href="73-how-life-like-is-life-like-enough.html"><span class="rn">73</span><span class="rt">How Life-Like Is Life-Like Enough?</span></a><a class="rail-ch" href="74-inhabiting-choice.html"><span class="rn">74</span><span class="rt">Inhabiting Choice</span></a><a class="rail-ch" href="75-any-future-metaphysics.html"><span class="rn">75</span><span class="rt">Any Future Metaphysics</span></a><a class="rail-ch" href="right-sizing.html"><span class="rn rn-i">⁂</span><span class="rt">Right-Sizing</span></a></div></nav>
+<main id="main" class="text ">
+<header class="chead"><p class="kicker">Chapter 13</p><h1>Grading: From Weight Maps to the Where-Clause</h1></header>
+<h2 id="sec-13-1"><span class="secnum">13.1</span> What is being built, and in what order</h2>
+<p>A rewrite rule’s left-hand side is a type. Terms inhabit it; the rule fires at its
+inhabitants. This chapter is about what happens when one attaches a number to the
+firing, and it builds the attachment twice.</p>
+<p>The first construction is the <em>weight map</em>. Given a continued interactive GSLT \(G\),
+the weight endofunctor \(\Wgt_{\Semi}\) produces a theory in which every base rule carries a
+finite table
+<span class="math-d">\[\varphi_1 \mapsto v_1, \quad \ldots, \quad \varphi_m \mapsto v_m\]</span>
+from formulae refining its left-hand side to values in a semiring \(\Semi\). A term’s
+redexes are classified by which refinement they satisfy, and the values turn the set of
+enabled redexes into a distribution. Where \(\Cost\) adjoins a stack of tokens and \(\Hist\)
+adjoins a word of events, \(\Wgt_{\Semi}\) adjoins a table of rates — and, like both of
+them, it adjoins it <em>to the state</em>. Sections <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#sec-13-2" data-ref="wt:sec:partition">13.2</a>
+to <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#sec-13-5-1" data-ref="wt:sec:spim">13.5.1</a> build this and prove what it gives.</p>
+<p>The second construction is the <em>graded where-clause</em>, and it is the one the rest of
+the book uses. It is stated in a sentence: <em>the <code>where</code> clause of the
+for-comprehension is valued in a commutative semiring and is evaluated once per candidate
+match.</em> There is no table, no key set and no partition. A programmer writes the weight
+where the program branches, in the same language the program is written in, and the
+value may depend on what was matched.
+Sections <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#sec-13-6" data-ref="gw:sec:choice">13.6</a> to <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#sec-13-9" data-ref="gw:sec:contention">13.9</a> build this.</p>
+<p>The two are not rivals, and the order is deliberate. The weight map is the easier object
+to see: it is a table, the table is attached to a rule, and a simulator reads it. Having
+seen it, the reader can watch it dissolve. Theorem <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#theorem-13-4" data-ref="gw:thm:dnf">13.4</a> says that a weight map
+is exactly a graded clause of one particular shape — a sum over a partition — so that
+everything Sections <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#sec-13-2" data-ref="wt:sec:partition">13.2</a>–<a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#sec-13-5-1" data-ref="wt:sec:spim">13.5.1</a> prove about weight maps is
+a theorem about the <em>linear</em> fragment of the clause language, and the discipline those
+sections had to impose is the price of staying in that fragment. The reader who already
+knows the chapter’s destination may read the first half as an extended example. The reader
+who does not will find that the second half has been argued for before it is stated.</p>
+<p>Two things distinguish both constructions from the literature on stochastic process
+calculi, and both are consequences of taking the weights from a logic the theory
+generates rather than from a vocabulary the modeler invents.</p>
+<h5 id="p-1">Weights depend on formulae, not names.</h5>
+<p>In Priami’s stochastic
+\(\pi\)-calculus [<a class="cite" href="bibliography.html#bib-priami" data-cite="priami">33</a>] and in Phillips and Cardelli’s Stochastic Pi Machine
+(SPiM) [<a class="cite" href="bibliography.html#bib-spim" data-cite="spim">34</a>], a rate is attached to a <em>channel</em>. That is one refinement among
+many: “this redex is a communication on \(n\)” is a particular formula, and there is no
+reason a modeler should be confined to it. Once weights are given by formulae, a rate may
+depend on the shape of the payload, on the <em>namespace</em> a channel belongs to — which
+in a reflective calculus is real structure, reachable through the name predicate — or
+on any combination of these. Channel identity is recovered as the degenerate case, and
+Theorem <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#theorem-13-2" data-ref="wt:thm:spim">13.2</a> says exactly how degenerate it is.</p>
+<h5 id="p-2">Weights are state, not declaration.</h5>
+<p>Rates change during execution. SPiM does
+not permit this, and the restriction is not incidental to its design but constitutive of
+it, since a static rate function is what makes the underlying object a chain over terms
+alone. The weight map recovers Markovianity by putting the table <em>in</em> the state, so
+the chain runs over configurations \((P,\dec)\) rather than over terms
+(Theorem <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#theorem-13-1" data-ref="wt:thm:markov">13.1</a>). The where-clause recovers it more simply: a clause is
+re-evaluated against the current term at every candidate, so whatever a rate depends on
+is already in the term, and the term is the state
+(Proposition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#proposition-13-3" data-ref="gw:prop:plastic">13.3</a>). Chapter <a class="xref" href="29-a-network-that-learns-by-rewriting.html#top" data-ref="ch:spiking">29</a> depends on one or the other,
+since plasticity is nothing other than a rate that changes.</p>
+<section class="thm remarkish thm-remark" id="remark-13-1" data-kind="Remark" data-num="13.1"><header><span class="thm-kind">Remark 13.1</span> <span class="thm-name">Where the formulae come from</span><a class="permalink" href="#remark-13-1" aria-label="Link to Remark 13.1">¶</a></header><p>
+The formulae used, as keys in the first construction and as the crisp sort of the
+clause language in the second, are those of the logic the OSLF construction generates
+from the theory’s own presentation: one structural connective per term former of
+\(\Sigma\), one context-labeled modality \(\langle K \rangle\) per rewrite rule together with
+a choice of redex position, and a propositional layer stratified by the categorical
+strength the target specification supplies. That construction is
+Chapter <a class="xref" href="20-generating-type-systems-oslf-and-the-hypercube.html#top" data-ref="ch:hypercube">20</a>, and the transition system the modalities range over is
+Chapter <a class="xref" href="17-the-labeled-transition-system-and-context-deco.html#top" data-ref="sec:lts-hml">17</a>. Nothing in the present chapter needs the details; it needs
+only that the vocabulary of refinements is <em>generated with the theory</em> rather than
+designed alongside it, so that a modeler who writes down a language has, at no further
+cost, the language in which to price it. The one place the details do intrude is
+Observation <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#observation-13-1" data-ref="wt:obs:closure">13.1</a>, which is about what a weak target specification cannot
+say — and Corollary <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#corollary-13-2" data-ref="gw:cor:nopartition">13.2</a>, which is about why, in the end, it does
+not have to.</p></section>
+<h2 id="sec-13-2"><span class="secnum">13.2</span> Keys, and the partition discipline</h2>
+<p>Fix a base rule \(r : L \rsq R\). Write \(L^{\sharp}\) for the structural formula
+characterizing the left-hand side pattern — for the rho communication rule, “an input
+on some \(n\) in parallel with an output on the same \(n\)” with \(n\) existentially bound.</p>
+<section class="thm plain thm-definition" id="definition-13-1" data-kind="Definition" data-num="13.1"><header><span class="thm-kind">Definition 13.1</span> <span class="thm-name">Refinement</span><a class="permalink" href="#definition-13-1" aria-label="Link to Definition 13.1">¶</a></header><p>
+A formula \(\varphi\) <em>refines</em> \(L^{\sharp}\) when \(\sat \varphi \Rightarrow L^{\sharp}\).
+The refinements of \(L^{\sharp}\), ordered by entailment, form the <em>refinement lattice</em>
+of the rule.</p></section>
+<p>A key set is a finite subset of that lattice. Three requirements are imposed on it, and
+the first is the substantial one.</p>
+<section class="thm plain thm-definition" id="definition-13-2" data-kind="Definition" data-num="13.2"><header><span class="thm-kind">Definition 13.2</span> <span class="thm-name">Partition discipline</span><a class="permalink" href="#definition-13-2" aria-label="Link to Definition 13.2">¶</a></header><p>
+A key set \(\Phi_r = \{\varphi_1, \ldots, \varphi_m\}\) is a <em>partition of \(r\)</em> when</p>
+<ol><li id="item-4-1"><p><em>Exclusivity</em>: \(\sat \neg(\varphi_i \wedge \varphi_j)\) for \(i \neq j\);</p></li><li id="item-4-2"><p><em>Exhaustiveness</em>: \(\sat L^{\sharp} \Rightarrow \bigvee_i \varphi_i\).</p></li></ol></section>
+<section class="thm plain thm-definition" id="definition-13-3" data-kind="Definition" data-num="13.3"><header><span class="thm-kind">Definition 13.3</span> <span class="thm-name">Admissible key set</span><a class="permalink" href="#definition-13-3" aria-label="Link to Definition 13.3">¶</a></header><p>
+A key set is <em>admissible</em> when it is a partition and in addition</p>
+<ol><li id="item-5-1"><p> <em>Decidability</em>: each \(\varphi_i\) lies in a fragment for
+        which model checking terminates on the terms of interest;</p></li><li id="item-5-2"><p> <em>Locality</em>: the modal depth of each \(\varphi_i\) is bounded
+        by some \(\alpha_r < \infty\) fixed with the rule;</p></li><li id="item-5-3"><p> <em>Structurality</em>: each \(\varphi_i\) lies in the structural
+        fragment, carrying no behavioral modality \(\langle K \rangle\), no greatest fixed
+        point, and no hidden-name quantifier.</p></li></ol></section>
+<p><a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#item-5-1" data-ref="wt:req:dec">1</a> is forced by execution: a simulator must classify every enabled redex
+before it can sample, so a key whose evaluation may diverge is a key that stops the run.
+<a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#item-5-2" data-ref="wt:req:loc">2</a> and <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#item-5-3" data-ref="wt:req:str">3</a> are forced by <em>efficient</em> execution, and they
+are restrictions on <em>keys</em> alone — the modalities and the fixed point remain
+available for stating and checking properties of the resulting chain. What they may not
+do is determine a rate. A rate depending on what a redex can do <em>next</em> cannot be
+recomputed locally when something elsewhere in the term changes, so an implementation
+admitting modal keys must reclassify globally at every step. The clause language of
+Section <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#sec-13-7" data-ref="gw:sec:clause">13.7</a> will relax exactly this, at exactly this price.</p>
+<section class="thm plain thm-proposition" id="proposition-13-1" data-kind="Proposition" data-num="13.1"><header><span class="thm-kind">Proposition 13.1</span> <span class="thm-name">Classification</span><a class="permalink" href="#proposition-13-1" aria-label="Link to Proposition 13.1">¶</a></header><p>
+Let \(\Phi_r\) be a partition of \(r\) and let \(\Red_r(P)\) be the set of redexes of \(r\) in
+\(P\), each a pair \((k,\sigma)\) of a position and a matching substitution. Then
+<span class="math-d">\[\class_r : \Red_r(P) \longrightarrow \Phi_r,
+  \qquad
+  \class_r(k,\sigma) = \text{the unique } \varphi_i \text{ with } L\sigma \sat \varphi_i\]</span>
+is a total function, for every term \(P\).</p></section>
+<section class="proof"><header>Proof</header><p>\((k,\sigma) \in \Red_r(P)\) gives \(P \equiv k[L\sigma]\), so \(L\sigma \sat L^{\sharp}\) by
+construction of \(L^{\sharp}\). Exhaustiveness gives some \(i\), which is totality;
+exclusivity gives at most one, which is single-valuedness. Well-definedness on
+\(\equiv\)-classes holds because satisfaction is \(\equiv\)-invariant, the generated
+connectives being generated from the signature modulo the equations.</p></section>
+<p>Proposition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#proposition-13-1" data-ref="wt:prop:classify">13.1</a> is the whole reason for the discipline, and what it
+buys is visible in what fails without it. Without exhaustiveness the weighting is
+<em>partial</em>: some enabled redexes have no rate, and one must invent a convention —
+fire them at rate zero, at a default rate, or refuse to run — that is not part of the
+specification. Without exclusivity the weighting is <em>multi-valued</em>, and one must
+invent an aggregation: take the most specific key if a unique minimum exists, sum the
+values of all satisfied keys, take the maximum. Each convention is defensible, and each
+yields a different simulator from the same specification, which is precisely the situation
+a specification exists to prevent. Hold on to the second of those conventions — sum the
+values of all satisfied keys — because Section <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#sec-13-8" data-ref="gw:sec:dnf">13.8</a> will show that it is not
+a convention at all but the semantics, once one stops asking for a table.</p>
+<section class="thm remarkish thm-remark" id="remark-13-2" data-kind="Remark" data-num="13.2"><header><span class="thm-kind">Remark 13.2</span> <span class="thm-name">Completing a partition is cheap</span><a class="permalink" href="#remark-13-2" aria-label="Link to Remark 13.2">¶</a></header><p>
+The discipline is less onerous than it looks. Given any pairwise-exclusive family
+\(\{\varphi_1,\ldots,\varphi_m\}\), adjoining
+\(\varphi_{\bot} := L^{\sharp} \wedge \neg\bigvee_i \varphi_i\) yields a partition, and a
+modeler wanting the unlisted redexes inert sets its value to \(0\). Exclusivity is the
+real constraint; exhaustiveness is a completion. In practice, keys of the form “the
+redex is a communication on channel \(n\)”, indexed by distinct \(n\), are exclusive for
+free.</p></section>
+<h3 id="sec-13-2-1"><span class="secnum">13.2.1</span> What stating the partition costs</h3>
+<p>Definition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#definition-13-2" data-ref="wt:def:partition">13.2</a> writes (P1) and (P2) as entailments. If they are to be
+stated <em>in the generated logic itself</em>, that logic must carry negation, conjunction
+and disjunction, and a target specification supplying only the finite-limits fragment
+will not do — finite limits supply \(\top\) and \(\wedge\) and no more
+(Remark <a class="xref" href="20-generating-type-systems-oslf-and-the-hypercube.html#remark-20-4" data-ref="ob:rem:stratification">20.4</a>).</p>
+<p>This is a hypothesis and not a theorem about weighting as such. A key family drawn from a
+positive fragment may perfectly well <em>be</em> pairwise disjoint and jointly exhaustive;
+what a weak logic prevents is not the holding of (P1) and (P2) but their <em>expression</em>
+as entailments between formulae of the language the keys are written in. The alternative
+is to discharge them in the metatheory — by an elaborator checking them on the instances
+that arise, or by a proof about a schema of keys — and the weighting is then perfectly
+well defined. Both branches cost something, and the second cost is the interesting one.</p>
+<section class="thm remarkish thm-observation" id="observation-13-1" data-kind="Observation" data-num="13.1"><header><span class="thm-kind">Observation 13.1</span> <span class="thm-name">The cost of an external partition</span><a class="permalink" href="#observation-13-1" aria-label="Link to Observation 13.1">¶</a></header><p>
+If (P1) and (P2) are discharged in the metatheory rather than in the generated logic, the
+specification is no longer <em>closed</em>: whether a key set is admissible becomes a
+judgment the object language cannot express. Two implementations conforming to the same
+written specification may then disagree about admissibility, hence — by
+Proposition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#proposition-13-1" data-ref="wt:prop:classify">13.1</a> — about the classification, hence about the
+distribution sampled. That is exactly the failure the partition discipline was introduced
+to prevent, relocated one level up rather than removed.</p></section>
+<p>So a weighted theory built on weight maps must choose between a Boolean target
+specification and an external admissibility judgment, and it should say which. This is a
+small instance of a pattern the Prestige will make central: a construction that looks
+self-contained turns out to have a seam, and the seam is where something the model cannot
+state has to be supplied from outside (Chapter <a class="xref" href="69-what-a-symbol-system-would-have-to-be.html#top" data-ref="ch:notation">69</a>). It is worth noticing
+that the seam here is <em>visible</em> — one can point at the entailment that has to be
+checked somewhere else — and that this is the good case. It is also worth noticing, in
+advance, that this particular seam is an artifact of asking for a table, and that
+Corollary <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#corollary-13-2" data-ref="gw:cor:nopartition">13.2</a> closes it.</p>
+<h2 id="sec-13-3"><span class="secnum">13.3</span> The endofunctor</h2>
+<section class="thm plain thm-definition" id="definition-13-4" data-kind="Definition" data-num="13.4"><header><span class="thm-kind">Definition 13.4</span> <span class="thm-name">Weight map</span><a class="permalink" href="#definition-13-4" aria-label="Link to Definition 13.4">¶</a></header><p>
+Let \(G\) be a continued interactive GSLT with an admissible key set \(\Phi_r\) for each base
+rule \(r\). A <em>weight map</em> is a function
+<span class="math-d">\[\dec : \textstyle\coprod_r \Phi_r \longrightarrow \Semi .\]</span>
+Write \(\Wmaps\) for the set of weight maps. Each \(\Phi_r\) is finite and there are finitely
+many rules, so \(\Wmaps \cong \Semi^N\) for a fixed \(N\).</p></section>
+<section class="thm plain thm-definition" id="definition-13-5" data-kind="Definition" data-num="13.5"><header><span class="thm-kind">Definition 13.5</span> <span class="thm-name">Configuration</span><a class="permalink" href="#definition-13-5" aria-label="Link to Definition 13.5">¶</a></header><p>
+A <em>configuration</em> is a pair \(\mathfrak{c} = (P, \dec)\) with \(P\) a term modulo
+\(\equiv\) and \(\dec \in \Wmaps\). Write \(\Cfg\) for the set of configurations.</p></section>
+<p>The phrase “a map instance is part of a state specification” is
+Definition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#definition-13-5" data-ref="wt:def:config">13.5</a>, and everything in this half of the chapter turns on it.</p>
+<section class="thm plain thm-definition" id="definition-13-6" data-kind="Definition" data-num="13.6"><header><span class="thm-kind">Definition 13.6</span> <span class="thm-name">Augmented rules</span><a class="permalink" href="#definition-13-6" aria-label="Link to Definition 13.6">¶</a></header><p>
+An <em>augmented base rule</em> is a base rule \(r : L \rsq R\) together with, for each
+\(\varphi_i \in \Phi_r\), an initial value \(v_i \in \Semi\) and an <em>update function</em>
+\(u_i : \Wmaps \to \Wmaps\) on the whole map. An <em>augmented context rule</em> is a context
+rule together with a <em>geometric factor</em> \(\gfac_c \in \Rnn\) and a fold function
+\(f_c\) combining the maps arriving from its sibling subterms. The initial weight map is
+\(\dec_0(\varphi_i) = v_i\).</p></section>
+<section class="thm plain thm-construction" id="construction-13-1" data-kind="Construction" data-num="13.1"><header><span class="thm-kind">Construction 13.1</span> <span class="thm-name">The weight endofunctor</span><a class="permalink" href="#construction-13-1" aria-label="Link to Construction 13.1">¶</a></header><p>
+\(\Wgt_{\Semi}\) sends a continued interactive GSLT \(G\), equipped with admissible key sets,
+to the theory \(\Wgt_{\Semi}(G)\) whose configurations are the pairs of
+Definition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#definition-13-5" data-ref="wt:def:config">13.5</a> and whose rules are the augmented rules of
+Definition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#definition-13-6" data-ref="wt:def:augmented">13.6</a>: a step is
+<span class="math-d">\[(P, \dec) \rewrite (P', \dec'),
+  \qquad
+  P' \equiv k[R\sigma],
+  \qquad
+  \dec' = f_{c_1}\bigl(\cdots f_{c_p}(u_i(\dec))\cdots\bigr),\]</span>
+for \((k,\sigma)\) a redex of \(r\) with \(\class_r(k,\sigma) = \varphi_i\) and \(k\) composed of
+the context rules \(c_1, \ldots, c_p\) from the root inwards, the folds applied from the
+redex outwards. In the common case where every \(f_c\) projects onto its second argument —
+“the context does not modify the map” — this is \(\dec' = u_i(\dec)\), and we write it so
+below. On morphisms, \(\Wgt_{\Semi}\) acts as the identity on the underlying map of theories
+and by reindexing on the key sets.</p></section>
+<p>The parallel with the two preceding chapters is exact, and it is the reason this chapter
+sits where it does. Each of the three constructions adjoins a component to the state and
+makes the rules act on it: a stack that drains, a word that accrues, a table that is
+rewritten. Each leaves the underlying interaction structure alone. And each is a genuine
+addition rather than a closure operation — the table after a step is not in general the
+table before it.</p>
+<section class="thm remarkish thm-remark" id="remark-13-3" data-kind="Remark" data-num="13.3"><header><span class="thm-kind">Remark 13.3</span> <span class="thm-name">Two adjunctions and one open question</span><a class="permalink" href="#remark-13-3" aria-label="Link to Remark 13.3">¶</a></header><p>
+\(\Cost\) and \(\Hist\) are monads, resolved by free–forgetful adjunctions
+(Proposition <a class="xref" href="11-the-cost-monad.html#proposition-11-3" data-ref="ob:prop:cost-adjunction">11.3</a>, Proposition <a class="xref" href="12-the-history-monad.html#proposition-12-1" data-ref="ob:prop:hist-adjunction">12.1</a>).
+We claim no such thing for \(\Wgt_{\Semi}\). There is an evident candidate unit: the map
+sending every key to \(1_{\Semi}\), which embeds \(G\) as the uniformly weighted theory in
+which every enabled redex is equally likely, and which is unital in the right way for the
+same reason the empty stack and the empty word are. Since a unit is available it might
+well be interesting to ask whether a multiplication exists — what it would mean to
+flatten a weighting of a weighting, and whether the flattening is canonical rather than
+chosen. We do not ask it here. Nothing below requires more than an endofunctor, and
+stating the construction is the point.</p></section>
+<section class="thm remarkish thm-remark" id="remark-13-4" data-kind="Remark" data-num="13.4"><header><span class="thm-kind">Remark 13.4</span> <span class="thm-name">Why context rules carry a factor and not a propensity</span><a class="permalink" href="#remark-13-4" aria-label="Link to Remark 13.4">¶</a></header><p>
+The obvious alternative to Definition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#definition-13-6" data-ref="wt:def:augmented">13.6</a> gives every rule, base and
+context alike, a value, and lets the simulator select among all of them. It
+double-counts. A step is a base rule firing <em>somewhere</em>; the context rules composing
+the path from the root to that somewhere are the <em>address</em> of the firing, not
+additional events. Structural rules are addressing, not dynamics, and incur no primitive
+cost. So the context rules contribute multiplicatively, by
+\(\gfac(k) = \prod_q \gfac_{c_q}\) over the composition, and setting every \(\gfac_c = 1\)
+recovers “addressing is free” exactly, which is the default.</p>
+<p>The reason to permit \(\gfac_c \neq 1\) is that it is the natural home of a <em>spatial</em>
+bias. \(\gfac\) weights an edge of the reduction graph by <em>where</em> in the term the
+interaction surfaces are; \(\dec(\varphi)\) weights it by <em>what</em> is being transferred.
+That is a geometry/matter split appearing here as an implementation detail, and
+Chapter <a class="xref" href="41-discussion-and-future-directions.html#top" data-ref="sec:discussion">41</a> says what would have to be true for it to be more than one.</p></section>
+<h2 id="sec-13-4"><span class="secnum">13.4</span> Propensity</h2>
+<p>The propensity of a rule at a refinement is where the construction is most easily got
+wrong, because four independent factors are involved and the literature usually presents
+some of them fused.</p>
+<section class="thm plain thm-definition" id="definition-13-7" data-kind="Definition" data-num="13.7"><header><span class="thm-kind">Definition 13.7</span> <span class="thm-name">Propensity</span><a class="permalink" href="#definition-13-7" aria-label="Link to Definition 13.7">¶</a></header><p>
+Let \(\mathfrak{c} = (P, \dec)\), let \(r\) be a base rule and \(\varphi \in \Phi_r\). Put
+\(K(r,\varphi,P) = \{(k,\sigma) \in \Red_r(P) : \class_r(k,\sigma) = \varphi\}\). The
+<em>propensity</em> of \((r,\varphi)\) at \(\mathfrak{c}\) is
+<span class="math-d">\[\prop(r,\varphi,\mathfrak{c})
+  \;=\;
+  \dec(\varphi) \cdot \!\!\sum_{(k,\sigma) \in K(r,\varphi,P)}\!\! \gfac(k) \cdot \chi(r,k,\sigma),\]</span>
+where \(\chi \in \{0,1\}\) is the funding gate of Definition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#definition-13-8" data-ref="wt:def:gate">13.8</a>, identically
+\(1\) in the absence of cost accounting. The <em>total propensity</em> is
+\(\propz(\mathfrak{c}) = \sum_r \sum_{\varphi \in \Phi_r} \prop(r,\varphi,\mathfrak{c})\).</p></section>
+<p>The four factors, and what each answers:</p>
+<dl><dt>\(\dec(\varphi)\) — the rate constant.</dt><dd><p>What kind of interaction this is, priced.
+        Dynamic: this is the component the update functions rewrite.</p></dd><dt>\(\gfac(k)\) — the geometric factor.</dt><dd><p>Where the interaction is, priced. Default
+        \(1\).</p></dd><dt>The cardinality of the sum — multiplicity.</dt><dd><p>How many ways this interaction is
+        available. This is Gillespie’s combinatorial count of distinct reactant
+        tuples [<a class="cite" href="bibliography.html#bib-gillespie1977exact" data-cite="gillespie1977exact">3</a>], and it is the factor most often omitted in
+        implementations, with the consequence that a term with fifty available redexes of
+        a kind fires them no faster than a term with one.</p></dd><dt>\(\chi\) — the funding gate.</dt><dd><p>Whether the interaction can be afforded.</p></dd></dl>
+<p>Multiplicity deserves a word, because it is the one place where the associative–commutative
+structure of the interaction constructor does real work. Redexes are counted as
+<em>selections</em> from the bag, not identified up to \(\equiv\). Two indistinguishable
+messages on the same channel offer two ways for a receipt to fire, and a construction that
+identified them would run the system at half rate. This is not a subtlety of the
+implementation; it is the difference between a truncated Poisson stationary distribution
+and a geometric one. The clause language will make the same point in its own terms:
+candidates are indexed by occurrences, not by terms (Definition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#definition-13-12" data-ref="gw:def:cand">13.12</a>).</p>
+<section class="thm plain thm-definition" id="definition-13-8" data-kind="Definition" data-num="13.8"><header><span class="thm-kind">Definition 13.8</span> <span class="thm-name">Funding gate</span><a class="permalink" href="#definition-13-8" aria-label="Link to Definition 13.8">¶</a></header><p>
+For a redex \((k,\sigma)\) of \(r\), let \(\Delta(r,k,\sigma)\) be the demand it incurs and
+\(\Sigma(P,k)\) the supply available at that location, in the sense of
+Chapter <a class="xref" href="11-the-cost-monad.html#top" data-ref="ch:costmonad">11</a>. Put \(\chi(r,k,\sigma) = 1\) when \(\Sigma(P,k)\) funds
+\(\Delta(r,k,\sigma)\) and \(0\) otherwise.</p></section>
+<section class="thm plain thm-proposition" id="proposition-13-2" data-kind="Proposition" data-num="13.2"><header><span class="thm-kind">Proposition 13.2</span> <span class="thm-name">Cost gates the support, weight distributes over it</span><a class="permalink" href="#proposition-13-2" aria-label="Link to Proposition 13.2">¶</a></header><p>
+Unfunded redexes have propensity zero and contribute nothing to \(\propz\), while among
+funded redexes the distribution is unchanged from the cost-free case up to normalization.</p></section>
+<section class="proof"><header>Proof</header><p>\(\chi\) appears as a multiplicative factor taking values in \(\{0,1\}\); a zero factor
+removes the term from the sum, and the remaining terms are untouched.</p></section>
+<p>Three consequences are worth recording, and they are the reason this chapter belongs
+beside Chapter <a class="xref" href="11-the-cost-monad.html#top" data-ref="ch:costmonad">11</a> rather than anywhere else in the book.</p>
+<p><em>The gate is decidable, so the simulator stays exact.</em> Were funding a real-valued
+penalty rather than a Boolean, the propensity would depend on an optimization and the
+process would no longer be exactly simulable. The decidability of the funding judgment is
+doing real work here.</p>
+<p><em>Exhaustion is a halting condition, not a deadlock.</em> \(\propz = 0\) when every enabled
+redex is unfunded. The chain has reached an absorbing state, which is the correct reading:
+a system that cannot pay for any of its available transitions has stopped, and the waiting
+time to the next event is infinite rather than undefined.</p>
+<p><em>The two decorations answer different questions.</em> Cost decides whether a step may
+happen; weight decides how fast and how often. Separating them is what lets a model say
+that a strong synapse on a starving neuron is silent — a statement neither decoration
+makes alone, and one Chapter <a class="xref" href="29-a-network-that-learns-by-rewriting.html#top" data-ref="ch:spiking">29</a> needs.</p>
+<h2 id="sec-13-5"><span class="secnum">13.5</span> The simulator is a functor out of the image</h2>
+<p>\(\Wgt_{\Semi}(G)\) is still a rewrite theory: it has terms, equations and rules, and it
+steps. Turning it into something one can sample from is a further operation, and the two
+should not be run together.</p>
+<section class="thm plain thm-definition" id="definition-13-9" data-kind="Definition" data-num="13.9"><header><span class="thm-kind">Definition 13.9</span> <span class="thm-name">The weighted coalgebra</span><a class="permalink" href="#definition-13-9" aria-label="Link to Definition 13.9">¶</a></header><p>
+Let \(\Semi^{(-)}\) denote the free-\(\Semi\)-semimodule construction, \(\Semi^{(X)}\) being the
+finitely supported functions \(X \to \Semi\). Evaluating
+Definition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#definition-13-7" data-ref="wt:def:propensity">13.7</a> pointwise gives
+<span class="math-d">\[\gamma : \Cfg \longrightarrow \Semi^{(\Cfg)},
+  \qquad
+  \gamma(\mathfrak{c})(\mathfrak{c}')
+  = \!\!\sum_{\substack{(r,k,\sigma) \\ \text{stepping } \mathfrak{c} \to \mathfrak{c}'}}\!\!
+    \dec(\class_r(k,\sigma)) \cdot \gfac(k) \cdot \chi(r,k,\sigma).\]</span></p></section>
+<p>The sum runs over <em>derivations</em> reaching \(\mathfrak{c}'\), not merely over the target.
+Assembling the weightings of a fixed theory into a category and taking the Grothendieck
+construction gives the fibered form of this assignment, and the simulator is a functor out
+of it. We record that to fix the picture and do not need it below.</p>
+<section class="thm remarkish thm-remark" id="remark-13-5" data-kind="Remark" data-num="13.5"><header><span class="thm-kind">Remark 13.5</span> <span class="thm-name">Simulator and interpreter are different objects</span><a class="permalink" href="#remark-13-5" aria-label="Link to Remark 13.5">¶</a></header><p>
+It is worth saying plainly that \(\gamma\) is not what a running system does.
+An interpreter advances one actual state; a simulator explores how a system <em>would</em>
+behave under a range of configurations, and it is offline. That difference is what makes
+exhaustive construction of the transition graph, model checking, and the complex codomain
+of Chapter <a class="xref" href="38-complex-amplitudes-and-where-the-coherence-is.html#top" data-ref="sec:quantum">38</a> viable here and not in an interpreter, and it is why the
+endofunctor and the coalgebra are separated above. The endofunctor adjoins the map. The
+coalgebra prices it.</p></section>
+<section class="thm plain thm-theorem" id="theorem-13-1" data-kind="Theorem" data-num="13.1"><header><span class="thm-kind">Theorem 13.1</span> <span class="thm-name">Markovianity on configurations</span><a class="permalink" href="#theorem-13-1" aria-label="Link to Theorem 13.1">¶</a></header><p>
+Sampling \(\gamma\) in the standard way — draw a waiting time exponentially with parameter
+\(\propz(\mathfrak{c})\), select a redex with probability proportional to its contribution,
+fire it — yields a time-homogeneous continuous-time Markov chain on \(\Cfg\), with
+generator \(Q(\mathfrak{c},\mathfrak{c}') = \gamma(\mathfrak{c})(\mathfrak{c}')\) off the
+diagonal and \(Q(\mathfrak{c},\mathfrak{c}) = -\sum_{\mathfrak{c}' \neq \mathfrak{c}}
+Q(\mathfrak{c},\mathfrak{c}')\). It is <em>not</em> in general a Markov chain on terms alone.</p></section>
+<section class="proof"><header>Proof</header><p>The propensity is a function of \(\mathfrak{c}\) and of nothing else — in particular not
+of the time or the history — and the successor is determined by \(\mathfrak{c}\) together
+with the selected redex. That is the definition of a time-homogeneous chain with the
+stated generator. For the negative claim it suffices to exhibit two runs reaching the same
+term with different maps, which Example <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#example-13-1" data-ref="wt:ex:nonmarkov">13.1</a> does.</p></section>
+<section class="thm plain thm-example" id="example-13-1" data-kind="Example" data-num="13.1"><header><span class="thm-kind">Example 13.1</span> <span class="thm-name">Dynamic weights are not a term-level phenomenon</span><a class="permalink" href="#example-13-1" aria-label="Link to Example 13.1">¶</a></header><p>
+Take rho with a single communication rule and keys \(\varphi_a, \varphi_b, \varphi_{\bot}\),
+where \(\varphi_x\) says the redex is a communication on \(x\). Let the updates act on
+\(\dec(\varphi_a)\) alone, by \(u_a : w \mapsto w+1\) and \(u_b : w \mapsto 2w\), which do not
+commute. A term offering exactly one \(a\)-redex and one \(b\)-redex, both of which must fire,
+reaches the same successor term by either order; starting from \(\dec(\varphi_a) = 1\),
+firing \(a\) first arrives with \((1+1)\cdot 2 = 4\) and firing \(b\) first with
+\(1\cdot 2 + 1 = 3\). The successor carries a single \(a\)-redex, so the two runs sit at the
+same term with expected waiting times \(1/4\) and \(1/3\). No rate function of the term alone
+reproduces both.</p></section>
+<p>Theorem <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#theorem-13-1" data-ref="wt:thm:markov">13.1</a> is the justification for
+Definition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#definition-13-5" data-ref="wt:def:config">13.5</a>, and the shape of the argument is worth being explicit
+about, because the design could have gone otherwise. If weight maps could change but were
+<em>not</em> part of the state, the process on terms would be non-Markovian: the rate out of
+\(P\) would depend on how \(P\) was reached. One would then be in the world of generalized
+semi-Markov processes, with no exact simulation algorithm and no chain to model check.
+Putting the map in the state restores exactness at the price of a larger state space, and
+that price is real — \(\Cfg\) is \(\terms \times \Semi^N\), a continuum unless the reachable
+weight maps are finite in number. Remark <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#remark-13-10" data-ref="gw:rmk:state-is-term">13.10</a> will say what this
+example looks like once there is no table.</p>
+<section class="thm remarkish thm-remark" id="remark-13-6" data-kind="Remark" data-num="13.6"><header><span class="thm-kind">Remark 13.6</span> <span class="thm-name">Self-transitions</span><a class="permalink" href="#remark-13-6" aria-label="Link to Remark 13.6">¶</a></header><p>
+Nothing forbids a rule whose firing returns a configuration \(\equiv\)-equal to the one it
+fired in. Such a redex contributes to \(\propz\) but to no off-diagonal entry, so the
+diagonal above is \(-\sum_{\mathfrak{c}' \neq \mathfrak{c}} Q\) and not \(-\propz\). A
+self-loop is a fictitious jump in the sense of uniformization: the two conventions induce
+the same distribution of the state at every time and differ only in the number of recorded
+events, hence in sojourn statistics. Neither is wrong; mixing them is.</p></section>
+<h3 id="sec-13-5-1"><span class="secnum">13.5.1</span> What the restriction to names gives back</h3>
+<section class="thm plain thm-theorem" id="theorem-13-2" data-kind="Theorem" data-num="13.2"><header><span class="thm-kind">Theorem 13.2</span> <span class="thm-name">Conservativity over summation-free SPiM</span><a class="permalink" href="#theorem-13-2" aria-label="Link to Theorem 13.2">¶</a></header><p>
+Restrict the construction to: the \(\pi\)-calculus fragment; keys that are channel-identity
+predicates and nothing else; static maps, every update the identity; and every geometric
+factor \(1\). Then the propensity of Definition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#definition-13-7" data-ref="wt:def:propensity">13.7</a> is exactly the
+activity computed by the Stochastic Pi Machine for the summation-free
+fragment [<a class="cite" href="bibliography.html#bib-spim" data-cite="spim">34</a>], redex multiplicity included. The restriction is strict in each of
+the four coordinates.</p></section>
+<p>We do not reproduce the proof, which is a computation matching the two definitions of
+activity term by term [<a class="cite" href="bibliography.html#bib-StochSim" data-cite="StochSim">32</a>]; the summation correction that the general SPiM
+statement would need is empty here, since rho has no summation operator. The theorem is
+worth having for what it says about the generality: everything the construction adds
+beyond SPiM is visible as the removal of one of four restrictions, and each removal is
+independently motivated. Formula-keys remove the first, plasticity the second, spatial
+bias the third.</p>
+<p>That completes the first construction. Everything above is correct, and everything
+above is about to be shown to be a special case.</p>
+<h2 id="sec-13-6"><span class="secnum">13.6</span> Where the choice is</h2>
+<p>A rho program does not determine its own execution. Write
+<span class="math-d">\[\begin{equation}
+\label{gw:eq:race}
+  x!(Q_1) \mid \textsf{for}(y \leftarrow x)\,P \mid x!(Q_2)
+\end{equation}\]</span>
+and the operational semantics permits two reductions. It does not say which one happens,
+and it does not say with what tendency. This is not an oversight. It is the defining
+feature of a mobile process calculus, and it is what makes the calculus a specification
+of interaction rather than of a machine.</p>
+<p>An implementation must close the gap. RSpace — the store that realizes rho in
+f1r3node, which Part <a class="xref" href="contents.html#part-realization-from-the-calculus-to-the-mac" data-ref="part:realization">Part II</a> examines in its own right — closes it by
+presenting the
+parallel fragment as a table from channels to bags of data and bags of continuations,
+and letting the physical race between cores decide which produce is zipped with which
+consume. That is a <em>resolution mechanism</em>, and it is a choice, in the precise sense
+Chapter <a class="xref" href="66-choice-principles-are-the-types-schedulers-are.html#top" data-ref="ch:chs">66</a> will make exact: the family of admissible pairings, indexed by
+contended channels, has a section only when something supplies one.</p>
+<p>The observation on which this half of the chapter rests is that the resolution mechanism
+is a <em>parameter</em>, and that other values of the parameter are available. Gillespie’s
+algorithm is a resolution mechanism: it supplies rates for the branches of a race and an
+exponential clock for turning them into outcomes. The Born rule is a resolution mechanism:
+it supplies amplitudes and a squared modulus. The weight map of the preceding sections is
+a way of <em>setting</em> the parameter from outside the term — a table beside the
+program. The question this half answers is what syntax a programmer needs in order to set
+it from inside.</p>
+<h3 id="sec-13-6-1"><span class="secnum">13.6.1</span> Why contexts cannot see the parameter</h3>
+<p>Before building the syntax it is worth knowing what kind of thing the parameter is, and
+the cleanest way to say it is to say what cannot detect it.</p>
+<section class="thm plain thm-principle" id="principle-13-1" data-kind="Principle" data-num="13.1"><header><span class="thm-kind">Principle 13.1</span> <span class="thm-name">Contexts create apertures; they do not read them</span><a class="permalink" href="#principle-13-1" aria-label="Link to Principle 13.1">¶</a></header><p>
+A rho context can change which races exist — by adding contention, by consuming a
+contender, by installing a new receive. It cannot observe how any race is resolved.
+Consequently no property of the form “for all rho contexts \(C[-]\), …” can be
+sensitive to the resolution mechanism.</p></section>
+<p>The reason is almost a tautology once stated: a rho context is itself a rho term, whose
+own races are resolved by the same unspecified mechanism. Composing silence with silence
+yields silence. The consequence is that the correctness criterion the rest of this part
+of the book leans on — full abstraction against the class of contexts, as in
+Chapter <a class="xref" href="21-instruments-making-structure-visible-to-bisimu.html#top" data-ref="ch:obsext">21</a> — is not the right instrument here. It is not that there are
+too few contexts. It is that the discriminating power one wants is not of the kind
+contexts have.</p>
+<p>Two things survive. The first is a different correctness frame: the object of study is
+the map
+<span class="math-d">\[\textsf{Resolvers} \times \textsf{Terms} \longrightarrow
+  \textsf{Distributions over outcomes},\]</span>
+in which the RSpace race, the Gillespie clock and the Born rule are three points of the
+first coordinate, and the interesting statements are <em>separations</em> between resolvers
+at a fixed term rather than between terms at a fixed resolver. The second is a one-sided
+obligation that every instantiation must meet.</p>
+<section class="thm plain thm-definition" id="definition-13-10" data-kind="Definition" data-num="13.10"><header><span class="thm-kind">Definition 13.10</span> <span class="thm-name">Support adequacy</span><a class="permalink" href="#definition-13-10" aria-label="Link to Definition 13.10">¶</a></header><p>
+Let \(\Reach(P)\) be the set of normal forms operationally reachable from \(P\) under the
+unweighted semantics, and let \(\sem{P}\) be a weighted denotation of \(P\) with values in
+\(\Semi\). The denotation is <em>support-adequate</em> when
+<span class="math-d">\[\supp\,\sem{P} \;\subseteq\; \Reach(P).\]</span></p></section>
+<p>Support adequacy says the resolver invents nothing the operational semantics forbids.
+The converse inclusion is <em>not</em> demanded, and for a reason that will matter in
+Chapter <a class="xref" href="38-complex-amplitudes-and-where-the-coherence-is.html#top" data-ref="sec:quantum">38</a>: a normal form that some derivation reaches, whose contributions
+cancel, is exactly what a resolver with additive inverses can produce. So the natural
+two-sided condition is not merely unproven; in the one instance where it fails, its
+failure is the physics.</p>
+<section class="thm remarkish thm-remark" id="remark-13-7" data-kind="Remark" data-num="13.7"><header><span class="thm-kind">Remark 13.7</span> <span class="thm-name">Non-compositionality is not a defect</span><a class="permalink" href="#remark-13-7" aria-label="Link to Remark 13.7">¶</a></header><p>
+The store denotation of rho is a monoid homomorphism for parallel composition, because it
+denotes the store. A denotation that resolves races cannot be, because composing \(P\) with
+\(Q\) creates races that neither had alone. The cut is the interaction term, and a
+dependence across the cut that neither side carries is the semantic image of a race across
+the cut. This is the same observation as Chapter <a class="xref" href="64-not-every-cut-is-an-aperture.html#top" data-ref="ch:apr">64</a>’s: an aperture is a
+property of the cut and of neither agent flanking it. It is recorded here because the
+reader trained on denotational semantics will otherwise read the failure of
+compositionality below as a mistake.</p></section>
+<h2 id="sec-13-7"><span class="secnum">13.7</span> The graded where-clause</h2>
+<h3 id="sec-13-7-1"><span class="secnum">13.7.1</span> Resolution algebras</h3>
+<section class="thm plain thm-definition" id="definition-13-11" data-kind="Definition" data-num="13.11"><header><span class="thm-kind">Definition 13.11</span> <span class="thm-name">Resolution algebra</span><a class="permalink" href="#definition-13-11" aria-label="Link to Definition 13.11">¶</a></header><p>
+A <em>resolution algebra</em> is a commutative semiring
+\(\Semi = (V, \sumv, \tensorv, 0, 1)\): \(\sumv\) associative and commutative with unit \(0\),
+\(\tensorv\) associative and commutative with unit \(1\), \(\tensorv\) distributing over
+\(\sumv\), and \(0\) annihilating.</p></section>
+<p>The two operations are forced by what the logical connectives must mean once they take
+values. <em>Conjunction is \(\tensorv\)</em>: two conditions holding together compose
+multiplicatively, which is also what makes a joined receive
+\(p_1 \leftarrow c_1 \ \&\ p_2 \leftarrow c_2\) combine its clauses correctly.
+<em>Disjunction is \(\sumv\)</em>: two ways for a match to be enabled add. This is the same
+semiring that Section <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#sec-13-3" data-ref="wt:sec:functor">13.3</a> took as a codomain; what has changed is that
+it is now the value space of a <em>logic</em>, and the logic’s connectives are its
+operations.</p>
+<section class="thm plain thm-principle" id="principle-13-2" data-kind="Principle" data-num="13.2"><header><span class="thm-kind">Principle 13.2</span> <span class="thm-name">Interference is a logical phenomenon</span><a class="permalink" href="#principle-13-2" aria-label="Link to Principle 13.2">¶</a></header><p>
+Since \(\sem{\varphi \vee \psi} = \sem{\varphi} \sumv \sem{\psi}\), in a resolution
+algebra with additive inverses a disjunction may evaluate to \(0\) though neither
+disjunct does. Destructive interference is a <em>false disjunction with true
+disjuncts</em>. This is the whole of the additional structure, stated in the logic rather
+than imposed on it from outside.</p></section>
+<figure class="float tabfloat" id="tab-13-1"><div class="tablewrap"><table><thead><tr><th><strong>Algebra</strong></th><th>\(\sumv,\tensorv\)</th><th><strong>Resolver</strong></th><th><strong>Regime</strong></th></tr></thead><tbody><tr><td>\(\Bool = (\{0,1\},\vee,\wedge)\)</td><td>\(\vee\), \(\wedge\)</td><td>the RSpace race</td><td>rholang exactly</td></tr><tr><td>\(\Rnn = (\mathbb{R}_{\geq 0},+,\times)\)</td><td>\(+\), \(\times\)</td><td>Gillespie</td><td>stochastic</td></tr><tr><td>\(\CC = (\mathbb{C},+,\times)\)</td><td>\(+\), \(\times\)</td><td>Born rule</td><td>interference</td></tr><tr><td>Viterbi \(([0,1],\max,\times)\)</td><td>\(\max\), \(\times\)</td><td>greedy</td><td>most-likely path</td></tr><tr><td>Tropical \((\mathbb{R}\cup\{\infty\},\min,+)\)</td><td>\(\min\), \(+\)</td><td>least cost</td><td>cost-optimal path</td></tr></tbody></table></div><figcaption><span class="fignum">Table 13.1</span> Instances of the resolution algebra. One syntax; the resolver is the choice of
+\(\Semi\). The last two are not developed as clause instances in this book; they are
+listed because the tropical instance is the cost reading that Chapter <a class="xref" href="35-decoration-one-map-many-semirings.html#top" data-ref="sec:weighted">35</a>
+develops in the linear fragment, where it supplies the least-action principle.</figcaption></figure>
+<p>Negation is the casualty and it is worth saying so plainly. On \([0,1]\) the map
+\(v \mapsto 1 - v\) serves; on \(\CC\) there is no canonical complement and De Morgan fails
+against \((+,\times)\). The design therefore keeps two sorts of formula, with the crisp
+sort embedded in the graded one.</p>
+<h3 id="sec-13-7-2"><span class="secnum">13.7.2</span> Two sorts, one slot</h3>
+<p>Let the <em>crisp sort</em> be the condition language the book already has: ground
+formulae supplied by a language definition, the spatial connectives generated from the
+term formers, the context-labeled modality \(\langle K \rangle\), and full Boolean
+structure.
+<span class="math-d">\[\begin{align*}
+\beta &::= \textsf{true} \mid \textsf{false} \mid g \mid \neg\beta \mid
+  \beta \wedge \beta \mid \beta \vee \beta \mid \langle K \rangle\beta \mid
+  \textsf{out}(n)\beta \mid \textsf{in}(n)\beta \mid \beta \mid \beta \mid @\beta
+\intertext{and let the \emph{graded sort} be}
+\psi &::= \crisp{\beta} \mid v \mid \psi \tensorv \psi \mid \psi \sumv \psi
+  \mid \langle K \rangle_{\Semi}\,\psi \qquad (v \in V).
+\end{align*}\]</span>
+Here \(\crisp{\beta}\) is the indicator embedding, sending a satisfied \(\beta\) to \(1\) and
+an unsatisfied one to \(0\), and \(v\) ranges over scalar constants of the algebra. The
+graded sort has no negation and no fixed-point operator; the crisp sort keeps both.</p>
+<section class="thm remarkish thm-remark" id="remark-13-8" data-kind="Remark" data-num="13.8"><header><span class="thm-kind">Remark 13.8</span> <span class="thm-name">One slot, not two</span><a class="permalink" href="#remark-13-8" aria-label="Link to Remark 13.8">¶</a></header><p>
+It is tempting to give the for-comprehension two clauses, a Boolean gate and a graded
+weight. It is better to give it one graded clause and recover the gate as its
+<em>support</em>: a communication is enabled exactly when its clause evaluates to something
+other than \(0\). This keeps the language unforked — the Boolean where-clauses rholang
+already has are the \(\Bool\)-valued fragment under \(\Bool \hookrightarrow \Semi\) — and
+it makes support adequacy (Definition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#definition-13-10" data-ref="gw:def:support">13.10</a>) hold by construction rather
+than by proof, since the classical interpreter sees nothing of the value except whether
+it vanishes.</p></section>
+<h3 id="sec-13-7-3"><span class="secnum">13.7.3</span> Syntax</h3>
+<p>The for-comprehension already carries a <code>where</code> clause, whose condition may
+mention the variables bound by the preceding receipts. The change is only to the sort of
+that condition.</p>
+<p><pre class="code"><code>for( p11 &lt;- c11 &amp; ... &amp; pm1 &lt;- cm1 ;
+     ... ;
+     p1n &lt;- c1n &amp; ... &amp; pmn &lt;- cmn
+     where psi ) P</code></pre></p>
+<p>
+with <code>psi</code> a graded formula over the algebra \(\Semi\) declared for the shard or
+for the channel’s language definition. Within <code>psi</code> the bound names \(p_{ij}\) are
+in scope, so the value may depend on what was matched. That one sentence is the whole of
+the difference between a clause and a key: a key classifies a redex by a formula fixed in
+advance; a clause computes a value from the match in front of it.</p>
+<h3 id="sec-13-7-4"><span class="secnum">13.7.4</span> Per-match evaluation</h3>
+<p>The decisive point concerns <em>when</em> the clause is evaluated.</p>
+<section class="thm plain thm-definition" id="definition-13-12" data-kind="Definition" data-num="13.12"><header><span class="thm-kind">Definition 13.12</span> <span class="thm-name">Candidates</span><a class="permalink" href="#definition-13-12" aria-label="Link to Definition 13.12">¶</a></header><p>
+Let \(r\) be a receipt site in \(P\) — a for-comprehension together with the channels its
+receipts name. A <em>candidate</em> at \(r\) is an assignment \(\sigma\) of a distinct datum
+occurrence to each pattern of each group, such that every pattern matches its assigned
+datum. Write \(\Cand(P,r)\) for the set of candidates and
+\(\Out(r,\sigma) \in \terms/{\equiv}\) for the residual term the firing of \(r\) under
+\(\sigma\) produces.</p></section>
+<p>Candidates are indexed by <em>occurrences</em>, not by terms. This is the multiplicity
+factor of Section <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#sec-13-4" data-ref="wt:sec:propensity">13.4</a> appearing in its native form: two structurally
+congruent messages on a channel are two candidates, not one, because parallel
+composition is a multiset and structural congruence does not delete duplicates. An
+implementation that keys data by content alone cannot represent \(\Cand\) faithfully.</p>
+<section class="thm plain thm-definition" id="definition-13-13" data-kind="Definition" data-num="13.13"><header><span class="thm-kind">Definition 13.13</span> <span class="thm-name">Graded clause valuation</span><a class="permalink" href="#definition-13-13" aria-label="Link to Definition 13.13">¶</a></header><p>
+A graded clause \(\psi\) at a receipt site \(r\) denotes a function
+<span class="math-d">\[\sem{\psi}_r : \Cand(P,r) \longrightarrow V ,\]</span>
+defined by structural recursion, with \(\crisp{\beta}\) evaluated against the term \(P\)
+under the substitution \(\sigma\) carries, scalars constant, \(\tensorv\) and \(\sumv\)
+pointwise, and \(\langle K \rangle_{\Semi}\) as in Section <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#sec-13-7-5" data-ref="gw:sec:modality">13.7.5</a>.</p></section>
+<p>So a clause is a <em>vector</em> indexed by candidates, and — once composed with
+\(\Out\) — a <em>matrix</em> over candidates and outcomes. That is the whole mechanism,
+and it is worth pausing on how little it is. The weight map needed a key set, a partition
+discipline, an admissibility judgment, a classification function and an update function.
+The clause needs a semiring and a scope rule.</p>
+<h3 id="sec-13-7-5"><span class="secnum">13.7.5</span> The graded modality is a transfer operator</h3>
+<p>Let \(\Semi\langle \terms/{\equiv}\rangle\) be the free \(\Semi\)-semimodule on terms modulo
+structural congruence. Define the one-step operator of a term by summing its candidates:
+<span class="math-d">\[\begin{equation}
+\label{gw:eq:onestep}
+  T(P) \;=\; \sum_{r}\ \sum_{\sigma \in \Cand(P,r)}
+    \sem{\psi_r}_r(\sigma)\;\cdot\;\Out(r,\sigma) ,
+\end{equation}\]</span>
+the outer sum over receipt sites and the coefficient arithmetic in \(\Semi\). Then the
+graded modality is
+<span class="math-d">\[\sem{\langle K \rangle_{\Semi}\,\psi}(P)
+  \;=\; \sum_{r,\sigma} \sem{\psi_r}_r(\sigma) \tensorv \sem{\psi}(\Out(r,\sigma)),\]</span>
+which is \(T\) acting on the vector of values of \(\psi\). The graded modality is the
+transfer matrix of the reduction relation, and the principle that the meaning of a term
+is the sum of all its possible futures is exactly the statement that \(\sem{-}\) is a fixed
+point of \(\langle K\rangle_{\Semi}\). The denotational principle and the graded logic are
+one object seen twice.</p>
+<p>This is also where the chapter’s own restriction <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#item-5-3" data-ref="wt:req:str">3</a> is repaid. A key could
+not carry a behavioral modality because a rate depending on what a redex does <em>next</em>
+cannot be recomputed locally. A clause <em>may</em> carry \(\langle K\rangle_{\Semi}\), and
+the price is exactly the one named there: such a clause is not local, and an
+implementation must either bound its modal depth or re-evaluate it globally. The
+restriction has not gone away; it has become a choice the programmer makes in the clause,
+with a cost the ledger can see.</p>
+<h3 id="sec-13-7-6"><span class="secnum">13.7.6</span> Denotation and conservativity</h3>
+<section class="thm plain thm-definition" id="definition-13-14" data-kind="Definition" data-num="13.14"><header><span class="thm-kind">Definition 13.14</span> <span class="thm-name">Graded denotation</span><a class="permalink" href="#definition-13-14" aria-label="Link to Definition 13.14">¶</a></header><p>
+Fix a resolution algebra \(\Semi\) and a budget \(\beta \in \mathbb{N}\). Let
+\(M := \Semi\langle \terms/{\equiv}\rangle\) with basis vectors written \(\lvert P \rangle\).
+The \(\beta\)-budgeted denotation is
+<span class="math-d">\[\sem{P}_\beta \;:=\; T_{\!*}^{\,\beta}\,\lvert P \rangle
+  \;=\;\!\!\sum_{h \,:\, P \Rightarrow^{\leq\beta} Q}\!\! w(h)\,\lvert Q\rangle ,\]</span>
+where \(T_*\) extends \(T\) linearly, \(h\) ranges over causal histories of length at most
+\(\beta\) ending at a normal form or exhausting the budget, and \(w(h)\) is the
+\(\tensorv\)-product of the clause values along \(h\). At a normal form \(Q\) the operator acts
+as the identity, \(T\lvert Q\rangle = \lvert Q\rangle\), so that normal forms are absorbing.</p></section>
+<section class="thm remarkish thm-remark" id="remark-13-9" data-kind="Remark" data-num="13.9"><header><span class="thm-kind">Remark 13.9</span> <span class="thm-name">Why a budget, and only one</span><a class="permalink" href="#remark-13-9" aria-label="Link to Remark 13.9">¶</a></header><p>
+The definition is corecursive and does not bottom out on non-terminating terms. For
+terminating \(P\) the recursion is well-founded on the reduction tree and \(\beta\) may be
+taken to be its depth. In general one needs either a convergence hypothesis — a
+spectral radius condition on \(T\), since \(\CC\) has no order and Knaster–Tarski is
+unavailable — or a budget. We take the budget, and note that it is the budget this book
+already charges: the risk ledger’s single \(\omega\) for reflection
+(Chapter <a class="xref" href="63-the-tower-of-oracle-extensions.html#top" data-ref="ch:tower">63</a>), and the token budget that keeps the mortal scientist’s inquiry
+terminating (Chapter <a class="xref" href="25-the-mortal-scientist.html#top" data-ref="ch:sci">25</a>). These should be one budget doing several jobs rather than several
+budgets.</p></section>
+<p>One denotation admits three readings, differing only in what is done at the end.
+<em>Support</em>: \(\supp(\sem{P}_\beta)\), which is what the classical interpreter sees and,
+by Remark <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#remark-13-8" data-ref="gw:rmk:oneslot">13.8</a>, all it sees. <em>Stochastic</em>: for \(\Semi = \Rnn\), the
+coefficients normalized, which is the jump-chain marginal of the Gillespie reading.
+<em>Born</em>: for \(\Semi = \CC\), the squared moduli normalized, which is
+Chapter <a class="xref" href="38-complex-amplitudes-and-where-the-coherence-is.html#top" data-ref="sec:quantum">38</a>.</p>
+<section class="thm plain thm-theorem" id="theorem-13-3" data-kind="Theorem" data-num="13.3"><header><span class="thm-kind">Theorem 13.3</span> <span class="thm-name">Conservativity</span><a class="permalink" href="#theorem-13-3" aria-label="Link to Theorem 13.3">¶</a></header><p>
+Let \(\Semi = \Bool\) and let every clause be the embedding \(\crisp{\beta}\) of a crisp
+condition. Then \(\supp(\sem{P}_\beta)\) is exactly the set of normal forms reachable from
+\(P\) in at most \(\beta\) steps under the operational semantics with Boolean
+<code>where</code> clauses.</p></section>
+<section class="proof"><header>Proof</header><p>In \(\Bool\), \(\tensorv = \wedge\) and \(\sumv = \vee\), so \(w(h) = 1\) iff every step of \(h\)
+has a satisfied clause, and the coefficient of \(\lvert Q\rangle\) is the disjunction over
+histories reaching \(Q\). Candidates coincide with the admissible zips of the store
+presentation, and the absorbing convention does not add normal forms. Hence the
+coefficient is \(1\) iff some admissible derivation reaches \(Q\).</p></section>
+<section class="thm plain thm-corollary" id="corollary-13-1" data-kind="Corollary" data-num="13.1"><header><span class="thm-kind">Corollary 13.1</span> <span class="thm-name">Support adequacy</span><a class="permalink" href="#corollary-13-1" aria-label="Link to Corollary 13.1">¶</a></header><p>
+For any \(\Semi\), \(\supp(\sem{P}_\beta) \subseteq \Reach_\beta(P)\), since a nonzero
+coefficient requires at least one history with all clause values nonzero, and such a
+history is admissible under the Boolean image of the clauses. Equality fails exactly when
+some reachable coefficient is a sum of nonzero terms summing to \(0\).</p></section>
+<p>This is the payoff of Remark <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#remark-13-8" data-ref="gw:rmk:oneslot">13.8</a>, and it should be read as a safety
+theorem. Adding grading cannot make a program do something it could not do; it can only
+make it fail to do something it could. Everything the ecology part builds on top of the
+clause inherits this: a learner whose hypotheses are clauses can be wrong, but it cannot
+be wrong in a way the unweighted calculus forbids.</p>
+<h2 id="sec-13-8"><span class="secnum">13.8</span> Weight maps are the linear graded clauses</h2>
+<p>The first half of this chapter can now be placed.</p>
+<section class="thm plain thm-theorem" id="theorem-13-4" data-kind="Theorem" data-num="13.4"><header><span class="thm-kind">Theorem 13.4</span> <span class="thm-name">Weight maps are a normal form</span><a class="permalink" href="#theorem-13-4" aria-label="Link to Theorem 13.4">¶</a></header><p>
+Every weight map \((\varphi_i, v_i)_{i\leq k}\) on a rule is denoted by the graded clause
+<span class="math-d">\[\psi \;=\; \bigoplus_{i=1}^{k} \; v_i \tensorv \crisp{\varphi_i},\]</span>
+and conversely a graded clause of this shape denotes a weight map if and only if the
+\(\varphi_i\) partition the refinement of the rule’s left-hand side. Graded clauses not of
+this shape — those with nested \(\tensorv\) over overlapping conditions, or with a graded
+modality — are strictly more expressive.</p></section>
+<section class="proof"><header>Proof</header><p>Forwards: on a candidate satisfying \(\varphi_j\) and no other, all but the \(j\)th summand
+vanish and the value is \(v_j\), and exhaustiveness of the partition ensures some summand
+survives. Backwards: if two \(\varphi\)’s overlap on a candidate, the clause returns
+\(v_i \sumv v_j\), which is a well-defined value but not a table lookup; the partition
+condition is exactly the condition making the sum a selection. Strictness: with
+overlapping \(\varphi_i\) the clause is a mixture no weight map assigns, and
+\(\langle K\rangle_{\Semi}\) inspects successors, which no key can.</p></section>
+<p>The theorem is the hinge of the chapter and it is worth saying what it does to each piece
+of the first half. The weight map is the <em>linear</em> fragment of the clause language:
+the clauses that are sums of scalars times indicators over a partition. The
+classification function \(\class_r\) is the statement that on such a clause exactly one
+summand is nonzero. The propensity formula of Definition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#definition-13-7" data-ref="wt:def:propensity">13.7</a> is
+Equation <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#eq-gw-eq-onestep" data-ref="gw:eq:onestep">(13.2)</a> with the clause in normal form and \(\Out\) grouped by
+outcome. And the convention Section <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#sec-13-2" data-ref="wt:sec:partition">13.2</a> declined — “sum the values
+of all satisfied keys” — is not a convention: it is what \(\sumv\) means, and the
+partition discipline is what was needed to stop it from ever being invoked.</p>
+<section class="thm plain thm-corollary" id="corollary-13-2" data-kind="Corollary" data-num="13.2"><header><span class="thm-kind">Corollary 13.2</span> <span class="thm-name">The partition discipline is unnecessary</span><a class="permalink" href="#corollary-13-2" aria-label="Link to Corollary 13.2">¶</a></header><p>
+Single-valuedness of a graded clause is automatic, a formula having one value. The
+requirements that key sets partition the left-hand-side refinement
+(Definition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#definition-13-2" data-ref="wt:def:partition">13.2</a>), that admissibility be checked
+(Definition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#definition-13-3" data-ref="wt:def:reqs">13.3</a>), and that a default class complete them
+(Remark <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#remark-13-2" data-ref="wt:rmk:default">13.2</a>), all exist to secure single-valuedness for a lookup and
+have no analogue here.</p></section>
+<p>This dissolves the obstruction of Section <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#sec-13-2-1" data-ref="wt:sec:closure">13.2.1</a>. The Boolean demand —
+that the target logic specification supply negation so that a partition can be stated
+— arose because a partition needs complements. With no partition to define, the demand
+does not arise. Negation is still absent from the graded sort, but it is absent as a
+design choice about the value algebra rather than as an unmet requirement, and the seam
+Observation <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#observation-13-1" data-ref="wt:obs:closure">13.1</a> pointed at is no longer there to point at. The reader
+should notice what kind of repair this is. Nothing was proved that the weight map could
+not prove; a presupposition was removed, and the problem it generated left with it. The
+Prestige will have occasion to recall the shape.</p>
+<section class="thm plain thm-proposition" id="proposition-13-3" data-kind="Proposition" data-num="13.3"><header><span class="thm-kind">Proposition 13.3</span> <span class="thm-name">Plasticity is free</span><a class="permalink" href="#proposition-13-3" aria-label="Link to Proposition 13.3">¶</a></header><p>
+A dynamic weight map, whose table is revised after each rewrite by an update function
+\(u : \Wmaps \times \textsf{Match} \times \textsf{Trace} \to \Wmaps\), is denoted by a
+static graded clause whenever \(u\)’s dependence on the trace is expressible as a crisp
+formula over the current term. No update function is needed, because a clause is
+re-evaluated against the current term at every candidate.</p></section>
+<section class="proof"><header>Proof</header><p>The clause mentions the term through its crisp subformulae; its value at a candidate in
+the term \(P'\) reached after some history is by definition computed against \(P'\). A table
+revised to depend on features of \(P'\) therefore agrees with the clause
+\(\bigoplus_i v_i \tensorv \crisp{\varphi_i}\) in which the \(\varphi_i\) mention those
+features directly. Dependence on trace history beyond what is visible in \(P'\) is not
+expressible, which is the hypothesis.</p></section>
+<section class="thm remarkish thm-remark" id="remark-13-10" data-kind="Remark" data-num="13.10"><header><span class="thm-kind">Remark 13.10</span> <span class="thm-name">The state is the term</span><a class="permalink" href="#remark-13-10" aria-label="Link to Remark 13.10">¶</a></header><p>
+Proposition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#proposition-13-3" data-ref="gw:prop:plastic">13.3</a> has a hypothesis, and Example <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#example-13-1" data-ref="wt:ex:nonmarkov">13.1</a>
+is a case where it fails: the two orders of firing leave the same term and different
+tables, and no formula over the term can tell the orders apart. The weight map’s answer
+was to enlarge the state to \((P,\dec)\) and prove Markovianity there. The clause’s answer
+is the one rho always gives: <em>put it in the term.</em> A rate that must remember something
+the term does not show is a rate that depends on a datum nobody wrote down; write it down
+— a message on a channel the clause can read — and the clause reads it. The
+non-commuting updates of the example become two rewrites that each consume and re-emit a
+counter, and the chain is a chain on terms again, because the term now carries what the
+table carried. In a calculus where the state <em>is</em> the term, “the map is in the
+state” and “the map is in the term” are the same sentence, and the configuration of
+Definition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#definition-13-5" data-ref="wt:def:config">13.5</a> was a way of saying it before the syntax existed to say it
+directly. Chapter <a class="xref" href="29-a-network-that-learns-by-rewriting.html#top" data-ref="ch:spiking">29</a> will make this move for synaptic weights, and the
+finiteness it needs is supplied by the same device that supplies it there: a quantized
+value on a bounded range.</p></section>
+<section class="thm remarkish thm-remark" id="remark-13-11" data-kind="Remark" data-num="13.11"><header><span class="thm-kind">Remark 13.11</span> <span class="thm-name">What was retired, and what was kept</span><a class="permalink" href="#remark-13-11" aria-label="Link to Remark 13.11">¶</a></header><p>
+The update function of Definition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#definition-13-6" data-ref="wt:def:augmented">13.6</a> was the one component of the
+weight map with no compilable form: an arbitrary closure over time and a trace summary,
+for which a declarative sub-language would have had to be designed. The graded clause
+<em>is</em> that sub-language, and it was needed for other reasons. The geometric factor
+\(\gfac\) and the funding gate \(\chi\) are kept exactly as they were: the first because it
+weights the <em>address</em> of a firing rather than the match, which a clause at the site
+cannot see; the second because, as Proposition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#proposition-13-2" data-ref="wt:prop:gate">13.2</a> says, cost is not a
+weighting and should not be dressed as one. The endofunctor \(\Wgt_{\Semi}\) is kept as the
+name for the linear fragment, which is what the physics part of the book instantiates.</p></section>
+<h2 id="sec-13-9"><span class="secnum">13.9</span> Contention, and what is normalized</h2>
+<p>One more notion is needed before the clause can be handed to the chapters that use it,
+and it is the notion the weight map never had to name because the partition hid it.
+Equation <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#eq-gw-eq-onestep" data-ref="gw:eq:onestep">(13.2)</a> sums over receipt sites as well as over candidates, and
+that outer sum conflates two different things: candidates at different sites may be
+<em>alternatives</em>, or they may be <em>concurrent</em>, and only the first should be
+weighed against each other.</p>
+<section class="thm plain thm-definition" id="definition-13-15" data-kind="Definition" data-num="13.15"><header><span class="thm-kind">Definition 13.15</span> <span class="thm-name">Conflict, components, matchings</span><a class="permalink" href="#definition-13-15" aria-label="Link to Definition 13.15">¶</a></header><p>
+Two candidates <em>conflict</em> when they share a datum or share a receipt. A
+<em>contention component</em> at \(P\) is a connected component of the conflict relation. A
+<em>step</em> of a component is one of its <em>maximal matchings</em>: a maximal set of
+pairwise non-conflicting candidates.</p></section>
+<p>The terminology is that of event structures, where conflict names events that cannot both
+occur [<a class="cite" href="bibliography.html#bib-Winskel" data-cite="Winskel">279</a>]. A contention component is the unit of choice: within it, the
+alternatives are its maximal matchings, which is the RSpace zip — the bag of data and
+the bag of patterns, admissibly paired — and across components nothing is chosen
+because everything fires. Two independent races are two components; the race
+equation <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#eq-gw-eq-race" data-ref="gw:eq:race">(13.1)</a> is one component with two matchings; a receipt with \(m\)
+patterns and \(m\) data is one component with \(m!\) matchings.</p>
+<section class="thm plain thm-proposition" id="proposition-13-4" data-kind="Proposition" data-num="13.4"><header><span class="thm-kind">Proposition 13.4</span> <span class="thm-name">Components factor</span><a class="permalink" href="#proposition-13-4" aria-label="Link to Proposition 13.4">¶</a></header><p>
+Let \(C_1,\dots,C_k\) be the contention components at \(P\). The maximal matchings of \(P\)
+are exactly the elements of \(\prod_i \mathrm{Match}(C_i)\): a step chooses one matching
+per component, independently, and all of them fire.</p></section>
+<section class="proof"><header>Proof</header><p>Candidates in distinct components neither share a datum nor share a receipt, so a set of
+candidates is pairwise non-conflicting iff its restriction to each component is;
+maximality is likewise componentwise.</p></section>
+<p>Why this matters is that <em>normalization</em> — turning values into odds — happens
+over a component and nowhere else. In the Gillespie reading of Section <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#sec-13-5-1" data-ref="wt:sec:spim">13.5.1</a>
+this was invisible, because exponential clocks race globally and the total propensity
+does the normalizing for free. In the <em>discrete</em> stochastic reading, where a
+clause’s values are relative odds rather than rates, the odds of a matching are its weight
+divided by the sum over the matchings of its component; and in the complex reading, the
+norm that must be preserved is taken over a component after summing amplitudes over
+matchings with a common outcome. Both of those sentences will be said again, with their
+consequences, in Chapters <a class="xref" href="38-complex-amplitudes-and-where-the-coherence-is.html#top" data-ref="sec:quantum">38</a> and <a class="xref" href="35-decoration-one-map-many-semirings.html#top" data-ref="sec:weighted">35</a>. Here it is enough to
+record two honest costs.</p>
+<section class="thm remarkish thm-remark" id="remark-13-12" data-kind="Remark" data-num="13.12"><header><span class="thm-kind">Remark 13.12</span> <span class="thm-name">Two costs</span><a class="permalink" href="#remark-13-12" aria-label="Link to Remark 13.12">¶</a></header><p>
+Normalization is <em>nonlocal</em>: a clause can be normalized only in the light of what
+else is contending, so a normalized value is a property of a configuration and not of a
+clause. And the sum over maximal matchings of a component is permanent-shaped, hence
+\(\#P\)-hard in general — which is a fact about the physics it models and bites an
+implementation, so what a compiler checks must be a syntactic sufficient condition such
+as a bound on component size. Neither cost arises in the linear fragment, because a
+partition is a component structure imposed in advance. That is a fair statement of what
+the weight map bought and what it cost: tractability, at the price of forbidding every
+race the modeler did not foresee.</p></section>
+<h2 id="sec-13-10"><span class="secnum">13.10</span> Where this is used</h2>
+<p>The construction is generic over the theory: it applies to anything one can write down as
+a language presentation, so one obtains a stochastic machine for the ambient calculus, for
+a user-defined domain language, or for cost-accounted rho, by writing the theory rather
+than by writing a simulator.</p>
+<p>Five places in this book take it up, and the division of labor between the two halves of
+the chapter is worth stating. Chapter <a class="xref" href="14-interventions-at-the-cut.html#top" data-ref="ch:do">14</a>, next, builds the first thing a clause can do
+that a table cannot — an operator that intervenes on a race, under which Pearl’s calculus of
+causation embeds exactly. Chapter <a class="xref" href="29-a-network-that-learns-by-rewriting.html#top" data-ref="ch:spiking">29</a> runs the clause at the smallest
+scale where the whole apparatus is visible at once, and finds a spiking neural network
+with plasticity in it — synaptic efficacy as a graded clause, and the same rewrite that
+performs inference performing the learning. Chapter <a class="xref" href="25-the-mortal-scientist.html#top" data-ref="ch:sci">25</a>  takes the clause as the <em>form of
+a hypothesis</em>: a mortal scientist’s conjecture about its world is a graded clause, and
+what it learns is a value in the fiber over that clause. Chapter <a class="xref" href="35-decoration-one-map-many-semirings.html#top" data-ref="sec:weighted">35</a> asks
+which semiring, in the linear fragment, and finds that the choice is what separates
+nondeterminism from cost from probability from amplitude. And Chapter <a class="xref" href="38-complex-amplitudes-and-where-the-coherence-is.html#top" data-ref="sec:quantum">38</a>
+asks what the complex instance means, and finds that the clause takes the one route the
+weight map could not — amplitudes attached to candidates rather than to classes —
+and meets, in Definition <a class="xref" href="13-grading-from-weight-maps-to-the-where-clause.html#definition-13-15" data-ref="gw:def:contention">13.15</a>, exactly the structure that decides
+whether the result is a quantum state.</p>
+<nav class="pager"><a class="prev" href="12-the-history-monad.html"><span>Previous</span>The History Monad</a><a class="next" href="14-interventions-at-the-cut.html"><span>Next</span>Interventions at the Cut</a></nav>
+</main>
+<aside class="margin" id="margin" aria-live="polite"></aside>
+</div>
+<button class="railtoggle" id="railtoggle" aria-expanded="false">Contents</button>
+
+</body>
+</html>

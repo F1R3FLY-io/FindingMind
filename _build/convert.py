@@ -15,8 +15,16 @@ macro table. This is why the pipeline is robust: no macro reimplementation.
 import re, os, json, html, sys, hashlib, subprocess, shutil
 from collections import OrderedDict
 
-ROOT = "/home/claude/book"
-OUT  = "/home/claude/site-out"
+# Paths. Override with environment variables; defaults assume the repository
+# layout (this file lives in <repo>/_build/) and a sibling checkout of the book.
+#   FM_BOOK  directory holding finding_mind.tex and its chapter directories
+#   FM_OUT   directory the site is written into (default: the repository root)
+#   FM_WORK  scratch directory for standalone TikZ compiles
+HERE = os.path.dirname(os.path.abspath(__file__))
+REPO = os.path.dirname(HERE)
+ROOT = os.environ.get("FM_BOOK", os.path.join(os.path.dirname(REPO), "publications", "FindingMind"))
+OUT  = os.environ.get("FM_OUT", REPO)
+WORK = os.environ.get("FM_WORK", os.path.join(HERE, "tikzwork"))
 FIGDIR = os.path.join(OUT, "figures")
 
 # ---------------------------------------------------------------- utilities
@@ -863,8 +871,11 @@ def parse_bib():
         B.bib[key.strip()] = (k, h)
 
 
-def render_tikz():
-    """compile each tikzpicture standalone and convert to SVG"""
+def render_tikz(refs=None):
+    """compile each tikzpicture standalone and convert to SVG.
+    refs: label -> printed number, used to resolve \\ref inside a picture (a
+    standalone compile has no .aux to take them from)."""
+    refs = refs or {}
     src = open(os.path.join(ROOT, "finding_mind.tex")).read()
     head = src[:src.index("\\begin{document}")]
     libs = "\n".join(re.findall(r"\\usetikzlibrary\{[^}]*\}", head))
@@ -883,10 +894,10 @@ def render_tikz():
         mac.append("\\providecommand{\\%s}%s{%s}" % (m.group(1), n, body))
     pre = ("\\usepackage{amsmath,amssymb,amsthm,mathtools,stmaryrd}\n"
            "\\usepackage{mathpazo}\n\\usepackage{xcolor}\n\\usepackage{tikz}\n"
-           "\\usepackage{bussproofs}\\usepackage{mathpartir}\n"
+           "\\usepackage{bussproofs}\\usepackage{mathpartir}\\usepackage{xspace}\n"
            + libs + "\n" + defs + "\n" + "\n".join(mac) + "\n")
     os.makedirs(FIGDIR, exist_ok=True)
-    work = "/home/claude/tikzwork"
+    work = WORK
     os.makedirs(work, exist_ok=True)
     found = []
     for dirp in ["ThePledge", "TheTurn", "ThePrestige", "Interludes"]:
@@ -921,8 +932,11 @@ def render_tikz():
         outsvg = os.path.join(FIGDIR, h + ".svg")
         if os.path.exists(outsvg):
             B.tikz[h] = h + ".svg"; ok += 1; continue
+        body = expand_text_macros(chunk)
+        body = re.sub(r"\\ref\{([^}]*)\}",
+                      lambda m: refs.get(m.group(1).strip(), "??"), body)
         doc = ("\\documentclass[border=6pt]{standalone}\n" + pre +
-               "\n\\begin{document}\n" + chunk + "\n\\end{document}\n")
+               "\n\\begin{document}\n" + body + "\n\\end{document}\n")
         p = os.path.join(work, h + ".tex")
         open(p, "w").write(doc)
         r = subprocess.run(["pdflatex", "-interaction=nonstopmode", "-halt-on-error",
