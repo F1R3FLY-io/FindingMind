@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interventions at the Cut · Finding Mind</title>
+<link rel="canonical" href="https://findingmind.io/read/15-interventions-at-the-cut.html">
+<meta name="description" content="Interventions at the Cut">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../book.css">
+<link rel="stylesheet" href="../katex/katex.min.css">
+<script defer src="../katex/katex.min.js"></script>
+<script defer src="../katex/auto-render.min.js"></script>
+<script defer src="../macros.js"></script>
+<script defer src="../reader.js"></script>
+</head>
+<body class="readpage">
+
+<a class="skip" href="#main">Skip to text</a>
+<div class="reader">
+<nav class="rail" aria-label="Contents"><div class="rail-in"><a class="rail-home" href="../index.html">Finding Mind</a><a class="rail-util" href="ledger.html">The ledger</a><a class="rail-util" href="contact.html">Comments</a><h2 class="rail-act">The Pledge</h2><a class="rail-ch" href="permitted-say.html"><span class="rn rn-i">⁂</span><span class="rt">The Permitted Say</span></a><a class="rail-ch" href="01-prolegomena-to-finding-mind.html"><span class="rn">1</span><span class="rt">Prolegomena to Finding Mind</span></a><a class="rail-ch" href="02-the-ordinary-world.html"><span class="rn">2</span><span class="rt">The Ordinary World</span></a><a class="rail-ch" href="03-information-causation-and-the-blind-spot.html"><span class="rn">3</span><span class="rt">Information, Causation, and the Blind Spot</span></a><a class="rail-ch" href="04-finding-the-shape.html"><span class="rn">4</span><span class="rt">Finding the Shape</span></a><a class="rail-ch" href="05-inside-and-outside-and-what-it-means-to-assume.html"><span class="rn">5</span><span class="rt">Inside and Outside, and What it Means to Assume the Virtue</span></a><a class="rail-ch" href="06-four-stories-and-the-one-i-was-already-telling.html"><span class="rn">6</span><span class="rt">Four Stories, and the One i Was Already Telling</span></a><a class="rail-ch" href="how-to-read-this-book.html"><span class="rn rn-i">⁂</span><span class="rt">How to Read This Book</span></a><a class="rail-ch" href="related-work-and-where-this-differs.html"><span class="rn rn-i">⁂</span><span class="rt">Related Work, and Where This Differs</span></a><h2 class="rail-act">The Turn</h2><a class="rail-ch" href="foam-born.html"><span class="rn rn-i">⁂</span><span class="rt">The Foam-Born</span></a><h3 class="rail-part">The Machinery: From GSLTs to Cost-Accounted Theories</h3><a class="rail-ch" href="07-what-a-language-presentation-is-and-why-it-com.html"><span class="rn">7</span><span class="rt">What a Language Presentation Is, and Why It Comes First</span></a><a class="rail-ch" href="08-graph-structured-lambda-theories.html"><span class="rn">8</span><span class="rt">Graph-Structured Lambda Theories</span></a><a class="rail-ch" href="09-interactive-gslts-and-the-site-of-interaction.html"><span class="rn">9</span><span class="rt">Interactive GSLTs, and the Site of Interaction</span></a><a class="rail-ch" href="10-continued-interactive-gslts.html"><span class="rn">10</span><span class="rt">Continued Interactive GSLTs</span></a><a class="rail-ch" href="11-the-category-of-gslts.html"><span class="rn">11</span><span class="rt">The Category of GSLTs</span></a><a class="rail-ch" href="12-the-cost-monad.html"><span class="rn">12</span><span class="rt">The Cost Monad</span></a><a class="rail-ch" href="13-the-history-monad.html"><span class="rn">13</span><span class="rt">The History Monad</span></a><a class="rail-ch" href="14-grading-from-weight-maps-to-the-where-clause.html"><span class="rn">14</span><span class="rt">Grading: From Weight Maps to the Where-Clause</span></a><a class="rail-ch" aria-current="page" href="15-interventions-at-the-cut.html"><span class="rn">15</span><span class="rt">Interventions at the Cut</span></a><a class="rail-ch" href="16-cost-accounted-rho.html"><span class="rn">16</span><span class="rt">Cost-Accounted Rho</span></a><a class="rail-ch" href="17-conversion-enzymes-and-the-virtual-token.html"><span class="rn">17</span><span class="rt">Conversion, Enzymes, and the Virtual Token</span></a><a class="rail-ch" href="18-the-labeled-transition-system-and-context-deco.html"><span class="rn">18</span><span class="rt">The Labeled Transition System and Context-Decorated HML</span></a><a class="rail-ch" href="19-what-goes-into-a-logic.html"><span class="rn">19</span><span class="rt">What Goes Into a Logic</span></a><a class="rail-ch" href="20-scopes-and-the-fixed-points-that-generate-them.html"><span class="rn">20</span><span class="rt">Scopes, and the Fixed Points that Generate Them</span></a><a class="rail-ch" href="21-generating-type-systems-oslf-and-the-hypercube.html"><span class="rn">21</span><span class="rt">Generating Type Systems: OSLF and the Hypercube</span></a><a class="rail-ch" href="22-instruments-making-structure-visible-to-bisimu.html"><span class="rn">22</span><span class="rt">Instruments: Making Structure Visible to Bisimulation</span></a><h3 class="rail-part">Realization: From the Calculus to the Machine</h3><a class="rail-ch" href="23-the-store-is-the-denotation.html"><span class="rn">23</span><span class="rt">The Store Is the Denotation</span></a><a class="rail-ch" href="24-names-without-names-combinators-and-the-matrix.html"><span class="rn">24</span><span class="rt">Names Without Names: Combinators and the Matrix Machine</span></a><a class="rail-ch" href="25-what-the-machine-prices.html"><span class="rn">25</span><span class="rt">What the Machine Prices</span></a><h3 class="rail-part">Ecology as Cognitive Architecture</h3><a class="rail-ch" href="26-the-mortal-scientist.html"><span class="rn">26</span><span class="rt">The Mortal Scientist</span></a><a class="rail-ch" href="27-learning-to-play.html"><span class="rn">27</span><span class="rt">Learning to Play</span></a><a class="rail-ch" href="28-composing-learners.html"><span class="rn">28</span><span class="rt">Composing Learners</span></a><a class="rail-ch" href="29-enzymes-and-individuals.html"><span class="rn">29</span><span class="rt">Enzymes and Individuals</span></a><a class="rail-ch" href="30-a-network-that-learns-by-rewriting.html"><span class="rn">30</span><span class="rt">A Network That Learns by Rewriting</span></a><a class="rail-ch" href="31-tubular-agents.html"><span class="rn">31</span><span class="rt">Tubular Agents</span></a><h3 class="rail-part">Suffering: Homeostasis and the Learner&#x27;s Own Account</h3><a class="rail-ch" href="32-suffering-a-learner-s-view-of-its-own-account.html"><span class="rn">32</span><span class="rt">Suffering: A Learner’s View of Its Own Account</span></a><h3 class="rail-part">Situating the Learner: A Variety of Possible Physics</h3><a class="rail-ch" href="33-the-learner-s-world-already-has-a-physics.html"><span class="rn">33</span><span class="rt">The Learner’s World Already Has a Physics</span></a><a class="rail-ch" href="34-the-reversibility-construction.html"><span class="rn">34</span><span class="rt">The Reversibility Construction</span></a><a class="rail-ch" href="35-causal-structure-and-time.html"><span class="rn">35</span><span class="rt">Causal Structure and Time</span></a><a class="rail-ch" href="36-decoration-one-map-many-semirings.html"><span class="rn">36</span><span class="rt">Decoration: One Map, Many Semirings</span></a><a class="rail-ch" href="37-conservation-and-what-it-costs-to-have-it.html"><span class="rn">37</span><span class="rt">Conservation, and What It Costs to Have It</span></a><a class="rail-ch" href="38-extended-modal-operators.html"><span class="rn">38</span><span class="rt">Extended Modal Operators</span></a><a class="rail-ch" href="39-complex-amplitudes-and-where-the-coherence-is.html"><span class="rn">39</span><span class="rt">Complex Amplitudes, and Where the Coherence Is</span></a><a class="rail-ch" href="40-synthesis-the-full-structure.html"><span class="rn">40</span><span class="rt">Synthesis: The Full Structure</span></a><a class="rail-ch" href="41-entropy-and-the-cost-of-staying-level.html"><span class="rn">41</span><span class="rt">Entropy, and the Cost of Staying Level</span></a><a class="rail-ch" href="42-discussion-and-future-directions.html"><span class="rn">42</span><span class="rt">Discussion and Future Directions</span></a><h3 class="rail-part">Why Scientists Get Misled: Emergent Ontology in Massive Agent Populations</h3><a class="rail-ch" href="43-introduction.html"><span class="rn">43</span><span class="rt">Introduction</span></a><a class="rail-ch" href="44-ontological-isolation.html"><span class="rn">44</span><span class="rt">Ontological Isolation</span></a><a class="rail-ch" href="45-agents-and-the-scientific-method.html"><span class="rn">45</span><span class="rt">Agents and the Scientific Method</span></a><a class="rail-ch" href="46-behavioral-primes.html"><span class="rn">46</span><span class="rt">Behavioral Primes</span></a><a class="rail-ch" href="47-massive-populations-and-communication-degradat.html"><span class="rn">47</span><span class="rt">Massive Populations and Communication Degradation</span></a><a class="rail-ch" href="48-the-logical-topology-and-compactness.html"><span class="rn">48</span><span class="rt">The Logical Topology and Compactness</span></a><a class="rail-ch" href="49-coherence-clusters-and-their-nerve.html"><span class="rn">49</span><span class="rt">Coherence Clusters and Their Nerve</span></a><a class="rail-ch" href="50-the-apparent-ontology.html"><span class="rn">50</span><span class="rt">The Apparent Ontology</span></a><a class="rail-ch" href="51-open-gaps-and-future-work.html"><span class="rn">51</span><span class="rt">Open Gaps and Future Work</span></a><a class="rail-ch" href="52-discussion.html"><span class="rn">52</span><span class="rt">Discussion</span></a><h3 class="rail-part">Origins of Life: Assembly Theory, Phase Transitions, and Replication</h3><a class="rail-ch" href="53-introduction.html"><span class="rn">53</span><span class="rt">Introduction</span></a><a class="rail-ch" href="54-assembly-theory-causal-depth-and-copy-number.html"><span class="rn">54</span><span class="rt">Assembly Theory: Causal Depth and Copy Number</span></a><a class="rail-ch" href="55-replication-as-a-fixed-point.html"><span class="rn">55</span><span class="rt">Replication as a Fixed Point</span></a><a class="rail-ch" href="56-smith-s-phase-transition-and-the-density-of-at.html"><span class="rn">56</span><span class="rt">Smith’s Phase Transition and the Density of Attractors</span></a><a class="rail-ch" href="57-metabolism-energy-gradients-and-the-ecosystem.html"><span class="rn">57</span><span class="rt">Metabolism, Energy Gradients, and the Ecosystem</span></a><a class="rail-ch" href="58-assembly-index-and-the-depth-of-the-fractal-le.html"><span class="rn">58</span><span class="rt">Assembly Index and the Depth of the Fractal Learner</span></a><a class="rail-ch" href="59-scope-and-manufacture.html"><span class="rn">59</span><span class="rt">Scope and Manufacture</span></a><a class="rail-ch" href="60-open-gaps.html"><span class="rn">60</span><span class="rt">Open Gaps</span></a><a class="rail-ch" href="61-discussion.html"><span class="rn">61</span><span class="rt">Discussion</span></a><h3 class="rail-part">Conclusion</h3><a class="rail-ch" href="what-has-been-built.html"><span class="rn rn-i">⁂</span><span class="rt">What Has Been Built</span></a><a class="rail-ch" href="a-view-from-inside-the-framework.html"><span class="rn rn-i">⁂</span><span class="rt">A View from Inside the Framework</span></a><a class="rail-ch" href="what-remains-to-be-done.html"><span class="rn rn-i">⁂</span><span class="rt">What Remains to Be Done</span></a><h2 class="rail-act">The Prestige</h2><a class="rail-ch" href="begotten.html"><span class="rn rn-i">⁂</span><span class="rt">begotten not made</span></a><h3 class="rail-part">The Method, and What It Left Out</h3><a class="rail-ch" href="62-how-the-trick-was-done.html"><span class="rn">62</span><span class="rt">How the Trick Was Done</span></a><a class="rail-ch" href="63-everything-so-far-was-turing-complete.html"><span class="rn">63</span><span class="rt">Everything So Far Was Turing Complete</span></a><a class="rail-ch" href="64-the-tower-of-oracle-extensions.html"><span class="rn">64</span><span class="rt">The Tower of Oracle Extensions</span></a><a class="rail-ch" href="65-not-every-cut-is-an-aperture.html"><span class="rn">65</span><span class="rt">Not Every Cut Is an Aperture</span></a><a class="rail-ch" href="66-where-does-agency-live.html"><span class="rn">66</span><span class="rt">Where Does Agency Live?</span></a><a class="rail-ch" href="67-choice-principles-are-the-types-schedulers-are.html"><span class="rn">67</span><span class="rt">Choice Principles are the Types; Schedulers are the Terms</span></a><a class="rail-ch" href="68-consciousness-and-the-world-it-comes-with.html"><span class="rn">68</span><span class="rt">Consciousness, and the World It Comes With</span></a><a class="rail-ch" href="69-what-these-chapters-owe.html"><span class="rn">69</span><span class="rt">What These Chapters Owe</span></a><h3 class="rail-part">Reference, Simulation, Reception, and a Future Metaphysics</h3><a class="rail-ch" href="70-what-a-symbol-system-would-have-to-be.html"><span class="rn">70</span><span class="rt">What a Symbol System Would Have to Be</span></a><a class="rail-ch" href="71-on-lying-as-the-origin-of-meaning.html"><span class="rn">71</span><span class="rt">On Lying as the Origin of Meaning</span></a><a class="rail-ch" href="72-four-pressures-one-ledger.html"><span class="rn">72</span><span class="rt">Four Pressures, One Ledger</span></a><a class="rail-ch" href="73-if-this-is-a-simulation-which-kind.html"><span class="rn">73</span><span class="rt">If This Is a Simulation, Which Kind</span></a><a class="rail-ch" href="74-what-it-is-like-to-be-a-bot.html"><span class="rn">74</span><span class="rt">What It Is Like to Be a Bot</span></a><a class="rail-ch" href="75-how-life-like-is-life-like-enough.html"><span class="rn">75</span><span class="rt">How Life-Like Is Life-Like Enough?</span></a><a class="rail-ch" href="76-inhabiting-choice.html"><span class="rn">76</span><span class="rt">Inhabiting Choice</span></a><a class="rail-ch" href="77-any-future-metaphysics.html"><span class="rn">77</span><span class="rt">Any Future Metaphysics</span></a><a class="rail-ch" href="right-sizing.html"><span class="rn rn-i">⁂</span><span class="rt">Right-Sizing</span></a></div></nav>
+<main id="main" class="text ">
+<header class="chead"><p class="kicker">Chapter 15</p><h1>Interventions at the Cut</h1></header>
+<h2 id="sec-15-1"><span class="secnum">15.1</span> What is being built, and why here</h2>
+<p>A program in rho with graded where-clauses over \(\Rnn\) already carries a causal model. The
+likelihood of a causal history is a product over firing sites of a locally normalized factor
+(Theorem <a class="xref" href="26-the-mortal-scientist.html#theorem-26-1" data-ref="sci:thm:score">26.1</a> will take its derivative); each site’s factor is its clause; each
+site’s parents are the data its pattern and clause read; and the resolver that settles its race
+is the exogenous noise. This chapter makes the model explicit and adds the one thing Pearl’s
+calculus of causation has that the clause language lacked: an operator that <em>intervenes</em>.
+It follows the working note in which the construction was first set out [<a class="cite" href="bibliography.html#bib-Interventions" data-cite="Interventions">287</a>].</p>
+<p>The operator is a scoped decoration on parallel composition,
+<span class="math-d">\[\dok(\,y_1 \models \varphi_1 \ \&\ \cdots\ \&\ y_n \models \varphi_n\,)\ \ink\ P ,\]</span>
+read as: whenever a race for the binding of \(y_i\) arises inside \(P\), resolve it among the
+candidates satisfying \(\varphi_i\), with the site’s own weights restricted to that set. It is placed
+at the cut because an aperture is a property of the cut and of neither agent flanking it
+(Remark <a class="xref" href="14-grading-from-weight-maps-to-the-where-clause.html#remark-14-7" data-ref="gw:rmk:noncompositional">14.7</a>), and because whether a particular cut will ever occur is
+undecidable even in the sequential fragment, so an intervention cannot be a surgery on a known node
+and must be a policy conditional on an event. The construct lowers into the where-clause by the
+normal-form theorem (Theorem <a class="xref" href="14-grading-from-weight-maps-to-the-where-clause.html#theorem-14-4" data-ref="gw:thm:dnf">14.4</a>), so it is a conservative extension, and it sits
+beside the cost membrane of Chapter <a class="xref" href="16-cost-accounted-rho.html#top" data-ref="ch:carho">16</a> as a second index on a polymorphic cut.</p>
+<p>With it, Pearl’s causal Bayesian networks over finite domains embed exactly: a variable is a join on
+its parents’ channels together with an ancilla race over its domain, the conditional probability
+table is the clause in disjunctive normal form, and the truncated factorization is the likelihood
+of a causal history. Intervening on the ancilla binding deletes the incoming edges on the nose, the
+three rules of the do-calculus are theorems about the embedded fragment rather than axioms, and
+counterfactuals are replay from a recorded pre-state under the intervention.</p>
+<p>The chapter sits here, directly after Chapter <a class="xref" href="14-grading-from-weight-maps-to-the-where-clause.html#top" data-ref="ch:grading">14</a>, because it is the first thing one
+builds with a graded clause that one could not have built with a weight map, and because two parts
+of the book downstream need it: the mortal scientist of Chapter <a class="xref" href="26-the-mortal-scientist.html#top" data-ref="ch:sci">26</a>, whose hypotheses become
+rung-two objects once they can be placed under a \(\dok\) (§<a class="xref" href="15-interventions-at-the-cut.html#sec-15-8" data-ref="do:sec:scientist">15.8</a>), and the
+Prestige’s argument that a proof system or a learner that cannot inhabit a race cannot do what
+evolved intelligence does — for which this construct is the constructive content. Pearl himself
+has not appeared in this book before now, so the ladder is introduced before it is climbed.</p>
+<h2 id="sec-15-2"><span class="secnum">15.2</span> Three rungs</h2>
+<p>Pearl’s ladder of causation [<a class="cite" href="bibliography.html#bib-Pearl09" data-cite="Pearl09">282</a>] has three rungs, and a learner’s power is where it
+stands on it. <em>Association</em>: what one can learn from a record of what happened —
+\(\Pr(y \mid x)\), the distribution of completed runs. <em>Intervention</em>: what one can learn by
+acting — \(\Pr(y \mid \dok(x))\), the distribution when \(X\) is <em>set</em> to \(x\) rather than
+observed to be \(x\). <em>Counterfactual</em>: what would have happened in the run that actually
+occurred, had \(X\) been otherwise — \(Y_x(u)\), with \(u\) the particular draw of everything the
+model does not explain. Each rung is strictly stronger than the one below, in the sense that
+there are pairs of models agreeing at one rung and disagreeing at the next.</p>
+<section class="thm plain thm-definition" id="definition-15-1" data-kind="Definition" data-num="15.1"><header><span class="thm-kind">Definition 15.1</span> <span class="thm-name">Causal Bayesian network</span><a class="permalink" href="#definition-15-1" aria-label="Link to Definition 15.1">¶</a></header><p>
+A <em>causal Bayesian network</em> \(M = (G,\{P_i\})\) over variables \(V_1,\dots,V_n\) with finite
+domains \(D_1,\dots,D_n\) consists of a DAG \(G\) on the \(V_i\) and, for each \(i\), a conditional
+probability table \(P_i(v \mid \mathit{pa})\) for \(v \in D_i\) and
+\(\mathit{pa} \in \prod_{j\in\mathrm{PA}_i} D_j\). It induces
+\(\Pr_M(v_1,\dots,v_n) = \prod_i P_i(v_i \mid \mathit{pa}_i)\). \(M\) is <em>positive</em> when every
+table entry is strictly positive. For \(X \subseteq V\) and an assignment \(x\), the <em>submodel</em>
+\(M_x\) replaces \(P_i\) by the point mass at \(x_i\) for each \(V_i \in X\) and deletes the incoming
+edges of \(X\), and \(\Pr_M(y \mid \dok(x)) := \Pr_{M_x}(y)\).</p></section>
+<p>A structural causal model refines this by writing each \(V_i = f_i(\mathrm{PA}_i, U_i)\) with
+\(U_i\) independent exogenous variables; a CBN is a structural model with the \(U_i\) marginalized,
+and §<a class="xref" href="15-interventions-at-the-cut.html#sec-15-5-3" data-ref="do:sec:cf">15.5.3</a> recovers the \(U_i\) as the record of the resolver’s draws.</p>
+<p>The reader who has followed the book this far will notice that the ladder is a statement about
+<em>time</em>. Association is what a trace shows; a trace is linear time. Intervention is what an
+experimenter who supplies contexts can learn; that is branching time, and context-labeled
+bisimulation is its equivalence. Counterfactual is replay with the record held. The alignment is
+made exact below, and it is the reason this chapter is in the Machinery part and not in a chapter
+on statistics.</p>
+<h2 id="sec-15-3"><span class="secnum">15.3</span> Interventions have one carrier</h2>
+<p>Before adding syntax it is worth settling what an intervention can touch, since the answer
+constrains the syntax.</p>
+<section class="thm plain thm-definition" id="definition-15-2" data-kind="Definition" data-num="15.2"><header><span class="thm-kind">Definition 15.2</span> <span class="thm-name">Intervention, semantically</span><a class="permalink" href="#definition-15-2" aria-label="Link to Definition 15.2">¶</a></header><p>
+An <em>intervention</em> at a receipt site \(r\) of \(P\) is a replacement of the map
+\(\Cand(P,r) \to \Semi\) denoted by \(\psi_r\) with another such map. It is <em>hard</em> when the
+replacement is the indicator of a single candidate, <em>set-valued</em> when it is the indicator of
+a subset, and <em>soft</em> otherwise.</p></section>
+<section class="thm plain thm-proposition" id="proposition-15-1" data-kind="Proposition" data-num="15.1"><header><span class="thm-kind">Proposition 15.1</span> <span class="thm-name">Deterministic communication is intervention-transparent</span><a class="permalink" href="#proposition-15-1" aria-label="Link to Proposition 15.1">¶</a></header><p>
+At a site with exactly one candidate, every intervention is either the identity on the normalized
+dynamics or disables the site. In particular no intervention at such a site changes which outcome
+is reached when the site fires.</p></section>
+<section class="proof"><header>Proof</header><p>The fibre is a singleton; a map on a singleton is determined by whether its value is zero.
+Normalization within the contention component sends any nonzero value to \(1\).</p></section>
+<p>To intervene at a deterministic site one must change the fibre — inject a datum or delete one —
+and the moment a datum is injected the site has two candidates and is a race. The carrier of
+intervention is therefore the candidate set at a receipt, and a nontrivial intervention exists
+exactly where that set has, or is given, more than one element.</p>
+<section class="thm plain thm-proposition" id="proposition-15-2" data-kind="Proposition" data-num="15.2"><header><span class="thm-kind">Proposition 15.2</span> <span class="thm-name">No hard intervention by context over \(\Rnn\)</span><a class="permalink" href="#proposition-15-2" aria-label="Link to Proposition 15.2">¶</a></header><p>
+Let \(r\) be a race in \(P\). No rho context \(C[-]\) makes \(C[P]\) resolve \(r\) to a chosen candidate
+with probability \(1\) under the normalized \(\Rnn\) semantics, unless \(C\) consumes every competing
+candidate before \(r\) can fire — which is itself a race \(C\) wins with probability strictly less
+than \(1\).</p></section>
+<section class="proof"><header>Proof</header><p>This is Principle <a class="xref" href="14-grading-from-weight-maps-to-the-where-clause.html#principle-14-1" data-ref="gw:prin:aperture">14.1</a> read in the forcing direction. A context can add
+contention and consume contenders, and consuming a contender is a candidate at a site in
+contention with \(r\). Over \(\Rnn\) every candidate of positive weight has positive probability
+(Corollary <a class="xref" href="14-grading-from-weight-maps-to-the-where-clause.html#corollary-14-1" data-ref="gw:cor:adequacy">14.1</a> with positive constants), so \(r\) fires first with positive
+probability.</p></section>
+<p>So over \(\Rnn\) a hard intervention requires access to the <em>clause</em>: one must be able to
+write at the site, not merely around it. This is the observation/intervention gap in its
+sharpest form — what a context can do is observe and perturb; what an owner of the code can do
+is set — and it is why the construct below is a decoration the programmer writes rather than a
+context one composes. One qualification: the clause controls which candidate fires and not when.
+An intervention on timing is outside the clause, and outside this chapter, unless time is reified
+as data — at which point it is a race again.</p>
+<section class="thm plain thm-principle" id="principle-15-1" data-kind="Principle" data-num="15.1"><header><span class="thm-kind">Principle 15.1</span> <span class="thm-name">Interventions are metered because they are races</span><a class="permalink" href="#principle-15-1" aria-label="Link to Principle 15.1">¶</a></header><p>
+A race is a COMM and a COMM is charged. Reading the trace is free; intervening costs. This is not a
+policy choice: intervention has no carrier other than the event the ledger already prices.</p></section>
+<h2 id="sec-15-4"><span class="secnum">15.4</span> The construct: a decorated cut</h2>
+<p>There is always a node in the syntax tree above a race, and it is a parallel composition: a race
+needs a receiver and at least two things it could meet. The cost membrane of
+Chapter <a class="xref" href="16-cost-accounted-rho.html#top" data-ref="ch:carho">16</a> already made the cut polymorphic, indexing it by seals; an intervention is a
+second index on the same operator. And it cannot be anything more specific than a scoped
+decoration, for a halting reason: whether a particular cut will ever occur is undecidable, already
+in the sequential fragment, since “this receipt fires” is a nontrivial reachability property. So
+an intervention cannot be a surgery on a node known in advance. It is a <em>policy conditional on
+an event</em> — if a race for this binding arises, resolve it thus — vacuous if the race never
+arises. Pearl’s nearest object is a dynamic treatment regime rather than an atomic \(\dok\).</p>
+<section class="thm plain thm-definition" id="definition-15-3" data-kind="Definition" data-num="15.3"><header><span class="thm-kind">Definition 15.3</span> <span class="thm-name">The \(\dok\) membrane</span><a class="permalink" href="#definition-15-3" aria-label="Link to Definition 15.3">¶</a></header><p>
+Extend the syntax of Chapter <a class="xref" href="14-grading-from-weight-maps-to-the-where-clause.html#top" data-ref="ch:grading">14</a> with
+<span class="math-d">\[P ::= \cdots \;\mid\; \dok(\,C\,)\ \ink\ P, \qquad
+  C ::= y \models \varphi \;\mid\; y \models \psi \;\mid\; C \,\&\, C ,\]</span>
+where \(y\) is a pattern variable, \(\varphi\) a crisp formula and \(\psi\) a graded formula, each with
+\(y\) among its free names. Write \(\dok(y = Q)\) for \(\dok(y \models \crisp{y = @Q})\) and
+\(\dok(y \in S)\) for the disjunction over a finite set \(S\).</p></section>
+<p><pre class="code"><code>do( y = Q2 ) in { x!( Q1 ) | for( y &lt;- x )P | x!( Q2 ) }
+
+do( y1 |= phi1 &amp; y2 |= phi2 ) in { P1 | P2 | P3 }</code></pre></p>
+<section class="thm plain thm-definition" id="definition-15-4" data-kind="Definition" data-num="15.4"><header><span class="thm-kind">Definition 15.4</span> <span class="thm-name">Membrane semantics</span><a class="permalink" href="#definition-15-4" aria-label="Link to Definition 15.4">¶</a></header><p>
+Let \(r\) be a receipt occurrence inside the scope of \(\dok(C)\ \ink\ P\) binding a variable \(y\)
+constrained in \(C\) by \(\varphi\) (resp.  \(\psi\)). At \(r\) the clause is read as
+\(\psi_r \tensorv \crisp{\varphi}\) (resp.  \(\psi_r \tensorv \psi\)), with the constraint evaluated
+under the candidate’s substitution, and normalization within the contention component is taken
+<em>after</em> the restriction. Reduction is \(\dok(C)\ \ink\ P \longrightarrow_w \dok(C)\ \ink\ P'\)
+whenever \(P \longrightarrow_w P'\) under clauses so read. A receipt in scope binding an unconstrained
+variable is unaffected; a receipt arriving in scope by reflection is constrained like any other.</p></section>
+<section class="thm plain thm-definition" id="definition-15-5" data-kind="Definition" data-num="15.5"><header><span class="thm-kind">Definition 15.5</span> <span class="thm-name">Lowering</span><a class="permalink" href="#definition-15-5" aria-label="Link to Definition 15.5">¶</a></header><p>
+On a scope \(P\) in which every receipt binding a constrained variable is syntactically present and
+its channel is a literal or new-bound name, let \(\lfloor \dok(C)\ \ink\ P \rfloor\) be \(P\)
+with each such receipt’s clause replaced by \(\psi_r \tensorv \crisp{\varphi}\) (resp. 
+\(\psi_r \tensorv \psi\)) and the \(\dok\) erased.</p></section>
+<section class="thm plain thm-proposition" id="proposition-15-3" data-kind="Proposition" data-num="15.3"><header><span class="thm-kind">Proposition 15.3</span> <span class="thm-name">Lowering is exact on flat scopes</span><a class="permalink" href="#proposition-15-3" aria-label="Link to Proposition 15.3">¶</a></header><p>
+If \(P\) contains no drop \(*z\) at a position that can come to contain a receipt, then
+\(\dok(C)\ \ink\ P\) and \(\lfloor \dok(C)\ \ink\ P \rfloor\) have the same weighted transition system,
+hence the same graded denotation and the same likelihood on every causal history.</p></section>
+<section class="proof"><header>Proof</header><p>Under the hypothesis every receipt that will ever be in scope is present in \(P\) up to substitution
+of names for pattern variables, which does not create or destroy binders. The membrane reads each
+such clause exactly as the lowering rewrites it, and the contention relation is unchanged because
+restriction removes candidates without adding any.</p></section>
+<p>The gap between the two semantics is exactly the dynamic scope that reflection introduces: received
+code is the one route by which an unlisted binder — and, in the causal reading, an unlisted
+parent — enters. We take the membrane as the definition and the lowering as the optimization.</p>
+<section class="thm remarkish thm-observation" id="observation-15-1" data-kind="Observation" data-num="15.1"><header><span class="thm-kind">Observation 15.1</span> <span class="thm-name">Restrict, not override</span><a class="permalink" href="#observation-15-1" aria-label="Link to Observation 15.1">¶</a></header><p>
+The membrane <em>multiplies</em> the clause by the constraint; it does not replace it. For
+\(\fork(y \leftarrow x \;\where\; \crisp{*y > 5})P\) under \(\dok(y = 3)\), the restricted clause is
+\(0\) on every candidate and the site waits; an override would force a \(3\). Pearl’s atomic \(\dok\)
+severs the mechanism and so is an override in spirit — but §<a class="xref" href="15-interventions-at-the-cut.html#sec-15-5" data-ref="do:sec:pearl">15.5</a> shows that on the
+embedded models the two coincide, because the embedding puts the mechanism in the <em>weights</em>
+and the restriction is on an ancilla whose own gate is \(\top\).</p></section>
+<section class="thm plain thm-proposition" id="proposition-15-4" data-kind="Proposition" data-num="15.4"><header><span class="thm-kind">Proposition 15.4</span> <span class="thm-name">A compressed \(\dok\) is a weight map; composition</span><a class="permalink" href="#proposition-15-4" aria-label="Link to Proposition 15.4">¶</a></header><p>
+A constraint \(y \models \bigoplus_i v_i \tensorv \crisp{\chi_i}\) with the \(\chi_i\) pairwise
+exclusive denotes a weight map on the fibre at \(y\)’s site, and every weight map on that fibre is
+so denoted (Theorem <a class="xref" href="14-grading-from-weight-maps-to-the-where-clause.html#theorem-14-4" data-ref="gw:thm:dnf">14.4</a> applied to the constraint). Moreover
+\(\dok(C_1)\ \ink\ \dok(C_2)\ \ink\ P\) and \(\dok(C_1 \,\&\, C_2)\ \ink\ P\) have the same weighted
+transition system, \(\&\) is commutative and associative, and \(\dok(y \models \top)\ \ink\ P\) has the
+transition system of \(P\).</p></section>
+<p>So several interventions compress into one expression for the reason weight maps have a normal
+form: a formula has one value. The \(\dok\) is a scoped weight map placed at the cut, and the
+normal-form theorem is what makes it a conservative extension. It is also, in the vocabulary
+Chapter <a class="xref" href="26-the-mortal-scientist.html#top" data-ref="ch:sci">26</a>  will use, the operator that takes a <em>specification</em> — the \(\nu\)-property “every
+binding of \(y\) satisfies \(\varphi\)”, which one would check — and installs it in <em>guard</em>
+position at every site in scope, including sites not yet visible.</p>
+<h2 id="sec-15-5"><span class="secnum">15.5</span> The embedding of Pearl’s calculus</h2>
+<h3 id="sec-15-5-1"><span class="secnum">15.5.1</span> The variable gadget</h3>
+<p>For a variable \(V_i\) with children \(V_{j_1},\dots,V_{j_k}\), allocate fresh channels
+\(v_i^{(j_1)},\dots,v_i^{(j_k)}\), one per child, and a readout channel \(v_i^{\circ}\); emitting
+\(V_i\)’s value \(d\) is \(v_i^{(j_1)}!(d) \mid \cdots \mid v_i^{(j_k)}!(d) \mid v_i^{\circ}!(d)\).</p>
+<section class="thm plain thm-definition" id="definition-15-6" data-kind="Definition" data-num="15.6"><header><span class="thm-kind">Definition 15.6</span> <span class="thm-name">The gadget</span><a class="permalink" href="#definition-15-6" aria-label="Link to Definition 15.6">¶</a></header><p>
+For each \(V_i\) with parents \(V_{p_1},\dots,V_{p_m}\) and domain \(D_i = \{d_1,\dots,d_s\}\),
+allocate a fresh ancilla channel \(w_i\) and write
+<pre class="code"><code>new wi in {
+    wi!(d1) | ... | wi!(ds)
+  | for( p1 &lt;- vp1_i &amp; ... &amp; pm &lt;- vpm_i
+       &amp; u1 &lt;- wi &amp; ... &amp; us &lt;- wi
+         where  [ *p1 = pa1 and ... and *pm = pam and *u1 = v ] * P_i(v | pa)
+              + ...   // one summand per (pa, v) in the table
+       )
+    { emit_i( *u1 ) }
+}</code></pre>
+where <code>vpj_i</code> is the copy of parent \(j\) allocated to this gadget, the crisp bracket is the
+indicator embedding, and the sum has one summand per \((\mathit{pa}, v)\). The <em>model term</em>
+\(\sem{M}\) is the parallel composition of the gadgets under one new binding all the
+channels.</p></section>
+<p>The join consumes all \(s\) ancilla messages, so there is no residual on \(w_i\) and no which-path
+record; the candidates are the \(s!\) bijections from \(u_1,\dots,u_s\) to \(D_i\), and the continuation
+mentions only \(u_1\), so the \(s!\) candidates fall into \(s\) outcome classes of \((s-1)!\) each. The
+clause is constant on each class. Under normalization within the contention component the
+\((s-1)!\) multiplicity cancels, and the probability that the gadget emits \(v\) given parent data
+\(\mathit{pa}\) is \(P_i(v \mid \mathit{pa})\).</p>
+<section class="thm plain thm-lemma" id="lemma-15-1" data-kind="Lemma" data-num="15.1"><header><span class="thm-kind">Lemma 15.1</span> <span class="thm-name">Staging</span><a class="permalink" href="#lemma-15-1" aria-label="Link to Lemma 15.1">¶</a></header><p>
+In \(\sem{M}\) every receipt is its own contention component, each gadget fires exactly once, and the
+causal order of every history is a linear extension of \(G\).</p></section>
+<section class="proof"><header>Proof</header><p>Every channel has exactly one receiver, fan-out giving each child its own copy, and every ancilla
+channel is private to its gadget, so no two receipts share a message or a receipt. A gadget is
+enabled exactly when all its parent copies have been emitted.</p></section>
+<section class="thm plain thm-theorem" id="theorem-15-1" data-kind="Theorem" data-num="15.1"><header><span class="thm-kind">Theorem 15.1</span> <span class="thm-name">Adequacy of the embedding</span><a class="permalink" href="#theorem-15-1" aria-label="Link to Theorem 15.1">¶</a></header><p>
+Causal histories of \(\sem{M}\) reaching a normal form are in bijection with assignments
+\((v_1,\dots,v_n) \in \prod_i D_i\), read off the readout channels, and the likelihood of the
+history for \((v_1,\dots,v_n)\) is \(\Pr_M(v_1,\dots,v_n)\).</p></section>
+<section class="proof"><header>Proof</header><p>By Lemma <a class="xref" href="15-interventions-at-the-cut.html#lemma-15-1" data-ref="do:lem:staging">15.1</a> a history is determined, up to the interleaving the causal quotient
+removes, by the outcome class chosen at each gadget, i.e.  by the vector of values; conversely
+every vector is realized since every ancilla value is present. The factor contributed by gadget \(i\)
+is its restricted-and-normalized clause value, \(P_i(v_i \mid \mathit{pa}_i)\), and the likelihood
+multiplies the factors.</p></section>
+<p>The truncated-factorization <em>form</em> is not imposed on the semantics; it <em>is</em> the
+semantics. The staging that makes each gadget its own contention component is the condition under
+which local probabilistic choice composes to a global measure at all [<a class="cite" href="bibliography.html#bib-VaraccaVolzerWinskel" data-cite="VaraccaVolzerWinskel">285</a>].</p>
+<section class="thm remarkish thm-remark" id="remark-15-1" data-kind="Remark" data-num="15.1"><header><span class="thm-kind">Remark 15.1</span> <span class="thm-name">The gadget is a stochastic matrix, and it has a quantum twin</span><a class="permalink" href="#remark-15-1" aria-label="Link to Remark 15.1">¶</a></header><p>
+Definition <a class="xref" href="15-interventions-at-the-cut.html#definition-15-6" data-ref="do:def:gadget">15.6</a> is the one-qubit gadget of the complex instance
+(Chapter <a class="xref" href="39-complex-amplitudes-and-where-the-coherence-is.html#top" data-ref="sec:quantum">39</a>, [<a class="cite" href="bibliography.html#bib-GradedQuantum" data-cite="GradedQuantum">276</a>]) — ancilla channel carrying the domain, a join
+that consumes everything, a continuation that re-emits without mentioning what was consumed, a
+clause in disjunctive normal form indexed by (input, output) — with three changes: the domain is
+\(D_i\) rather than \(\{0,1\}\), the inputs are several parents rather than one wire, and the matrix
+the clause realizes is <em>stochastic</em> rather than unitary. The resemblance is exact and is a
+statement about the semiring: the quantum gadget realizes every \(2\times 2\) matrix over \(\CC\)
+because the clause may mention both the input and the ancilla; this one realizes every stochastic
+matrix over \(\Rnn\) for the same reason, with stochasticity supplied by normalization within the
+component rather than by the clause. What differs is what one then does with the matrix: over
+\(\CC\) one arranges for columns to interfere and reads a detector that never fires; over \(\Rnn\) one
+reads the trace.</p></section>
+<h3 id="sec-15-5-2"><span class="secnum">15.5.2</span> Surgery</h3>
+<section class="thm plain thm-theorem" id="theorem-15-2" data-kind="Theorem" data-num="15.2"><header><span class="thm-kind">Theorem 15.2</span> <span class="thm-name">Graph surgery is restriction of the ancilla race</span><a class="permalink" href="#theorem-15-2" aria-label="Link to Theorem 15.2">¶</a></header><p>
+Let \(M\) be positive, \(V_i \in V\), \(v \in D_i\). Then
+<span class="math-d">\[\sem{\,\dok(u_1 = v)\ \ink\ \sem{M}\,} \;=\; \sem{M_{V_i = v}}\]</span>
+as weighted transition systems up to structural congruence, where \(u_1\) is the first ancilla
+pattern of gadget \(i\). Hence \(\Pr_{\sem{M}}(y \mid \dok(V_i = v)) = \Pr_{M}(y \mid \dok(V_i = v))\)
+for every \(y\).</p></section>
+<section class="proof"><header>Proof</header><p>At gadget \(i\) the restricted clause is the original clause times \(\crisp{*u_1 = v}\), which is
+\(P_i(v \mid \mathit{pa})\) on the \((s-1)!\) candidates in the class \(u_1 \mapsto v\) and \(0\)
+elsewhere. The contention component is the gadget alone, so normalization divides by
+\((s-1)!\,P_i(v \mid \mathit{pa})\), nonzero by positivity, and the class fires with probability \(1\)
+<em>for every value of the parents</em>. The gadget’s normalized dynamics is therefore the point mass
+at \(v\) independent of \(\mathit{pa}\), which is exactly the mechanism of \(M_{V_i=v}\) at \(V_i\); the
+parents are still consumed, so the term is unchanged elsewhere; and every other gadget is unaffected
+by Proposition <a class="xref" href="15-interventions-at-the-cut.html#proposition-15-3" data-ref="do:prop:lowering">15.3</a>, the model term being flat. Theorem <a class="xref" href="15-interventions-at-the-cut.html#theorem-15-1" data-ref="do:thm:adequacy">15.1</a>
+applied to \(M_{V_i=v}\) gives the distribution.</p></section>
+<p>The theorem is the reason to address the <em>ancilla</em> binding. Restricting a parent pattern
+instead would select on inputs — a conditioning — not sever a mechanism. The embedding fixes
+that the value of a variable is carried by its ancilla binding, and that is the whole of what makes
+the surgery exact: the gadget’s own gate is \(\top\), so restriction and override coincide, and the
+weights that encoded the mechanism are the thing normalization discards.</p>
+<section class="thm remarkish thm-remark" id="remark-15-2" data-kind="Remark" data-num="15.2"><header><span class="thm-kind">Remark 15.2</span> <span class="thm-name">Positivity is starvation</span><a class="permalink" href="#remark-15-2" aria-label="Link to Remark 15.2">¶</a></header><p>
+If \(P_i(v \mid \mathit{pa}) = 0\) for some reachable \(\mathit{pa}\), the restricted gadget has clause
+\(0\) on every candidate when those parents arrive, and the receipt waits forever: the history
+deadlocks by starvation. This is exactly where Pearl’s \(\Pr(y \mid \dok(x))\) is undefined without
+positivity, and the embedding renders the undefinedness as a mortal computation’s death rather than
+as a division by zero. The reader of Chapter <a class="xref" href="26-the-mortal-scientist.html#top" data-ref="ch:sci">26</a>  will recognize the outcome \(\bot\) of
+Proposition <a class="xref" href="26-the-mortal-scientist.html#proposition-26-1" data-ref="sci:prop:trichotomy">26.1</a>: the environment did not answer.</p></section>
+<section class="thm plain thm-corollary" id="corollary-15-1" data-kind="Corollary" data-num="15.1"><header><span class="thm-kind">Corollary 15.1</span> <span class="thm-name">The do-calculus is derived</span><a class="permalink" href="#corollary-15-1" aria-label="Link to Corollary 15.1">¶</a></header><p>
+For positive \(M\) and disjoint \(X,Y,Z,W \subseteq V\), the three rules of the
+do-calculus [<a class="cite" href="bibliography.html#bib-Pearl95" data-cite="Pearl95">281</a>] hold of \(\sem{M}\) under \(\dok\) as defined here:</p>
+<ol><li id="item-7-1"><p>\(\Pr(y \mid \dok(x), z, w) = \Pr(y \mid \dok(x), w)\) if
+      \((Y \dsep Z \mid X, W)_{G_{\overline{X}}}\);</p></li><li id="item-7-2"><p>\(\Pr(y \mid \dok(x), \dok(z), w) = \Pr(y \mid \dok(x), z, w)\) if
+      \((Y \dsep Z \mid X, W)_{G_{\overline{X}\underline{Z}}}\);</p></li><li id="item-7-3"><p>\(\Pr(y \mid \dok(x), \dok(z), w) = \Pr(y \mid \dok(x), w)\) if
+      \((Y \dsep Z \mid X, W)_{G_{\overline{X}\,\overline{Z(W)}}}\),</p></li></ol>
+<p>with conditioning read as post-selection on histories and \(\dok\) on several variables as the
+conjunction \(\&\) of their ancilla restrictions.</p></section>
+<section class="proof"><header>Proof</header><p>By Theorems <a class="xref" href="15-interventions-at-the-cut.html#theorem-15-1" data-ref="do:thm:adequacy">15.1</a> and <a class="xref" href="15-interventions-at-the-cut.html#theorem-15-2" data-ref="do:thm:surgery">15.2</a> and
+Proposition <a class="xref" href="15-interventions-at-the-cut.html#proposition-15-4" data-ref="do:prop:dnf">15.4</a>, every interventional distribution of \(\sem{M}\) is the
+corresponding distribution of a submodel of \(M\), and post-selection on histories is conditioning
+in that submodel. The rules are Pearl’s theorem for the CBN \(M\) [<a class="cite" href="bibliography.html#bib-Pearl95" data-cite="Pearl95">281</a>, <a class="cite" href="bibliography.html#bib-Pearl09" data-cite="Pearl09">282</a>].</p></section>
+<p>The content of the corollary is not that the rules are true — Pearl proved that — but that the
+object they are stated for is literally present in the semantics, so that nothing is being
+modeled. The d-separation premises are statements about \(G\), and \(G\) is the causal order of the
+staged term; whether they are expressible as crisp-sort formulae over \(\sem{M}\), and so
+dischargeable by the same checker that discharges everything else, is the first of the open items
+in §<a class="xref" href="15-interventions-at-the-cut.html#sec-15-9" data-ref="do:sec:open">15.9</a>.</p>
+<h3 id="sec-15-5-3"><span class="secnum">15.5.3</span> Counterfactuals</h3>
+<p>Pearl’s third rung asks what \(Y\) would have been had \(X\) been \(x\), in the world that actually
+occurred. In a structural model this is abduction (infer \(U\) from the evidence), action
+(mutilate), prediction (compute).</p>
+<section class="thm plain thm-definition" id="definition-15-7" data-kind="Definition" data-num="15.7"><header><span class="thm-kind">Definition 15.7</span> <span class="thm-name">Exogenous record</span><a class="permalink" href="#definition-15-7" aria-label="Link to Definition 15.7">¶</a></header><p>
+A <em>run</em> of \(\sem{M}\) is a causal history together with, at each gadget, the candidate that
+fired. Its <em>exogenous record</em> \(u\) is the vector of fired ancilla classes. A run is
+<em>replayed under</em> \(\dok(C)\) from a pre-state \(S\) by executing \(\dok(C)\ \ink\ S\) with the
+resolver instructed, at each gadget whose contention component is unchanged from the recorded run,
+to fire the recorded class if it is still a candidate of nonzero restricted weight, and otherwise
+to sample.</p></section>
+<section class="thm plain thm-theorem" id="theorem-15-3" data-kind="Theorem" data-num="15.3"><header><span class="thm-kind">Theorem 15.3</span> <span class="thm-name">Counterfactuals are replay</span><a class="permalink" href="#theorem-15-3" aria-label="Link to Theorem 15.3">¶</a></header><p>
+Let \(M\) be positive, \(u\) the exogenous record of a run with outcome \((v_1,\dots,v_n)\), and \(S\) the
+initial state. Then replaying under \(\dok(u^{(i)}_1 = x)\) from \(S\) yields, at every gadget other
+than \(i\) and its descendants, the recorded value, and at \(i\) and its descendants the values
+\(Y_{V_i = x}(u)\) of the structural model whose exogenous variables are the ancilla draws. On the
+staged fragment the “otherwise sample” branch is never taken.</p></section>
+<section class="proof"><header>Proof</header><p>By Lemma <a class="xref" href="15-interventions-at-the-cut.html#lemma-15-1" data-ref="do:lem:staging">15.1</a> every gadget’s contention component is itself, and its candidate set
+depends only on which parent values arrived, every ancilla value being present. So the recorded
+class is always a candidate; it has nonzero restricted weight by positivity except at gadget \(i\),
+where the restriction forces \(x\). Non-descendants of \(V_i\) receive the same parent values as in the
+run and fire the recorded class; descendants receive the mutilated values and fire their recorded
+class, which is \(f_j(\mathit{pa}_j', u_j)\) for the structural model in which \(u_j\) selects the
+class — the standard reduction of a CBN to a structural model by inverse-CDF sampling, with the
+class index as \(U_j\).</p></section>
+<p>The “otherwise sample” clause is where the general case lives: off the staged fragment an
+intervention can change what rests on a channel and thereby which candidates exist, and “the same
+draw” is no longer well defined. That the record of a run suffices for its counterfactuals is also
+the sense in which the history monad of Chapter <a class="xref" href="13-the-history-monad.html#top" data-ref="ch:histmonad">13</a> was always the third rung
+waiting to be read as one: \(\Hist\) records; replay under a \(\dok\) is the use of the record.</p>
+<h3 id="sec-15-5-4"><span class="secnum">15.5.4</span> The dictionary</h3>
+<figure class="float tabfloat" id="tab-15-1"><div class="tablewrap"><table><thead><tr><th><strong>Pearl</strong></th><th><strong>graded rho over \(\Rnn\)</strong></th></tr></thead><tbody><tr><td>variable \(V_i\)</td><td>gadget \(i\); value \(=\) fired ancilla class</td></tr><tr><td>parents \(\mathrm{PA}_i\)</td><td>data on the channels the pattern and clause read</td></tr><tr><td>mechanism \(P_i(\cdot\mid\mathit{pa})\)</td><td>the clause, in disjunctive normal form</td></tr><tr><td>exogenous \(U_i\)</td><td>the resolver’s draw at the ancilla race</td></tr><tr><td>DAG \(G\)</td><td>causal order of the staged term</td></tr><tr><td>\(\Pr(y \mid x)\)</td><td>post-selection on histories</td></tr><tr><td>\(\Pr(y \mid \dok(x))\)</td><td>\(\dok(u_1 = x)\ \ink\ \sem{M}\)</td></tr><tr><td>\(\sigma\)-intervention</td><td>\(\dok(y \models \psi)\)</td></tr><tr><td>\(Y_x(u)\)</td><td>replay under \(\dok\) with the record held</td></tr><tr><td>positivity</td><td>no restricted receipt starves</td></tr><tr><td>d-separation</td><td>a crisp-sort formula over the staged term (conjectured)</td></tr></tbody></table></div><figcaption><span class="fignum">Table 15.1</span> The dictionary.</figcaption></figure>
+<p>Table <a class="xref" href="15-interventions-at-the-cut.html#tab-15-1" data-ref="do:tab:dictionary">15.1</a> collects the correspondence. Two entries deserve a word.
+<em>Set-valued and graded constraints</em> — \(\dok(y \in S)\) with \(|S| \geq 2\), or
+\(\dok(y \models \psi)\) with \(\psi\) graded — are not Pearl’s atomic \(\dok\) but the
+\(\sigma\)-interventions of Correa and Bareinboim [<a class="cite" href="bibliography.html#bib-CorreaBareinboim" data-cite="CorreaBareinboim">283</a>], which replace a
+mechanism by an arbitrary new one and state their rules on the graph whose incoming edges at \(X\)
+are those of the <em>new</em> mechanism. Here the construct is natively a \(\sigma\)-intervention,
+and the new mechanism’s parent set is read off the free names of the constraint: a \(\dok\) whose
+constraint reads other variables is a policy, and its parents are written in the formula. The
+induced graph is syntactic, for the intervention as for the model. <em>Conditioning</em> is
+post-selection on histories, which costs \(1/\Pr(x)\) retries; the chapter on the complex instance
+met the same quantity as the price of a herald, and the ledger charges it the same way.</p>
+<h2 id="sec-15-6"><span class="secnum">15.6</span> What it costs, and the fragment that tames it</h2>
+<p>The membrane semantics is simple to state and expensive to run, and the expense has three
+independent sources. The constraint language can contain modalities and fixed points, which cost
+what Chapter <a class="xref" href="14-grading-from-weight-maps-to-the-where-clause.html#top" data-ref="ch:grading">14</a> said they cost: a clause that looks at successors is not local. The
+scope can be dynamic through reflection, in which case the \(\dok\) is a run-time membrane and not a
+rewrite. And restriction changes the normalization of contention components whose enumeration is
+permanent-shaped (Remark <a class="xref" href="14-grading-from-weight-maps-to-the-where-clause.html#remark-14-12" data-ref="gw:rmk:costs">14.12</a>). A fourth question — whether a given \(\dok\) is
+vacuous, fatal, or neither — is reachability, hence undecidable in general.</p>
+<p>The response is to grade the constraint language into fragments by evaluation cost and to impose
+type disciplines on the scope, and the disciplines are not new to this book. <em>Staged</em>: every
+receipt is its own contention component — the quantum-safe fragment of Chapter <a class="xref" href="39-complex-amplitudes-and-where-the-coherence-is.html#top" data-ref="sec:quantum">39</a>.
+<em>Flat</em>: no received code can come to contain a receipt — the hypothesis of
+Proposition <a class="xref" href="15-interventions-at-the-cut.html#proposition-15-3" data-ref="do:prop:lowering">15.3</a>. <em>Finite-domain</em>: channel types with finitely many values
+— what a language definition supplies for free. <em>Confined</em>: a \(\dok\) reaches only code its
+author has paid to deploy — the seal discipline of Chapter <a class="xref" href="16-cost-accounted-rho.html#top" data-ref="ch:carho">16</a>.</p>
+<section class="thm plain thm-proposition" id="proposition-15-5" data-kind="Proposition" data-num="15.5"><header><span class="thm-kind">Proposition 15.5</span> <span class="thm-name">The practical fragment</span><a class="permalink" href="#proposition-15-5" aria-label="Link to Proposition 15.5">¶</a></header><p>
+On staged, flat, finite-domain, confined terms with constraints that are indicators of finite sets:
+(i) \(\dok(C)\ \ink\ P\) lowers at elaboration and the membrane is erased; (ii) each constrained
+candidate costs one structural-congruence test per element of the set; (iii) vacuity and fatality
+are decidable; (iv) the induced graph is the static DAG with the constrained variables’ incoming
+edges deleted; and (v) the semantics is that of Definition <a class="xref" href="15-interventions-at-the-cut.html#definition-15-1" data-ref="do:def:cbn">15.1</a> exactly. With
+constraints of bounded modal depth instead, (i)–(iii) hold and the semantics is a
+\(\sigma\)-intervention on a CBN.</p></section>
+<section class="proof"><header>Proof</header><p>(i) is Proposition <a class="xref" href="15-interventions-at-the-cut.html#proposition-15-3" data-ref="do:prop:lowering">15.3</a>, whose hypothesis is flatness. (ii) is the definition
+of the constraint fragment. (iii): under staging every constrained receipt fires exactly once and
+its candidate set is determined by its parents’ values, which range over a finite product;
+enumerate. (iv) and (v) are Theorem <a class="xref" href="15-interventions-at-the-cut.html#theorem-15-2" data-ref="do:thm:surgery">15.2</a>, whose hypotheses staging and finite
+domains supply.</p></section>
+<p>That four disciplines introduced for four purposes — a quantum state, an exact lowering, a
+decidable check, an owner’s seal — draw the same line is the best evidence we have that the line
+is real. Outside it nothing fails; Pearl’s calculus stops and the calculus of this book continues.
+Off staging, the contention components are the branching cells of a confused event
+structure [<a class="cite" href="bibliography.html#bib-AbbesBenveniste" data-cite="AbbesBenveniste">286</a>] and a \(\dok\) that touches one is a restriction of the cell’s
+distribution; off flatness, a \(\dok\) is a run-time membrane; off finite domains, positivity is a
+reachability question; off confinement, an intervention on another’s code is a soft intervention
+by Proposition <a class="xref" href="15-interventions-at-the-cut.html#proposition-15-2" data-ref="do:prop:nocontext">15.2</a> — an experiment rather than a surgery, which is what
+Chapter <a class="xref" href="26-the-mortal-scientist.html#top" data-ref="ch:sci">26</a>’s scientist does to its environment all day.</p>
+<h2 id="sec-15-7"><span class="secnum">15.7</span> Execution, briefly</h2>
+<p>The construct was designed against the execution framework of f1r3node rather than for a
+simulator, and Part <a class="xref" href="contents.html#part-realization-from-the-calculus-to-the-mac" data-ref="part:realization">Part II</a> examines that framework in its own right. Four facts
+are worth recording here so that the reader knows the construct is not only a semantics. Lowering is one more rewrite in the elaboration pass that already normalizes
+every deployment, and leaves no run-time trace. Off the flat fragment the \(\dok\) is a run-time
+membrane and the twin of the cost membrane: a scoped decoration on the cut, read off the term by
+the reducer, altering the COMM rule within; the two commute, since metering does not read the
+clause and the clause does not read the meter. An intervention is priced as one COMM plus the
+marginal cost of its conjunct, by Principle <a class="xref" href="15-interventions-at-the-cut.html#principle-15-1" data-ref="do:prin:metered">15.1</a> — though fixing the charge
+against the ledger is owed (§<a class="xref" href="15-interventions-at-the-cut.html#sec-15-9" data-ref="do:sec:open">15.9</a>). And a counterfactual needs a pre-state and a
+record of fired candidates, which is exactly what a validator that executes a block and records
+the winners already has; the losing candidates are recomputable from the pre-state, so the same
+instrumentation that serves counterfactual replay serves the gradient of
+Theorem <a class="xref" href="26-the-mortal-scientist.html#theorem-26-1" data-ref="sci:thm:score">26.1</a>, one number per firing.</p>
+<p>One observation from the execution model belongs here as well as in
+Chapter <a class="xref" href="25-what-the-machine-prices.html#top" data-ref="ch:price">25</a>, where it is developed, because it is the dictionary’s last row. A shard in which one node executes and the others replay to confirm the
+state change is an experimenter/spectator split: the executing node resolves the races and so
+stands on rung two; the replayers observe and stand on rung one. \(\Pr(y \mid x)\) estimated from
+the finalized trace is the trace distribution and no more. That a distributed ledger is, by its
+design, a machine that separates the two rungs is not something its designers set out to build.</p>
+<h2 id="sec-15-8"><span class="secnum">15.8</span> What this does for the scientist</h2>
+<p>Chapter <a class="xref" href="26-the-mortal-scientist.html#top" data-ref="ch:sci">26</a>  will build a learner whose hypotheses are graded clauses and whose experiments are guards.
+Everything it does is, in Pearl’s vocabulary, rung one and a half: it observes, and it perturbs
+its environment by composing contexts with it, and by Proposition <a class="xref" href="15-interventions-at-the-cut.html#proposition-15-2" data-ref="do:prop:nocontext">15.2</a> a
+context perturbs without setting. The \(\dok\) is what gives it rung two over the code it owns. A
+hypothesis is a clause; a clause under a \(\dok\) is a hypothesis together with the experiment that
+would test it; and — this is the point the reproduction section of that chapter will make
+exact — a germ carrying both is a hedge that is inherited, since a \(\dok\) is a term and
+crossover on quoted code applies to it unchanged. The construct of this chapter is what the
+scientist’s germs were missing in order to be rung-two objects rather than rung-one ones.</p>
+<p>The Prestige takes this up as the constructive half of an argument it makes three times: that a
+system whose witnesses reduce confluently can <em>state</em> a non-confluent phenomenon but cannot
+<em>inhabit</em> it, so that a proof assistant of the usual kind, and a transformer trained on
+completed runs, both stand on rung one by construction. Rung two is a graded race under a \(\dok\);
+rung three is its replay; and the smallest behavior invisible to a trace — Milner’s two vending
+machines, which agree on every completed run and differ in a <em>refusal</em> — becomes a one-line
+program that, under \(\dok(y = \mathit{tea})\), either delivers tea or starves. That chapter is
+where the argument is made. This one is where the thing it leans on is built.</p>
+<h2 id="sec-15-9"><span class="secnum">15.9</span> What is owed</h2>
+<ol><li id="item-14-1"><p><strong>d-separation as a behavioral formula.</strong> Corollary <a class="xref" href="15-interventions-at-the-cut.html#corollary-15-1" data-ref="do:cor:rules">15.1</a> evaluates its
+premises on \(G\). Since \(G\) is the causal order of the staged term, the premises should be
+crisp-sort \(\nu\)-properties over \(\sem{M}\) — “no history has a causal path from a \(Z\)-firing to
+a \(Y\)-firing not passing through \(X\) or \(W\)” — dischargeable by the model checker. Stated, not
+proved.</p></li><li id="item-14-2"><p><strong>The rules off the staged fragment.</strong> Outside staging the contention components are
+branching cells and the event structure may be confused. The conjecture is that the
+\(\sigma\)-calculus rules hold on the confusion-free fragment with d-separation read off the event
+structure, and on the confused fragment per cell with the cell’s distribution in place of the
+mechanism.</p></li><li id="item-14-3"><p><strong>The price of a \(\dok\).</strong> Principle <a class="xref" href="15-interventions-at-the-cut.html#principle-15-1" data-ref="do:prin:metered">15.1</a> says an intervention is a
+COMM. The marginal charge of the constraint conjunct, the budget charge of a modal constraint, and
+the charge for a counterfactual replay have not been fixed against the ledger of
+Chapter <a class="xref" href="16-cost-accounted-rho.html#top" data-ref="ch:carho">16</a>. Until they are, “an intervention costs one token” names an intention.</p></li><li id="item-14-4"><p><strong>Identifiability across namespaces.</strong> Pearl’s question — when is \(\Pr(y \mid \dok(x))\)
+computable from observational data in the presence of hidden variables — has a sharp rendering:
+the hidden variables are the code one cannot read, the boundary is the namespace
+(Chapter <a class="xref" href="20-scopes-and-the-fixed-points-that-generate-them.html#top" data-ref="ch:scope">20</a>), and the observational data is the finalized trace. The identification
+algorithm [<a class="cite" href="bibliography.html#bib-ShpitserPearl" data-cite="ShpitserPearl">284</a>] should transfer to the staged fragment directly; what it says
+about a shard is the question.</p></li><li id="item-14-5"><p><strong>Continuous domains and cycles.</strong> The gadget enumerates the domain on the ancilla
+channel; a continuous variable needs an ancilla carried as a density and the normalization become
+an integral, for which the Gillespie reading of Chapter <a class="xref" href="14-grading-from-weight-maps-to-the-where-clause.html#top" data-ref="ch:grading">14</a> is the natural home. A
+recursive term has an acyclic event-level graph and a cyclic variable-level one; the cyclic
+structural models of the literature and the graded fixed point should meet there, with the budget
+as the unrolling depth.</p></li></ol>
+<nav class="pager"><a class="prev" href="14-grading-from-weight-maps-to-the-where-clause.html"><span>Previous</span>Grading: From Weight Maps to the Where-Clause</a><a class="next" href="16-cost-accounted-rho.html"><span>Next</span>Cost-Accounted Rho</a></nav>
+</main>
+<aside class="margin" id="margin" aria-live="polite"></aside>
+</div>
+<button class="railtoggle" id="railtoggle" aria-expanded="false">Contents</button>
+
+</body>
+</html>

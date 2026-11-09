@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Names Without Names: Combinators and the Matrix Machine · Finding Mind</title>
+<link rel="canonical" href="https://findingmind.io/read/24-names-without-names-combinators-and-the-matrix.html">
+<meta name="description" content="Names Without Names: Combinators and the Matrix Machine">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../book.css">
+<link rel="stylesheet" href="../katex/katex.min.css">
+<script defer src="../katex/katex.min.js"></script>
+<script defer src="../katex/auto-render.min.js"></script>
+<script defer src="../macros.js"></script>
+<script defer src="../reader.js"></script>
+</head>
+<body class="readpage">
+
+<a class="skip" href="#main">Skip to text</a>
+<div class="reader">
+<nav class="rail" aria-label="Contents"><div class="rail-in"><a class="rail-home" href="../index.html">Finding Mind</a><a class="rail-util" href="ledger.html">The ledger</a><a class="rail-util" href="contact.html">Comments</a><h2 class="rail-act">The Pledge</h2><a class="rail-ch" href="permitted-say.html"><span class="rn rn-i">⁂</span><span class="rt">The Permitted Say</span></a><a class="rail-ch" href="01-prolegomena-to-finding-mind.html"><span class="rn">1</span><span class="rt">Prolegomena to Finding Mind</span></a><a class="rail-ch" href="02-the-ordinary-world.html"><span class="rn">2</span><span class="rt">The Ordinary World</span></a><a class="rail-ch" href="03-information-causation-and-the-blind-spot.html"><span class="rn">3</span><span class="rt">Information, Causation, and the Blind Spot</span></a><a class="rail-ch" href="04-finding-the-shape.html"><span class="rn">4</span><span class="rt">Finding the Shape</span></a><a class="rail-ch" href="05-inside-and-outside-and-what-it-means-to-assume.html"><span class="rn">5</span><span class="rt">Inside and Outside, and What it Means to Assume the Virtue</span></a><a class="rail-ch" href="06-four-stories-and-the-one-i-was-already-telling.html"><span class="rn">6</span><span class="rt">Four Stories, and the One i Was Already Telling</span></a><a class="rail-ch" href="how-to-read-this-book.html"><span class="rn rn-i">⁂</span><span class="rt">How to Read This Book</span></a><a class="rail-ch" href="related-work-and-where-this-differs.html"><span class="rn rn-i">⁂</span><span class="rt">Related Work, and Where This Differs</span></a><h2 class="rail-act">The Turn</h2><a class="rail-ch" href="foam-born.html"><span class="rn rn-i">⁂</span><span class="rt">The Foam-Born</span></a><h3 class="rail-part">The Machinery: From GSLTs to Cost-Accounted Theories</h3><a class="rail-ch" href="07-what-a-language-presentation-is-and-why-it-com.html"><span class="rn">7</span><span class="rt">What a Language Presentation Is, and Why It Comes First</span></a><a class="rail-ch" href="08-graph-structured-lambda-theories.html"><span class="rn">8</span><span class="rt">Graph-Structured Lambda Theories</span></a><a class="rail-ch" href="09-interactive-gslts-and-the-site-of-interaction.html"><span class="rn">9</span><span class="rt">Interactive GSLTs, and the Site of Interaction</span></a><a class="rail-ch" href="10-continued-interactive-gslts.html"><span class="rn">10</span><span class="rt">Continued Interactive GSLTs</span></a><a class="rail-ch" href="11-the-category-of-gslts.html"><span class="rn">11</span><span class="rt">The Category of GSLTs</span></a><a class="rail-ch" href="12-the-cost-monad.html"><span class="rn">12</span><span class="rt">The Cost Monad</span></a><a class="rail-ch" href="13-the-history-monad.html"><span class="rn">13</span><span class="rt">The History Monad</span></a><a class="rail-ch" href="14-grading-from-weight-maps-to-the-where-clause.html"><span class="rn">14</span><span class="rt">Grading: From Weight Maps to the Where-Clause</span></a><a class="rail-ch" href="15-interventions-at-the-cut.html"><span class="rn">15</span><span class="rt">Interventions at the Cut</span></a><a class="rail-ch" href="16-cost-accounted-rho.html"><span class="rn">16</span><span class="rt">Cost-Accounted Rho</span></a><a class="rail-ch" href="17-conversion-enzymes-and-the-virtual-token.html"><span class="rn">17</span><span class="rt">Conversion, Enzymes, and the Virtual Token</span></a><a class="rail-ch" href="18-the-labeled-transition-system-and-context-deco.html"><span class="rn">18</span><span class="rt">The Labeled Transition System and Context-Decorated HML</span></a><a class="rail-ch" href="19-what-goes-into-a-logic.html"><span class="rn">19</span><span class="rt">What Goes Into a Logic</span></a><a class="rail-ch" href="20-scopes-and-the-fixed-points-that-generate-them.html"><span class="rn">20</span><span class="rt">Scopes, and the Fixed Points that Generate Them</span></a><a class="rail-ch" href="21-generating-type-systems-oslf-and-the-hypercube.html"><span class="rn">21</span><span class="rt">Generating Type Systems: OSLF and the Hypercube</span></a><a class="rail-ch" href="22-instruments-making-structure-visible-to-bisimu.html"><span class="rn">22</span><span class="rt">Instruments: Making Structure Visible to Bisimulation</span></a><h3 class="rail-part">Realization: From the Calculus to the Machine</h3><a class="rail-ch" href="23-the-store-is-the-denotation.html"><span class="rn">23</span><span class="rt">The Store Is the Denotation</span></a><a class="rail-ch" aria-current="page" href="24-names-without-names-combinators-and-the-matrix.html"><span class="rn">24</span><span class="rt">Names Without Names: Combinators and the Matrix Machine</span></a><a class="rail-ch" href="25-what-the-machine-prices.html"><span class="rn">25</span><span class="rt">What the Machine Prices</span></a><h3 class="rail-part">Ecology as Cognitive Architecture</h3><a class="rail-ch" href="26-the-mortal-scientist.html"><span class="rn">26</span><span class="rt">The Mortal Scientist</span></a><a class="rail-ch" href="27-learning-to-play.html"><span class="rn">27</span><span class="rt">Learning to Play</span></a><a class="rail-ch" href="28-composing-learners.html"><span class="rn">28</span><span class="rt">Composing Learners</span></a><a class="rail-ch" href="29-enzymes-and-individuals.html"><span class="rn">29</span><span class="rt">Enzymes and Individuals</span></a><a class="rail-ch" href="30-a-network-that-learns-by-rewriting.html"><span class="rn">30</span><span class="rt">A Network That Learns by Rewriting</span></a><a class="rail-ch" href="31-tubular-agents.html"><span class="rn">31</span><span class="rt">Tubular Agents</span></a><h3 class="rail-part">Suffering: Homeostasis and the Learner&#x27;s Own Account</h3><a class="rail-ch" href="32-suffering-a-learner-s-view-of-its-own-account.html"><span class="rn">32</span><span class="rt">Suffering: A Learner’s View of Its Own Account</span></a><h3 class="rail-part">Situating the Learner: A Variety of Possible Physics</h3><a class="rail-ch" href="33-the-learner-s-world-already-has-a-physics.html"><span class="rn">33</span><span class="rt">The Learner’s World Already Has a Physics</span></a><a class="rail-ch" href="34-the-reversibility-construction.html"><span class="rn">34</span><span class="rt">The Reversibility Construction</span></a><a class="rail-ch" href="35-causal-structure-and-time.html"><span class="rn">35</span><span class="rt">Causal Structure and Time</span></a><a class="rail-ch" href="36-decoration-one-map-many-semirings.html"><span class="rn">36</span><span class="rt">Decoration: One Map, Many Semirings</span></a><a class="rail-ch" href="37-conservation-and-what-it-costs-to-have-it.html"><span class="rn">37</span><span class="rt">Conservation, and What It Costs to Have It</span></a><a class="rail-ch" href="38-extended-modal-operators.html"><span class="rn">38</span><span class="rt">Extended Modal Operators</span></a><a class="rail-ch" href="39-complex-amplitudes-and-where-the-coherence-is.html"><span class="rn">39</span><span class="rt">Complex Amplitudes, and Where the Coherence Is</span></a><a class="rail-ch" href="40-synthesis-the-full-structure.html"><span class="rn">40</span><span class="rt">Synthesis: The Full Structure</span></a><a class="rail-ch" href="41-entropy-and-the-cost-of-staying-level.html"><span class="rn">41</span><span class="rt">Entropy, and the Cost of Staying Level</span></a><a class="rail-ch" href="42-discussion-and-future-directions.html"><span class="rn">42</span><span class="rt">Discussion and Future Directions</span></a><h3 class="rail-part">Why Scientists Get Misled: Emergent Ontology in Massive Agent Populations</h3><a class="rail-ch" href="43-introduction.html"><span class="rn">43</span><span class="rt">Introduction</span></a><a class="rail-ch" href="44-ontological-isolation.html"><span class="rn">44</span><span class="rt">Ontological Isolation</span></a><a class="rail-ch" href="45-agents-and-the-scientific-method.html"><span class="rn">45</span><span class="rt">Agents and the Scientific Method</span></a><a class="rail-ch" href="46-behavioral-primes.html"><span class="rn">46</span><span class="rt">Behavioral Primes</span></a><a class="rail-ch" href="47-massive-populations-and-communication-degradat.html"><span class="rn">47</span><span class="rt">Massive Populations and Communication Degradation</span></a><a class="rail-ch" href="48-the-logical-topology-and-compactness.html"><span class="rn">48</span><span class="rt">The Logical Topology and Compactness</span></a><a class="rail-ch" href="49-coherence-clusters-and-their-nerve.html"><span class="rn">49</span><span class="rt">Coherence Clusters and Their Nerve</span></a><a class="rail-ch" href="50-the-apparent-ontology.html"><span class="rn">50</span><span class="rt">The Apparent Ontology</span></a><a class="rail-ch" href="51-open-gaps-and-future-work.html"><span class="rn">51</span><span class="rt">Open Gaps and Future Work</span></a><a class="rail-ch" href="52-discussion.html"><span class="rn">52</span><span class="rt">Discussion</span></a><h3 class="rail-part">Origins of Life: Assembly Theory, Phase Transitions, and Replication</h3><a class="rail-ch" href="53-introduction.html"><span class="rn">53</span><span class="rt">Introduction</span></a><a class="rail-ch" href="54-assembly-theory-causal-depth-and-copy-number.html"><span class="rn">54</span><span class="rt">Assembly Theory: Causal Depth and Copy Number</span></a><a class="rail-ch" href="55-replication-as-a-fixed-point.html"><span class="rn">55</span><span class="rt">Replication as a Fixed Point</span></a><a class="rail-ch" href="56-smith-s-phase-transition-and-the-density-of-at.html"><span class="rn">56</span><span class="rt">Smith’s Phase Transition and the Density of Attractors</span></a><a class="rail-ch" href="57-metabolism-energy-gradients-and-the-ecosystem.html"><span class="rn">57</span><span class="rt">Metabolism, Energy Gradients, and the Ecosystem</span></a><a class="rail-ch" href="58-assembly-index-and-the-depth-of-the-fractal-le.html"><span class="rn">58</span><span class="rt">Assembly Index and the Depth of the Fractal Learner</span></a><a class="rail-ch" href="59-scope-and-manufacture.html"><span class="rn">59</span><span class="rt">Scope and Manufacture</span></a><a class="rail-ch" href="60-open-gaps.html"><span class="rn">60</span><span class="rt">Open Gaps</span></a><a class="rail-ch" href="61-discussion.html"><span class="rn">61</span><span class="rt">Discussion</span></a><h3 class="rail-part">Conclusion</h3><a class="rail-ch" href="what-has-been-built.html"><span class="rn rn-i">⁂</span><span class="rt">What Has Been Built</span></a><a class="rail-ch" href="a-view-from-inside-the-framework.html"><span class="rn rn-i">⁂</span><span class="rt">A View from Inside the Framework</span></a><a class="rail-ch" href="what-remains-to-be-done.html"><span class="rn rn-i">⁂</span><span class="rt">What Remains to Be Done</span></a><h2 class="rail-act">The Prestige</h2><a class="rail-ch" href="begotten.html"><span class="rn rn-i">⁂</span><span class="rt">begotten not made</span></a><h3 class="rail-part">The Method, and What It Left Out</h3><a class="rail-ch" href="62-how-the-trick-was-done.html"><span class="rn">62</span><span class="rt">How the Trick Was Done</span></a><a class="rail-ch" href="63-everything-so-far-was-turing-complete.html"><span class="rn">63</span><span class="rt">Everything So Far Was Turing Complete</span></a><a class="rail-ch" href="64-the-tower-of-oracle-extensions.html"><span class="rn">64</span><span class="rt">The Tower of Oracle Extensions</span></a><a class="rail-ch" href="65-not-every-cut-is-an-aperture.html"><span class="rn">65</span><span class="rt">Not Every Cut Is an Aperture</span></a><a class="rail-ch" href="66-where-does-agency-live.html"><span class="rn">66</span><span class="rt">Where Does Agency Live?</span></a><a class="rail-ch" href="67-choice-principles-are-the-types-schedulers-are.html"><span class="rn">67</span><span class="rt">Choice Principles are the Types; Schedulers are the Terms</span></a><a class="rail-ch" href="68-consciousness-and-the-world-it-comes-with.html"><span class="rn">68</span><span class="rt">Consciousness, and the World It Comes With</span></a><a class="rail-ch" href="69-what-these-chapters-owe.html"><span class="rn">69</span><span class="rt">What These Chapters Owe</span></a><h3 class="rail-part">Reference, Simulation, Reception, and a Future Metaphysics</h3><a class="rail-ch" href="70-what-a-symbol-system-would-have-to-be.html"><span class="rn">70</span><span class="rt">What a Symbol System Would Have to Be</span></a><a class="rail-ch" href="71-on-lying-as-the-origin-of-meaning.html"><span class="rn">71</span><span class="rt">On Lying as the Origin of Meaning</span></a><a class="rail-ch" href="72-four-pressures-one-ledger.html"><span class="rn">72</span><span class="rt">Four Pressures, One Ledger</span></a><a class="rail-ch" href="73-if-this-is-a-simulation-which-kind.html"><span class="rn">73</span><span class="rt">If This Is a Simulation, Which Kind</span></a><a class="rail-ch" href="74-what-it-is-like-to-be-a-bot.html"><span class="rn">74</span><span class="rt">What It Is Like to Be a Bot</span></a><a class="rail-ch" href="75-how-life-like-is-life-like-enough.html"><span class="rn">75</span><span class="rt">How Life-Like Is Life-Like Enough?</span></a><a class="rail-ch" href="76-inhabiting-choice.html"><span class="rn">76</span><span class="rt">Inhabiting Choice</span></a><a class="rail-ch" href="77-any-future-metaphysics.html"><span class="rn">77</span><span class="rt">Any Future Metaphysics</span></a><a class="rail-ch" href="right-sizing.html"><span class="rn rn-i">⁂</span><span class="rt">Right-Sizing</span></a></div></nav>
+<main id="main" class="text ">
+<header class="chead"><p class="kicker">Chapter 24</p><h1>Names Without Names: Combinators and the Matrix Machine</h1></header>
+<h2 id="sec-24-1"><span class="secnum">24.1</span> Status, first</h2>
+<p>The previous chapter reported on a store that has run in production for years. This one
+reports on a compiler whose first build passed its test suite in the autumn of 2026, on a
+software graphics driver, and whose performance has not been measured on a single program
+anyone wanted to run. The reader is asked to hold that asymmetry in mind throughout, and
+the chapter will keep saying so, because the argument it makes is of a kind that invites
+overstatement: it is an argument that a theoretical property of the calculus —
+reflection, the thing that makes rho rho — is exactly what makes the calculus cheap on
+hardware the store was not designed for. The argument is sound as far as it goes. How far
+it goes is a number nobody has yet produced.</p>
+<p>Here is the shape of what follows. A name-free combinator calculus for rho exists, and the
+version of it that was published is broken in an instructive way; repairing it requires
+adding something the published version lacked, and the repaired calculus compiles rho in
+linear size where the classical method is exponential. A combinator state is a multiset of
+fixed-width tuples, so it is a vector; the rewrite rules are a matrix; and the one rule
+that gives the calculus its computational power is also the one rule that cannot be
+written down in advance and the one that breaks the matrix’s triangular structure. The
+feature that makes the theory hard makes the machine cheap: reflection is a lookup table.
+And the speedup available from running this on an accelerator is the <em>width</em> of the
+computation and nothing else — a falsifiable thesis that should be tested before anyone
+builds more hardware than has already been built.</p>
+<h2 id="sec-24-2"><span class="secnum">24.2</span> A calculus with no bound names</h2>
+<p>Rho has no name-restriction operator: names are quoted processes, and freshness comes
+from quotation rather than from a binder. It nonetheless has one binder, the input
+prefix. Yoshida showed how to eliminate the input binder of the asynchronous
+\(\pi\)-calculus in favor of combinators, at the cost of keeping \(\mathsf{new}\). The
+combination is suggestive: a calculus with no \(\mathsf{new}\), compiled by a discipline
+that removes the remaining binder, would be a concurrency calculus with no bound names
+whatsoever. That is what the rho combinators proposed [<a class="cite" href="bibliography.html#bib-rhocomb" data-cite="rhocomb">288</a>], and the current
+draft of the work [<a class="cite" href="bibliography.html#bib-rhocomb3" data-cite="rhocomb3">289</a>] asks whether the proposal works.</p>
+<p>The atoms are nine. Six are <em>routers</em>, which move a message without reading it:
+\(\mathsf{d}(a,b,c)\) duplicates a message at \(a\) to \(b\) and \(c\); \(\mathsf{k}(a)\) kills
+one; \(\mathsf{fw}(a,b)\) forwards \(a\) to \(b\); \(\mathsf{bl}(a,b)\) and \(\mathsf{br}(a,b)\)
+bind the received payload as the left or right argument of a new forwarder; and
+\(\mathsf{sy}(a,b,c)\) synchronizes, emitting a forwarder from \(b\) to \(c\) when a message
+arrives at \(a\). One is the <em>destructor</em> \(\mathsf{ev}(a)\), which consumes a message at
+\(a\) and <em>runs its payload</em>. Two carry values: the message \(\mathsf{m}(a,v)\) and the
+store \(\mathsf{q}(a,p)\), a message that only a forwarder can read. The rules are two-atom
+rewrites, each a message meeting one router or the destructor at a shared name.</p>
+<figure class="float figfloat" id="fig-24-1"><p> 
+<span class="math-d">\[\begin{gathered}\begin{array}{ll}
+ \mathsf{d}(a,b,c) \mid \mathsf{m}(a,v) \rewrite \mathsf{m}(b,v) \mid \mathsf{m}(c,v)
+   & \mathsf{bl}(a,b) \mid \mathsf{m}(a,v) \rewrite \mathsf{fw}(v,b) \\
+
+ \mathsf{k}(a) \mid \mathsf{m}(a,v) \rewrite \nil
+   & \mathsf{br}(a,b) \mid \mathsf{m}(a,v) \rewrite \mathsf{fw}(b,v) \\
+
+ \mathsf{fw}(a,b) \mid \mathsf{m}(a,v) \rewrite \mathsf{m}(b,v)
+   & \mathsf{sy}(a,b,c) \mid \mathsf{m}(a,v) \rewrite \mathsf{fw}(b,c) \\
+
+ \mathsf{ev}(a) \mid \mathsf{m}(a,v) \rewrite *v
+   & \mathsf{fw}(a,b) \mid \mathsf{q}(a,p) \rewrite \mathsf{m}(b,@p)\end{array} \\[4pt]
+\begin{array}{l}\mathsf{cons}_{\mid}(a,b,c) \mid \mathsf{m}(a,@p) \mid \mathsf{m}(b,@r)
+   \rewrite \mathsf{m}(c,@(p \mid r)) \\
+\mathsf{cons}_{A}(a_{1},\dots,a_{n},f) \mid \mathsf{m}(a_{1},v_{1})
+   \mid \cdots \mid \mathsf{m}(a_{n},v_{n})
+   \rewrite \mathsf{m}(f,@A(v_{1},\dots,v_{n}))\end{array}\end{gathered}\]</span>
+ </p><figcaption><span class="fignum">Figure 24.1</span> The rules of the repaired combinator calculus, closed under \(\mid\) and the
+equations of a commutative monoid on \(\mid\). The last line is a schema, one rule per
+atom shape \(A\) a program needs.</figcaption></figure>
+<h5 id="p-2">One equation breaks the published calculus.</h5>
+<p>The published combinators inherit
+\(*@P \equiv P\) from a presentation in which quote and drop are mutually inverse, and they
+write the destructor and the drop with the same symbol. In the combinator setting the
+destructor is not a process former but a guard; and since every name is \(@Q\) for some \(Q\),
+identifying the guard with the drop makes an arbitrary running process match the guard.</p>
+<section class="thm plain thm-proposition" id="proposition-24-1" data-kind="Proposition" data-num="24.1"><header><span class="thm-kind">Proposition 24.1</span> <span class="thm-name">The defect</span><a class="permalink" href="#proposition-24-1" aria-label="Link to Proposition 24.1">¶</a></header><p>
+If the drop and the destructor are one constructor and \(*@p = p\), then for all \(P,Q\):
+\(\;Q \mid \mathsf{m}(@Q,@P) \rewrite P\).</p></section>
+<section class="proof"><header>Proof</header><p>Every name is \(@Q\) for some \(Q\), so under the conflation \(\mathsf{ev}(@Q) = Q\). Reduction
+is closed under the equations, so the redex \(\mathsf{ev}(a) \mid \mathsf{m}(a,@P)\) with
+\(a=@Q\) matches \(Q \mid \mathsf{m}(@Q,@P)\) and fires.</p></section>
+<p>An arbitrary running process can be annihilated and replaced by an arbitrary payload by
+anyone who knows its quotation. No faithfulness theorem survives this. The repair is to
+separate the drop from the guard — Figure <a class="xref" href="24-names-without-names-combinators-and-the-matrix.html#fig-24-1" data-ref="cb:fig:rules">24.1</a> does — which leaves the
+equation optional; the source gives both presentations.</p>
+<h5 id="p-3">Reflection was half-implemented, and constructors complete it.</h5>
+<p>The rule
+\(\mathsf{ev}(a) \mid \mathsf{m}(a,@P) \rewrite P\) opens a name that arrives at run time.
+In the published calculus nothing <em>builds</em> one: combinator reduction never produces
+a name not already present in the redex, hereditarily. Rho reduction does, at every step,
+because substituting under a quotation turns \(@(*y \mid R)\) into \(@(Q \mid R)\) — a name in
+neither participant. So the published calculus cannot encode rho at all. The missing
+operation is the construction of a name from names, and it is supplied by
+<em>constructors</em>: one for parallel composition, \(\mathsf{cons}_{\mid}\), and one per atom
+shape, each taking its arguments as messages and emitting the quotation of the term built
+from them. With constructors there is no name-opaque fragment to restrict to. They are the
+combinator-level image of the one thing the Pledge said reflection had to do cheaply: let
+a network of agents be the sort of thing that can be named.</p>
+<h5 id="p-4">The storage combinator is about opacity, not power.</h5>
+<p>\(\mathsf{q}(a,p)\), released
+by a forwarder rather than by a message, adds nothing to expressiveness. What it adds is
+<em>silence</em>: it is a message that only a redirection can read, which is what stored code
+and intermediate results of name construction need if the encoding is to be opaque to
+observers.</p>
+<h5 id="p-5">Prefix elimination is linear.</h5>
+<p>Reflection allows a continuation to be quoted
+once and released by a three-atom gate. Yoshida must instead push the prefix through the
+body, splitting at every parallel composition and delaying every atom, which costs a
+constant factor per level of nesting.</p>
+<section class="thm plain thm-proposition" id="proposition-24-2" data-kind="Proposition" data-num="24.2"><header><span class="thm-kind">Proposition 24.2</span> <span class="thm-name">Succinctness</span><a class="permalink" href="#proposition-24-2" aria-label="Link to Proposition 24.2">¶</a></header><p>
+On an explicit family of terms of nesting depth \(d\), Yoshida’s elimination produces
+\((3^{d-1}+1)/2\) atoms where the reflective encoding produces \(3d+1\). In general the image
+of a rho term \(P\) under the two-phase translation has \(O(|P|)\) atoms.</p></section>
+<p>That is the first payoff, and it is a theorem [<a class="cite" href="bibliography.html#bib-rhocomb3" data-cite="rhocomb3">289</a>, Prop. 8.1]: <em>storing a
+continuation as a name makes compiling away the input binder linear in program size, where
+the classical method blows up exponentially in nesting depth.</em></p>
+<h5 id="p-6">Correctness is full abstraction relative to encoded contexts.</h5>
+<p>Observation is by
+context-labeled bisimilarity, with the observer class taken to be the image of the
+translation on source contexts, and the theorem is that two rho terms are bisimilar iff
+their images are bisimilar against encoded observers [<a class="cite" href="bibliography.html#bib-rhocomb3" data-cite="rhocomb3">289</a>, §7]. The
+restriction to encoded observers is forced rather than convenient — an unrestricted
+combinator context can see the apparatus — by the same argument that forces it for the
+encoding of the \(\pi\)-calculus into rho (Chapter <a class="xref" href="22-instruments-making-structure-visible-to-bisimu.html#top" data-ref="ch:obsext">22</a>). The proofs are at the
+level of sketches; the source says so.</p>
+<h5 id="p-7">An expressiveness lattice.</h5>
+<p>Including or excluding combinators gives a lattice
+of fragments, and three invariants draw it. Without the destructor the calculus is
+strongly normalizing and so not Turing complete; without constructors it cannot build a
+name; and the duplicator \(\mathsf{d}\) is conjectured necessary for divergence. The
+constructor axis is Boolean. Whether the three binders \(\mathsf{bl},\mathsf{br},\mathsf{sy}\)
+are separable from one another is open. The lattice has two orderings, expressive and
+observational, and they do not coincide, because the calculus has no hiding. We mention it
+because the next section will show that the same three invariants are the three finiteness
+conditions of a matrix.</p>
+<h2 id="sec-24-3"><span class="secnum">24.3</span> States are vectors, rules are a matrix</h2>
+<p>Everything in this section is over the Booleans or the natural numbers; the weighted and
+complex readings of Chapter <a class="xref" href="14-grading-from-weight-maps-to-the-where-clause.html#top" data-ref="ch:grading">14</a> attach to the same operator later and nothing
+here depends on them. The source is a design analysis [<a class="cite" href="bibliography.html#bib-rhocombmat" data-cite="rhocombmat">290</a>], and it marks
+each of its claims as settled, as a route believed to work, as open, or as a gate on the
+work downstream; we carry the markings.</p>
+<h5 id="p-9">What a graphics processor rewards.</h5>
+<p>An accelerator is a bulk-synchronous machine
+with a very wide, very shallow execution model. It rewards flat, indexable state — arrays
+of fixed-width records at predictable addresses, pointer chasing being the single most
+expensive thing one can ask of it; uniform work across lanes — threads that take the same
+branch; bulk-synchronous phases — one kernel does one thing to everything, then a
+barrier; and standard sparse primitives — sparse matrix products, segmented scans, sorts
+and hash tables, which inherit decades of tuning. An RSpace-style interpreter does
+approximately the opposite of all four. Its state is a store of variably shaped terms
+reached by pointer; matching is a recursive walk over nested syntax; conflicts are
+resolved by locks; and the inner loop is a hash lookup followed by unification. None of
+that is a criticism of RSpace, which is a good design for a general machine. It is an
+itemized statement of the gap a compiler standing between the two has to close.</p>
+<p>Four facts about the repaired combinators do the closing. <em>Atoms are flat</em>: every atom
+is a head symbol applied to at most \(w\) arguments, \(w\) known at compile time, and every
+argument is a name — there is no nesting, no binder, no pattern variable. <em>The
+multiset is complete</em>: the multiset of top-level atoms of a drop-free normal form is a
+complete invariant for structural congruence. <em>Rules are small and subject-joined</em>:
+two to \(w\) premises, each a single atom, sharing names. <em>Name equality is decidable and
+internable</em>: on closed normal forms it is decided by normalization and multiset comparison,
+and quotation is injective there, so names can be hash-consed to integers once and
+compared by integer equality thereafter.</p>
+<section class="thm plain thm-definition" id="definition-24-1" data-kind="Definition" data-num="24.1"><header><span class="thm-kind">Definition 24.1</span> <span class="thm-name">Species, and the state space</span><a class="permalink" href="#definition-24-1" aria-label="Link to Definition 24.1">¶</a></header><p>
+A <em>species</em> is a head symbol together with a tuple of names of the matching arity. A
+<em>state</em> is a finite multiset over species — an <em>occupation vector</em>
+\(\gamma : \mathrm{Spec} \to \mathbb{N}\) of finite support. The state space is the free
+module on such \(\gamma\); equivalently, the free commutative algebra generated by the
+species, a state being a monomial \(\prod_\sigma (a^{\dagger}_\sigma)^{\gamma(\sigma)}
+\lvert\nil\rangle\).</p></section>
+<section class="thm plain thm-principle" id="principle-24-1" data-kind="Principle" data-num="24.1"><header><span class="thm-kind">Principle 24.1</span> <span class="thm-name">Structural congruence is free</span><a class="permalink" href="#principle-24-1" aria-label="Link to Principle 24.1">¶</a></header><p>
+The equations of the calculus are not imposed on the representation and are not discharged
+by a normalization pass. Commutativity, associativity and the unit of \(\mid\) are the
+algebra of the multiset; \(*@p = p\) and \(@*a = a\) are discharged once, at interning time.
+No run-time cost.</p></section>
+<p>This is the first place the combinators pay. In a direct rho machine, matching modulo
+structural congruence is a recurring cost and a recurring source of subtlety; here it is
+a property of the data structure. It is also, the reader will notice, Chapter <a class="xref" href="23-the-store-is-the-denotation.html#top" data-ref="ch:rspace">23</a>’s
+Proposition <a class="xref" href="23-the-store-is-the-denotation.html#proposition-23-1" data-ref="rs:prop:hom">23.1</a> said a second way: the store made \(\Par\) into multiset union
+of bags at keys; the matrix machine makes the whole state into one multiset over species,
+and the keys have become coordinates.</p>
+<section class="thm plain thm-definition" id="definition-24-2" data-kind="Definition" data-num="24.2"><header><span class="thm-kind">Definition 24.2</span> <span class="thm-name">The rule operator</span><a class="permalink" href="#definition-24-2" aria-label="Link to Definition 24.2">¶</a></header><p>
+For a species \(\sigma\) let \(a^{\dagger}_\sigma\) add one occurrence and \(a_\sigma\) remove
+one, with \(a_\sigma \lvert\gamma\rangle = 0\) when \(\gamma(\sigma) = 0\). Each rule of
+Figure <a class="xref" href="24-names-without-names-combinators-and-the-matrix.html#fig-24-1" data-ref="cb:fig:rules">24.1</a> is a monomial in these operators — annihilate the premises,
+create the conclusions — schematic in the names; the <em>transfer operator</em> is the sum
+over rules and name instances, \(T = \sum_r H_r\).</p></section>
+<section class="thm plain thm-proposition" id="proposition-24-3" data-kind="Proposition" data-num="24.3"><header><span class="thm-kind">Proposition 24.3</span> <span class="thm-name">Matrix elements count derivations</span><a class="permalink" href="#proposition-24-3" aria-label="Link to Proposition 24.3">¶</a></header><p>
+\(\langle\gamma'\lvert T \rvert\gamma\rangle\) is the number of distinct rule instances
+carrying \(\gamma\) to \(\gamma'\), which for a rule with premises of multiplicities
+\(\gamma(\sigma_1),\dots,\gamma(\sigma_k)\) is the product of those multiplicities.</p></section>
+<p>The entries are mass-action counts. A combinator program is, without any choice having
+been made, a chemical reaction network: species, reactions, and a transfer operator whose
+entries are the number of ways each reaction can fire. Chapter <a class="xref" href="14-grading-from-weight-maps-to-the-where-clause.html#top" data-ref="ch:grading">14</a>’s
+multiplicity factor — count redexes by occurrence, or run the system at half rate — is
+here the definition of the matrix element. The weighted reading attaches at exactly one
+place, a diagonal factor in each rule’s operator term, which is why the Gillespie reading
+of that chapter and the matrix machine of this one are one object.</p>
+<h5 id="p-10">The self-indexing problem.</h5>
+<p>Species are indexed by names, and names are quoted
+processes, so by completeness of the multiset they are finite multisets over species. The
+index set of the basis therefore satisfies
+<span class="math-d">\[\mathrm{Nm} \;\cong\; M_{\mathrm{fin}}(\mathrm{Spec}), \qquad
+  \mathrm{Spec} \;=\; \textstyle\coprod_{A} \mathrm{Nm}^{\mathrm{ar}(A)} .\]</span>
+The basis of the state space indexes itself. This is reflection seen through the linear
+algebra, and it is the reason no finite matrix can be written down in advance for the full
+calculus. The solution of the domain equation is the initial algebra: names are finite
+trees, so the name set is countable, finitely branching, and graded by depth of quotation.</p>
+<section class="thm plain thm-definition" id="definition-24-3" data-kind="Definition" data-num="24.3"><header><span class="thm-kind">Definition 24.3</span> <span class="thm-name">The intern table</span><a class="permalink" href="#definition-24-3" aria-label="Link to Definition 24.3">¶</a></header><p>
+The machine realizes the name set as a bijection between integers and canonical component
+multisets, in two directions: \(\mathsf{quote}\), a hash-cons — an <em>encode</em>; and
+\(\mathsf{drop}\), a table read — a <em>decode</em>.</p></section>
+<section class="thm plain thm-theorem" id="theorem-24-1" data-kind="Theorem" data-num="24.1"><header><span class="thm-kind">Theorem 24.1</span> <span class="thm-name">The lattice classifies the matrix</span><a class="permalink" href="#theorem-24-1" aria-label="Link to Theorem 24.1">¶</a></header><p>
+Let \(T\) be a combinator term over a constructor set \(S\).</p>
+<ol><li id="item-11-1"><p><em>(Index set; constructor axis.)</em> Every name occurring in a reduct of \(T\) lies in
+the closure of \(T\)’s names under the node shapes in \(S\). If \(S=\emptyset\) the reachable
+species set is finite; if not, it is the free \(S\)-algebra on \(T\)’s names, countable and
+graded by depth.</p></li><li id="item-11-2"><p><em>(Nilpotency; destructor axis.)</em> Every rule but \(\mathsf{ev}\) strictly decreases
+a weight counting non-message atoms. Without \(\mathsf{ev}\) the reachable operator is
+strictly block upper triangular with respect to that grading and \(T^{2N+1} = 0\) for \(N\) the
+number of non-message atoms.</p></li><li id="item-11-3"><p><em>(Occupation bound; duplication axis.)</em> Without \(\mathsf{d}\) and without
+\(\mathsf{ev}\), the combined occupation of message and store species is non-increasing.</p></li></ol></section>
+<p>The three invariants the expressiveness lattice was drawn with are, without modification,
+the three finiteness conditions a matrix representation needs, one per axis of the lattice.
+That is the source’s main structural observation and it is proved. The corollary the
+original proposal wanted — that the reduction graph is an upper triangular matrix, so
+that reachability is a finite Neumann series computed by repeated squaring — holds
+<em>exactly on the destructor-free fragment</em>. With \(\mathsf{ev}\) the graph can have
+cycles, because reflection admits terms that step to a structurally congruent copy of
+themselves, and by Principle <a class="xref" href="24-names-without-names-combinators-and-the-matrix.html#principle-24-1" data-ref="cb:prin:free">24.1</a> congruent means equal.</p>
+<section class="thm remarkish thm-remark" id="remark-24-1" data-kind="Remark" data-num="24.1"><header><span class="thm-kind">Remark 24.1</span> <span class="thm-name">One atom, three characterizations</span><a class="permalink" href="#remark-24-1" aria-label="Link to Remark 24.1">¶</a></header><p>
+The destructor \(\mathsf{ev}\) is, simultaneously: the carrier of Turing power, by the
+strong-normalization result for the fragment without it; the unique breaker of the
+grading, by Theorem <a class="xref" href="24-names-without-names-combinators-and-the-matrix.html#theorem-24-1" data-ref="cb:thm:three">24.1</a>(ii); and the unique rule whose operator cannot be
+written schematically in advance, because its conclusion is whatever the decoded name
+says. Three independent characterizations of one atom, from logic, from order theory and
+from implementation. The remark in the combinator paper that “the destructor carries the
+computational power that reflection supplies” acquires an operational reading: the power
+is exactly the ability to turn an index into a state.</p></section>
+<p>The recommendation that follows is the one the source makes, and it reverses the original
+proposal. For running a program one needs a <em>frontier</em>, not a closure: the current
+state and its successors. Triangularity is a property of the whole graph and buys nothing
+at the frontier; a general sparse non-negative operator applied to a sparse vector is
+entirely adequate, and iterative methods are indifferent to cycles. The upper triangular
+matrix is the right object for model checking — or, working in the unfolding, for the
+history monad’s universal cover, which is acyclic by construction — and the wrong object
+for execution. <em>Do not ask for it.</em></p>
+<h2 id="sec-24-4"><span class="secnum">24.4</span> What actually gets multiplied</h2>
+<p>Not the reduction graph. The object the machine multiplies is the sparse <em>incidence
+matrix</em> between atom occurrences and names — term-sized, not graph-sized — and three
+operations on it are the whole of a step. <em>Redex finding is a join</em>: the rules are
+subject-joined, so the instances of a rule enabled in the current state are found by
+joining the atom table with itself on the shared name column, which is a sparse product.
+<em>Conflict detection is a second product</em>: two redexes conflict when they consume a
+common atom occurrence, and the conflict graph is \(BB^{\top}\) for \(B\) the redex-atom
+incidence. <em>Independent-set selection is a standard parallel primitive</em>. Each step
+fires a <em>maximal independent set</em> of redexes, which is one barrier per causal layer
+— and firing a maximal independent set per step is sound with respect to the
+interleaving semantics, so that machine steps count <em>causal depth</em>. This is the
+contention-component structure of Chapter <a class="xref" href="14-grading-from-weight-maps-to-the-where-clause.html#top" data-ref="ch:grading">14</a> with the components found by
+linear algebra: the independent-set step is the \(k\)-ary generalization of the
+contention-set normalization, and the source files reconciling the two as an obligation.</p>
+<section class="thm plain thm-principle" id="principle-24-2" data-kind="Principle" data-num="24.2"><header><span class="thm-kind">Principle 24.2</span> <span class="thm-name">Reflection is an intern table</span><a class="permalink" href="#principle-24-2" aria-label="Link to Principle 24.2">¶</a></header><p>
+The decode rule reads the intern table at \(v\) and appends the stored component multiset to
+the state: a table lookup followed by a bulk copy of a contiguous block, among the cheapest
+things an accelerator does. The constructors build a small canonical term and hash-cons it:
+a concurrent insert-or-get, a standard device primitive. The feature that makes the
+calculus theoretically hard — that a name is a program and a program can be recovered
+from a name — is, at the level of the machine, exactly a bidirectional intern table. The
+theoretical difficulty and the implementation difficulty do not coincide here, and they
+point in opposite directions: reflection is what obstructs a static matrix and what makes
+the dynamic one cheap, because storing a continuation as an index is what keeps atoms
+fixed-width.</p></section>
+<p>This also explains Proposition <a class="xref" href="24-names-without-names-combinators-and-the-matrix.html#proposition-24-2" data-ref="cb:prop:blowup">24.2</a> from the machine side. Yoshida’s
+elimination must rewrite a continuation to delay it; the reflective encoding stores it as a
+name and pays for a gate. A machine that stores continuations as integers in a table is
+doing the same thing, and the \(O(|P|)\) bound is what keeps the state array small enough
+to be worth the transfer to a device. The intern table is the one place the
+bulk-synchronous discipline is violated — it is shared mutable state — but both of its
+operations are commutative and idempotent in effect, so it can be updated by an unordered
+batch insert per step rather than by locking. Interning order is a gauge freedom: two runs
+may assign different integers to the same name, the states are equal up to the canonical
+bijection, and the machine must never let an integer comparison stand in for a semantic
+distinction between runs.</p>
+<h2 id="sec-24-5"><span class="secnum">24.5</span> What has been measured, and the thesis</h2>
+<p>A reference implementation accompanies the design note, and its measurements are step
+counts and widths, not timings. On four synthetic term families with analytically known
+widths — \(k\) independent forwarder chains of length \(d\); \(c\) messages and \(c\) consumers
+on one channel; a binary duplicator tree of height \(h\); a construct-then-eval family —
+the number of parallel steps equals the causal depth exactly and the ratio of sequential
+to parallel steps equals the width exactly: \(64.00\) for \(64\) chains, \(16.00\) for \(16\)
+contenders, \(18.14\) for a duplicator tree of height six. The join formulation of redex
+finding agrees with naive enumeration on \(400\) of \(400\) random states.</p>
+<section class="thm plain thm-principle" id="principle-24-3" data-kind="Principle" data-num="24.3"><header><span class="thm-kind">Principle 24.3</span> <span class="thm-name">The width thesis</span><a class="permalink" href="#principle-24-3" aria-label="Link to Principle 24.3">¶</a></header><p>
+The speedup available from this route is the mean width of the reduction, and nothing
+else. Sequential terms gain nothing; the machine adds a constant per-step overhead of two
+sparse products and an independent-set selection. The thesis is falsifiable by measuring
+the width distribution of compiled rho programs, and should be falsified or confirmed
+before further device work is undertaken.</p></section>
+<p>Three things are not claimed, and the source says so in its own voice: that any of this
+beats a well-tuned sequential interpreter on real workloads; that the reduction graph should
+ever be materialized; that maximal progress is the right resolver rather than <em>a</em>
+resolver whose cost is an open question. And one thing is marked as the gate on the whole
+enterprise: <em>the width of the combinator image of a compiled rho program has not been
+measured.</em> The measurements establish that the construction is correct and that step
+count is causal depth on families whose depth is known. They establish nothing about real
+programs, because that measurement requires the compiler, not the machine.</p>
+<h2 id="sec-24-6"><span class="secnum">24.6</span> The compiler, as it stands</h2>
+<p>The compiler is called Saph1r3. It is a Rust workspace of eight crates, about eight thousand
+lines, whose front end is the kernel-rho parser and normalizer of the campf1r3 project
+taken unmodified, and whose pipeline is: parse and normalize; <em>phase one</em>, a
+homomorphism on the normal form into the combinators extended with a binder; <em>phase
+two</em>, which eliminates the binder by giving each run-time instance an address and erecting
+its apparatus under that address with an instantiation combinator; then deployment to a
+host matrix machine or to a device bundle — a program matrix, kernels generated from the
+rule table in the WebGPU shading language, and a manifest — targeting Vulkan, Metal or
+DirectX through a portable layer. The device finds redexes and selects the independent set;
+the host commits each step; the intern table stays on the host.</p>
+<p>Its test suite reports forty-eight passing tests at the time of writing: a hundred-seed
+regression against a reference reducer on the paper’s own adversarial term and its
+variants; a nineteen-program corpus covering every occurrence kind, nesting, relays,
+races and received code with inputs; device traces byte-identical to host traces; address
+independence; canonicity of the encoding; golden files for the full reduction traces of
+two programs; an adversarial cross-instance scheduler with zero disagreements over a hundred
+seeds; and a nesting family on which phase-one atoms grow linearly in depth, which is
+Proposition <a class="xref" href="24-names-without-names-combinators-and-the-matrix.html#proposition-24-2" data-ref="cb:prop:blowup">24.2</a> observed. The device tests were run on a software Vulkan
+driver. No performance target has been set, let alone met.</p>
+<p>The build also found things wrong in the specifications it implements, and reported them.
+Collapsing the hole indices of nested contexts to a single marker is unsound for nested
+units — a parent’s instantiation would fill a child’s hole — and de Bruijn indices over
+context nodes repair it. The specification’s address supply for received code was
+unstated, and the build closes the gap with one address per release site at a shared
+static channel. A quoted process containing an input is a unit and must be erected like an
+input body. These are the ordinary findings of a first implementation, and they are
+recorded in the repository’s own words as findings for the papers.</p>
+<section class="thm remarkish thm-remark" id="remark-24-2" data-kind="Remark" data-num="24.2"><header><span class="thm-kind">Remark 24.2</span> <span class="thm-name">What is nascent, stated plainly</span><a class="permalink" href="#remark-24-2" aria-label="Link to Remark 24.2">¶</a></header><p>
+The store-backed machine — the one that would let the matrix machine run against the
+production store of Chapter <a class="xref" href="23-the-store-is-the-denotation.html#top" data-ref="ch:rspace">23</a> rather than its own interned state — is not
+built. There is no browser build. The alternative erection scheme the logic paper favors
+reaches twelve of twenty-one corpus programs and not the regression term itself. The
+specification says the machine has no external dependencies and the code depends on a
+graphics library. And the one number the whole route turns on — the width distribution
+of compiled rho programs — has not been computed, although the compiler that would
+compute it now exists. In the vocabulary of this book: a hypothesis has been installed as a
+guard, the assay has been designed, and no message has yet arrived on the probe channel.</p></section>
+<h2 id="sec-24-7"><span class="secnum">24.7</span> Two realizations of one rule</h2>
+<p>The store and the matrix machine implement the same COMM rule and agree on what it means,
+and they disagree about everything else. The store keys the state by channel and finds a
+redex by looking up a key; the machine flattens the state to species and finds every
+redex at once by a join. The store resolves a race at a key, under a lock, with a seeded
+shuffle; the machine resolves every race in a layer at once, by independent-set selection,
+under maximal progress. The store is a general machine’s realization and runs anything;
+the machine is an accelerator’s realization and runs what is wide. The store carries
+reflection as a content-addressed key — a quoted process <em>is</em> its hash; the machine
+carries it as an intern table — a quoted process <em>is</em> its integer. And the store
+knows the two messages at \(a\) are two because it keeps a bag; the machine knows it because
+the matrix element is \(2\).</p>
+<p>Which is to say that the resource layer of Chapter <a class="xref" href="23-the-store-is-the-denotation.html#top" data-ref="ch:rspace">23</a> — the layer the
+behavioral layer forgets, the layer that keeps counts and keys — is the layer both
+machines live in, and that they are two coordinate systems on it. A reader who has
+followed the book’s habit of asking what a construction prices will want to know what the
+change of coordinates costs and buys. That is the next chapter.</p>
+<nav class="pager"><a class="prev" href="23-the-store-is-the-denotation.html"><span>Previous</span>The Store Is the Denotation</a><a class="next" href="25-what-the-machine-prices.html"><span>Next</span>What the Machine Prices</a></nav>
+</main>
+<aside class="margin" id="margin" aria-live="polite"></aside>
+</div>
+<button class="railtoggle" id="railtoggle" aria-expanded="false">Contents</button>
+
+</body>
+</html>

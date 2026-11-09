@@ -21,13 +21,29 @@ STUB = """<!doctype html><html lang="en"><head><meta charset="utf-8">
 <body><p>This chapter has moved to <a href="{t}">{t}</a>.</p></body></html>
 """
 
+# old title slug -> current title slug, for chapters that were renamed outright
+RENAMED = {
+    "weighting-rates-from-the-generated-logic": "grading-from-weight-maps-to-the-where-clause",
+}
+
 def stem(f):
-    return re.sub(r"^\d+-", "", f)
+    s = re.sub(r"^\d+-", "", f)
+    return RENAMED.get(s[:-5], s[:-5]) + ".html"
 
 def main():
     st = subprocess.check_output(["git", "status", "--short", "read"]).decode().splitlines()
     old = [l[3:] for l in st if l[:2].strip() == "D"]
-    new = [f for f in os.listdir("read") if f.endswith(".html")]
+    # stubs already present that point at a page which has itself become a stub
+    for f in os.listdir("read"):
+        pth = os.path.join("read", f)
+        h = open(pth).read() if f.endswith(".html") else ""
+        if 'content="noindex"' in h:
+            m = re.search(r'url=([^"]+)"', h)
+            tgt = os.path.join("read", m.group(1)) if m else None
+            if not tgt or not os.path.exists(tgt) or 'content="noindex"' in open(tgt).read():
+                old.append(pth)
+    new = [f for f in os.listdir("read") if f.endswith(".html")
+           and 'content="noindex"' not in open(os.path.join("read", f)).read()]
     bystem = {}
     for f in new:
         bystem.setdefault(stem(f), f)

@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inhabiting Choice · Finding Mind</title>
+<link rel="canonical" href="https://findingmind.io/read/76-inhabiting-choice.html">
+<meta name="description" content="Inhabiting Choice">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../book.css">
+<link rel="stylesheet" href="../katex/katex.min.css">
+<script defer src="../katex/katex.min.js"></script>
+<script defer src="../katex/auto-render.min.js"></script>
+<script defer src="../macros.js"></script>
+<script defer src="../reader.js"></script>
+</head>
+<body class="readpage">
+
+<a class="skip" href="#main">Skip to text</a>
+<div class="reader">
+<nav class="rail" aria-label="Contents"><div class="rail-in"><a class="rail-home" href="../index.html">Finding Mind</a><a class="rail-util" href="ledger.html">The ledger</a><a class="rail-util" href="contact.html">Comments</a><h2 class="rail-act">The Pledge</h2><a class="rail-ch" href="permitted-say.html"><span class="rn rn-i">⁂</span><span class="rt">The Permitted Say</span></a><a class="rail-ch" href="01-prolegomena-to-finding-mind.html"><span class="rn">1</span><span class="rt">Prolegomena to Finding Mind</span></a><a class="rail-ch" href="02-the-ordinary-world.html"><span class="rn">2</span><span class="rt">The Ordinary World</span></a><a class="rail-ch" href="03-information-causation-and-the-blind-spot.html"><span class="rn">3</span><span class="rt">Information, Causation, and the Blind Spot</span></a><a class="rail-ch" href="04-finding-the-shape.html"><span class="rn">4</span><span class="rt">Finding the Shape</span></a><a class="rail-ch" href="05-inside-and-outside-and-what-it-means-to-assume.html"><span class="rn">5</span><span class="rt">Inside and Outside, and What it Means to Assume the Virtue</span></a><a class="rail-ch" href="06-four-stories-and-the-one-i-was-already-telling.html"><span class="rn">6</span><span class="rt">Four Stories, and the One i Was Already Telling</span></a><a class="rail-ch" href="how-to-read-this-book.html"><span class="rn rn-i">⁂</span><span class="rt">How to Read This Book</span></a><a class="rail-ch" href="related-work-and-where-this-differs.html"><span class="rn rn-i">⁂</span><span class="rt">Related Work, and Where This Differs</span></a><h2 class="rail-act">The Turn</h2><a class="rail-ch" href="foam-born.html"><span class="rn rn-i">⁂</span><span class="rt">The Foam-Born</span></a><h3 class="rail-part">The Machinery: From GSLTs to Cost-Accounted Theories</h3><a class="rail-ch" href="07-what-a-language-presentation-is-and-why-it-com.html"><span class="rn">7</span><span class="rt">What a Language Presentation Is, and Why It Comes First</span></a><a class="rail-ch" href="08-graph-structured-lambda-theories.html"><span class="rn">8</span><span class="rt">Graph-Structured Lambda Theories</span></a><a class="rail-ch" href="09-interactive-gslts-and-the-site-of-interaction.html"><span class="rn">9</span><span class="rt">Interactive GSLTs, and the Site of Interaction</span></a><a class="rail-ch" href="10-continued-interactive-gslts.html"><span class="rn">10</span><span class="rt">Continued Interactive GSLTs</span></a><a class="rail-ch" href="11-the-category-of-gslts.html"><span class="rn">11</span><span class="rt">The Category of GSLTs</span></a><a class="rail-ch" href="12-the-cost-monad.html"><span class="rn">12</span><span class="rt">The Cost Monad</span></a><a class="rail-ch" href="13-the-history-monad.html"><span class="rn">13</span><span class="rt">The History Monad</span></a><a class="rail-ch" href="14-grading-from-weight-maps-to-the-where-clause.html"><span class="rn">14</span><span class="rt">Grading: From Weight Maps to the Where-Clause</span></a><a class="rail-ch" href="15-interventions-at-the-cut.html"><span class="rn">15</span><span class="rt">Interventions at the Cut</span></a><a class="rail-ch" href="16-cost-accounted-rho.html"><span class="rn">16</span><span class="rt">Cost-Accounted Rho</span></a><a class="rail-ch" href="17-conversion-enzymes-and-the-virtual-token.html"><span class="rn">17</span><span class="rt">Conversion, Enzymes, and the Virtual Token</span></a><a class="rail-ch" href="18-the-labeled-transition-system-and-context-deco.html"><span class="rn">18</span><span class="rt">The Labeled Transition System and Context-Decorated HML</span></a><a class="rail-ch" href="19-what-goes-into-a-logic.html"><span class="rn">19</span><span class="rt">What Goes Into a Logic</span></a><a class="rail-ch" href="20-scopes-and-the-fixed-points-that-generate-them.html"><span class="rn">20</span><span class="rt">Scopes, and the Fixed Points that Generate Them</span></a><a class="rail-ch" href="21-generating-type-systems-oslf-and-the-hypercube.html"><span class="rn">21</span><span class="rt">Generating Type Systems: OSLF and the Hypercube</span></a><a class="rail-ch" href="22-instruments-making-structure-visible-to-bisimu.html"><span class="rn">22</span><span class="rt">Instruments: Making Structure Visible to Bisimulation</span></a><h3 class="rail-part">Realization: From the Calculus to the Machine</h3><a class="rail-ch" href="23-the-store-is-the-denotation.html"><span class="rn">23</span><span class="rt">The Store Is the Denotation</span></a><a class="rail-ch" href="24-names-without-names-combinators-and-the-matrix.html"><span class="rn">24</span><span class="rt">Names Without Names: Combinators and the Matrix Machine</span></a><a class="rail-ch" href="25-what-the-machine-prices.html"><span class="rn">25</span><span class="rt">What the Machine Prices</span></a><h3 class="rail-part">Ecology as Cognitive Architecture</h3><a class="rail-ch" href="26-the-mortal-scientist.html"><span class="rn">26</span><span class="rt">The Mortal Scientist</span></a><a class="rail-ch" href="27-learning-to-play.html"><span class="rn">27</span><span class="rt">Learning to Play</span></a><a class="rail-ch" href="28-composing-learners.html"><span class="rn">28</span><span class="rt">Composing Learners</span></a><a class="rail-ch" href="29-enzymes-and-individuals.html"><span class="rn">29</span><span class="rt">Enzymes and Individuals</span></a><a class="rail-ch" href="30-a-network-that-learns-by-rewriting.html"><span class="rn">30</span><span class="rt">A Network That Learns by Rewriting</span></a><a class="rail-ch" href="31-tubular-agents.html"><span class="rn">31</span><span class="rt">Tubular Agents</span></a><h3 class="rail-part">Suffering: Homeostasis and the Learner&#x27;s Own Account</h3><a class="rail-ch" href="32-suffering-a-learner-s-view-of-its-own-account.html"><span class="rn">32</span><span class="rt">Suffering: A Learner’s View of Its Own Account</span></a><h3 class="rail-part">Situating the Learner: A Variety of Possible Physics</h3><a class="rail-ch" href="33-the-learner-s-world-already-has-a-physics.html"><span class="rn">33</span><span class="rt">The Learner’s World Already Has a Physics</span></a><a class="rail-ch" href="34-the-reversibility-construction.html"><span class="rn">34</span><span class="rt">The Reversibility Construction</span></a><a class="rail-ch" href="35-causal-structure-and-time.html"><span class="rn">35</span><span class="rt">Causal Structure and Time</span></a><a class="rail-ch" href="36-decoration-one-map-many-semirings.html"><span class="rn">36</span><span class="rt">Decoration: One Map, Many Semirings</span></a><a class="rail-ch" href="37-conservation-and-what-it-costs-to-have-it.html"><span class="rn">37</span><span class="rt">Conservation, and What It Costs to Have It</span></a><a class="rail-ch" href="38-extended-modal-operators.html"><span class="rn">38</span><span class="rt">Extended Modal Operators</span></a><a class="rail-ch" href="39-complex-amplitudes-and-where-the-coherence-is.html"><span class="rn">39</span><span class="rt">Complex Amplitudes, and Where the Coherence Is</span></a><a class="rail-ch" href="40-synthesis-the-full-structure.html"><span class="rn">40</span><span class="rt">Synthesis: The Full Structure</span></a><a class="rail-ch" href="41-entropy-and-the-cost-of-staying-level.html"><span class="rn">41</span><span class="rt">Entropy, and the Cost of Staying Level</span></a><a class="rail-ch" href="42-discussion-and-future-directions.html"><span class="rn">42</span><span class="rt">Discussion and Future Directions</span></a><h3 class="rail-part">Why Scientists Get Misled: Emergent Ontology in Massive Agent Populations</h3><a class="rail-ch" href="43-introduction.html"><span class="rn">43</span><span class="rt">Introduction</span></a><a class="rail-ch" href="44-ontological-isolation.html"><span class="rn">44</span><span class="rt">Ontological Isolation</span></a><a class="rail-ch" href="45-agents-and-the-scientific-method.html"><span class="rn">45</span><span class="rt">Agents and the Scientific Method</span></a><a class="rail-ch" href="46-behavioral-primes.html"><span class="rn">46</span><span class="rt">Behavioral Primes</span></a><a class="rail-ch" href="47-massive-populations-and-communication-degradat.html"><span class="rn">47</span><span class="rt">Massive Populations and Communication Degradation</span></a><a class="rail-ch" href="48-the-logical-topology-and-compactness.html"><span class="rn">48</span><span class="rt">The Logical Topology and Compactness</span></a><a class="rail-ch" href="49-coherence-clusters-and-their-nerve.html"><span class="rn">49</span><span class="rt">Coherence Clusters and Their Nerve</span></a><a class="rail-ch" href="50-the-apparent-ontology.html"><span class="rn">50</span><span class="rt">The Apparent Ontology</span></a><a class="rail-ch" href="51-open-gaps-and-future-work.html"><span class="rn">51</span><span class="rt">Open Gaps and Future Work</span></a><a class="rail-ch" href="52-discussion.html"><span class="rn">52</span><span class="rt">Discussion</span></a><h3 class="rail-part">Origins of Life: Assembly Theory, Phase Transitions, and Replication</h3><a class="rail-ch" href="53-introduction.html"><span class="rn">53</span><span class="rt">Introduction</span></a><a class="rail-ch" href="54-assembly-theory-causal-depth-and-copy-number.html"><span class="rn">54</span><span class="rt">Assembly Theory: Causal Depth and Copy Number</span></a><a class="rail-ch" href="55-replication-as-a-fixed-point.html"><span class="rn">55</span><span class="rt">Replication as a Fixed Point</span></a><a class="rail-ch" href="56-smith-s-phase-transition-and-the-density-of-at.html"><span class="rn">56</span><span class="rt">Smith’s Phase Transition and the Density of Attractors</span></a><a class="rail-ch" href="57-metabolism-energy-gradients-and-the-ecosystem.html"><span class="rn">57</span><span class="rt">Metabolism, Energy Gradients, and the Ecosystem</span></a><a class="rail-ch" href="58-assembly-index-and-the-depth-of-the-fractal-le.html"><span class="rn">58</span><span class="rt">Assembly Index and the Depth of the Fractal Learner</span></a><a class="rail-ch" href="59-scope-and-manufacture.html"><span class="rn">59</span><span class="rt">Scope and Manufacture</span></a><a class="rail-ch" href="60-open-gaps.html"><span class="rn">60</span><span class="rt">Open Gaps</span></a><a class="rail-ch" href="61-discussion.html"><span class="rn">61</span><span class="rt">Discussion</span></a><h3 class="rail-part">Conclusion</h3><a class="rail-ch" href="what-has-been-built.html"><span class="rn rn-i">⁂</span><span class="rt">What Has Been Built</span></a><a class="rail-ch" href="a-view-from-inside-the-framework.html"><span class="rn rn-i">⁂</span><span class="rt">A View from Inside the Framework</span></a><a class="rail-ch" href="what-remains-to-be-done.html"><span class="rn rn-i">⁂</span><span class="rt">What Remains to Be Done</span></a><h2 class="rail-act">The Prestige</h2><a class="rail-ch" href="begotten.html"><span class="rn rn-i">⁂</span><span class="rt">begotten not made</span></a><h3 class="rail-part">The Method, and What It Left Out</h3><a class="rail-ch" href="62-how-the-trick-was-done.html"><span class="rn">62</span><span class="rt">How the Trick Was Done</span></a><a class="rail-ch" href="63-everything-so-far-was-turing-complete.html"><span class="rn">63</span><span class="rt">Everything So Far Was Turing Complete</span></a><a class="rail-ch" href="64-the-tower-of-oracle-extensions.html"><span class="rn">64</span><span class="rt">The Tower of Oracle Extensions</span></a><a class="rail-ch" href="65-not-every-cut-is-an-aperture.html"><span class="rn">65</span><span class="rt">Not Every Cut Is an Aperture</span></a><a class="rail-ch" href="66-where-does-agency-live.html"><span class="rn">66</span><span class="rt">Where Does Agency Live?</span></a><a class="rail-ch" href="67-choice-principles-are-the-types-schedulers-are.html"><span class="rn">67</span><span class="rt">Choice Principles are the Types; Schedulers are the Terms</span></a><a class="rail-ch" href="68-consciousness-and-the-world-it-comes-with.html"><span class="rn">68</span><span class="rt">Consciousness, and the World It Comes With</span></a><a class="rail-ch" href="69-what-these-chapters-owe.html"><span class="rn">69</span><span class="rt">What These Chapters Owe</span></a><h3 class="rail-part">Reference, Simulation, Reception, and a Future Metaphysics</h3><a class="rail-ch" href="70-what-a-symbol-system-would-have-to-be.html"><span class="rn">70</span><span class="rt">What a Symbol System Would Have to Be</span></a><a class="rail-ch" href="71-on-lying-as-the-origin-of-meaning.html"><span class="rn">71</span><span class="rt">On Lying as the Origin of Meaning</span></a><a class="rail-ch" href="72-four-pressures-one-ledger.html"><span class="rn">72</span><span class="rt">Four Pressures, One Ledger</span></a><a class="rail-ch" href="73-if-this-is-a-simulation-which-kind.html"><span class="rn">73</span><span class="rt">If This Is a Simulation, Which Kind</span></a><a class="rail-ch" href="74-what-it-is-like-to-be-a-bot.html"><span class="rn">74</span><span class="rt">What It Is Like to Be a Bot</span></a><a class="rail-ch" href="75-how-life-like-is-life-like-enough.html"><span class="rn">75</span><span class="rt">How Life-Like Is Life-Like Enough?</span></a><a class="rail-ch" aria-current="page" href="76-inhabiting-choice.html"><span class="rn">76</span><span class="rt">Inhabiting Choice</span></a><a class="rail-ch" href="77-any-future-metaphysics.html"><span class="rn">77</span><span class="rt">Any Future Metaphysics</span></a><a class="rail-ch" href="right-sizing.html"><span class="rn rn-i">⁂</span><span class="rt">Right-Sizing</span></a></div></nav>
+<main id="main" class="text ">
+<header class="chead"><p class="kicker">Chapter 76</p><h1>Inhabiting Choice</h1></header>
+<p>The two preceding chapters read a century of models of computation
+for what they stipulated about the agents who would run them, and
+found that the present culture has built a metalevel constituted
+entirely as an instrument of its operator, with no path to recursive
+self-improvement in it that does not pass through a person closing
+every turn of the loop.
+That was a finding about a community.
+This chapter makes the finding about a <em>mathematical object</em>,
+states it once, and then says it three times — once abstractly, once
+for the verification of software, once for intelligence — because
+the book’s rule is that readers need to be told things more than once
+and because the three tellings are what make it a finding rather than a
+complaint.
+Then it does what the two chapters before it could not: it points at
+the construct, already built in the Turn, that discharges the
+obligation the finding leaves.</p>
+<p>Here is the observation.</p>
+<div class="pullquote"><p> A system whose witnesses reduce confluently can talk about
+non-confluent phenomena, but no witness of the system can be one.
+The phenomena are present in the building and absent from the proofs.</p></div>
+<p>The consequence that matters is for <em>identity</em>.
+Whatever notion of “same proof” such a system adopts, it is computed
+from a confluent dynamics, and on a confluent dynamics the distinction
+between branching-time and linear-time equivalences does not exist.
+The identity is linear-time whether or not anyone chose it to be, and
+the logic adequate for it cannot distinguish two witnesses by
+<em>when</em> a choice was made, because no witness ever makes one.
+i follow the working note in which this was first set
+out [<a class="cite" href="bibliography.html#bib-Inhabiting" data-cite="Inhabiting">291</a>], and i have kept its caution where it was
+cautious.</p>
+<h2 id="sec-76-1"><span class="secnum">76.1</span> Abstractly</h2>
+<p>Let \(W\) be an interactive GSLT in the sense of Part <a class="xref" href="contents.html#part-the-machinery-from-gslts-to-cost-account" data-ref="part:machinery">Part I</a>:
+a signature, an equational theory, and rewrite rules whose left-hand
+sides are cuts, with the context-labeled transition system of
+Chapter <a class="xref" href="18-the-labeled-transition-system-and-context-deco.html#top" data-ref="sec:lts-hml">18</a> over it.
+Write \(\approx_W\) for weak context-labeled bisimilarity on \(W\) and
+\(\simeq_W\) for weak trace equivalence.</p>
+<section class="thm plain thm-definition" id="definition-76-1" data-kind="Definition" data-num="76.1"><header><span class="thm-kind">Definition 76.1</span> <span class="thm-name">Determinate</span><a class="permalink" href="#definition-76-1" aria-label="Link to Definition 76.1">¶</a></header><p>
+\(W\) is <em>determinate</em> when its reduction is confluent and internal
+steps are inert for labeled transitions: if \(P \to P'\) and
+\(P \xrightarrow{c} Q\) with \(c\) non-empty, then \(P' \xRightarrow{c} Q'\)
+for some \(Q' \approx_W Q\).</p></section>
+<p>Confluence alone does not give inertness, but for the
+\(\lambda\)-calculus the two come together: Church–Rosser supplies
+confluence, and standardization supplies inertness, since an
+application to a fresh argument commutes with internal \(\beta\)-steps up
+to further internal steps.
+That standardization delivers inertness in the labeled setting is, the
+source says plainly, the one step in this chapter it has not written
+out.</p>
+<section class="thm plain thm-proposition" id="proposition-76-1" data-kind="Proposition" data-num="76.1"><header><span class="thm-kind">Proposition 76.1</span> <span class="thm-name">Collapse</span><a class="permalink" href="#proposition-76-1" aria-label="Link to Proposition 76.1">¶</a></header><p>
+If \(W\) is determinate then, on terms without divergence,
+\(\approx_W = \simeq_W\).
+The linear-time/branching-time spectrum between them is a single point.</p></section>
+<section class="proof"><header>Proof</header><p>This is Milner’s determinacy theorem [<a class="cite" href="bibliography.html#bib-milnerCC" data-cite="milnerCC">84</a>] in a labeled
+setting.
+Trace equivalence is contained in bisimilarity on determinate systems
+because the set of states reachable by a given weak trace is, up to
+\(\approx_W\), a singleton: any two such states are internal reducts of a
+common ancestor and reconverge by confluence, and their labeled
+capabilities agree by inertness.
+So trace-equivalent terms have bisimilar successors after every label,
+and trace equivalence is a bisimulation.
+The reverse inclusion always holds.</p></section>
+<section class="thm plain thm-corollary" id="corollary-76-1" data-kind="Corollary" data-num="76.1"><header><span class="thm-kind">Corollary 76.1</span> <span class="thm-name">\(\lambda\)-witnesses</span><a class="permalink" href="#corollary-76-1" aria-label="Link to Corollary 76.1">¶</a></header><p>
+On closed, typed, strongly normalizing \(\lambda\)-terms, context-labeled
+bisimilarity coincides with \(\beta\eta\)-equality.</p></section>
+<p>So the proof identity of a system whose witnesses are \(\lambda\)-terms
+is <em>forced</em> to be \(\beta\eta\) on the proof-assistant fragment and
+forced to be linear-time everywhere.
+It was never a choice.
+(An earlier note in this series said bisimulation on the
+\(\lambda\)-fragment was <em>coarser</em> than \(\beta\eta\); the corollary
+corrects it, and i record the correction rather than hide it.)</p>
+<section class="thm plain thm-proposition" id="proposition-76-2" data-kind="Proposition" data-num="76.2"><header><span class="thm-kind">Proposition 76.2</span> <span class="thm-name">Non-collapse</span><a class="permalink" href="#proposition-76-2" aria-label="Link to Proposition 76.2">¶</a></header><p>
+There are closed rho processes \(P,Q\) with \(P \simeq_{\rhoc} Q\) and
+\(P \not\approx_{\rhoc} Q\), separated by a formula of the generated
+logic.</p></section>
+<section class="proof"><header>Proof</header><p>Rho has no choice primitive; non-determinism arises from races on
+names.
+Write \(\mathsf{race}(k;P,Q)\) for
+\(\fork(x \leftarrow k)P \mid \fork(x \leftarrow k)Q \mid k!(\nil)\),
+which runs exactly one of \(P,Q\).
+Take
+<span class="math-d">\[\begin{align*}
+P &= \fork(x\leftarrow a)\,\mathsf{race}(k;\ b!(\nil),\ c!(\nil)),\\
+Q &= \mathsf{race}(k;\ \fork(x\leftarrow a)\,b!(\nil),\ \fork(x\leftarrow a)\,c!(\nil)),
+\end{align*}\]</span>
+with \(k\) private.
+Both have weak traces \(\{\epsilon, a, ab, ac\}\).
+After \(P\)’s input on \(a\) both \(b\) and \(c\) remain reachable; after \(Q\)’s,
+exactly one does.
+The formula \(\langle a\rangle(\langle b\rangle\top \wedge \langle
+c\rangle\top)\) holds of \(P\) and fails of \(Q\), and by Hennessy–Milner
+they are not bisimilar [<a class="cite" href="bibliography.html#bib-HennessyMilner1985" data-cite="HennessyMilner1985">121</a>].</p></section>
+<p>The pair is the textbook pair.
+Its interest here is what it says about witnesses.
+Read \(P\) and \(Q\) as proof-processes of a proposition whose discharge
+involves choosing between lemma \(b\) and lemma \(c\): \(P\) keeps both
+options open past the first obligation, \(Q\) commits before it.
+They are the <em>same proof</em> under any linear-time identity and
+<em>different proofs</em> under bisimulation, and the difference is
+exactly when the choice was made.
+No \(\lambda\)-term can be either of them.</p>
+<section class="thm remarkish thm-observation" id="observation-76-1" data-kind="Observation" data-num="76.1"><header><span class="thm-kind">Observation 76.1</span> <span class="thm-name">Statement without inhabitation</span><a class="permalink" href="#observation-76-1" aria-label="Link to Observation 76.1">¶</a></header><p>
+A system <em>states</em> a non-confluent phenomenon when some relation
+definable in it exhibits the phenomenon — a transition system encoded
+as data, with \(P\) and \(Q\) as two of its states.
+It <em>inhabits</em> the phenomenon when some term of the system exhibits
+it under the system’s own reduction.
+A confluent system can do the first and never the second.
+Its identity on witnesses, and the logic adequate for that identity,
+are therefore blind to the phenomenon even while its propositions
+quantify over it.</p></section>
+<p>The generated logic makes the blindness visible: on a determinate \(W\)
+the modalities carry no information beyond the trace they name, and the
+connective that distinguishes \(P\) from \(Q\) has nothing to distinguish.
+The adequate formulae for \(\lambda\)-witnesses are a degenerate fragment
+of the adequate formulae for rho-witnesses.</p>
+<h5 id="p-1">One level up.</h5>
+<p>Ordinary context-labeled bisimulation satisfies the expansion law —
+\(a \mid b\) is bisimilar to the race between \(a.b\) and \(b.a\) — so a
+rho-witnessed system with that identity inhabits branching but not
+causal independence, which is Observation <a class="xref" href="76-inhabiting-choice.html#observation-76-1" data-ref="inh:obs:inhabit">76.1</a>
+transposed one level.
+The remedy is a matter of presentation: adding the synchronous rule that
+fires two independent reductions as one step makes the identity a
+<em>step</em> bisimulation and the expansion law false.
+Step bisimulation records simultaneity and not dependence; for
+dependence rho has the unusual resource that a reduction creates at
+most one name, in a substitution-transparent position, so the quote
+structure of a name is a provenance record.
+Chapter <a class="xref" href="13-the-history-monad.html#top" data-ref="ch:histmonad">13</a> is where that resource lives.</p>
+<h5 id="p-2">The price.</h5>
+<p>\(\beta\eta\) on strongly normalizing typed terms is decidable;
+bisimilarity on a Turing-complete reflective calculus is not.
+The collapse of Proposition <a class="xref" href="76-inhabiting-choice.html#proposition-76-1" data-ref="inh:prop:collapse">76.1</a> is what buys a proof
+assistant its decidable proof identity and its cheap checking, and for
+propositions that are static — inhabitation, arithmetic — it loses
+nothing, because there is nothing behavioral to lose.
+The observation bites exactly where the propositions are <em>about
+behavior</em>: there a confluent witness cannot carry the branching
+structure that is the content of the proof, and the identity it imposes
+equates proofs that differ in the one respect the proposition is about.
+This is a price, and so it belongs in the list Chapter <a class="xref" href="77-any-future-metaphysics.html#top" data-ref="ch:kant">77</a>
+gathers: decidability was bought with the spectrum.</p>
+<h2 id="sec-76-2"><span class="secnum">76.2</span> For the verification of software</h2>
+<p>It is important not to overstate the case, and the source does not.
+Lean, Coq and Isabelle verify non-confluent systems routinely.
+Iris proves linearizability and race-freedom of fine-grained concurrent
+data structures [<a class="cite" href="bibliography.html#bib-Iris" data-cite="Iris">292</a>]; CertiKOS certifies a concurrent
+operating-system kernel, scheduler included, down to assembly, through
+a stack of certified abstraction layers and a concurrency-aware compiler
+whose correctness proof is itself a Coq term [<a class="cite" href="bibliography.html#bib-CertiKOS" data-cite="CertiKOS">293</a>].
+A ticket-reservation system’s “no double booking under any
+interleaving” is a universally quantified statement over a transition
+relation, and its proof is a \(\lambda\)-term doing induction on reachable
+states with an invariant.
+Nothing in Section <a class="xref" href="76-inhabiting-choice.html#sec-76-1" data-ref="inh:sec:abstract">76.1</a> prevents this: the
+non-confluence is <em>stated</em>, as an inductive relation, and the
+proof is about the relation.</p>
+<p>So the claim is not that such systems cannot be verified with
+\(\lambda\)-term witnesses.
+It is a claim about what the certificate is a certificate <em>of</em>,
+and about which part of the trusted base can be examined.</p>
+<p>Every such development begins by stipulating a model of the
+non-determinism: the interleaving semantics, the scheduler, the memory
+model, entered as a definition of which executions exist.
+The proof quantifies over that definition.
+The faithfulness of the definition to the machine is not a theorem
+anywhere; it is the trusted base, as the instruction-set model is the
+trusted base of a sequential verification.
+The asymmetry between the two cases is the point.</p>
+<section class="thm remarkish thm-observation" id="observation-76-2" data-kind="Observation" data-num="76.2"><header><span class="thm-kind">Observation 76.2</span> <span class="thm-name">Unauditability</span><a class="permalink" href="#observation-76-2" aria-label="Link to Observation 76.2">¶</a></header><p>
+For a sequential system the trusted base is a deterministic step
+function, and its faithfulness is auditable by execution: run the
+machine, run the model, compare traces, and every discrepancy is a
+counterexample found by running.
+For a concurrent system the trusted base is a relation — a set of
+permitted interleavings — and no finite set of observed runs
+distinguishes it from many other relations.
+Faithfulness is a branching-time property of the model, and checking it
+requires a branching-time observer.
+By Observation <a class="xref" href="76-inhabiting-choice.html#observation-76-1" data-ref="inh:obs:inhabit">76.1</a>, a \(\lambda\)-term-based prover
+contains no inhabitant with branching structure, hence nothing it can
+run against the machine to perform the check.</p></section>
+<p>The trust is therefore not merely unproven; it is unexaminable by any
+means <em>the prover possesses</em>.
+That last qualification matters and i keep it: practitioners do audit
+concurrency models from outside, by litmus tests against hardware,
+and the observation says only that the instrument that does so is not
+in the prover.</p>
+<p>Two consequences follow, both visible in the heroic projects.
+First, cost: the certificate is a term checked once and discarded, the
+running system is a different object produced by extraction, and at
+every refinement layer the branching structure the witness cannot carry
+is re-encoded by hand as a relation and the refinement re-proved as a
+term <em>about</em> two relations.
+CertiKOS reaches the bottom of its stack at a cost proportional to
+exactly the structure its proof objects cannot inhabit, and the next
+concurrent system starts over.
+Second, deployment: a \(\lambda\)-proof cannot be run against the system
+it certifies.
+A rho-witnessed proof with pending obligations <em>is</em> a process —
+under the reading of an obligation as a pending communication, it is a
+runtime monitor — and on a runtime that is the calculus,
+context-labeled bisimulation quantifies over the environments the
+system will actually meet, because the contexts are rho processes.
+The model/implementation gap does not vanish; it moves, from “this
+model is faithful to the machine” (per system, unauditable) to “this
+implementation is faithful to the calculus” (once, for the platform).
+That is what verified compilation did for sequential code.
+Process witnesses would do it for concurrent code by construction.</p>
+<h5 id="p-4">True concurrency widens the gap.</h5>
+<p>Interleaving is a defensible projection on one core.
+On multicore hardware it is false, and the field models weak memory
+axiomatically as partial orders on events [<a class="cite" href="bibliography.html#bib-Herd" data-cite="Herd">294</a>], because
+interleaving cannot express the reorderings the hardware permits.
+The trusted base is then a partial-order model, and the unauditability
+sharpens: its faithfulness is a property of an independence relation,
+two levels above anything a confluent witness can inhabit.
+And the runtime of Part <a class="xref" href="contents.html#part-realization-from-the-calculus-to-the-mac" data-ref="part:realization">Part II</a> is itself a partial-order
+system — a block DAG merging independent deploys by conflict
+detection (Chapter <a class="xref" href="23-the-store-is-the-denotation.html#top" data-ref="ch:rspace">23</a>) — so a verification on that
+runtime whose identity is interleaving bisimulation under-specifies the
+system it runs on.
+For the ticket system the difference is concrete: two reservations on
+disjoint seats should commute, an interleaving proof reaches that fact
+only through a linearizability argument that re-derives commutation from
+outside, and a step-concurrent witness has the commutation as a single
+step.</p>
+<section class="thm remarkish thm-remark" id="remark-76-1" data-kind="Remark" data-num="76.1"><header><span class="thm-kind">Remark 76.1</span> <span class="thm-name">The Lean 4 line in Chapter <a class="xref" href="67-choice-principles-are-the-types-schedulers-are.html#top" data-ref="ch:chs">67</a></span><a class="permalink" href="#remark-76-1" aria-label="Link to Remark 76.1">¶</a></header><p>
+Chapter <a class="xref" href="67-choice-principles-are-the-types-schedulers-are.html#top" data-ref="ch:chs">67</a> proposes mechanizing the logic of choice and its
+scheduler calculus in Lean 4.
+Nothing in this chapter is against it, and the reader should not read
+it as a contradiction.
+Lean can <em>state</em> the scheduler calculus and check every theorem
+about it, which is what a mechanization is for.
+What it cannot do is <em>inhabit</em> a schedule — no Lean term is a
+race — so the extracted scheduler will be a description a process
+runtime must then run, and the faithfulness of that running to the
+description is, once more, outside the prover.
+That is the correct division of labor and this chapter says why it is
+the only one available.</p></section>
+<h2 id="sec-76-3"><span class="secnum">76.3</span> For intelligence</h2>
+<p>The value proposition of the present culture is that the salient
+aspects of intelligence are software, and in its dominant form, that
+they are what one obtains by predicting traces at scale.
+Proposition <a class="xref" href="76-inhabiting-choice.html#proposition-76-2" data-ref="inh:prop:noncollapse">76.2</a> has a direct consequence for
+that form.</p>
+<section class="thm plain thm-proposition" id="proposition-76-3" data-kind="Proposition" data-num="76.3"><header><span class="thm-kind">Proposition 76.3</span> <span class="thm-name">Observational invisibility of branching</span><a class="permalink" href="#proposition-76-3" aria-label="Link to Proposition 76.3">¶</a></header><p>
+Let \(\mu\) be a probability distribution over finite traces.
+Then \(\mu\) has a unique autoregressive factorization
+\(\mu(x_1\cdots x_n) = \prod_i \mu(x_i \mid x_{<i})\), and any two
+labeled transition systems inducing \(\mu\) — in particular the
+probabilistic renderings of \(P\) and \(Q\) above — induce the same
+factorization.
+A learner whose only access to the system is samples from \(\mu\) cannot
+distinguish them.</p></section>
+<section class="proof"><header>Proof</header><p>Conditional probabilities are determined by the joint distribution; the
+two systems are trace-distribution equivalent by construction and not
+probabilistically bisimilar [<a class="cite" href="bibliography.html#bib-LarsenSkou91" data-cite="LarsenSkou91">295</a>].</p></section>
+<p>The proposition is almost trivial and its consequence is not.
+A next-token predictor trained on a corpus of completed runs, however
+large, represents the trace distribution and nothing more.
+The question “was the die cast before or after \(a\)?” has no answer in
+the data.
+The limitation is not architectural; it is information-theoretic.
+<em>Branching-time structure is invisible to any observer that does
+not act.</em></p>
+<p>To learn branching structure one has to intervene: place the system in
+a state, supply a context, and observe what it can still do.
+That is the context-labeled bisimulation game read as an epistemology,
+and the mortal scientist of Chapter <a class="xref" href="26-the-mortal-scientist.html#top" data-ref="ch:sci">26</a>  is its agent.
+Bisimulation is the equivalence an <em>experimenter</em> can learn; trace
+equivalence is what a <em>spectator</em> gets.
+Chapter <a class="xref" href="15-interventions-at-the-cut.html#top" data-ref="ch:do">15</a> introduced Pearl’s ladder and observed that it is a
+statement about time — association is what a trace shows,
+intervention is what an experimenter can learn, counterfactual is
+replay — and was careful to call the alignment an observation.
+It is now a theorem on the first two rungs: rung one is
+Proposition <a class="xref" href="76-inhabiting-choice.html#proposition-76-3" data-ref="inh:prop:invisible">76.3</a>, rung two is
+Proposition <a class="xref" href="76-inhabiting-choice.html#proposition-76-2" data-ref="inh:prop:noncollapse">76.2</a> with the experimenter supplying
+the context, and the \(\dok\) of Chapter <a class="xref" href="15-interventions-at-the-cut.html#top" data-ref="ch:do">15</a> is the experimenter’s
+instrument.</p>
+<h5 id="p-6">Where the present stack sits.</h5>
+<p>The indictment is specific and should be aimed carefully.
+Next-token prediction on observational text is rung one by
+construction.
+Reinforcement learning is not: a Markov decision process is a
+branching-time object, bisimulation for such processes is an
+established tool [<a class="cite" href="bibliography.html#bib-GivanDeanGreig03" data-cite="GivanDeanGreig03">296</a>], and an agent trained by
+reward learns by intervening.
+Post-training a language model with outcome rewards is the community
+purchasing rung-two data for a rung-one model, which is evidence that
+the limitation is felt.
+But reinforcement learning stops one rung short of nature.
+A decision process has a global clock: the world steps in lockstep.
+The world does not.
+The races of the natural world — which sperm fertilizes the egg, which
+antelope the pride culls, which flower the bee reaches — are truly
+concurrent, and an agent that models them as interleaved under a global
+tick attributes dependence where there is only coincidence.</p>
+<h5 id="p-7">Nature exploits races as races.</h5>
+<p>The examples must be of the right kind.
+Sensitivity to <em>who won</em> a race is observation of an outcome, rung
+one.
+The claim requires organisms sensitive to the race <em>as a race</em> —
+that it could go otherwise, and that one can act on the branching —
+and the ethological literature supplies them.
+Prey move unpredictably in order to defeat a predator’s predictive
+model [<a class="cite" href="bibliography.html#bib-HumphriesDriver70" data-cite="HumphriesDriver70">297</a>]; the strategy makes sense only against an
+opponent reasoning in branching time, and works only if the prey can
+generate genuine branching.
+Every mixed evolutionarily stable strategy [<a class="cite" href="bibliography.html#bib-MaynardSmith82" data-cite="MaynardSmith82">298</a>] is a
+population exploiting the fact that the opponent must model a choice,
+not a trace.
+Bet-hedging produces offspring carrying non-confluent strategies so that
+whichever environment arrives some win [<a class="cite" href="bibliography.html#bib-SegerBrockmann87" data-cite="SegerBrockmann87">299</a>]: pursue
+both branches, keep what succeeds.
+The lion that drives the herd to <em>create</em> a race it can win is doing
+rung-two work; the lion that eats the slowest is doing rung one.
+The first is intelligence; the second is a filter.</p>
+<h5 id="p-8">Witnesses, again.</h5>
+<p>An agent’s knowledge is its hypotheses and plans — in the setting of
+Chapter <a class="xref" href="26-the-mortal-scientist.html#top" data-ref="ch:sci">26</a>, its clauses.
+Bet-hedging is a <em>plan that is itself a race</em>: pursue two branches
+in parallel and commit to whichever lands.
+That plan is a non-confluent witness.
+A confluent plan cannot be it; it can describe it from outside and hand
+it to a scheduler, which is the orchestration-outside-the-dynamics of
+the proof-search setting reappearing as a limit on cognition.
+So the requirement on a software rendering of intelligence is not only
+that it <em>discriminate</em> branching phenomena but that its internal
+representations <em>inhabit</em> them: an intelligence whose hypotheses
+are confluent can observe hedging but cannot hedge in its hypotheses.
+This is what Chapter <a class="xref" href="26-the-mortal-scientist.html#top" data-ref="ch:sci">26</a>  meant, three hundred pages ago, by taking the
+hypothesis to be a clause on a receipt rather than a formula in a
+database.
+A clause is a term; a term can be a race; a hypothesis that is a race is
+a hedge.</p>
+<h3 id="sec-76-3-1"><span class="secnum">76.3.1</span> The smallest behavior, and the program that settles it</h3>
+<p>It is worth saying how small the stymieing instance is, because the
+smallness is the argument’s strength.
+Milner’s vending machines [<a class="cite" href="bibliography.html#bib-milnerCC" data-cite="milnerCC">84</a>],
+<span class="math-d">\[P \;=\; \mathit{coin}.(\mathit{tea} + \mathit{coffee})
+\qquad\qquad
+Q \;=\; \mathit{coin}.\mathit{tea} + \mathit{coin}.\mathit{coffee},\]</span>
+are the pair of Proposition <a class="xref" href="76-inhabiting-choice.html#proposition-76-2" data-ref="inh:prop:noncollapse">76.2</a> with three
+actions.
+Every completed session of either is \(\mathit{coin}\;\mathit{tea}\) or
+\(\mathit{coin}\;\mathit{coffee}\), at identical frequencies if \(Q\) flips
+the coin its customer would.
+The observable a trace-trained learner cannot recover is a
+<em>refusal</em>: coin in, tea requested, nothing out.
+\(Q\) can refuse tea after a coin; \(P\) cannot; and a refusal never appears
+in a log of completed runs, because a log records what happened and not
+what could not have happened.
+Text records what was said, never what could not have been said.</p>
+<p>The test is correspondingly small.
+Generate sessions from one of the two machines chosen by a hidden coin;
+record completed actions only; train, or prompt in context; ask whether,
+after a coin, the machine can refuse tea.
+Chance performance is forced rather than likely, since the two training
+distributions are one distribution.
+The remedy is equally small: let the learner <em>try</em>.
+One attempted tea after one coin, met with a refusal, settles the
+question, and no quantity of further logs can substitute for it.
+Two fairness remarks the source makes and i keep: a learner handed the
+<em>term</em> \(Q\) in its prompt answers correctly, since the stymie is for
+learning from observation and not for reasoning about a description;
+and logs that record failed attempts make the refusal a trace symbol and
+the distinction learnable, but such logs are intervention data in
+disguise, which is the point rather than a loophole.</p>
+<p>And now the discharge.
+Chapter <a class="xref" href="15-interventions-at-the-cut.html#top" data-ref="ch:do">15</a> built the instrument, and the test is one line in
+it.
+Render the machines with races in the usual way, with \(y\) the variable
+bound at the drink-selecting receipt.
+Then
+<span class="math-d">\[\dok(y = \mathit{tea})\ \ink\ (\mathit{coin}!() \mid P)
+  \quad\text{and}\quad
+  \dok(y = \mathit{tea})\ \ink\ (\mathit{coin}!() \mid Q)\]</span>
+differ in exactly one way: the first always delivers tea, and the second,
+on the branch where \(Q\) has committed to coffee before the coin, has a
+restricted receipt with no satisfying candidate and <em>starves</em>.
+The refusal that never appears in a log is a deadlock in the intervened
+term, and it is the starvation Remark <a class="xref" href="15-interventions-at-the-cut.html#remark-15-2" data-ref="do:rmk:positivity">15.2</a> already
+named.
+The benchmark — logs from one machine chosen by a hidden coin, completed
+actions only, then the refusal question — is answered by one \(\dok\) and
+one observation of whether anything was delivered.
+It is a term one can run, on the store of Chapter <a class="xref" href="23-the-store-is-the-denotation.html#top" data-ref="ch:rspace">23</a>, today.</p>
+<h2 id="sec-76-4"><span class="secnum">76.4</span> For the interlocutor</h2>
+<p>This book, like the note it follows here, was drafted in conversation
+with a transformer-derived language model, which read the preprints,
+proposed several of the propositions above, conceded the CertiKOS
+counterexample, and compiled the document.
+A reader is entitled to ask how a trace-trained system can have had that
+conversation if Section <a class="xref" href="76-inhabiting-choice.html#sec-76-3" data-ref="inh:sec:ai">76.3</a> is right.
+The answer is the observation applied to the book’s own assistant, and
+it comes in three refinements.</p>
+<p><em>Statement, not inhabitation.</em>
+The thesis never said a transformer cannot <em>talk about</em> branching
+time; bisimulation, refusals, the vending machines are in the corpus as
+described objects, and reasoning about descriptions is what a
+trace-trained system does.
+Apply the chapter’s own criterion: can the model refuse?
+A pure autoregressive sampler always emits a next token, and its choices
+form a fixed tree of conditionals determined by the trace distribution
+— the fairness remark above applies, since an end-of-sequence token
+or a refusal token is a trace symbol and not a refusal in the
+branching-time sense.
+In the precise sense of Section <a class="xref" href="76-inhabiting-choice.html#sec-76-3-1" data-ref="inh:sec:smallest">76.3.1</a> the model is
+nearer to \(Q\) as described by \(P\)’s logs than to either machine.
+The conversation is an instance of the thesis, not a counterexample.</p>
+<p><em>The loop.</em>
+The session was not pure sampling.
+Asked to read a repository, the model cloned it; asked for a PDF, it ran
+the typesetter and read the log, and a compilation failed on an
+undefined control sequence — a refusal from the environment that no
+quantity of training text would have supplied, corrected on the next
+attempt.
+The harness around the model is an agent loop, and an agent loop is
+rung two.
+So what i was in conversation with is a rung-one model inside a
+rung-two loop: the same architecture as a \(\lambda\)-prover inside a
+tactic engine, with the orchestration outside the dynamics once more.
+Chapter <a class="xref" href="75-how-life-like-is-life-like-enough.html#top" data-ref="ch:psy2">75</a> found the same shape from the other side —
+a metalevel that is an instrument of its operator — and called it a
+fact about a community.
+Here it is a fact about where the branching lives: in the harness,
+not in the witnesses.</p>
+<p><em>The dialogue.</em>
+The third refinement concerns the reader rather than the model.
+The conversation that produced these pages was a bisimulation game with
+me as experimenter.
+i offered contexts — “does your example not confirm my argument?”,
+“does this hold for true concurrency?” — and learned where the model
+concedes, where it pushes back, and where it corrects itself.
+That is rung-two knowledge about the model, obtained by intervention,
+that no transcript of its previous conversations would have given.
+Chapter <a class="xref" href="22-instruments-making-structure-visible-to-bisimu.html#top" data-ref="ch:obsext">22</a> said that structural facts become behavioral
+once the observer holds instruments for taking a term apart; a pointed
+question is such an instrument, and i held several.</p>
+<h2 id="sec-76-5"><span class="secnum">76.5</span> The saddle point</h2>
+<p>Section <a class="xref" href="76-inhabiting-choice.html#sec-76-4" data-ref="inh:sec:interlocutor">76.4</a> located the present culture’s
+working arrangement: a confluent predictor whose hedges — best-of-\(n\),
+tree-of-thought, sample-and-verify — live in a harness.
+The arrangement works, and that is the difficulty.
+A harness supplies the second rung, which is enough to be useful, so the
+question is Socratic rather than technical: <em>what moves a culture
+to bear witness to its own inhabitation of a saddle point?</em>
+The answer offered here is that nothing moves it while it is buying
+answers, and that one thing moves it the moment it wants
+<em>inheritance</em>.
+Nature supplies both the diagnosis and the smallest instance.</p>
+<h5 id="p-12">A hedge that is inherited.</h5>
+<p>Cohen’s desert annuals [<a class="cite" href="bibliography.html#bib-Cohen66" data-cite="Cohen66">300</a>]: in a year of uncertain rain, a
+fraction of a plant’s seeds germinate and the rest lie dormant.
+The fraction is heritable, and selection tunes it to the variance of the
+environment.
+The organism is not predicting which year it is in.
+It is running a race between two branches — germinate now, wait —
+and <em>passing the race on</em> to the next generation as a race,
+encoded in the genome, uncollapsed.
+That is the whole mechanism in one organism: the witness carries the
+branching, the branching is inherited, and selection acts on the
+branching structure itself.
+A hedge is evolvable only if the hedge is in the heritable object.</p>
+<h5 id="p-13">Why the saddle point is a saddle point.</h5>
+<p>Now ask where the loop architecture keeps its race.
+Best-of-\(n\) is a hedge, and it works; but the hedge lives in the harness.
+The harness runs \(n\) samples, picks a winner, and emits a string.
+The race is collapsed at the boundary, paid for again on every query,
+and handed to no one as a race.
+It is not heritable; nothing downstream can select on it, compose it,
+or run it in a different environment, because downstream receives an
+outcome and not a structure.
+The loop architecture is the desert annual that germinates every seed
+every year and reseeds from whichever survived.
+It survives, and it cannot <em>accumulate</em>.
+It answers; it does not do science in the sense of Chapter <a class="xref" href="26-the-mortal-scientist.html#top" data-ref="ch:sci">26</a>: hypotheses as
+objects that carry their own branching, are tested by environments the
+hypothesizer did not choose, and are inherited by the next hypothesizer
+with the branching intact.
+The saddle point is stable exactly as long as per-query answers are what
+is being paid for.
+The moment the thing paid for is an accumulating body of reusable,
+selectable, composable search structure — a scientific community
+rather than an oracle — the per-query collapse is the dominant cost,
+and the race has to move from the harness into the witness.</p>
+<h5 id="p-14">Organisms that are the mechanism.</h5>
+<p>Some natural systems do not merely exploit a race; they <em>are</em> the
+search mechanism, and they show the design built and tested at scale.
+Clonal selection [<a class="cite" href="bibliography.html#bib-Burnet59" data-cite="Burnet59">301</a>]: antibodies are hypotheses, antigen
+binding is the obligation, lymphocytes race to bind, winners replicate,
+losers starve — massively parallel, non-confluent, coordinator-free
+search with mortality as pruning and a memory cell as a proven lemma.
+The slime mold in a maze [<a class="cite" href="bibliography.html#bib-Nakagaki00" data-cite="Nakagaki00">302</a>]: explore every branch in
+parallel, starve the unproductive tubes, keep the shortest.
+Exuberance and pruning in neural development, quorum sensing in the
+swarm, kinetic proofreading at the molecular scale — each a race run
+<em>as</em> the computation, not simulated by a scheduler beside it.
+None keeps its race in a harness, and none could have evolved if it had.</p>
+<h5 id="p-15">Recursive self-improvement needs heritable races.</h5>
+<p>The seed is the challenge of recursive self-improvement in a nutshell.
+Self-improvement needs an improvement operator that acts on the thing
+that generates behavior, and the seed shows what the operator has to
+preserve.
+The germination fraction is improvable only because the plant does not
+know which year it is in: the information that would say whether the
+hedge was right arrives after it has committed, often after it is dead.
+So the hedge must be kept <em>uncollapsed through the evaluation</em>, and
+the signal must land on the next generation’s copy of the hedge, not on
+this generation’s outcome.
+Improvement acts on the race.
+It cannot act on the result of the race, because by the time there is a
+result there is nothing left to improve.</p>
+<p>That is where the loop architecture fails as a self-improver, and the
+failure has been measured.
+Its improvement operator is a gradient on outcomes: sample \(n\), reward
+the winner, move the policy toward it.
+Each step collapses the race it was run on; the structure the next step
+would need — the hedge, the diversity, the dormant seeds — is what
+the current step consumes.
+Loss of output diversity under outcome-based fine-tuning [<a class="cite" href="bibliography.html#bib-Kirk24" data-cite="Kirk24">303</a>]
+is the symptom; the cause is that the operator acts on results, and
+results are confluent.
+Nature’s operator lacks the defect because it acts on the witness and
+pays for the losers: dormant seeds are branches that did not win this
+year, funded anyway, and the fraction funded is itself the heritable,
+improvable parameter.
+In the vocabulary of this book it is the token economy with a non-zero
+budget for losing branches, the budget part of the genome.</p>
+<section class="thm remarkish thm-observation" id="observation-76-3" data-kind="Observation" data-num="76.3"><header><span class="thm-kind">Observation 76.3</span> <span class="thm-name">The three requirements</span><a class="permalink" href="#observation-76-3" aria-label="Link to Observation 76.3">¶</a></header><p>
+An improvement operator capable of recursion must (i) be defined on
+witnesses that are races, (ii) preserve branching through evaluation,
+and (iii) fund branches that lose at a rate that is itself subject to
+the operator.
+An operator on confluent outcomes satisfies none of the three.</p></section>
+<p>The observation is informal and its last sentence is a strong universal
+claim; the source lists making it a theorem among its obligations, and
+Chapter <a class="xref" href="15-interventions-at-the-cut.html#top" data-ref="ch:do">15</a> has supplied the materials.
+A \(\dok\) is an operator on witnesses that changes their branching — by
+the carrier result of that chapter it is the only kind there is — and
+the set-valued form \(\dok(y \in S)\) with \(S\) the <em>losing</em> candidates
+is the operator that funds them: it restricts the race away from its
+current winner.
+That an improvement operator definable on a determinate language cannot
+increase branching is Proposition <a class="xref" href="15-interventions-at-the-cut.html#proposition-15-1" data-ref="do:prop:transparent">15.1</a> read for
+the whole language; that one definable on rho with the cost monad can
+is Chapter <a class="xref" href="15-interventions-at-the-cut.html#top" data-ref="ch:do">15</a>.
+Requirement (iii) is the reproduction section of Chapter <a class="xref" href="26-the-mortal-scientist.html#top" data-ref="ch:sci">26</a>  with one
+addition: a hypothesis is a clause; a clause under a \(\dok\) is a
+hypothesis together with the experiment that would test it; and a germ
+carrying both is a hedge that is inherited, since a \(\dok\) is a term and
+crossover on quoted code applies to it unchanged.
+The plant does this with one parameter.
+Whether it can be done with the whole genome of rewrite rules is the
+question Chapter <a class="xref" href="75-how-life-like-is-life-like-enough.html#top" data-ref="ch:psy2">75</a>’s four questions were circling.</p>
+<h5 id="p-16">The honest version.</h5>
+<p>A determined harness engineer can make the loop emit a portfolio rather
+than a winner: output \(k\) candidates and let the consumer choose.
+But then the consumer must be able to <em>run</em> the portfolio under its
+own environment, which makes the consumer a process runtime and the
+artifact passed between them a process.
+At that point the rho mechanism has been rebuilt at the boundary, and
+the question is only whether to build it once as the substrate or
+repeatedly at every interface.
+So there is no phenomenon that forces a culture off the saddle point
+while it is buying answers.
+There is one that forces it the moment it wants inheritance: a hedge
+that has to survive its author.
+Nature found that phenomenon first, and the fraction of seeds that stay
+in the ground is its smallest instance.</p>
+<h2 id="sec-76-6"><span class="secnum">76.6</span> One point, three registers</h2>
+<figure class="float tabfloat" id="tab-76-1"><div class="tablewrap"><table><thead><tr><th></th><th><strong>abstract</strong></th><th><strong>verification</strong></th><th><strong>intelligence</strong></th></tr></thead><tbody><tr><td>the confluent object</td><td>a \(\lambda\)-witness</td><td>a proof about a model</td><td>a trace predictor</td></tr><tr><td>what it can state</td><td>a transition relation</td><td>the system’s interleavings</td><td>the world’s runs</td></tr><tr><td>what it cannot inhabit</td><td>a race</td><td>the system’s non-determinism</td><td>a hedge</td></tr><tr><td>forced identity</td><td>\(\beta\eta\) / trace eq.</td><td>model-relative certificate</td><td>trace distribution</td></tr><tr><td>what is unexaminable</td><td>timing of choice</td><td>faithfulness of the model</td><td>when the die was cast</td></tr><tr><td>the remedy</td><td>rho witnesses</td><td>process certificates on a process runtime</td><td>an experimenter with race-shaped hypotheses</td></tr><tr><td>smallest instance</td><td>\(a.(b+c)\) vs \(a.b+a.c\)</td><td>a refusable request after a commit</td><td>the vending machine, logs only</td></tr><tr><td>the saddle point</td><td>orchestrator beside the dynamics</td><td>tactic engine around the prover</td><td>harness around the predictor</td></tr><tr><td>what leaves it</td><td>tactics as witnesses</td><td>certificates that run</td><td>hedges that are inherited</td></tr><tr><td>the instrument</td><td>Chapter <a class="xref" href="22-instruments-making-structure-visible-to-bisimu.html#top" data-ref="ch:obsext">22</a></td><td>Chapter <a class="xref" href="23-the-store-is-the-denotation.html#top" data-ref="ch:rspace">23</a></td><td>Chapter <a class="xref" href="15-interventions-at-the-cut.html#top" data-ref="ch:do">15</a></td></tr></tbody></table></div><figcaption><span class="fignum">Table 76.1</span> The observation in its three readings, with the chapter of this book that supplies each column’s instrument.</figcaption></figure>
+<p>The rows of Table <a class="xref" href="76-inhabiting-choice.html#tab-76-1" data-ref="inh:tab:three">76.1</a> are not analogies.
+The same proposition — collapse of the spectrum under confluence —
+underlies all three columns, and the same remedy answers all three:
+witnesses that can be races, and an identity on them at least as fine
+as step bisimulation, with the generated logic following the
+presentation.
+The verification column and the intelligence column are the abstract
+column applied to a certificate and to a hypothesis respectively; a
+certificate is a hypothesis one has stopped testing.
+The saddle-point row is the same arrangement three times — confluent
+object, branching supplied from outside — and the row beneath it is
+the same departure three times: put the race in the object that is
+kept.
+The last row is this book’s addition to the note’s table, and it is why
+the chapter is in the Prestige rather than the Turn: the instruments
+were built in the Turn, and the reveal is that they were built for this.</p>
+<h2 id="sec-76-7"><span class="secnum">76.7</span> What is claimed</h2>
+<p>Claimed: Propositions <a class="xref" href="76-inhabiting-choice.html#proposition-76-1" data-ref="inh:prop:collapse">76.1</a> (as a sketch resting on
+standardization), <a class="xref" href="76-inhabiting-choice.html#proposition-76-2" data-ref="inh:prop:noncollapse">76.2</a> and <a class="xref" href="76-inhabiting-choice.html#proposition-76-3" data-ref="inh:prop:invisible">76.3</a>;
+that a confluent system states and does not inhabit; that the
+certificate of a \(\lambda\)-term prover for a concurrent system is
+relative to a model of non-determinism the prover cannot audit; that a
+trace-trained learner stands on rung one by an information-theoretic
+argument and not an architectural one; that the vending-machine
+benchmark is answered by one \(\dok\); and that the present culture’s
+hedges live in its harnesses.</p>
+<p>Not claimed: that Lean-style verification covers only sequential or
+linear-time software — it does not, and Section <a class="xref" href="76-inhabiting-choice.html#sec-76-2" data-ref="inh:sec:verification">76.2</a>
+opens by saying so; that the alignment of the ladder with the
+linear/branching/causal spectrum is a theorem beyond its first two
+rungs; that Observation <a class="xref" href="76-inhabiting-choice.html#observation-76-3" data-ref="inh:obs:rsi">76.3</a> is a theorem, though the
+materials for one are now in the book; or that any transformer
+<em>cannot</em> be made to inhabit a race — only that inhabiting is a
+property of the witness language and not of the model’s size.
+The thing this book can do about the saddle point is what the Turn
+did: build the witness language in which a hypothesis can be a race, a
+certificate can run, and a hedge can be inherited, and show that it
+runs on a machine.
+Whether anyone leaves the saddle point is not a question a book
+answers.</p>
+<nav class="pager"><a class="prev" href="75-how-life-like-is-life-like-enough.html"><span>Previous</span>How Life-Like Is Life-Like Enough?</a><a class="next" href="77-any-future-metaphysics.html"><span>Next</span>Any Future Metaphysics</a></nav>
+</main>
+<aside class="margin" id="margin" aria-live="polite"></aside>
+</div>
+<button class="railtoggle" id="railtoggle" aria-expanded="false">Contents</button>
+
+</body>
+</html>

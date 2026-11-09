@@ -17,6 +17,10 @@ BOOK="${1:-$(dirname "$REPO")/publications/FindingMind}"
 DOMAIN="${2:-findingmind.io}"
 [ -f "$BOOK/finding_mind.tex" ] || { echo "no finding_mind.tex in $BOOK" >&2; exit 1; }
 export FM_BOOK="$BOOK" FM_OUT="$REPO" FM_WORK="${FM_WORK:-$HERE/tikzwork}"
+# Chapter numbers (and so page names) shift between drafts; clear the old pages so
+# nothing stale survives, then put redirect stubs at every name that disappeared.
+rm -f "$REPO"/read/*.html
 python3 "$HERE/gen.py"
+( cd "$REPO" && python3 deploy/make-renamed-redirects.py )
 if command -v node >/dev/null; then node "$HERE/katex-check.js"; fi   # every expression must parse
 cd "$(dirname "$REPO")" && python3 "$REPO/deploy/finalize.py" "$DOMAIN" --site "$(basename "$REPO")"
