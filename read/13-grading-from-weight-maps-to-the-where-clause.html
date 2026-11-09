@@ -388,7 +388,7 @@ above is about to be shown to be a special case.</p>
 <h2 id="sec-13-6"><span class="secnum">13.6</span> Where the choice is</h2>
 <p>A rho program does not determine its own execution. Write
 <span class="math-d">\[\begin{equation}
-\label{gw:eq:race}
+
   x!(Q_1) \mid \textsf{for}(y \leftarrow x)\,P \mid x!(Q_2)
 \end{equation}\]</span>
 and the operational semantics permits two reductions. It does not say which one happens,
@@ -491,8 +491,8 @@ structure.
 <span class="math-d">\[\begin{align*}
 \beta &::= \textsf{true} \mid \textsf{false} \mid g \mid \neg\beta \mid
   \beta \wedge \beta \mid \beta \vee \beta \mid \langle K \rangle\beta \mid
-  \textsf{out}(n)\beta \mid \textsf{in}(n)\beta \mid \beta \mid \beta \mid @\beta
-\intertext{and let the \emph{graded sort} be}
+  \textsf{out}(n)\beta \mid \textsf{in}(n)\beta \mid \beta \mid \beta \mid @\beta\end{align*}\]</span><p class="intertext">and let the <em>graded sort</em> be</p><span class="math-d">\[\begin{align*}
+
 \psi &::= \crisp{\beta} \mid v \mid \psi \tensorv \psi \mid \psi \sumv \psi
   \mid \langle K \rangle_{\Semi}\,\psi \qquad (v \in V).
 \end{align*}\]</span>
@@ -551,7 +551,7 @@ The clause needs a semiring and a scope rule.</p>
 <p>Let \(\Semi\langle \terms/{\equiv}\rangle\) be the free \(\Semi\)-semimodule on terms modulo
 structural congruence. Define the one-step operator of a term by summing its candidates:
 <span class="math-d">\[\begin{equation}
-\label{gw:eq:onestep}
+
   T(P) \;=\; \sum_{r}\ \sum_{\sigma \in \Cand(P,r)}
     \sem{\psi_r}_r(\sigma)\;\cdot\;\Out(r,\sigma) ,
 \end{equation}\]</span>

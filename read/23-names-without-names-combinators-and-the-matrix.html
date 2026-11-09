@@ -65,21 +65,23 @@ arrives at \(a\). One is the <em>destructor</em> \(\mathsf{ev}(a)\), which consu
 store \(\mathsf{q}(a,p)\), a message that only a forwarder can read. The rules are two-atom
 rewrites, each a message meeting one router or the destructor at a shared name.</p>
 <figure class="float figfloat" id="fig-23-1"><p> 
-<span class="math-d">\[\begin{array}{ll}
+<span class="math-d">\[\begin{gathered}\begin{array}{ll}
  \mathsf{d}(a,b,c) \mid \mathsf{m}(a,v) \rewrite \mathsf{m}(b,v) \mid \mathsf{m}(c,v)
-   & \mathsf{bl}(a,b) \mid \mathsf{m}(a,v) \rewrite \mathsf{fw}(v,b)\\
+   & \mathsf{bl}(a,b) \mid \mathsf{m}(a,v) \rewrite \mathsf{fw}(v,b) \\
+
  \mathsf{k}(a) \mid \mathsf{m}(a,v) \rewrite \nil
-   & \mathsf{br}(a,b) \mid \mathsf{m}(a,v) \rewrite \mathsf{fw}(b,v)\\
+   & \mathsf{br}(a,b) \mid \mathsf{m}(a,v) \rewrite \mathsf{fw}(b,v) \\
+
  \mathsf{fw}(a,b) \mid \mathsf{m}(a,v) \rewrite \mathsf{m}(b,v)
-   & \mathsf{sy}(a,b,c) \mid \mathsf{m}(a,v) \rewrite \mathsf{fw}(b,c)\\
+   & \mathsf{sy}(a,b,c) \mid \mathsf{m}(a,v) \rewrite \mathsf{fw}(b,c) \\
+
  \mathsf{ev}(a) \mid \mathsf{m}(a,v) \rewrite *v
-   & \mathsf{fw}(a,b) \mid \mathsf{q}(a,p) \rewrite \mathsf{m}(b,@p)\\[4pt]
- \multicolumn{2}{l}{\mathsf{cons}_{\mid}(a,b,c) \mid \mathsf{m}(a,@p) \mid \mathsf{m}(b,@r)
-   \rewrite \mathsf{m}(c,@(p \mid r))}\\
- \multicolumn{2}{l}{\mathsf{cons}_{A}(a_{1},\dots,a_{n},f) \mid \mathsf{m}(a_{1},v_{1})
+   & \mathsf{fw}(a,b) \mid \mathsf{q}(a,p) \rewrite \mathsf{m}(b,@p)\end{array} \\[4pt]
+\begin{array}{l}\mathsf{cons}_{\mid}(a,b,c) \mid \mathsf{m}(a,@p) \mid \mathsf{m}(b,@r)
+   \rewrite \mathsf{m}(c,@(p \mid r)) \\
+\mathsf{cons}_{A}(a_{1},\dots,a_{n},f) \mid \mathsf{m}(a_{1},v_{1})
    \mid \cdots \mid \mathsf{m}(a_{n},v_{n})
-   \rewrite \mathsf{m}(f,@A(v_{1},\dots,v_{n}))}
-\end{array}\]</span>
+   \rewrite \mathsf{m}(f,@A(v_{1},\dots,v_{n}))\end{array}\end{gathered}\]</span>
  </p><figcaption><span class="fignum">Figure 23.1</span> The rules of the repaired combinator calculus, closed under \(\mid\) and the
 equations of a commutative monoid on \(\mid\). The last line is a schema, one rule per
 atom shape \(A\) a program needs.</figcaption></figure>

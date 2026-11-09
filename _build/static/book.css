@@ -243,6 +243,7 @@ th,td{text-align:left;padding:.45rem .8rem .45rem 0;vertical-align:top;
   border-bottom:1px solid var(--rule)}
 th{font-weight:700;border-bottom:1.5px solid var(--ink-3)}
 .tikz-missing{color:var(--ink-3);font-style:italic;margin:1.5rem 0}
+.intertext{margin:-.6rem 0 -.6rem;color:var(--ink-2)}
 .math-d{display:block;overflow-x:auto;overflow-y:hidden;margin:1.2rem 0;max-width:38rem}
 .pullquote{margin:1.6rem 0 1.6rem 1.2rem;color:var(--ink-2);max-width:34rem;
   border-left:2px solid var(--rule);padding-left:1rem}

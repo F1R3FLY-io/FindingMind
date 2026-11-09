@@ -347,9 +347,7 @@ def stash_math(t, ctx):
             if env == "mathpar":
                 inner = t[a + len("\\begin{mathpar}"):b]
                 inner = inner.replace("\\and", "\\\\[1ex]")
-                inner = re.sub(r"\\inferrule\*?\s*\{(.*?)\}\s*\{(.*?)\}",
-                               lambda m: "\\dfrac{%s}{%s}" % (m.group(1).replace("\\\\", "\\quad "), m.group(2)),
-                               inner, flags=re.S)
+                inner = fix_inferrules(inner)
                 t = t[:a] + push("\\begin{array}{c}" + inner + "\\end{array}", True) + t[c2:]
             else:
                 t = t[:a] + push(body, True) + t[c2:]
@@ -373,12 +371,106 @@ def scan_math_labels(ctx, register):
             ctx["math"][idx] = (tex, disp)
 
 
+def _split_rows(body):
+    """split an array body on \\\\ (optionally with [..] spacing), brace-aware."""
+    rows, cur, d, i = [], "", 0, 0
+    while i < len(body):
+        c = body[i]
+        if c == "\\" and body.startswith("\\\\", i) and d == 0:
+            j = i + 2
+            m = re.match(r"\[[^\]]*\]", body[j:])
+            if m:
+                j += m.end()
+            rows.append(cur); cur = ""; i = j; continue
+        if c == "\\" and i + 1 < len(body):
+            cur += body[i:i+2]; i += 2; continue
+        if c == "{": d += 1
+        elif c == "}": d -= 1
+        cur += c; i += 1
+    rows.append(cur)
+    return rows
+
+
+def fix_inferrules(t):
+    r"""\inferrule*[right=Name]{premises}{conclusion} -> \dfrac{premises}{conclusion}
+    with the rule name set to the right. Premises separated by \\\\ are stacked."""
+    out = ""
+    i = 0
+    while True:
+        j = t.find("\\inferrule", i)
+        if j < 0:
+            out += t[i:]; break
+        k = j + len("\\inferrule")
+        if k < len(t) and t[k] == "*":
+            k += 1
+        opt, k = take_opt(t, k)
+        prem, k2 = take_group(t, k)
+        if k2 == k:
+            out += t[i:k]; i = k; continue
+        conc, k3 = take_group(t, k2)
+        name = ""
+        if opt:
+            m = re.search(r"(?:right|left|lab)\s*=\s*([^,\]]+)", opt)
+            if m:
+                name = "\;\\small\\textrm{%s}" % m.group(1).strip()
+        prem = prem.strip()
+        if "\\\\" in prem:
+            prem = "\\begin{array}{c}" + prem + "\\end{array}"
+        out += t[i:j] + "\\dfrac{%s}{%s}%s" % (prem, conc.strip(), name)
+        i = k3
+    return out
+
+
 def katex_fixups(tex):
     """LaTeX that pdflatex accepts but KaTeX rejects."""
-    # @{...} inter-column material in array/tabular specs: KaTeX has no equivalent
-    tex = re.sub(r"(\\begin\{array\}\{)((?:[^{}]|\{[^{}]*\})*)\}",
-                 lambda m: m.group(1) + re.sub(r"@\{[^}]*\}", "", m.group(2)) + "}", tex)
+    tex = re.sub(r"\\label\{[^}]*\}", "", tex)            # labels were registered already
+    tex = fix_inferrules(tex)
+    def fix_array(m):
+        spec = re.sub(r"@\{[^}]*\}", "", m.group(2))      # @{..} has no KaTeX equivalent
+        ncols = len(re.findall(r"[lcr]", spec))
+        body = m.group(3)
+        if "\\multicolumn" not in body:
+            return m.group(1) + spec + "}" + body + "\\end{array}"
+        # rows spanning every column are hoisted into a one-column array below
+        main, wide = [], []
+        for r in _split_rows(body):
+            mm = re.match(r"\s*\\multicolumn\{(\d+)\}\{[^}]*\}", r)
+            if mm and int(mm.group(1)) == ncols:
+                _, k = take_group(r, mm.end())
+                wide.append(r[mm.end():k].strip()[1:-1])
+            elif r.strip():
+                main.append(r)
+        out = m.group(1) + spec + "}" + " \\\\\n".join(main) + "\\end{array}"
+        if wide:
+            out = ("\\begin{gathered}" + out + " \\\\[4pt]\n\\begin{array}{l}"
+                   + " \\\\\n".join(wide) + "\\end{array}\\end{gathered}")
+        return out
+    tex = re.sub(r"(\\begin\{array\}\{)((?:[^{}]|\{[^{}]*\})*)\}(.*?)\\end\{array\}",
+                 fix_array, tex, flags=re.S)
     return tex
+
+
+def split_intertext(tex):
+    r"""\intertext{..} inside an amsmath display: close the environment, set the
+    text as a paragraph, reopen the same environment. Returns a list of
+    alternating (tex, text) pieces."""
+    m0 = re.match(r"\s*(\\begin\{([a-z*]+)\})", tex)
+    if not m0 or "\\intertext" not in tex:
+        return [tex]
+    env = m0.group(1)
+    endenv = "\\end{%s}" % m0.group(2)
+    pieces = []
+    while True:
+        m = re.search(r"\\intertext\s*\{", tex)
+        if not m:
+            pieces.append(tex); break
+        body, k = take_group(tex, m.end() - 1)
+        head = tex[:m.start()].rstrip()
+        head = re.sub(r"(\\\\(\[[^\]]*\])?)\s*$", "", head)       # drop a trailing \\
+        pieces.append(head + endenv)
+        pieces.append(body)
+        tex = env + "\n" + tex[k:]
+    return pieces
 
 
 def restore_math(s, ctx):
@@ -386,7 +478,14 @@ def restore_math(s, ctx):
         tex, disp = ctx["math"][int(m.group(1))]
         tex = katex_fixups(tex.strip())
         if disp:
-            return '<span class="math-d">\\[' + tex + '\\]</span>'
+            pieces = split_intertext(tex)
+            out = []
+            for i, pc in enumerate(pieces):
+                if i % 2 == 0:
+                    out.append('<span class="math-d">\\[' + pc + '\\]</span>')
+                else:
+                    out.append('<p class="intertext">%s</p>' % inline(pc, ctx))
+            return "".join(out)
         return '\\(' + tex + '\\)'
     return re.sub("\x00M(\\d+)\x00", sub, s)
 

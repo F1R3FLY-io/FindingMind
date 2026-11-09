@@ -9,7 +9,7 @@
 # DOMAIN    canonical hostname for CNAME/sitemap/canonical links (default: findingmind.io)
 #
 # Writes into the repository root (index.html, read/, figures/, macros.js, ...).
-# Needs: python3, pdflatex with tikz/standalone, pdftocairo.
+# Needs: python3, pdflatex with tikz/standalone, pdftocairo; node (optional) for the KaTeX check.
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 REPO="$(dirname "$HERE")"
@@ -18,4 +18,5 @@ DOMAIN="${2:-findingmind.io}"
 [ -f "$BOOK/finding_mind.tex" ] || { echo "no finding_mind.tex in $BOOK" >&2; exit 1; }
 export FM_BOOK="$BOOK" FM_OUT="$REPO" FM_WORK="${FM_WORK:-$HERE/tikzwork}"
 python3 "$HERE/gen.py"
+if command -v node >/dev/null; then node "$HERE/katex-check.js"; fi   # every expression must parse
 cd "$(dirname "$REPO")" && python3 "$REPO/deploy/finalize.py" "$DOMAIN" --site "$(basename "$REPO")"

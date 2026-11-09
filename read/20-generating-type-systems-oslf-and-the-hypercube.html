@@ -103,32 +103,24 @@ a type former at carrier \(Y_j\), read as a <em>rely-possibly</em> specification
 rely assumptions \(\vec x :: \vec A\), placing a term into the context \(K_j[-]\) takes one
 step to a specified right-hand side inhabiting \(B\).</p>
 <p><span class="math-d">\[\begin{array}{c}
-\inferrule*[right=M-Form]
-  { \bigl(\Gamma \ctxbar \Delta \vdash A_k :: s_k^{X_k}\bigr)_{x_k \in V_j} \\
-    \Gamma, \vec x{:}\vec X \ctxbar \Delta, \vec x{::}\vec A \vdash B :: s_{\mathrm{out}}^{\Pr} }
-  { \Gamma \ctxbar \Delta \vdash \angles{K_j}{\vec x :: \vec A}{B} :: s_{\mathrm{out}}^{Y_j} }
+\dfrac{\begin{array}{c}\bigl(\Gamma \ctxbar \Delta \vdash A_k :: s_k^{X_k}\bigr)_{x_k \in V_j} \\
+    \Gamma, \vec x{:}\vec X \ctxbar \Delta, \vec x{::}\vec A \vdash B :: s_{\mathrm{out}}^{\Pr}\end{array}}{\Gamma \ctxbar \Delta \vdash \angles{K_j}{\vec x :: \vec A}{B} :: s_{\mathrm{out}}^{Y_j}}\;\small\textrm{M-Form}
 \end{array}\]</span></p>
 <p><span class="math-d">\[\begin{array}{c}
-\inferrule*[right=M-Intro]
-  { \bigl(\Gamma \ctxbar \Delta \vdash A_k :: s_k^{X_k}\bigr)_{x_k \in V_j} \\
+\dfrac{\begin{array}{c}\bigl(\Gamma \ctxbar \Delta \vdash A_k :: s_k^{X_k}\bigr)_{x_k \in V_j} \\
     \Gamma, \vec w{:}\vec W, \vec x{:}\vec X \ctxbar \Delta, \vec x{::}\vec A \vdash B :: s_{\mathrm{out}}^{\Pr} \\
-    \Gamma, \vec w{:}\vec W, \vec x{:}\vec X \ctxbar \Delta, \vec x{::}\vec A \vdash R(\vec x, \vec w) :: B }
-  { \Gamma, \vec w{:}\vec W \ctxbar \Delta \vdash t_j(\vec w) :: \angles{K_j}{\vec x :: \vec A}{B} }
+    \Gamma, \vec w{:}\vec W, \vec x{:}\vec X \ctxbar \Delta, \vec x{::}\vec A \vdash R(\vec x, \vec w) :: B\end{array}}{\Gamma, \vec w{:}\vec W \ctxbar \Delta \vdash t_j(\vec w) :: \angles{K_j}{\vec x :: \vec A}{B}}\;\small\textrm{M-Intro}
 \end{array}\]</span></p>
 <p>Elimination is where a rewrite-generated modality differs from an equation-generated one.
 Because the modality comes from a <em>rewrite</em>, elimination does not provide full
 conversion; it provides the operational step to the specified right-hand side, and the
 typing of that right-hand side.</p>
 <p><span class="math-d">\[\begin{array}{c}
-\inferrule*[right=M-Step]
-  { \Gamma \ctxbar \Delta \vdash t :: \angles{K_j}{\vec x :: \vec A}{B} \\
-    \bigl(\Gamma \ctxbar \Delta \vdash u_k :: A_k\bigr)_{x_k \in V_j} }
-  { \Gamma \ctxbar \Delta \vdash K_j[t][\vec u/\vec x] \rsq R(\vec u) }
+\dfrac{\begin{array}{c}\Gamma \ctxbar \Delta \vdash t :: \angles{K_j}{\vec x :: \vec A}{B} \\
+    \bigl(\Gamma \ctxbar \Delta \vdash u_k :: A_k\bigr)_{x_k \in V_j}\end{array}}{\Gamma \ctxbar \Delta \vdash K_j[t][\vec u/\vec x] \rsq R(\vec u)}\;\small\textrm{M-Step}
 \\[1ex]
-\inferrule*[right=M-Elim]
-  { \Gamma \ctxbar \Delta \vdash t :: \angles{K_j}{\vec x :: \vec A}{B} \\
-    \bigl(\Gamma \ctxbar \Delta \vdash u_k :: A_k\bigr)_{x_k \in V_j} }
-  { \Gamma \ctxbar \Delta \vdash R(\vec u) :: B[\vec u/\vec x] }
+\dfrac{\begin{array}{c}\Gamma \ctxbar \Delta \vdash t :: \angles{K_j}{\vec x :: \vec A}{B} \\
+    \bigl(\Gamma \ctxbar \Delta \vdash u_k :: A_k\bigr)_{x_k \in V_j}\end{array}}{\Gamma \ctxbar \Delta \vdash R(\vec u) :: B[\vec u/\vec x]}\;\small\textrm{M-Elim}
 \end{array}\]</span></p>
 <p>To recover a conversion-like principle stable under rewriting, the algorithm freely adds
 an <em>empty-context possibility</em> operator \(\Diamond\) at the carrier of programs, with
