@@ -65,7 +65,7 @@ arrives at \(a\). One is the <em>destructor</em> \(\mathsf{ev}(a)\), which consu
 store \(\mathsf{q}(a,p)\), a message that only a forwarder can read. The rules are two-atom
 rewrites, each a message meeting one router or the destructor at a shared name.</p>
 <figure class="float figfloat" id="fig-23-1"><p> 
-<span class="math-d">\[\begin{array}{l@{\qquad}l}
+<span class="math-d">\[\begin{array}{ll}
  \mathsf{d}(a,b,c) \mid \mathsf{m}(a,v) \rewrite \mathsf{m}(b,v) \mid \mathsf{m}(c,v)
    & \mathsf{bl}(a,b) \mid \mathsf{m}(a,v) \rewrite \mathsf{fw}(v,b)\\
  \mathsf{k}(a) \mid \mathsf{m}(a,v) \rewrite \nil
@@ -134,7 +134,7 @@ the classical method blows up exponentially in nesting depth.</em></p>
 <p>Observation is by
 context-labeled bisimilarity, with the observer class taken to be the image of the
 translation on source contexts, and the theorem is that two rho terms are bisimilar iff
-their images are bisimilar against encoded observers [<a class="cite" href="bibliography.html#bib-rhocomb3" data-cite="rhocomb3">289</a>, \S7]. The
+their images are bisimilar against encoded observers [<a class="cite" href="bibliography.html#bib-rhocomb3" data-cite="rhocomb3">289</a>, §7]. The
 restriction to encoded observers is forced rather than convenient — an unrestricted
 combinator context can see the apparatus — by the same argument that forces it for the
 encoding of the \(\pi\)-calculus into rho (Chapter <a class="xref" href="21-instruments-making-structure-visible-to-bisimu.html#top" data-ref="ch:obsext">21</a>). The proofs are at the

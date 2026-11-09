@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""
+r"""
 finding-mind: LaTeX -> HTML
 
 Purpose-built for FindingMind/finding_mind.tex and its 89 chapter files.
@@ -206,6 +206,8 @@ def inline(s, ctx):
             out.append('<a class="cite" data-cite="%s" href="#">%s</a>' % (html.escape(k), html.escape(k)))
         txt = ", ".join(out)
         if extra:
+            extra = extra.replace("\\S", "\u00a7").replace("~", "\u00a0")
+            extra = re.sub(r"\\(?:,|;|!)", " ", extra)
             txt += ", " + html.escape(extra)
         return "[" + txt + "]"
     s = re.sub(r"\\cite(?:\[([^\]]*)\])?\{([^}]*)\}", cite_sub, s)
@@ -355,7 +357,7 @@ def stash_math(t, ctx):
 
 
 def scan_math_labels(ctx, register):
-    """\label inside a display carries the \tag or an equation number."""
+    r"""\label inside a display carries the \tag or an equation number."""
     for idx, (tex, disp) in enumerate(ctx["math"]):
         for m in re.finditer(r"\\label\{([^}]*)\}", tex):
             key = m.group(1).strip()
@@ -371,10 +373,18 @@ def scan_math_labels(ctx, register):
             ctx["math"][idx] = (tex, disp)
 
 
+def katex_fixups(tex):
+    """LaTeX that pdflatex accepts but KaTeX rejects."""
+    # @{...} inter-column material in array/tabular specs: KaTeX has no equivalent
+    tex = re.sub(r"(\\begin\{array\}\{)((?:[^{}]|\{[^{}]*\})*)\}",
+                 lambda m: m.group(1) + re.sub(r"@\{[^}]*\}", "", m.group(2)) + "}", tex)
+    return tex
+
+
 def restore_math(s, ctx):
     def sub(m):
         tex, disp = ctx["math"][int(m.group(1))]
-        tex = tex.strip()
+        tex = katex_fixups(tex.strip())
         if disp:
             return '<span class="math-d">\\[' + tex + '\\]</span>'
         return '\\(' + tex + '\\)'
